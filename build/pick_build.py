@@ -23,7 +23,7 @@ def lockup(bg, tint, it_col, line_col, it_size, panel=True, gid='p'):
     dots = ''.join(f'<circle cx="{x + px * sc:.2f}" cy="{y + py * sc:.2f}" r="{r}" fill="#d93636"/>'
                    for px, py in ((124.5, 191.2),   # Huntington Beach, nearest spot where the whole dot is on land
                                   (14.1, 27.9)))    # Arcata, same rule
-    art = (_state(x, y, h, tint, op=op_s) + redwood(x + 18, 44, 32, tint, op_t, wr=.42) + redwood(x + 30, 45, 24, tint, op_t * .8, wr=.42) + dots)
+    art = (_state(x, y, h, tint, op=op_s) + redwood(x + 15, 38, 30, tint, op_t, wr=.42) + redwood(x + 22, 41, 23, tint, op_t * .8, wr=.42) + dots)
     art = f'<g class="art" transform="translate(165 50) scale({k:.4f}) translate(-165.6 -48)">{art}</g>'
     out = ''
     if panel:
