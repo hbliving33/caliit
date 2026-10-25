@@ -196,6 +196,17 @@ for t in range(30):
     cards7.append(f'<figure class="card"><div class="light"><svg viewBox="0 0 330 96" role="img" aria-label="Cali IT logo option {n7}">{lt}</svg></div>'
                   f'<div class="dark"><svg viewBox="0 0 330 96" aria-hidden="true">{dk}</svg></div><figcaption><b>{n7}</b> {tl} · {PAIRS7[pr][0]} · {WAYS[wy][0]}</figcaption></figure>')
 
+# ---------------- Focus page (focus.html): 221 with the line beside CONSULTING ----------------
+from logos_set8 import logo as fo_logo, PAIRS8, RULES, TAGF
+focus = []
+ref = cards7[0].replace('<b>221</b>', '<b>221</b> (and 226, the same design)')
+for t in range(30):
+    pr = t % len(PAIRS8); rl = (t // len(PAIRS8)) % len(RULES); tf = (t + t // len(PAIRS8)) % len(TAGF)
+    rc = ['green', 'green', 'brass'][(t + rl) % 3]
+    lt = fo_logo(pr, RULES[rl][1], tf, rc, False); dk = fo_logo(pr, RULES[rl][1], tf, rc, True)
+    focus.append(f'<figure class="card"><div class="light"><svg viewBox="0 0 330 96" role="img" aria-label="Cali IT option F{t+1}">{lt}</svg></div>'
+                 f'<div class="dark"><svg viewBox="0 0 330 96" aria-hidden="true">{dk}</svg></div><figcaption><b>F{t+1}</b> {PAIRS8[pr][0]} · {RULES[rl][0]} ({rc}) · tagline {TAGF[tf][0]}</figcaption></figure>')
+
 html = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex"><title>Cali IT logo options</title>
 <style>{faces}
@@ -211,4 +222,7 @@ figcaption{{padding:8px 14px 12px;font-size:13px;color:#5b6578}} figcaption b{{c
 </style></head><body><header><h1>Cali IT logo options</h1><p>Eight new color schemes, no red, white and blue.  Each logo is shown in one scheme, but any logo works in any scheme.  Pick a scheme by name and a logo by number, for example: logo 14 in Pacific Teal.</p></header>
 <h2>Refreshed color schemes</h2><section class="pals">{sw}</section><h2 id="set7">Masculine colorways, 221 to 250</h2><main class="grid">{"".join(cards7)}</main><h2 id="set6">Redwood &amp; Sage with light redwoods, 191 to 220</h2><main class="grid">{"".join(cards6)}</main><h2 id="set5">Livelier fonts on the 108 idea, 161 to 190</h2><main class="grid">{"".join(cards5)}</main><h2 id="set4">Built on 108: the state behind the name, 131 to 160</h2><main class="grid">{"".join(cards4)}</main><h2 id="set3">California, 101 to 130</h2><main class="grid">{"".join(cards3)}</main><h2 id="set2">New styles, 51 to 100</h2><main class="grid">{"".join(cards2)}</main><h2 id="set1">First set, 1 to 50</h2><main class="grid">{"".join(cards)}</main></body></html>'''
 (ROOT / 'logos.html').write_text(html)
+fhtml = html.split('<main')[0].split('<h2')[0]
+fhtml = html[:html.index('<body>')] + '<body><header><h1>Cali IT: 221 with the line beside CONSULTING</h1><p>Starting point first, then 30 variations: three line styles, ten font pairings, green or brass line.  Numbered F1 to F30.</p></header><h2>Starting point</h2><main class="grid">' + ref + '</main><h2>Variations</h2><main class="grid">' + ''.join(focus) + '</main></body></html>'
+(ROOT / 'focus.html').write_text(fhtml.replace('<title>Cali IT logo options</title>', '<title>Cali IT logo focus</title>'))
 print('cards', len(cards))
