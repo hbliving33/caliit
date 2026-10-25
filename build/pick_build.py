@@ -18,8 +18,12 @@ def lockup(bg, tint, it_col, line_col, it_size, panel=True, gid='p'):
     op_s, op_t = (.2, .3) if panel else (.1, .2)
     tw = 10 * (10.5 * .62 + 5)
     k = 86 / 96                                   # state height 86 inside a 100-high panel, 7 above and 7 below
-    art = (_state(x, y, h, tint, op=op_s) + redwood(x + 10, 44, 44, tint, op_t) + redwood(x + 22, 46, 32, tint, op_t * .8)
-           + _dot(x, y, h, bg, r=round(2.6 / k, 2)))
+    sc = h / 220                                  # state drawn in a 200 x 220 box
+    r = round(1.6 / k, 2)                         # small dot: about 1.6 units across the finished logo, well under letter size
+    dots = ''.join(f'<circle cx="{x + px * sc:.2f}" cy="{y + py * sc:.2f}" r="{r}" fill="#d93636"/>'
+                   for px, py in ((124.5, 191.2),   # Huntington Beach, nearest spot where the whole dot is on land
+                                  (14.1, 27.9)))    # Arcata, same rule
+    art = (_state(x, y, h, tint, op=op_s) + redwood(x + 18, 44, 44, tint, op_t) + redwood(x + 29, 46, 32, tint, op_t * .8) + dots)
     art = f'<g class="art" transform="translate(165 50) scale({k:.4f}) translate(-165.6 -48)">{art}</g>'
     out = ''
     if panel:
