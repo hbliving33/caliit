@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><defs>
+    <linearGradient id="rim" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5b6578"/><stop offset=".5" stop-color="#1a1f2b"/><stop offset="1" stop-color="#3c4558"/></linearGradient>
+    <linearGradient id="face" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset=".55" stop-color="#eef1f6"/><stop offset="1" stop-color="#b9c1cf"/></linearGradient>
+    <radialGradient id="disc" cx=".35" cy=".3" r=".85"><stop offset="0" stop-color="#1b4596"/><stop offset=".7" stop-color="#0a2a6b"/><stop offset="1" stop-color="#061a45"/></radialGradient>
+    <path id="cShape" fill-rule="evenodd" d="M146 64 A58 58 0 1 0 146 136 L127 120 A33 33 0 1 1 127 80 Z"/>
+  </defs>
+  <circle cx="100" cy="100" r="96" fill="url(#rim)"/>
+  <circle cx="100" cy="100" r="88" fill="url(#disc)"/>
+  <circle cx="100" cy="100" r="80" fill="none" stroke="#c8102e" stroke-width="5"/>
+  <circle cx="100" cy="100" r="74" fill="none" stroke="#ffffff" stroke-width="2.4"/>
+  <!-- C: shadow, keyline, bevel, face -->
+  <use href="#cShape" fill="#000" opacity=".45" transform="translate(4 5)"/>
+  <use href="#cShape" fill="#141821" stroke="#141821" stroke-width="10" stroke-linejoin="round"/>
+  <use href="#cShape" fill="#8a93a6" transform="translate(2 2.5)"/>
+  <use href="#cShape" fill="url(#face)"/>
+  <!-- IT in red, tucked into the open side of the C -->
+  <text x="132" y="111" font-family="Arial Black, Arial, Helvetica, sans-serif" font-weight="900" font-size="30" fill="#c8102e" stroke="#ffffff" stroke-width="2.2" paint-order="stroke" letter-spacing="-1">IT</text>
+  <circle cx="100" cy="100" r="88" fill="none" stroke="#fff" stroke-opacity=".25" stroke-width="1.5"/>
+  <circle cx="100" cy="100" r="95" fill="none" stroke="#000" stroke-opacity=".6" stroke-width="2"/>
+</svg>
