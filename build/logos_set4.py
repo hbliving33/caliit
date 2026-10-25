@@ -11,10 +11,11 @@ def _state(x, y, h, fill='none', stroke='none', sw=0, op=1):
     s = h / 220
     return f'<g transform="translate({x} {y}) scale({s:.4f})" opacity="{op}"><path d="{CA}" fill="{fill}" stroke="{stroke}" stroke-width="{sw / s:.1f}" stroke-linejoin="round"/></g>'
 
-def _dot(x, y, h, k, r=2.8):
+def _dot(x, y, h, k, r=2.6):
+    """Huntington Beach marker, nudged just inland so it sits on the state, not in the water.  No halo ring."""
     s = h / 220
-    cx, cy = x + HB[0] * s, y + HB[1] * s
-    return f'<circle cx="{cx:.1f}" cy="{cy:.1f}" r="{r + 1.4}" fill="{k}"/><circle cx="{cx:.1f}" cy="{cy:.1f}" r="{r}" fill="{DOT_RED}"/>'
+    cx, cy = x + (HB[0] + 10) * s, y + (HB[1] - 10) * s
+    return f'<circle cx="{cx:.1f}" cy="{cy:.1f}" r="{r}" fill="{DOT_RED}"/>'
 
 def _dots_state(x, y, h, col, op):
     s = h / 220
