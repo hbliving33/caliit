@@ -5,8 +5,9 @@ NAVY, RED, SLATE, INK, SKY = '#0b2a5b', '#c8102e', '#5b6578', '#111827', '#2f6fd
 FONTS = [('Inter','inter'),('Montserrat','montserrat'),('IBM Plex Sans','ibm-plex-sans'),('Space Grotesk','space-grotesk'),('Sora','sora'),
          ('Manrope','manrope'),('Outfit','outfit'),('Archivo','archivo'),('Barlow','barlow'),('Oswald','oswald'),('Rajdhani','rajdhani'),
          ('Exo 2','exo-2'),('Lexend','lexend'),('Raleway','raleway'),('Poppins','poppins')]
+EXTRA = [('Fraunces','fraunces'),('IBM Plex Serif','ibm-plex-serif'),('DM Serif Display','dm-serif-display'),('IBM Plex Mono','ibm-plex-mono'),('JetBrains Mono','jetbrains-mono')]
 faces = ''.join(f'@font-face{{font-family:"{n}";src:url(assets/fonts/{s}-latin-{w}-normal.woff2) format("woff2");font-weight:{w};font-display:swap}}\n'
-                for n, s in FONTS for w in (400, 600, 700, 800) if (ROOT / f'assets/fonts/{s}-latin-{w}-normal.woff2').exists())
+                for n, s in FONTS + EXTRA for w in (400, 600, 700, 800) if (ROOT / f'assets/fonts/{s}-latin-{w}-normal.woff2').exists())
 
 # ---- marks: each returns SVG drawn in a 64x64 box ----
 def m_shield(c1,c2): return f'<path d="M32 4 L56 12 V30 C56 46 45 56 32 60 C19 56 8 46 8 30 V12Z" fill="{c1}"/><path d="M40 22 A11 11 0 1 0 40 42" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round"/><circle cx="44" cy="32" r="3" fill="{c2}"/>'
@@ -60,6 +61,65 @@ while len(cards)<50:
     pal = next(nm for nm,b,*_ in PALS if b==c1)
     cards.append(f'<figure class="card"><div class="light">{svg}</div><div class="dark">{dark}</div><figcaption><b>{n}</b> {mname} · {fname} · {pal}</figcaption></figure>')
 
+
+# ---------------- Set 2 (51-100): new styles ----------------
+import sys; sys.path.insert(0, str(ROOT / 'build'))
+from logos_set2 import MARKS2
+SANS2 = ['Inter','Manrope','IBM Plex Sans','Sora','Outfit','Archivo','Lexend','Montserrat','Space Grotesk','Barlow']
+def wd_side(style, f, tx, c1, c2):
+    if style == 'serif':  return f'<text x="0" y="-2" font-family="Fraunces" font-weight="600" font-size="31" fill="{tx}">Cali <tspan fill="{c1}">IT</tspan></text><text x="1" y="16" font-family="{f}" font-weight="600" font-size="9.5" letter-spacing="3" fill="{c2}">TECHNOLOGY CONSULTING</text>'
+    if style == 'plexserif': return f'<text x="0" y="0" font-family="IBM Plex Serif" font-weight="600" font-size="30" fill="{tx}">Cali IT</text><rect x="1" y="9" width="30" height="3" fill="{c2}"/>'
+    if style == 'slash':  return f'<text x="0" y="0" font-family="JetBrains Mono" font-weight="700" font-size="30" fill="{tx}">cali<tspan fill="{c2}">/</tspan><tspan fill="{c1}">it</tspan></text>'
+    if style == 'dot':    return f'<text x="0" y="0" font-family="{f}" font-weight="800" font-size="32" letter-spacing="-1" fill="{tx}">caliit<tspan fill="{c2}">.</tspan></text>'
+    if style == 'divider':return f'<text x="0" y="0" font-family="{f}" font-weight="700" font-size="27" letter-spacing="3" fill="{tx}">CALI</text><rect x="86" y="-24" width="2.5" height="28" fill="{c2}"/><text x="98" y="0" font-family="{f}" font-weight="400" font-size="27" letter-spacing="3" fill="{c1}">IT</text>'
+    if style == 'spaced': return f'<text x="0" y="0" font-family="{f}" font-weight="400" font-size="24" letter-spacing="7" fill="{tx}">CALI <tspan font-weight="700" fill="{c1}">IT</tspan></text>'
+    if style == 'two':    return f'<text x="0" y="-4" font-family="{f}" font-weight="700" font-size="27" fill="{tx}">Cali IT</text><text x="1" y="14" font-family="{f}" font-weight="400" font-size="12" fill="{c1}">IT and security consulting</text>'
+    return f'<text x="0" y="0" font-family="{f}" font-weight="600" font-size="31" fill="{tx}">Cali <tspan fill="{c1}">IT</tspan></text>'
+SIDE_STYLES = ['serif','slash','dot','divider','spaced','two','plain','plexserif']
+def full_logo(kind, f, tx, c1, c2, k, gid):
+    if kind == 'seal':
+        return (f'<defs><path id="{gid}r" d="M165 48 m-34 0 a34 34 0 1 1 68 0 a34 34 0 1 1 -68 0"/></defs><circle cx="165" cy="48" r="45" fill="none" stroke="{c1}" stroke-width="2"/><circle cx="165" cy="48" r="25" fill="{c1}"/>'
+                f'<text font-family="{f}" font-weight="700" font-size="7.6" fill="{tx}"><textPath href="#{gid}r" textLength="208" lengthAdjust="spacing">TECHNOLOGY · SECURITY · CONSULTING · CALI IT ·</textPath></text>'
+                f'<text x="165" y="55" text-anchor="middle" font-family="Fraunces" font-weight="700" font-size="19" fill="{k}">CI</text><rect x="156" y="59" width="18" height="2" fill="{c2}"/>')
+    if kind == 'box':
+        return f'<rect x="60" y="20" width="210" height="56" fill="none" stroke="{tx}" stroke-width="3"/><text x="165" y="58" text-anchor="middle" font-family="{f}" font-weight="700" font-size="28" letter-spacing="6" fill="{tx}">CALI <tspan fill="{c1}">IT</tspan></text><rect x="150" y="16" width="30" height="8" fill="{c2}"/>'
+    if kind == 'split':
+        return f'<rect x="58" y="22" width="122" height="52" fill="{c1}"/><text x="119" y="58" text-anchor="middle" font-family="{f}" font-weight="800" font-size="28" letter-spacing="2" fill="{k}">CALI</text><rect x="180" y="22" width="92" height="52" fill="none" stroke="{c1}" stroke-width="3"/><text x="226" y="58" text-anchor="middle" font-family="{f}" font-weight="800" font-size="28" letter-spacing="2" fill="{c1}">IT</text><rect x="58" y="74" width="214" height="4" fill="{c2}"/>'
+    if kind == 'prompt':
+        return f'<text x="62" y="58" font-family="JetBrains Mono" font-weight="700" font-size="30" fill="{c2}">&gt;_</text><text x="116" y="58" font-family="JetBrains Mono" font-weight="700" font-size="30" fill="{tx}">cali<tspan fill="{c1}">.it</tspan></text><rect x="250" y="34" width="14" height="28" fill="{c1}"><animate attributeName="opacity" values="1;1;0;0" dur="1.2s" repeatCount="indefinite"/></rect>'
+    if kind == 'classic':
+        return f'<text x="165" y="48" text-anchor="middle" font-family="DM Serif Display" font-size="38" fill="{tx}">Cali IT</text><rect x="92" y="63" width="32" height="1.5" fill="{c2}"/><rect x="206" y="63" width="32" height="1.5" fill="{c2}"/><text x="165" y="66" text-anchor="middle" font-family="{f}" font-weight="600" font-size="8.5" letter-spacing="2.6" fill="{c1}">CONSULTING</text>'
+    if kind == 'underline':
+        return f'<text x="165" y="56" text-anchor="middle" font-family="{f}" font-weight="800" font-size="40" letter-spacing="-1.5" fill="{tx}">caliit</text><rect x="104" y="66" width="80" height="6" rx="3" fill="{c1}"/><rect x="190" y="66" width="36" height="6" rx="3" fill="{c2}"/>'
+FULLS = ['seal','box','split','prompt','classic','underline']
+
+cards2 = []; n2 = 50; j = 0
+plan = []   # (layout, mark index or full kind)
+for t in range(50):
+    if t % 5 == 4: plan.append(('full', FULLS[(t // 5) % len(FULLS)]))
+    elif t % 5 == 2: plan.append(('stack', (t * 7) % len(MARKS2)))
+    else: plan.append(('side', (t * 3) % len(MARKS2)))
+for t, (layout, what) in enumerate(plan):
+    n2 += 1
+    c1, c2 = PALETTES[(t * 3 + 1) % len(PALETTES)]
+    f = SANS2[t % len(SANS2)]
+    pal = next(nm for nm, b, *_ in PALS if b == c1)
+    def draw(dark):
+        a = TINT[c1] if dark else c1; tx = '#ffffff' if dark else TEXT[c1]; k = '#1a2230' if dark else '#ffffff'; gid = f'g{n2}{"d" if dark else "l"}'
+        if layout == 'full':
+            return full_logo(what, f, tx, a, c2, k, gid), what.capitalize()
+        name, mf = MARKS2[what]
+        mk = mf(a, c2, k, gid=gid) if name == 'Gradient C' else (mf(a, c2, k, f=f) if name == 'ci monogram' else mf(a, c2, k))
+        if layout == 'stack':
+            word = f'<text x="165" y="88" text-anchor="middle" font-family="{f}" font-weight="700" font-size="20" letter-spacing="4" fill="{tx}">CALI <tspan fill="{a}">IT</tspan></text>'
+            return f'<g transform="translate(141 4) scale(.75)">{mk}</g>{word}', name + ' (stacked)'
+        style = SIDE_STYLES[t % len(SIDE_STYLES)]
+        return f'<g transform="translate(8 16)">{mk}</g><g transform="translate(88 58)">{wd_side(style, f, tx, a, c2)}</g>', name
+    light, label = draw(False); dark, _ = draw(True)
+    fnt = f
+    cards2.append(f'<figure class="card"><div class="light"><svg viewBox="0 0 330 96" role="img" aria-label="Cali IT logo option {n2}" style="font-family:\'{f}\'">{light}</svg></div>'
+                  f'<div class="dark"><svg viewBox="0 0 330 96" aria-hidden="true" style="font-family:\'{f}\'">{dark}</svg></div><figcaption><b>{n2}</b> {label} · {fnt} · {pal}</figcaption></figure>')
+
 html = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex"><title>Cali IT logo options</title>
 <style>{faces}
@@ -73,6 +133,6 @@ figcaption{{padding:8px 14px 12px;font-size:13px;color:#5b6578}} figcaption b{{c
 .pal{{background:#fff;border:1px solid #e3e7ef;border-radius:12px;padding:12px 14px}} .chips{{display:flex;gap:6px;margin-bottom:8px}} .chips i{{width:34px;height:34px;border-radius:8px;display:block}}
 .pal b{{display:block;font-size:15px}} .pal small{{color:#5b6578;font-size:12px}} h2{{max-width:1240px;margin:22px auto 0;padding:0 20px;font-size:18px}}
 </style></head><body><header><h1>Cali IT logo options</h1><p>Eight new color schemes, no red, white and blue.  Each logo is shown in one scheme, but any logo works in any scheme.  Pick a scheme by name and a logo by number, for example: logo 14 in Pacific Teal.</p></header>
-<h2>Refreshed color schemes</h2><section class="pals">{sw}</section><h2>Logo options</h2><main class="grid">{"".join(cards)}</main></body></html>'''
+<h2>Refreshed color schemes</h2><section class="pals">{sw}</section><h2 id="set2">New styles, 51 to 100</h2><main class="grid">{"".join(cards2)}</main><h2 id="set1">First set, 1 to 50</h2><main class="grid">{"".join(cards)}</main></body></html>'''
 (ROOT / 'logos.html').write_text(html)
 print('cards', len(cards))
