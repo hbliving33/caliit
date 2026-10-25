@@ -10,6 +10,12 @@ E = html.escape
 GRID = json.loads((ROOT / 'build' / 'ca_grid.json').read_text())
 CX, CY = GRID['centroid']
 ARCATA, HB = (14.1, 27.9), (124.5, 191.2)
+ORDER = ['network', 'cloud', 'data-center', 'microsoft-365', 'it-strategy', 'cybersecurity', 'business-automation', 'access-control', 'compliance']
+sb.SERVICES.sort(key=lambda x: ORDER.index(x['slug']))
+for _x in sb.SERVICES:
+    if _x['slug'] == 'cloud': _x['short'] = 'Servers, storage, virtualization and cloud, with backups you have tested.'
+    if _x['slug'] == 'microsoft-365': _x['short'] = 'Licensing under control, plus tenant security and migrations.'
+    if _x['slug'] == 'it-strategy': _x['short'] = 'Day-to-day IT operations leadership, roadmaps, budgets and vendors.'
 S = {s['slug']: s for s in sb.SERVICES}
 STATS2 = [('30', 'Years in IT leadership'), ('10+', 'Acquisitions integrated'), ('30+', 'Sites networked worldwide'), ('$12M', 'Largest IT budget managed')]
 
@@ -143,6 +149,18 @@ def ledger_block():
   <table class="ledger"><caption class="hp">Standards and environments we support</caption><tbody>{trs}</tbody></table>
 </div></section>'''
 
+def run_block():
+    rows = [('Core infrastructure', 'Servers, storage, virtualization, networks, Wi-Fi and the links between sites.  Data centers and colocation, designed, built, moved and kept running.'),
+            ('Licensing', 'Microsoft 365 and software licensing reviewed, right-sized and kept that way.  Renewals, true-ups and vendor contracts negotiated so you stop paying for seats nobody uses.'),
+            ('IT operations', 'The day-to-day: users, devices, patching, monitoring, backups, onboarding and offboarding, vendors and documentation.  Run the same way every time.'),
+            ('Facilities', 'When the building is part of the job: office moves and build-outs, server room power and cooling, badge access and cameras.'),
+            ('Compliance', 'When audits come, the evidence is ready: SOX, HIPAA, ISO and FDA-regulated environments.')]
+    trs = ''.join(f'<tr><th scope="row">{a}</th><td>{b}</td></tr>' for a, b in rows)
+    return f'''<section class="ledger-sec"><div class="wrap">
+  <div><h2>What we run.</h2><p class="lead" style="margin-top:20px">Our specialty is the core of IT: the infrastructure, the licenses and the day-to-day operations that keep a business moving.  Facilities and compliance come along when the work calls for it.</p><p><a class="link" href="engagement.html">See how we work</a></p></div>
+  <table class="ledger"><caption class="hp">What we run</caption><tbody>{trs}</tbody></table>
+</div></section>'''
+
 def notes_block(title='Field notes.', intro='A few of the projects behind the numbers.  Client names are kept confidential.'):
     notes = ''.join(f'<article class="note"><div class="where">{k}</div><div><h3>{t}</h3><p>{d}</p></div><div class="out">{b}</div></article>' for k, t, d, b in sb.RESULTS)
     return f'<section class="notes-sec"><div class="wrap"><h2>{title}</h2><p class="lead" style="margin:18px 0 44px">{intro}</p>{notes}</div></section>'
@@ -193,8 +211,8 @@ def home():
 <section class="chart-sec hero on-dark"><div class="wrap">
   <div>
     <p class="kicker">Rooted in California.  Serving businesses nationwide.</p>
-    <h1><span class="h-serif">Senior IT,</span><span class="h-heavy">built for audits and uptime.</span></h1>
-    <p class="lead">Thirty years of running IT inside FDA-regulated labs, global manufacturers and growing firms.  We find the gaps, build it right the first time, and keep it running.</p>
+    <h1><span class="h-serif">Your IT, run right.</span><span class="h-heavy">Infrastructure, licensing and IT operations.</span></h1>
+    <p class="lead">We manage the core of your IT: servers, networks, data centers, Microsoft 365 and the licenses and vendors behind them.  Thirty years of running IT operations, now working for you.</p>
     <div class="acts"><a class="btn" href="#talk">Contact us</a><a class="btn line" href="services.html">See our services</a></div>
     <p class="reach-note">On-site across California.  Remote support in all 50 states.</p>
   </div>
@@ -202,18 +220,18 @@ def home():
 </div><p class="chart-note">Red marks show our California home base.  We support clients in every state.</p></section>
 
 <section class="statement"><div class="wrap">
-  <p class="big">We've moved headquarters and data centers, joined <b>ten-plus</b> companies after acquisitions, built certified labs, and walked into SOX, HIPAA and ISO audits calm.  Now we do it for you.</p>
+  <p class="big">For <b>thirty years</b> we've built and run the infrastructure behind growing companies: the servers, the networks, the data centers, the licenses and the vendors.  Now we run it for you.</p>
   <div class="margin">{stats}</div>
 </div></section>
 
+{run_block()}
 {index_block()}
-{ledger_block()}
 {notes_block()}
 {compare_block()}
 {standard_block()}
 {quote_block(1)}
 {close_block()}'''
-    page('index.html', 'Cali IT Consulting | Senior IT for regulated businesses nationwide', "Cali IT Consulting: senior IT for businesses that answer to auditors.  Microsoft 365, cybersecurity, networks, cloud, data centers, compliance and IT strategy.  Headquartered in Huntington Beach, California, serving clients nationwide.", body, CUBE_JS())
+    page('index.html', 'Cali IT Consulting | IT infrastructure, licensing and operations, nationwide', "Cali IT Consulting manages core IT infrastructure, software licensing and day-to-day IT operations: servers, networks, data centers, Microsoft 365 and vendors.  Headquartered in Huntington Beach, California, serving clients nationwide.", body, CUBE_JS())
 
 def services():
     body = phero('Everything your IT needs,', 'under one roof.', 'Nine practice areas, one team.  Bring us a single project or hand us the whole stack.') + index_block(head=False) + f'''
