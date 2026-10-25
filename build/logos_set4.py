@@ -12,9 +12,9 @@ def _state(x, y, h, fill='none', stroke='none', sw=0, op=1):
     return f'<g transform="translate({x} {y}) scale({s:.4f})" opacity="{op}"><path d="{CA}" fill="{fill}" stroke="{stroke}" stroke-width="{sw / s:.1f}" stroke-linejoin="round"/></g>'
 
 def _dot(x, y, h, k, r=2.6):
-    """Huntington Beach marker, nudged just inland so it sits on the state, not in the water.  No halo ring."""
+    """Huntington Beach marker, right at the coast edge but fully on land.  No halo ring."""
     s = h / 220
-    cx, cy = x + (HB[0] + 10) * s, y + (HB[1] - 10) * s
+    cx, cy = x + 126.0 * s, y + 189.8 * s   # closest spot to Huntington Beach where the whole dot is on land
     return f'<circle cx="{cx:.1f}" cy="{cy:.1f}" r="{r}" fill="{DOT_RED}"/>'
 
 def _dots_state(x, y, h, col, op):

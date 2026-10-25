@@ -184,6 +184,18 @@ for t in range(30):
     cards6.append(f'<figure class="card"><div class="light"><svg viewBox="0 0 330 96" role="img" aria-label="Cali IT logo option {n6}">{lt}</svg></div>'
                   f'<div class="dark"><svg viewBox="0 0 330 96" aria-hidden="true">{dk}</svg></div><figcaption><b>{n6}</b> {tl} · {PAIRS6[pr][0]} · {GREENS[gi][0]} {GREENS[gi][1]}</figcaption></figure>')
 
+# ---------------- Set 7 (221-250): masculine colorways ----------------
+from logos_set7 import logo as m_logo, PAIRS7, TREATS7, WAYS
+cards7 = []; n7 = 220
+for t in range(30):
+    n7 += 1
+    tl, treat = TREATS7[t % len(TREATS7)]
+    pr = (t + t // len(TREATS7)) % len(PAIRS7)
+    wy = (t * 2 + t // 10) % len(WAYS)
+    lt = m_logo(treat, pr, wy, False, f'm{n7}l'); dk = m_logo(treat, pr, wy, True, f'm{n7}d')
+    cards7.append(f'<figure class="card"><div class="light"><svg viewBox="0 0 330 96" role="img" aria-label="Cali IT logo option {n7}">{lt}</svg></div>'
+                  f'<div class="dark"><svg viewBox="0 0 330 96" aria-hidden="true">{dk}</svg></div><figcaption><b>{n7}</b> {tl} · {PAIRS7[pr][0]} · {WAYS[wy][0]}</figcaption></figure>')
+
 html = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex"><title>Cali IT logo options</title>
 <style>{faces}
@@ -197,6 +209,6 @@ figcaption{{padding:8px 14px 12px;font-size:13px;color:#5b6578}} figcaption b{{c
 .pal{{background:#fff;border:1px solid #e3e7ef;border-radius:12px;padding:12px 14px}} .chips{{display:flex;gap:6px;margin-bottom:8px}} .chips i{{width:34px;height:34px;border-radius:8px;display:block}}
 .pal b{{display:block;font-size:15px}} .pal small{{color:#5b6578;font-size:12px}} h2{{max-width:1240px;margin:22px auto 0;padding:0 20px;font-size:18px}}
 </style></head><body><header><h1>Cali IT logo options</h1><p>Eight new color schemes, no red, white and blue.  Each logo is shown in one scheme, but any logo works in any scheme.  Pick a scheme by name and a logo by number, for example: logo 14 in Pacific Teal.</p></header>
-<h2>Refreshed color schemes</h2><section class="pals">{sw}</section><h2 id="set6">Redwood &amp; Sage with light redwoods, 191 to 220</h2><main class="grid">{"".join(cards6)}</main><h2 id="set5">Livelier fonts on the 108 idea, 161 to 190</h2><main class="grid">{"".join(cards5)}</main><h2 id="set4">Built on 108: the state behind the name, 131 to 160</h2><main class="grid">{"".join(cards4)}</main><h2 id="set3">California, 101 to 130</h2><main class="grid">{"".join(cards3)}</main><h2 id="set2">New styles, 51 to 100</h2><main class="grid">{"".join(cards2)}</main><h2 id="set1">First set, 1 to 50</h2><main class="grid">{"".join(cards)}</main></body></html>'''
+<h2>Refreshed color schemes</h2><section class="pals">{sw}</section><h2 id="set7">Masculine colorways, 221 to 250</h2><main class="grid">{"".join(cards7)}</main><h2 id="set6">Redwood &amp; Sage with light redwoods, 191 to 220</h2><main class="grid">{"".join(cards6)}</main><h2 id="set5">Livelier fonts on the 108 idea, 161 to 190</h2><main class="grid">{"".join(cards5)}</main><h2 id="set4">Built on 108: the state behind the name, 131 to 160</h2><main class="grid">{"".join(cards4)}</main><h2 id="set3">California, 101 to 130</h2><main class="grid">{"".join(cards3)}</main><h2 id="set2">New styles, 51 to 100</h2><main class="grid">{"".join(cards2)}</main><h2 id="set1">First set, 1 to 50</h2><main class="grid">{"".join(cards)}</main></body></html>'''
 (ROOT / 'logos.html').write_text(html)
 print('cards', len(cards))
