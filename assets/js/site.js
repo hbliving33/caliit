@@ -6,7 +6,7 @@
   const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   // mobile menu
-  const btn = document.querySelector(".menu-btn"), nav = document.getElementById("nav");
+  const btn = document.querySelector(".burger"), nav = document.getElementById("nav");
   if (btn && nav) {
     btn.addEventListener("click", () => { const open = nav.classList.toggle("open"); btn.setAttribute("aria-expanded", open); });
     addEventListener("keydown", (e) => { if (e.key === "Escape" && nav.classList.contains("open")) { nav.classList.remove("open"); btn.setAttribute("aria-expanded", "false"); btn.focus(); } });
@@ -15,6 +15,19 @@
   // reveal on scroll
   const io = "IntersectionObserver" in window && !reduce ? new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }), { rootMargin: "0px 0px -8% 0px" }) : null;
   document.querySelectorAll(".reveal").forEach((el) => (io ? io.observe(el) : el.classList.add("in")));
+
+  // services list steers the cube; the cube's tour lights up the matching row
+  const list = document.getElementById("svcList"), picker = document.getElementById("picker");
+  if (list && picker) {
+    const rows = [...list.querySelectorAll("li")];
+    const byName = (n) => rows.find((r) => r.dataset.name === n);
+    const light = () => { const on = picker.querySelector('[aria-pressed="true"]'); rows.forEach((r) => r.classList.toggle("lit", !!on && r.dataset.name === on.textContent.trim())); };
+    new MutationObserver(light).observe(picker, { subtree: true, attributes: true, attributeFilter: ["aria-pressed"] });
+    rows.forEach((r) => {
+      const go = () => { if (!window.dcCube) return; const i = window.dcCube.names.indexOf(r.dataset.name); if (i >= 0) window.dcCube.select(i); };
+      r.addEventListener("pointerenter", go); r.querySelector("a").addEventListener("focus", go);
+    });
+  }
 
   // testimonial rotator
   const rot = document.getElementById("quoteRot");
