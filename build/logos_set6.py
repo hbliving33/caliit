@@ -7,9 +7,9 @@ TEXT_DARK, TEXT_LIGHT = '#243028', '#ffffff'
 GREENS = [('Forest', '#2f6d4f', '#7fc8a0'), ('Redwood green', '#3a7d44', '#8fd19e'), ('Fresh green', '#2e8b57', '#7fdcaa'), ('Deep pine', '#1f5f45', '#6fbf96')]
 SUB_LIGHT, SUB_DARK = '#5f6f66', '#a9b8ae'
 
-def redwood(x, base, h, col, op):
+def redwood(x, base, h, col, op, wr=.23):
     """A slim redwood: straight trunk, narrow spire with short tiers of branches.  (x, base) = foot of the trunk."""
-    w = h * .23
+    w = h * wr
     tiers = 7
     pts = [(0, -h)]
     for i in range(1, tiers + 1):            # right side, tiers stepping out
