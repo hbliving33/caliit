@@ -28,7 +28,8 @@ def chart(cls='', labels=True, draw=False, vb='-34 -12 276 246'):
                 y = float(p['d'].split(' L')[0].split()[1])
                 gl += f'<text class="grat-t" x="-31" y="{y + 1.5:.1f}">{p["lat"]}°N</text>'
     rings = ''.join(f'<g transform="translate({CX} {CY}) scale({k}) translate({-CX} {-CY})"><path class="ring" d="{CA}" stroke-width="{.55 / k:.2f}" opacity="{op}"/></g>' for k, op in [])
-    trees = redwood(26, 66, 30, '#3c5c80', 1, wr=.42).replace('<g opacity="1">', '<g class="tree">') + redwood(34, 70, 22, '#3c5c80', .8, wr=.42)
+    trees = (redwood(26, 66, 30, '#3c5c80', 1, wr=.42) + redwood(34, 70, 22, '#3c5c80', .8, wr=.42) + redwood(30.5, 75, 25, '#4a6d94', 1, wr=.42)
+             + palm(140, 192, 26, '#3c5c80') + board(152, 193, 18, '#4a6d94'))
     pins = ''
     for (x, y), name, sub, lx, ly, anchor in [(ARCATA, 'Arcata', 'North Coast', 46, 12, 'start'), (HB, 'Huntington Beach', 'Headquarters', 168, 226, 'start')]:
         pins += f'<circle class="pin-halo" cx="{x}" cy="{y}" r="2.6"/><circle class="pin" cx="{x}" cy="{y}" r="2.6"/>'
@@ -44,7 +45,8 @@ def us_chart(cls=''):
     cx, cy = US['cc']; hx, hy = US['hb']['x'], US['hb']['y']; ax, ay = US['ar']['x'], US['ar']['y']
     grat = ''.join(f'<path class="grat" d="{d}"/>' for d in US['grat'])
     rings = ''.join(f'<g transform="translate({cx} {cy}) scale({k}) translate({-cx} {-cy})"><path class="ring" d="{US["ca"]}" stroke-width="{.45 / k:.2f}" opacity="{op}"/></g>' for k, op in [])
-    trees = redwood(11.5, 86, 11, '#3c5c80', 1, wr=.42) + redwood(14.2, 87.5, 8, '#3c5c80', .8, wr=.42)
+    trees = (redwood(11.5, 86, 11, '#3c5c80', 1, wr=.42) + redwood(14.2, 87.5, 8, '#3c5c80', .8, wr=.42) + redwood(12.9, 89.2, 9, '#4a6d94', 1, wr=.42)
+             + palm(40.5, 151.5, 10, '#4a6d94') + board(45.3, 151.8, 7, '#5a7ea6'))
     pulses = ''.join(f'<circle class="reach" cx="{hx}" cy="{hy}" r="12" style="animation-delay:{d}s"/>' for d in (0, 1.6, 3.2))
     pins = ''
     for (x, y), name, sub, lx, ly in [((ax, ay), 'Arcata', 'North Coast', 20, 52), ((hx, hy), 'Huntington Beach', 'Headquarters', 52, 186)]:
@@ -56,6 +58,24 @@ def us_chart(cls=''):
             f'<g>{grat}</g><path class="nation" d="{US["nation"]}"/><path class="borders" d="{US["borders"]}"/>'
             f'<g clip-path="url(#usclip)">{pulses}</g>'
             f'<path class="land" d="{US["ca"]}" style="stroke-width:.7"/>{rings}{trees}{pins}{legend}</svg>')
+
+
+def palm(x, base, h, col, op=1):
+    """A small palm: gently curved trunk, five fronds and a few dates.  (x, base) = foot of the trunk."""
+    tx, ty = x + h * .16, base - h          # top of the trunk, leaning slightly seaward-right
+    trunk = f'<path d="M{x:.2f} {base:.2f} Q{x + h * .02:.2f} {base - h * .55:.2f} {tx:.2f} {ty:.2f}" fill="none" stroke="{col}" stroke-width="{h * .085:.2f}" stroke-linecap="round"/>'
+    fr = ''
+    for dx, dy, cx, cy in [(-.55, .22, -.3, -.18), (-.38, -.1, -.22, -.3), (.05, -.28, .0, -.32), (.45, -.08, .25, -.3), (.6, .25, .35, -.15)]:
+        ex, ey = tx + dx * h, ty + dy * h; qx, qy = tx + cx * h, ty + cy * h
+        fr += f'<path d="M{tx:.2f} {ty:.2f} Q{qx:.2f} {qy:.2f} {ex:.2f} {ey:.2f}" fill="none" stroke="{col}" stroke-width="{h * .075:.2f}" stroke-linecap="round"/>'
+    return f'<g opacity="{op}">{trunk}{fr}<circle cx="{tx:.2f}" cy="{ty + h * .05:.2f}" r="{h * .05:.2f}" fill="{col}"/></g>'
+
+def board(x, base, h, col, op=1):
+    """An upright surfboard with a center stringer.  (x, base) = tail."""
+    w = h * .26
+    body = f'<path d="M{x:.2f} {base:.2f} C{x - w:.2f} {base - h * .25:.2f} {x - w * .8:.2f} {base - h * .85:.2f} {x:.2f} {base - h:.2f} C{x + w * .8:.2f} {base - h * .85:.2f} {x + w:.2f} {base - h * .25:.2f} {x:.2f} {base:.2f}Z" fill="{col}"/>'
+    stringer = f'<path d="M{x:.2f} {base - h * .06:.2f} L{x:.2f} {base - h * .94:.2f}" stroke="#0a1420" stroke-width="{h * .03:.2f}" opacity=".55"/>'
+    return f'<g opacity="{op}">{body}{stringer}</g>'
 
 def two_voice(h):
     """'Find the gaps <em>before someone else does</em>.' -> serif line, heavy line."""
