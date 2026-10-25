@@ -29,7 +29,7 @@ def chart(cls='', labels=True, draw=False, vb='-34 -12 276 246'):
                 gl += f'<text class="grat-t" x="-31" y="{y + 1.5:.1f}">{p["lat"]}°N</text>'
     rings = ''.join(f'<g transform="translate({CX} {CY}) scale({k}) translate({-CX} {-CY})"><path class="ring" d="{CA}" stroke-width="{.55 / k:.2f}" opacity="{op}"/></g>' for k, op in [])
     trees = (redwood(26, 66, 30, '#3c5c80', 1, wr=.42) + redwood(34, 70, 22, '#3c5c80', .8, wr=.42) + redwood(30.5, 75, 25, '#4a6d94', 1, wr=.42)
-             + palm(140, 192, 26, '#3c5c80') + board(152, 193, 18, '#4a6d94'))
+             + wave(133, 193, 16, '#3c5c80') + board(162, 193, 18, '#4a6d94'))
     pins = ''
     for (x, y), name, sub, lx, ly, anchor in [(ARCATA, 'Arcata', 'North Coast', 46, 12, 'start'), (HB, 'Huntington Beach', 'Headquarters', 168, 226, 'start')]:
         pins += f'<circle class="pin-halo" cx="{x}" cy="{y}" r="2.6"/><circle class="pin" cx="{x}" cy="{y}" r="2.6"/>'
@@ -46,7 +46,7 @@ def us_chart(cls=''):
     grat = ''.join(f'<path class="grat" d="{d}"/>' for d in US['grat'])
     rings = ''.join(f'<g transform="translate({cx} {cy}) scale({k}) translate({-cx} {-cy})"><path class="ring" d="{US["ca"]}" stroke-width="{.45 / k:.2f}" opacity="{op}"/></g>' for k, op in [])
     trees = (redwood(11.5, 86, 11, '#3c5c80', 1, wr=.42) + redwood(14.2, 87.5, 8, '#3c5c80', .8, wr=.42) + redwood(12.9, 89.2, 9, '#4a6d94', 1, wr=.42)
-             + palm(40.5, 151.5, 10, '#4a6d94') + board(45.3, 151.8, 7, '#5a7ea6'))
+             + wave(37.5, 152, 6, '#4a6d94') + board(48.2, 152, 7, '#5a7ea6'))
     pulses = ''.join(f'<circle class="reach" cx="{hx}" cy="{hy}" r="12" style="animation-delay:{d}s"/>' for d in (0, 1.6, 3.2))
     pins = ''
     for (x, y), name, sub, lx, ly in [((ax, ay), 'Arcata', 'North Coast', 20, 52), ((hx, hy), 'Huntington Beach', 'Headquarters', 52, 186)]:
@@ -69,6 +69,16 @@ def palm(x, base, h, col, op=1):
         ex, ey = tx + dx * h, ty + dy * h; qx, qy = tx + cx * h, ty + cy * h
         fr += f'<path d="M{tx:.2f} {ty:.2f} Q{qx:.2f} {qy:.2f} {ex:.2f} {ey:.2f}" fill="none" stroke="{col}" stroke-width="{h * .075:.2f}" stroke-linecap="round"/>'
     return f'<g opacity="{op}">{trunk}{fr}<circle cx="{tx:.2f}" cy="{ty + h * .05:.2f}" r="{h * .05:.2f}" fill="{col}"/></g>'
+
+def wave(x, base, h, col, op=1):
+    """A small curling wave, sized like the trees.  (x, base) = left end of the wave's base line."""
+    w = h * 1.5
+    crest = (f'<path d="M{x:.2f} {base:.2f} C{x + w * .18:.2f} {base - h * .1:.2f} {x + w * .32:.2f} {base - h * .55:.2f} {x + w * .55:.2f} {base - h * .9:.2f} '
+             f'C{x + w * .72:.2f} {base - h * 1.12:.2f} {x + w * .98:.2f} {base - h * .98:.2f} {x + w * .96:.2f} {base - h * .7:.2f} '
+             f'C{x + w * .8:.2f} {base - h * .82:.2f} {x + w * .66:.2f} {base - h * .66:.2f} {x + w * .72:.2f} {base - h * .45:.2f} '
+             f'C{x + w * .8:.2f} {base - h * .22:.2f} {x + w * .92:.2f} {base - h * .1:.2f} {x + w:.2f} {base:.2f}Z" fill="{col}"/>')
+    foam = f'<path d="M{x + w * .58:.2f} {base - h * .78:.2f} C{x + w * .66:.2f} {base - h * .92:.2f} {x + w * .82:.2f} {base - h * .95:.2f} {x + w * .9:.2f} {base - h * .8:.2f}" fill="none" stroke="#8fb3d9" stroke-width="{h * .06:.2f}" stroke-linecap="round" opacity=".6"/>'
+    return f'<g opacity="{op}">{crest}{foam}</g>'
 
 def board(x, base, h, col, op=1):
     """An upright surfboard with a center stringer.  (x, base) = tail."""
@@ -322,7 +332,7 @@ def about():
 </div></section>
 <section class="band fog"><div class="wrap two">
   <div><h2>What we do.</h2></div>
-  <div class="prose"><p class="lead">We've led more than ten acquisitions, moved headquarters and data centers, built certified labs, and passed SOX, HIPAA and ISO audits.</p><p>We handle Microsoft 365, cybersecurity, networks, cloud, data centers, physical security, compliance and IT strategy.  We work on-site across California and support clients remotely in all 50 states, traveling on-site when the job needs it.  You get senior-level answers from people who have done the work, not a sales pitch.</p></div>
+  <div class="prose"><p class="lead">We've led more than ten acquisitions, moved headquarters and data centers, built certified labs, and passed SOX, HIPAA and ISO audits.</p><p>We handle Microsoft 365, cybersecurity, networks, cloud, data centers, physical security, compliance and IT strategy.  We work on-site across California and support clients remotely in all 50 states, traveling on-site as required.  You get senior-level answers from people who have done the work, not a sales pitch.</p></div>
 </div></section>
 <section class="standard-sec on-dark"><div class="wrap"><h2>What we stand for.</h2><div class="promises">{vals}</div></div></section>
 {notes_block()}
@@ -341,7 +351,7 @@ def testimonials():
 def contact():
     body = phero('Tell us what', "you're working on.", 'Fill out the form and a senior consultant will get back to you within one business day.') + f'''
 <section class="band white"><div class="wrap two">
-  <div><h2>California headquarters.  Nationwide clients.</h2><ul class="ticks" style="margin-top:28px"><li>Headquarters in Huntington Beach, California</li><li>On-site across California</li><li>Remote support in all 50 states, and on-site travel when the job needs it</li><li>A reply from a senior consultant within one business day</li></ul></div>
+  <div><h2>California headquarters.  Nationwide clients.</h2><ul class="ticks" style="margin-top:28px"><li>Headquarters in Huntington Beach, California</li><li>On-site across California</li><li>Remote support in all 50 states, with on-site travel as required</li><li>A reply from a senior consultant within one business day</li></ul></div>
   {form(False)}
 </div></section>'''
     page('contact.html', 'Contact | Cali IT Consulting', 'Contact Cali IT Consulting.  California headquarters, clients nationwide.  A senior consultant will reply within one business day.', body)
