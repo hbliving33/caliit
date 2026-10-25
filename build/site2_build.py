@@ -31,6 +31,26 @@ def chart(cls='', labels=True, draw=False, vb='-34 -12 276 246'):
     return (f'<svg class="{cls}" viewBox="{vb}" role="img" aria-label="Map of California marking Arcata on the North Coast and Huntington Beach, our headquarters">'
             f'<g>{grat}{gl}</g><path class="land" d="{CA}"/>{rings}{trees}{pins}</svg>')
 
+
+US = json.loads((ROOT / 'build' / 'us_chart.json').read_text())
+def us_chart(cls=''):
+    """Lower 48 in faint outline, California bright with contours, redwoods, two marks, and rings pulsing out from Huntington Beach."""
+    cx, cy = US['cc']; hx, hy = US['hb']['x'], US['hb']['y']; ax, ay = US['ar']['x'], US['ar']['y']
+    grat = ''.join(f'<path class="grat" d="{d}"/>' for d in US['grat'])
+    rings = ''.join(f'<g transform="translate({cx} {cy}) scale({k}) translate({-cx} {-cy})"><path class="ring" d="{US["ca"]}" stroke-width="{.45 / k:.2f}" opacity="{op}"/></g>' for k, op in [(.8, .22), (.6, .15), (.4, .1)])
+    trees = redwood(11.5, 86, 11, '#3c5c80', 1, wr=.42) + redwood(14.2, 87.5, 8, '#3c5c80', .8, wr=.42)
+    pulses = ''.join(f'<circle class="reach" cx="{hx}" cy="{hy}" r="12" style="animation-delay:{d}s"/>' for d in (0, 1.6, 3.2))
+    pins = ''
+    for (x, y), name, sub, lx, ly in [((ax, ay), 'Arcata', 'North Coast', 20, 52), ((hx, hy), 'Huntington Beach', 'Headquarters', 52, 186)]:
+        pins += (f'<circle class="pin" cx="{x}" cy="{y}" r="1.7"/><line class="lead-line" x1="{x + 1.6}" y1="{y + (-1.2 if y < 100 else 1.2)}" x2="{lx - 1.5}" y2="{ly - 3}"/>'
+                 f'<text class="pin-t us" x="{lx}" y="{ly}">{name}</text><text class="pin-s us" x="{lx}" y="{ly + 6.5}">{sub}</text>')
+    legend = '<text class="us-leg" x="400" y="258" text-anchor="end">Remote support in all 50 states</text>'
+    return (f'<svg class="{cls}" viewBox="-14 -6 428 270" role="img" aria-label="Map of the United States.  California is highlighted with marks at Arcata and at our Huntington Beach headquarters.  Rings spread from Huntington Beach across the country.">'
+            f'<defs><clipPath id="usclip"><rect x="-14" y="-6" width="428" height="270"/></clipPath></defs>'
+            f'<g>{grat}</g><path class="nation" d="{US["nation"]}"/><path class="borders" d="{US["borders"]}"/>'
+            f'<g clip-path="url(#usclip)">{pulses}</g>'
+            f'<path class="land" d="{US["ca"]}" style="stroke-width:.7"/>{rings}{trees}{pins}{legend}</svg>')
+
 def two_voice(h):
     """'Find the gaps <em>before someone else does</em>.' -> serif line, heavy line."""
     m = re.match(r'(.*?)<em>(.*?)</em>(.*)', h)
@@ -81,7 +101,7 @@ def page(fname, title, desc, body, extra_js='', hero_header=True):
 <footer class="foot">
   <div class="wrap">
     <div class="cols">
-      <div><a class="brand" href="index.html" aria-label="Cali IT Consulting, home">{sb.logo_dark()}</a><p>Senior IT consulting from Huntington Beach, California.  On-site across Southern California, remote anywhere in the United States.</p></div>
+      <div><a class="brand" href="index.html" aria-label="Cali IT Consulting, home">{sb.logo_dark()}</a><p>Senior IT consulting, headquartered in Huntington Beach, California and serving clients across the United States.</p></div>
       <div><h4>Services</h4><ul>{svc_links}</ul></div>
       <div><h4>Company</h4><ul><li><a href="industries.html">Industries</a></li><li><a href="engagement.html">How we work</a></li><li><a href="why-us.html">Why us</a></li><li><a href="about.html">About</a></li><li><a href="testimonials.html">Testimonials</a></li></ul></div>
       <div><h4>Get in touch</h4><ul><li><a href="contact.html">Contact us</a></li><li><a href="why-us.html#check">Free IT health check</a></li><li><a href="privacy.html">Privacy</a></li></ul></div>
@@ -162,7 +182,7 @@ def close_block():
     st = f'<svg class="close-state" viewBox="0 0 200 220" aria-hidden="true"><path d="{CA}" fill="#8fb3d9"/></svg>'
     return f'''<section class="chart-sec close-sec on-dark" id="talk">{st}<div class="wrap">
   <div><h2>Tell us what you're working on.</h2><p class="lead" style="margin-top:20px">An audit on the calendar, an office move, a security worry or an IT person who just gave notice.  Send a few lines and we'll reply within one business day.</p>
-  <p style="margin-top:28px;color:#8ea2b8;font-size:15px">Headquarters in Huntington Beach, California.<br>On-site across Southern California.  Remote anywhere in the United States.</p></div>
+  <p style="margin-top:28px;color:#8ea2b8;font-size:15px">Headquarters in Huntington Beach, California.<br>On-site across California.  Remote support in all 50 states.</p></div>
   {form(True)}
 </div></section>'''
 
@@ -172,13 +192,14 @@ def home():
     body = f'''
 <section class="chart-sec hero on-dark"><div class="wrap">
   <div>
-    <p class="kicker">IT consulting from Arcata to Huntington Beach</p>
+    <p class="kicker">Rooted in California.  Serving businesses nationwide.</p>
     <h1><span class="h-serif">Senior IT,</span><span class="h-heavy">built for audits and uptime.</span></h1>
     <p class="lead">Thirty years of running IT inside FDA-regulated labs, global manufacturers and growing firms.  We find the gaps, build it right the first time, and keep it running.</p>
     <div class="acts"><a class="btn" href="#talk">Contact us</a><a class="btn line" href="services.html">See our services</a></div>
+    <p class="reach-note">On-site across California.  Remote support in all 50 states.</p>
   </div>
-  <div class="map">{chart(cls='draw')}</div>
-</div><p class="chart-note">Field chart of California.  Red marks show where we work from.</p></section>
+  <div class="map us">{us_chart(cls='draw')}</div>
+</div><p class="chart-note">Red marks show our California home base.  We support clients in every state.</p></section>
 
 <section class="statement"><div class="wrap">
   <p class="big">We've moved headquarters and data centers, joined <b>ten-plus</b> companies after acquisitions, built certified labs, and walked into SOX, HIPAA and ISO audits calm.  Now we do it for you.</p>
@@ -192,7 +213,7 @@ def home():
 {standard_block()}
 {quote_block(1)}
 {close_block()}'''
-    page('index.html', 'Cali IT Consulting | Senior IT for regulated businesses', "Cali IT Consulting: senior IT for businesses that answer to auditors.  Microsoft 365, cybersecurity, networks, cloud, data centers, compliance and IT strategy.  Huntington Beach, California.", body, CUBE_JS())
+    page('index.html', 'Cali IT Consulting | Senior IT for regulated businesses nationwide', "Cali IT Consulting: senior IT for businesses that answer to auditors.  Microsoft 365, cybersecurity, networks, cloud, data centers, compliance and IT strategy.  Headquartered in Huntington Beach, California, serving clients nationwide.", body, CUBE_JS())
 
 def services():
     body = phero('Everything your IT needs,', 'under one roof.', 'Nine practice areas, one team.  Bring us a single project or hand us the whole stack.') + index_block(head=False) + f'''
@@ -201,7 +222,7 @@ def services():
   <ul class="ticks"><li>Microsoft 365 and identity security</li><li>Backups and recovery</li><li>Network, firewall and Wi-Fi</li><li>Licensing and vendor spend</li><li>Compliance gaps and evidence</li><li>A ranked, written remediation plan</li></ul>
 </div></section>
 {close_block()}'''
-    page('services.html', 'Services | Cali IT Consulting', 'Microsoft 365, cybersecurity, network, cloud, data center, compliance, access control, business automation and IT strategy.', body, CUBE_JS())
+    page('services.html', 'Services | Cali IT Consulting', 'Microsoft 365, cybersecurity, network, cloud, data center, compliance, access control, business automation and IT strategy, for clients nationwide.', body, CUBE_JS())
 
 def service(i, s):
     m = re.match(r'(.*?)<em>(.*?)</em>(.*)', s['h']); a, b, c = m.groups()
@@ -219,7 +240,7 @@ def service(i, s):
 </div></section>
 <section class="band white"><div class="wrap"><nav class="next-prev" aria-label="More services"><a href="{prev['slug']}.html"><small>Previous service</small><b>{prev['name']}</b></a><a href="{nxt['slug']}.html" style="text-align:right"><small>Next service</small><b>{nxt['name']}</b></a></nav></div></section>
 {close_block()}'''
-    page(s['slug'] + '.html', f'{s["name"]} | Cali IT Consulting', f'{s["name"]} from Cali IT Consulting.  {s["intro"].split("  ")[0]}', body)
+    page(s['slug'] + '.html', f'{s["name"]} | Cali IT Consulting', f'{s["name"]} from Cali IT Consulting, serving clients nationwide.  {s["intro"].split("  ")[0]}', body)
 
 def industries():
     rows = ''.join(f'<article class="ind"><div><h3>{t}</h3><p>{d}</p></div><ul class="ticks">{"".join(f"<li>{x}</li>" for x in l)}</ul></article>' for _, t, d, l in sb.INDUSTRIES)
@@ -258,18 +279,18 @@ def about():
     stats = ''.join(f'<div><strong>{n}</strong>{t}</div>' for n, t in STATS2)
     body = phero('Built by people', 'who ran IT, not just sold it.', "Cali IT Consulting brings 30 years of IT leadership to businesses that can't afford downtime.") + f'''
 <section class="statement"><div class="wrap">
-  <p class="big">Our team has run technology for FDA-regulated medical device and diagnostics companies, global manufacturers and growing firms, from the North Coast to Huntington Beach and well beyond.</p>
+  <p class="big">Our team has run technology for FDA-regulated medical device and diagnostics companies, global manufacturers and growing firms, from the North Coast to Huntington Beach and across the country.</p>
   <div class="margin">{stats}</div>
 </div></section>
 <section class="band fog"><div class="wrap two">
   <div><h2>What we do.</h2></div>
-  <div class="prose"><p class="lead">We've led more than ten acquisitions, moved headquarters and data centers, built certified labs, and passed SOX, HIPAA and ISO audits.</p><p>We handle Microsoft 365, cybersecurity, networks, cloud, data centers, physical security, compliance and IT strategy.  We work on-site across Southern California and remotely anywhere in the United States.  You get senior-level answers from people who have done the work, not a sales pitch.</p></div>
+  <div class="prose"><p class="lead">We've led more than ten acquisitions, moved headquarters and data centers, built certified labs, and passed SOX, HIPAA and ISO audits.</p><p>We handle Microsoft 365, cybersecurity, networks, cloud, data centers, physical security, compliance and IT strategy.  We work on-site across California and support clients remotely in all 50 states, traveling on-site when the job needs it.  You get senior-level answers from people who have done the work, not a sales pitch.</p></div>
 </div></section>
 <section class="standard-sec on-dark"><div class="wrap"><h2>What we stand for.</h2><div class="promises">{vals}</div></div></section>
 {notes_block()}
 {quote_block(2)}
 {close_block()}'''
-    page('about.html', 'About | Cali IT Consulting', 'Cali IT Consulting: senior IT consultants with 30 years of leadership in regulated companies.  Huntington Beach, California.', body)
+    page('about.html', 'About | Cali IT Consulting', 'Cali IT Consulting: senior IT consultants with 30 years of leadership in regulated companies.  Headquartered in Huntington Beach, California, serving clients nationwide.', body)
 
 def testimonials():
     rows = ''
@@ -282,10 +303,10 @@ def testimonials():
 def contact():
     body = phero('Tell us what', "you're working on.", 'Fill out the form and a senior consultant will get back to you within one business day.') + f'''
 <section class="band white"><div class="wrap two">
-  <div><h2>Where we work.</h2><ul class="ticks" style="margin-top:28px"><li>Headquarters in Huntington Beach, California</li><li>On-site and remote across Southern California</li><li>Remote support anywhere in the United States</li><li>A reply from a senior consultant within one business day</li></ul></div>
+  <div><h2>California headquarters.  Nationwide clients.</h2><ul class="ticks" style="margin-top:28px"><li>Headquarters in Huntington Beach, California</li><li>On-site across California</li><li>Remote support in all 50 states, and on-site travel when the job needs it</li><li>A reply from a senior consultant within one business day</li></ul></div>
   {form(False)}
 </div></section>'''
-    page('contact.html', 'Contact | Cali IT Consulting', 'Contact Cali IT Consulting.  A senior consultant will reply within one business day.', body)
+    page('contact.html', 'Contact | Cali IT Consulting', 'Contact Cali IT Consulting.  California headquarters, clients nationwide.  A senior consultant will reply within one business day.', body)
 
 def thanks():
     body = phero('Thanks.', 'We got your message.', 'A senior consultant will reply within one business day.') + '<section class="band white"><div class="wrap"><a class="btn ink" href="index.html">Back to the home page</a></div></section>'
