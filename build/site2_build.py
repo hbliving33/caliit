@@ -27,7 +27,7 @@ def chart(cls='', labels=True, draw=False, vb='-34 -12 276 246'):
             if p['lat'] % 2 == 0 and 34 <= p['lat'] <= 42:
                 y = float(p['d'].split(' L')[0].split()[1])
                 gl += f'<text class="grat-t" x="-31" y="{y + 1.5:.1f}">{p["lat"]}°N</text>'
-    rings = ''.join(f'<g transform="translate({CX} {CY}) scale({k}) translate({-CX} {-CY})"><path class="ring" d="{CA}" stroke-width="{.55 / k:.2f}" opacity="{op}"/></g>' for k, op in [(.8, .2), (.6, .13), (.4, .09)])
+    rings = ''.join(f'<g transform="translate({CX} {CY}) scale({k}) translate({-CX} {-CY})"><path class="ring" d="{CA}" stroke-width="{.55 / k:.2f}" opacity="{op}"/></g>' for k, op in [])
     trees = redwood(26, 66, 30, '#3c5c80', 1, wr=.42).replace('<g opacity="1">', '<g class="tree">') + redwood(34, 70, 22, '#3c5c80', .8, wr=.42)
     pins = ''
     for (x, y), name, sub, lx, ly, anchor in [(ARCATA, 'Arcata', 'North Coast', 46, 12, 'start'), (HB, 'Huntington Beach', 'Headquarters', 168, 226, 'start')]:
@@ -43,7 +43,7 @@ def us_chart(cls=''):
     """Lower 48 in faint outline, California bright with contours, redwoods, two marks, and rings pulsing out from Huntington Beach."""
     cx, cy = US['cc']; hx, hy = US['hb']['x'], US['hb']['y']; ax, ay = US['ar']['x'], US['ar']['y']
     grat = ''.join(f'<path class="grat" d="{d}"/>' for d in US['grat'])
-    rings = ''.join(f'<g transform="translate({cx} {cy}) scale({k}) translate({-cx} {-cy})"><path class="ring" d="{US["ca"]}" stroke-width="{.45 / k:.2f}" opacity="{op}"/></g>' for k, op in [(.8, .22), (.6, .15), (.4, .1)])
+    rings = ''.join(f'<g transform="translate({cx} {cy}) scale({k}) translate({-cx} {-cy})"><path class="ring" d="{US["ca"]}" stroke-width="{.45 / k:.2f}" opacity="{op}"/></g>' for k, op in [])
     trees = redwood(11.5, 86, 11, '#3c5c80', 1, wr=.42) + redwood(14.2, 87.5, 8, '#3c5c80', .8, wr=.42)
     pulses = ''.join(f'<circle class="reach" cx="{hx}" cy="{hy}" r="12" style="animation-delay:{d}s"/>' for d in (0, 1.6, 3.2))
     pins = ''

@@ -386,3 +386,6 @@ h3 { font: 700 21px/1.25 var(--sans); }
 @media (max-width: 980px) { .top .wrap { min-height: 84px; } .brand svg { height: 70px; } }
 @media (max-width: 900px) { .hero { padding-top: 104px; } .phero { padding-top: 104px; } }
 @media (max-width: 900px) { .chart-note { position: relative; right: auto; bottom: auto; z-index: 2; padding: 14px var(--gut) 0; margin: 0; } .map .us-leg { display: none; } }
+
+/* California stands out by fill, no contour copies */
+.map .land { fill: #1d3a5c; stroke: var(--sky); }
