@@ -1,10 +1,9 @@
-# Cali IT website
+# caliit.com
 
-Static site, hosted on GitHub Pages.  No build step: edit the HTML and push.
+Cali IT Consulting website, hosted on GitHub Pages.
 
-- `index.html`: home page with the interactive cube
-- `services.html`, `about.html`, `contact.html`: inner pages
-- `404.html`: page-not-found screen
-- `assets/css/site.css`: all styles
-- `assets/js/cube.js`: cube animation (home page only)
-- `assets/img/badge.svg`: logo and browser tab icon
+- `python3 build/site_build.py` rebuilds every public page from the content in that file.
+- Styles: `assets/css/cali.css`.  Scripts: `assets/js/site.js` (menu, health check, contact form, visit counter), `cube.js` and `heroswap.js` (home page cube).
+- Logo files (high-resolution PNG and vector PDF): `assets/brand/`.
+- Contact form saves to the Supabase project "caliit" (table `contact_requests`) and emails a copy through FormSubmit.
+- Review pages (not linked, noindex): `logos.html`, `focus.html`, `pick.html`.

@@ -1,2 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /logos.html
+Disallow: /focus.html
+Disallow: /pick.html
+Sitemap: https://caliit.com/sitemap.xml

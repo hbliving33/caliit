@@ -8,14 +8,14 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 import json
 SHIFT = json.loads((ROOT / 'build' / 'pick_shift.json').read_text()) if (ROOT / 'build' / 'pick_shift.json').exists() else {}
 
-def lockup(bg, tint, it_col, line_col, it_size, panel=True, gid='p'):
+def lockup(bg, tint, it_col, line_col, it_size, panel=True, gid='p', on_dark=False):
     """Panel: 250 x 100 at (40, 0), center (165, 50).  The state and trees are scaled so the whole state sits inside the
     panel with an even 6-unit margin top and bottom, centered left to right.  The text block is centered by measurement
     (pick_shift.json holds the measured nudge for each version)."""
     x, y, h = 122, 0, 96
-    tx = '#ffffff' if panel else '#0f1c2d'
-    sub = '#c3ccd4' if panel else '#5b6675'
-    op_s, op_t = (.2, .3) if panel else (.1, .2)
+    tx = '#ffffff' if panel or on_dark else '#0f1c2d'
+    sub = '#c3ccd4' if panel or on_dark else '#5b6675'
+    op_s, op_t = (.2, .3) if panel or on_dark else (.1, .2)
     tw = 10 * (10.5 * .62 + 5)
     k = 86 / 96                                   # state height 86 inside a 100-high panel, 7 above and 7 below
     sc = h / 220                                  # state drawn in a 200 x 220 box
@@ -48,6 +48,8 @@ items = [
     ('275 in the 278 colors, IT smallest', lockup(NAVY, TINT_D, STEEL_D, STEEL_D, 27, gid='c'), lockup('#ffffff', STEEL_L, STEEL_L, STEEL_L, 27, panel=False, gid='cl')),
     ('Smaller IT, white IT with steel lines', lockup(NAVY, TINT_D, '#ffffff', STEEL_D, 31, gid='d'), lockup('#ffffff', STEEL_L, NAVY, STEEL_L, 31, panel=False, gid='dl')),
 ]
+if __name__ != '__main__':
+    pass
 src = (ROOT / 'focus.html').read_text()
 head = src[:src.index('<body>')].replace('<title>Cali IT logo focus</title>', '<title>Cali IT pick</title>')
 cards = ''
