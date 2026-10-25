@@ -26,9 +26,10 @@ def m_split(c1,c2): return f'<path d="M48 14 A24 24 0 0 0 10 32" fill="none" str
 def m_circuit(c1,c2): return f'<path d="M44 16 A20 20 0 1 0 44 48" fill="none" stroke="{c1}" stroke-width="6" stroke-linecap="round"/><path d="M32 32 H56 M44 32 V20 H56 M44 32 V44 H56" fill="none" stroke="{c2}" stroke-width="3"/><circle cx="56" cy="20" r="3" fill="{c2}"/><circle cx="56" cy="32" r="3" fill="{c2}"/><circle cx="56" cy="44" r="3" fill="{c2}"/>'
 MARKS = [('Shield',m_shield),('Hexagon',m_hex),('Tile',m_rsq),('Ring',m_ring),('Signal bars',m_bars),('Peak',m_chev),('Network',m_nodes),
          ('Coastline',m_sun),('Lock',m_lock),('Arcs',m_arcs),('Grid',m_grid),('Brackets',m_brkt),('Cloud',m_cloud),('Split C',m_split),('Circuit C',m_circuit)]
-PALS = [('Pacific','#1f6feb','#e5484d','#334155','#6ea8fe'),('Harbor','#2563eb','#dc3545','#1e293b','#7aa7ff'),
-        ('Coastal','#0f7bd8','#e8505b','#3f4b5e','#5fb3f6'),('Skyline','#3b6fd8','#f05454','#2b3445','#8fb0f5'),
-        ('Steel','#2f5fb3','#d9434f','#475569','#86a8e6')]
+PALS = [('Pacific Teal','#0e7c86','#f08a4b','#1f2d3d','#5fd0d8'),('Redwood & Sage','#2f6d4f','#c99a2e','#243028','#7fc8a0'),
+        ('Indigo Sunset','#3d348b','#f18701','#262338','#a59bf0'),('Plum & Peach','#6a3f99','#f27c5f','#2a2438','#c2a6ee'),
+        ('Graphite & Lime','#2f3a40','#6bb33e','#1f2629','#cfd8dc'),('Slate & Coral','#36557a','#ef6f6c','#1f2933','#9fb8d6'),
+        ('Desert Clay','#b5562b','#23867a','#2d2a26','#eba07a'),('Ocean & Amber','#14619e','#e09a00','#1c2533','#74b3f0')]
 PALETTES = [(b,r) for _,b,r,_,_ in PALS]
 TINT = {b:t for _,b,_,_,t in PALS}
 TEXT = {b:x for _,b,_,x,_ in PALS}
@@ -46,7 +47,7 @@ combos = list(itertools.product(range(len(MARKS)), range(len(WORDS))))
 seen=set()
 i=0
 while len(cards)<50:
-    mi = i % len(MARKS); wi = (i*2 + i//len(MARKS)) % len(WORDS); fi = (i*7) % len(FONTS); pi = (i*3 + i//len(MARKS)) % len(PALETTES)
+    mi = i % len(MARKS); wi = (i*2 + i//len(MARKS)) % len(WORDS); fi = (i*7) % len(FONTS); pi = i % len(PALETTES)
     i += 1
     if (mi,wi) in seen: continue
     seen.add((mi,wi)); n += 1
@@ -66,12 +67,12 @@ html = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name
 header{{max-width:1240px;margin:0 auto;padding:28px 20px 6px}} h1{{margin:0;font-size:26px}} header p{{margin:6px 0 0;color:#5b6578}}
 .grid{{max-width:1240px;margin:0 auto;padding:18px 20px 40px;display:grid;grid-template-columns:repeat(auto-fill,minmax(360px,1fr));gap:16px}}
 .card{{margin:0;background:#fff;border:1px solid #e3e7ef;border-radius:14px;overflow:hidden}}
-.light{{padding:14px 14px 6px}} .dark{{background:#13213a;padding:10px 14px}} svg{{display:block;width:100%;height:auto}}
-figcaption{{padding:8px 14px 12px;font-size:13px;color:#5b6578}} figcaption b{{color:#e5484d;margin-right:6px}}
+.light{{padding:14px 14px 6px}} .dark{{background:#1a2230;padding:10px 14px}} svg{{display:block;width:100%;height:auto}}
+figcaption{{padding:8px 14px 12px;font-size:13px;color:#5b6578}} figcaption b{{color:#0e7c86;margin-right:6px}}
 .pals{{max-width:1240px;margin:0 auto;padding:14px 20px 0;display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}}
 .pal{{background:#fff;border:1px solid #e3e7ef;border-radius:12px;padding:12px 14px}} .chips{{display:flex;gap:6px;margin-bottom:8px}} .chips i{{width:34px;height:34px;border-radius:8px;display:block}}
 .pal b{{display:block;font-size:15px}} .pal small{{color:#5b6578;font-size:12px}} h2{{max-width:1240px;margin:22px auto 0;padding:0 20px;font-size:18px}}
-</style></head><body><header><h1>Cali IT logo options</h1><p>A lighter, refreshed red, white and blue: brighter blue, a softer coral red, and slate gray for text.  No flag.  Pick a color scheme by name and a logo by number, or mix a mark from one with the type from another.</p></header>
+</style></head><body><header><h1>Cali IT logo options</h1><p>Eight new color schemes, no red, white and blue.  Each logo is shown in one scheme, but any logo works in any scheme.  Pick a scheme by name and a logo by number, for example: logo 14 in Pacific Teal.</p></header>
 <h2>Refreshed color schemes</h2><section class="pals">{sw}</section><h2>Logo options</h2><main class="grid">{"".join(cards)}</main></body></html>'''
 (ROOT / 'logos.html').write_text(html)
 print('cards', len(cards))
