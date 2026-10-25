@@ -120,6 +120,22 @@ for t, (layout, what) in enumerate(plan):
     cards2.append(f'<figure class="card"><div class="light"><svg viewBox="0 0 330 96" role="img" aria-label="Cali IT logo option {n2}" style="font-family:\'{f}\'">{light}</svg></div>'
                   f'<div class="dark"><svg viewBox="0 0 330 96" aria-hidden="true" style="font-family:\'{f}\'">{dark}</svg></div><figcaption><b>{n2}</b> {label} · {fnt} · {pal}</figcaption></figure>')
 
+# ---------------- Set 3 (101-130): California-shaped marks ----------------
+from logos_set3 import logo as ca_logo, KINDS as CA_KINDS
+cards3 = []; n3 = 100
+SANS3 = ['Montserrat','Inter','Sora','Manrope','Archivo','Outfit','Lexend','IBM Plex Sans','Space Grotesk','Barlow']
+order = list(range(len(CA_KINDS))) + list(range(14))
+for t, ki in enumerate(order):
+    n3 += 1
+    label, kind = CA_KINDS[ki]
+    c1, c2 = PALETTES[(t * 5 + 2) % len(PALETTES)]
+    f = SANS3[t % len(SANS3)]
+    pal = next(nm for nm, b, *_ in PALS if b == c1)
+    lt = ca_logo(kind, f, TEXT[c1], c1, c2, '#ffffff', f'c{n3}l')
+    dk = ca_logo(kind, f, '#ffffff', TINT[c1], c2, '#1a2230', f'c{n3}d')
+    cards3.append(f'<figure class="card"><div class="light"><svg viewBox="0 0 330 96" role="img" aria-label="Cali IT logo option {n3}" style="font-family:\'{f}\'">{lt}</svg></div>'
+                  f'<div class="dark"><svg viewBox="0 0 330 96" aria-hidden="true" style="font-family:\'{f}\'">{dk}</svg></div><figcaption><b>{n3}</b> {label} · {f} · {pal}</figcaption></figure>')
+
 html = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex"><title>Cali IT logo options</title>
 <style>{faces}
@@ -133,6 +149,6 @@ figcaption{{padding:8px 14px 12px;font-size:13px;color:#5b6578}} figcaption b{{c
 .pal{{background:#fff;border:1px solid #e3e7ef;border-radius:12px;padding:12px 14px}} .chips{{display:flex;gap:6px;margin-bottom:8px}} .chips i{{width:34px;height:34px;border-radius:8px;display:block}}
 .pal b{{display:block;font-size:15px}} .pal small{{color:#5b6578;font-size:12px}} h2{{max-width:1240px;margin:22px auto 0;padding:0 20px;font-size:18px}}
 </style></head><body><header><h1>Cali IT logo options</h1><p>Eight new color schemes, no red, white and blue.  Each logo is shown in one scheme, but any logo works in any scheme.  Pick a scheme by name and a logo by number, for example: logo 14 in Pacific Teal.</p></header>
-<h2>Refreshed color schemes</h2><section class="pals">{sw}</section><h2 id="set2">New styles, 51 to 100</h2><main class="grid">{"".join(cards2)}</main><h2 id="set1">First set, 1 to 50</h2><main class="grid">{"".join(cards)}</main></body></html>'''
+<h2>Refreshed color schemes</h2><section class="pals">{sw}</section><h2 id="set3">California, 101 to 130</h2><main class="grid">{"".join(cards3)}</main><h2 id="set2">New styles, 51 to 100</h2><main class="grid">{"".join(cards2)}</main><h2 id="set1">First set, 1 to 50</h2><main class="grid">{"".join(cards)}</main></body></html>'''
 (ROOT / 'logos.html').write_text(html)
 print('cards', len(cards))
