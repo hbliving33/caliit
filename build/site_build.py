@@ -150,7 +150,7 @@ PAINS = [('Your IT person left, and nobody knows the passwords.', 'it-strategy')
          ('Your team types the same order into three different systems.', 'business-automation')]
 TESTIMONIALS = json.loads((ROOT / 'build' / 'testimonials.json').read_text())
 
-NAV = [('services.html', 'Services'), ('industries.html', 'Industries'), ('engagement.html', 'How We Work'), ('why-us.html', 'Why Us'), ('about.html', 'About')]
+NAV = [('index.html', 'Home'), ('services.html', 'Services'), ('industries.html', 'Industries'), ('engagement.html', 'How We Work'), ('why-us.html', 'Why Us'), ('about.html', 'About')]
 
 # ---------- page shell ----------
 def page(fname, title, desc, body, extra_js=''):
