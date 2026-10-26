@@ -29,6 +29,18 @@
     });
   }
 
+  // map chips: each one cycles through the technologies we support
+  const chips = [...document.querySelectorAll(".chip[data-words]")];
+  if (chips.length && !reduce) {
+    chips.forEach((c, i) => {
+      const words = c.dataset.words.split("|"); let n = 0;
+      setTimeout(() => setInterval(() => {
+        c.classList.add("swap");
+        setTimeout(() => { n = (n + 1) % words.length; c.textContent = words[n]; c.classList.remove("swap"); }, 250);
+      }, 3600), 4200 + i * 700);
+    });
+  }
+
   // testimonial rotator
   const rot = document.getElementById("quoteRot");
   if (rot) {

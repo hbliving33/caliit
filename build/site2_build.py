@@ -64,13 +64,16 @@ def us_chart(cls=''):
             f'<g>{grat}</g><path class="nation" d="{US["nation"]}"/><path class="borders" d="{US["borders"]}"/>'
             f'<path class="land" d="{US["ca"]}" style="stroke-width:.7"/>{trees}<g class="links">{arcs}{nodes}{packets}</g>{pins}</svg>')
 
-CHIPS = [('Minneapolis', 'Servers and storage'), ('NewYork', 'Microsoft 365 licensing'), ('Atlanta', 'Day-to-day IT operations'),
-         ('Dallas', 'Networks and Wi-Fi'), ('Denver', 'Data centers and colocation')]
+CHIPS = [('Minneapolis', ['Microsoft 365', 'Exchange Online', 'Teams', 'SharePoint']),
+         ('NewYork', ['Azure', 'Entra ID', 'Intune', 'Conditional access']),
+         ('Denver', ['VMware', 'NetApp', 'Synology', 'Cloud backup']),
+         ('Dallas', ['Cisco Meraki', 'UniFi', 'Site-to-site VPN', 'Dell and HP servers']),
+         ('Atlanta', ['Power Automate', 'Power Apps', 'NetSuite', 'HubSpot and Pipedrive'])]
 def us_map_block():
     chips = ''
-    for i, (city, label) in enumerate(CHIPS):
+    for i, (city, words) in enumerate(CHIPS):
         x, y = US['cities'][city]
-        chips += f'<span class="chip" style="left:{(x + 14) / 428 * 100:.2f}%;top:{(y + 6) / 270 * 100:.2f}%;--i:{i}">{label}</span>'
+        chips += f'<span class="chip" data-words="{"|".join(words)}" style="left:{(x + 14) / 428 * 100:.2f}%;top:{(y + 6) / 270 * 100:.2f}%;--i:{i}">{words[0]}</span>'
     return f'<div class="map us">{us_chart(cls="draw")}<div class="chips" aria-hidden="true">{chips}</div><p class="map-cap">Remote support in all 50 states</p></div>'
 
 def palm(x, base, h, col, op=1):
