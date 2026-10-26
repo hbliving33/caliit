@@ -41,24 +41,37 @@ def chart(cls='', labels=True, draw=False, vb='-34 -12 276 246'):
 
 US = json.loads((ROOT / 'build' / 'us_chart.json').read_text())
 def us_chart(cls=''):
-    """Lower 48 in faint outline, California bright with contours, redwoods, two marks, and rings pulsing out from Huntington Beach."""
-    cx, cy = US['cc']; hx, hy = US['hb']['x'], US['hb']['y']; ax, ay = US['ar']['x'], US['ar']['y']
+    """Lower 48 in outline, California highlighted with redwoods, wave and board, two marks, and live-looking links:
+    arcs from Huntington Beach to cities across the country with light traveling along them."""
+    hx, hy = US['hb']['x'], US['hb']['y']; ax, ay = US['ar']['x'], US['ar']['y']
     grat = ''.join(f'<path class="grat" d="{d}"/>' for d in US['grat'])
-    rings = ''.join(f'<g transform="translate({cx} {cy}) scale({k}) translate({-cx} {-cy})"><path class="ring" d="{US["ca"]}" stroke-width="{.45 / k:.2f}" opacity="{op}"/></g>' for k, op in [])
     trees = (redwood(11.5, 86, 11, '#3c5c80', 1, wr=.42) + redwood(14.2, 87.5, 8, '#3c5c80', .8, wr=.42) + redwood(12.9, 89.2, 9, '#4a6d94', 1, wr=.42)
              + wave(37.5, 152, 6, '#4a6d94') + board(48.2, 152, 7, '#5a7ea6'))
-    pulses = ''.join(f'<circle class="reach" cx="{hx}" cy="{hy}" r="12" style="animation-delay:{d}s"/>' for d in (0, 1.6, 3.2))
+    arcs = nodes = packets = ''
+    for i, (name, (x, y)) in enumerate(US['cities'].items()):
+        mx, my = (hx + x) / 2, (hy + y) / 2
+        lift = ((x - hx) ** 2 + (y - hy) ** 2) ** .5 * .28
+        d = f'M{hx} {hy} Q{mx:.1f} {my - lift:.1f} {x} {y}'
+        arcs += f'<path class="arc" d="{d}"/>'
+        nodes += f'<circle class="node" cx="{x}" cy="{y}" r="1.5" style="animation-delay:{(i * .37) % 3:.2f}s"/>'
+        dur = 2.4 + (i % 4) * .45
+        packets += f'<circle class="packet" r="1.25"><animateMotion dur="{dur:.2f}s" begin="{2.4 + i * .3:.1f}s" repeatCount="indefinite" path="{d}"/></circle>'
     pins = ''
-    for (x, y), name, sub, lx, ly in [((ax, ay), 'Arcata', 'North Coast', 20, 52), ((hx, hy), 'Huntington Beach', 'Headquarters', 52, 186)]:
-        pins += (f'<circle class="pin" cx="{x}" cy="{y}" r="1.7"/><line class="lead-line" x1="{x + 1.6}" y1="{y + (-1.2 if y < 100 else 1.2)}" x2="{lx - 1.5}" y2="{ly - 3}"/>'
+    for (x, y), name, sub, lx, ly in [((ax, ay), 'Arcata', 'North Coast', 20, 52), ((hx, hy), 'Huntington Beach', 'Headquarters', 52, 192)]:
+        pins += (f'<circle class="pin-halo" cx="{x}" cy="{y}" r="1.8"/><circle class="pin" cx="{x}" cy="{y}" r="1.8"/><line class="lead-line" x1="{x + 1.6}" y1="{y + (-1.2 if y < 100 else 1.2)}" x2="{lx - 1.5}" y2="{ly - 3}"/>'
                  f'<text class="pin-t us" x="{lx}" y="{ly}">{name}</text><text class="pin-s us" x="{lx}" y="{ly + 6.5}">{sub}</text>')
-    legend = '<text class="us-leg" x="400" y="258" text-anchor="end">Remote support in all 50 states</text>'
-    return (f'<svg class="{cls}" viewBox="-14 -6 428 270" role="img" aria-label="Map of the United States.  California is highlighted with marks at Arcata and at our Huntington Beach headquarters.  Rings spread from Huntington Beach across the country.">'
-            f'<defs><clipPath id="usclip"><rect x="-14" y="-6" width="428" height="270"/></clipPath></defs>'
+    return (f'<svg class="{cls}" viewBox="-14 -6 428 270" role="img" aria-label="Map of the United States.  California is highlighted with marks at Arcata and at our Huntington Beach headquarters.  Lines run from Huntington Beach to cities across the country.">'
             f'<g>{grat}</g><path class="nation" d="{US["nation"]}"/><path class="borders" d="{US["borders"]}"/>'
-            f'<g clip-path="url(#usclip)">{pulses}</g>'
-            f'<path class="land" d="{US["ca"]}" style="stroke-width:.7"/>{rings}{trees}{pins}{legend}</svg>')
+            f'<path class="land" d="{US["ca"]}" style="stroke-width:.7"/>{trees}<g class="links">{arcs}{nodes}{packets}</g>{pins}</svg>')
 
+CHIPS = [('Minneapolis', 'Servers and storage'), ('NewYork', 'Microsoft 365 licensing'), ('Atlanta', 'Day-to-day IT operations'),
+         ('Dallas', 'Networks and Wi-Fi'), ('Denver', 'Data centers and colocation')]
+def us_map_block():
+    chips = ''
+    for i, (city, label) in enumerate(CHIPS):
+        x, y = US['cities'][city]
+        chips += f'<span class="chip" style="left:{(x + 14) / 428 * 100:.2f}%;top:{(y + 6) / 270 * 100:.2f}%;--i:{i}">{label}</span>'
+    return f'<div class="map us">{us_chart(cls="draw")}<div class="chips" aria-hidden="true">{chips}</div><p class="map-cap">Remote support in all 50 states</p></div>'
 
 def palm(x, base, h, col, op=1):
     """A small palm: gently curved trunk, five fronds and a few dates.  (x, base) = foot of the trunk."""
@@ -246,8 +259,8 @@ def home():
     <div class="acts"><a class="btn" href="#talk">Contact us</a><a class="btn line" href="services.html">See our services</a></div>
     <p class="reach-note">On-site across California.  Remote support in all 50 states.</p>
   </div>
-  <div class="map us">{us_chart(cls='draw')}</div>
-</div><p class="chart-note">Red marks show our California home base.  We support clients in every state.</p></section>
+  {us_map_block()}
+</div></section>
 
 <section class="statement"><div class="wrap">
   <p class="big">For <b>thirty years</b> we've built and run the infrastructure behind growing companies: the servers, the networks, the data centers, the licenses and the vendors.  Now we run it for you.</p>
