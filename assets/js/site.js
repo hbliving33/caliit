@@ -1,7 +1,7 @@
 // Cali IT site script: menu, reveal on scroll, testimonial rotator, IT health check, contact form, visit counter.
 (() => {
-  const SB_URL = "https://uwfilkuvwcjltwfmnfsx.supabase.co";
-  const SB_KEY = "sb_publishable_hbSaWzoehgIezzgx3gvnQg_qTsf4zsJ";   // public key: can only add form entries and count visits
+  const SB_URL = "https://mefvxxoytleyfjbwtxix.supabase.co";   // Supabase project "valve-partners" (shared by all Valve Partners sites)
+  const SB_KEY = "sb_publishable_Ex6vMImvvkTdQsFYprve7g_awiuqxEs";   // public key: can only add form entries and count visits
   const MAIL_TO = "[email removed]";
   const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
 
@@ -85,7 +85,7 @@
       if (f._honey.value) { location.href = "thanks.html"; return; }   // bots fill hidden fields
       const send = form.querySelector("button[type=submit]"); send.disabled = true; send.textContent = "Sending...";
       out.hidden = true;
-      const row = { name: f.name.value.trim(), company: f.company.value.trim() || null, email: f.email.value.trim(), phone: f.phone.value.trim() || null,
+      const row = { site: "caliit", name: f.name.value.trim(), company: f.company.value.trim() || null, email: f.email.value.trim(), phone: f.phone.value.trim() || null,
         topic: f.topic.value || null, company_size: f.size.value || null, message: f.message.value.trim(), page: location.pathname };
       const db = fetch(`${SB_URL}/rest/v1/contact_requests`, { method: "POST", headers: { apikey: SB_KEY, "Content-Type": "application/json", Prefer: "return=minimal" }, body: JSON.stringify(row) })
         .then((r) => r.ok).catch(() => false);
