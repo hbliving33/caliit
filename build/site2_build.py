@@ -13,7 +13,7 @@ ARCATA, HB = (14.1, 27.9), (124.5, 191.2)
 ORDER = ['network', 'cloud', 'data-center', 'microsoft-365', 'it-strategy', 'cybersecurity', 'business-automation', 'access-control', 'compliance']
 sb.SERVICES.sort(key=lambda x: ORDER.index(x['slug']))
 for _x in sb.SERVICES:
-    if _x['slug'] == 'cloud': _x['short'] = 'Servers, storage, virtualization and cloud, with backups you have tested.'
+    if _x['slug'] == 'cloud': _x['short'] = 'Servers, storage and virtualization, with backups you have tested.'
     if _x['slug'] == 'microsoft-365': _x['short'] = 'Licensing under control, plus tenant security and migrations.'
     if _x['slug'] == 'it-strategy': _x['short'] = 'Day-to-day IT operations leadership, roadmaps, budgets and vendors.'
 S = {s['slug']: s for s in sb.SERVICES}
