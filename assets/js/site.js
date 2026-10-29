@@ -3,7 +3,7 @@
   const SB_URL = "https://mefvxxoytleyfjbwtxix.supabase.co";   // Supabase project "valve-partners" (shared by all Valve Partners sites)
   const SB_KEY = "sb_publishable_Ex6vMImvvkTdQsFYprve7g_awiuqxEs";   // public key: can only add form entries and count visits
   const MAIL_TO = "[email removed]";
-  const W3F_KEY = "";   // Web3Forms access key for [email removed] (public by design; it can only send to that address)
+  const W3F_KEY = "b88fef65-1434-4f2b-8b2d-9b9cb760e7f0";   // Web3Forms access key for [email removed] (public by design; it can only send to that address)
   const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   // mobile menu
