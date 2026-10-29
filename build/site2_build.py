@@ -14,8 +14,10 @@ ORDER = ['network', 'cloud', 'data-center', 'microsoft-365', 'it-strategy', 'cyb
 sb.SERVICES.sort(key=lambda x: ORDER.index(x['slug']))
 for _x in sb.SERVICES:
     if _x['slug'] == 'cloud': _x['short'] = 'Servers, storage and virtualization, with backups you have tested.'
-    if _x['slug'] == 'microsoft-365': _x['short'] = 'Exchange, Teams, SharePoint, OneDrive, Entra ID and Intune, secured, migrated, managed and licensed right.'
-    if _x['slug'] == 'it-strategy': _x['short'] = 'Day-to-day IT operations leadership, roadmaps, budgets and vendors.'
+    if _x['slug'] == 'microsoft-365': _x['short'] = 'The whole platform: mail, Teams, SharePoint and OneDrive, sharing and file permissions, identity, devices and licensing, set up right and kept clean.'
+    if _x['slug'] == 'cybersecurity': _x['short'] = 'Penetration testing, risk assessments, MFA, email gateway security and a plan for a bad day.'
+    if _x['slug'] == 'access-control': _x['short'] = 'Badge access, security cameras and monitoring for every door and every site.'
+    if _x['slug'] == 'it-strategy': _x['short'] = 'IT operations leadership, repeatable processes, roadmaps, budgets and vendor management.'
 S = {s['slug']: s for s in sb.SERVICES}
 STATS2 = [('30', 'Years in IT leadership'), ('10+', 'Acquisitions integrated'), ('30+', 'Sites networked worldwide'), ('$12M', 'Largest IT budget managed')]
 
