@@ -29,7 +29,7 @@ def chart(cls='', labels=True, draw=False, vb='-34 -12 276 246'):
                 gl += f'<text class="grat-t" x="-31" y="{y + 1.5:.1f}">{p["lat"]}°N</text>'
     rings = ''.join(f'<g transform="translate({CX} {CY}) scale({k}) translate({-CX} {-CY})"><path class="ring" d="{CA}" stroke-width="{.55 / k:.2f}" opacity="{op}"/></g>' for k, op in [])
     trees = (redwood(26, 66, 30, '#3c5c80', 1, wr=.42) + redwood(34, 70, 22, '#3c5c80', .8, wr=.42) + redwood(30.5, 75, 25, '#4a6d94', 1, wr=.42)
-             + wave(133, 193, 16, '#3c5c80') + board(162, 193, 18, '#4a6d94'))
+             + wave(104, 180, 16, '#4a6d94'))
     pins = ''
     for (x, y), name, sub, lx, ly, anchor in [(ARCATA, 'Arcata', 'North Coast', 46, 12, 'start'), (HB, 'Huntington Beach', 'Headquarters', 168, 226, 'start')]:
         pins += f'<circle class="pin-halo" cx="{x}" cy="{y}" r="2.6"/><circle class="pin" cx="{x}" cy="{y}" r="2.6"/>'
@@ -46,7 +46,7 @@ def us_chart(cls=''):
     hx, hy = US['hb']['x'], US['hb']['y']; ax, ay = US['ar']['x'], US['ar']['y']
     grat = ''.join(f'<path class="grat" d="{d}"/>' for d in US['grat'])
     trees = (redwood(11.5, 86, 11, '#3c5c80', 1, wr=.42) + redwood(14.2, 87.5, 8, '#3c5c80', .8, wr=.42) + redwood(12.9, 89.2, 9, '#4a6d94', 1, wr=.42)
-             + wave(37.5, 152, 6, '#4a6d94') + board(48.2, 152, 7, '#5a7ea6'))
+             + wave(30, 145.5, 6, '#5a7ea6'))
     arcs = nodes = packets = ''
     for i, (name, (x, y)) in enumerate(US['cities'].items()):
         mx, my = (hx + x) / 2, (hy + y) / 2
