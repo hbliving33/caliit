@@ -229,7 +229,7 @@ def compare_block(intro=True):
         return f'<tr><th scope="row">{label}</th>' + ''.join(f'<td data-col="{e[0]}">{fn(e)}</td>' for e in sb.ENGAGE) + '</tr>'
     ul = lambda xs: '<ul>' + ''.join(f'<li>{x}</li>' for x in xs) + '</ul>'
     body = row('How it works', lambda e: e[2]) + row("What's included", lambda e: ul(e[3])) + row('Typical work', lambda e: ul(e[4])) + row('Best for', lambda e: e[5][0].upper() + e[5][1:] + '.')
-    i = '<h2>Three ways to work with us.</h2><p class="lead" style="margin-top:18px">Start with one and add another later.  Many clients fix the foundation with a project, then keep it that way with managed support.</p>' if intro else ''
+    i = '<h2>Three ways to work with us.</h2><p class="lead" style="margin-top:18px">Start with one and add another later.  Many clients fix the foundation with a project, then keep it that way with a managed IT plan sized for them.</p>' if intro else ''
     return f'<section class="compare-sec"><div class="wrap">{i}<table class="compare"><thead><tr><td></td>{heads}</tr></thead><tbody>{body}</tbody></table></div></section>'
 
 def standard_block():
@@ -329,11 +329,11 @@ def industries():
 def engagement():
     steps = [('Send us a message', "Tell us what's going on through the contact form.  We reply within one business day."), ('Get a written proposal', 'A clear scope, timeline and price, in plain English.'), ('Kick off', 'We get to work, keep you posted and document everything as we go.'), ('Hand-off or ongoing', 'Projects end with documentation you own.  Managed and fractional work continue month to month.')]
     st = ''.join(f'<div><h3><span style="font:400 15px var(--heavy);color:#8fb3d9;display:block;margin-bottom:8px">Step {n}</span>{t}</h3><p>{d}</p></div>' for n, (t, d) in enumerate(steps, 1))
-    body = phero('Work with us', 'the way that fits.', 'One job, ongoing support or a senior IT leader part time.  Start with one, add another later.') + compare_block(intro=False) + f'''
+    body = phero('Work with us', 'the way that fits.', 'One job, a managed IT plan built around you, or a senior IT leader part time.  Start with one, add another later.') + compare_block(intro=False) + f'''
 <section class="standard-sec on-dark"><div class="wrap"><h2>How an engagement starts.</h2><div class="promises four">{st}</div></div></section>
 {standard_block().replace('standard-sec on-dark', 'band white').replace('class="promises"', 'class="promises light-p"')}
 {close_block()}'''
-    page('engagement.html', 'How We Work | Cali IT Consulting', 'Projects, managed support or fractional IT leadership.  Written scope and price before work starts.', body)
+    page('engagement.html', 'How We Work | Cali IT Consulting', 'Projects, a managed IT plan built around you, or fractional IT leadership.  Written scope and price before work starts.', body)
 
 def why():
     qs = ''.join(f'<li data-q="{i}"><p>{q}</p><div class="yn"><button type="button" data-v="1" aria-pressed="false">Yes</button><button type="button" data-v="0" aria-pressed="false">No</button></div></li>' for i, q in enumerate(sb.QUESTIONS))
@@ -398,7 +398,28 @@ def notfound():
     body = phero('This page', 'is off the map.', "The page you're looking for isn't here.") + '<section class="band white"><div class="wrap"><a class="btn ink" href="index.html">Home page</a> &nbsp; <a class="link" href="services.html">Services</a></div></section>'
     page('404.html', 'Page not found | Cali IT Consulting', 'Page not found.', body)
 
+def cube_preview():
+    S2 = {x['slug']: x for x in sb.SERVICES}
+    codes = {'network': 'NET', 'cloud': 'CLD', 'data-center': 'DC', 'microsoft-365': 'M365', 'ai': 'AI', 'cybersecurity': 'SEC',
+             'it-strategy': 'STRAT', 'business-automation': 'AUTO', 'access-control': 'ACS', 'compliance': 'CMP'}
+    it = lambda slug: {'slug': slug, 'code': codes[slug], 'name': {'ai': 'Artificial intelligence'}.get(slug, S2[slug]['name']), 'short': S2[slug]['short']}
+    front = [it(x) for x in ['network', 'cloud', 'data-center', 'microsoft-365', 'ai', 'cybersecurity', 'it-strategy', 'business-automation', 'access-control']]
+    techs = ['Cisco Meraki', 'UniFi', 'Site-to-site VPN', 'Wi-Fi', 'Firewalls', 'Switching', 'Remote access', 'Monitoring', 'Phone systems',
+             'Azure', 'VMware', 'NetApp', 'Synology', 'Dell servers', 'HP servers', 'Cloud backup', 'Colocation', 'Disaster recovery',
+             'Entra ID', 'Exchange Online', 'SharePoint', 'OneDrive', 'Teams', 'Intune', 'Conditional access', 'Copilot', 'Power Apps',
+             'Power Automate', 'NetSuite', 'HubSpot', 'Pipedrive', 'Pen testing', 'Email gateway', 'Badge access', 'Cameras', 'UPS and power']
+    top = ['SOX', 'HIPAA', 'ISO 27001', 'GDPR', it('compliance'), 'FDA-regulated', 'ITIL', 'CLIA labs', 'Audit evidence']
+    data = json.dumps({'front': front, 'top': top, 'techs': techs})
+    body = phero('A cube you', 'can click.', 'Preview only.  Each tile on the front is a service.  Point at one to read about it, click it to open it, or drag to spin and see the technologies on the other sides.', mini=False) + f"""
+<section class="index-sec on-dark"><div class="wrap c2-wrap">
+  <div><h2>Ten practice areas, one team.</h2><p class="lead" style="margin:16px 0 30px">Nine services on the front, compliance on top, and the platforms we support on every other side.</p><div class="c2-panel" id="cube2-panel" aria-live="polite"></div></div>
+  <div class="c2-stage"><div class="c2-cube" id="cube2"></div></div>
+</div></section>
+<script type="application/json" id="cube2-data">{data}</script>"""
+    page('cube-preview.html', 'Cube preview | Cali IT Consulting', 'Preview of a clickable service cube.', body, f'<script src="assets/js/cube2.js?v={sb.ver("assets/js/cube2.js")}" defer></script>')
+    f = ROOT / 'cube-preview.html'; f.write_text(f.read_text().replace('<meta name="theme-color"', '<meta name="robots" content="noindex">\n<meta name="theme-color"', 1))
+
 if __name__ == '__main__':
     privacy()   # reads the current privacy text first
-    home(); services(); [service(i, s) for i, s in enumerate(sb.SERVICES)]; industries(); engagement(); why(); about(); testimonials(); contact(); thanks(); notfound()
+    home(); services(); [service(i, s) for i, s in enumerate(sb.SERVICES)]; industries(); engagement(); why(); about(); testimonials(); contact(); thanks(); notfound(); cube_preview()
     print('built field-chart site')

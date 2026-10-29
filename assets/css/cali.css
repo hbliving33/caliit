@@ -411,3 +411,19 @@ h3 { font: 700 21px/1.25 var(--sans); }
 
 .chip { transition: opacity .25s; }
 .chip.swap { opacity: 0 !important; }
+
+/* preview: service cube (cube2.js) */
+.c2-stage { --s: min(330px, 74vw); --h: calc(var(--s) / 2); height: calc(var(--s) * 1.55); display: grid; place-items: center; perspective: 1200px; touch-action: none; cursor: grab; user-select: none; }
+.c2-cube { position: relative; width: var(--s); height: var(--s); transform-style: preserve-3d; }
+.c2-face { position: absolute; inset: 0; display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(3, 1fr); gap: 4px; padding: 4px; background: rgba(10, 20, 32, .55); border: 1px solid rgba(143, 179, 217, .45); backface-visibility: hidden; }
+.c2-tile { display: grid; place-content: center; text-align: center; gap: 4px; border: 1px solid rgba(143, 179, 217, .35); background: rgba(23, 42, 66, .92); color: #fff; text-decoration: none; transition: background .2s, border-color .2s, transform .2s; }
+.c2-tile.svc b { font: 400 calc(var(--s) / 11)/1 var(--heavy); letter-spacing: -.01em; color: #fff; }
+.c2-tile.svc span { font: 600 calc(var(--s) / 30)/1.15 var(--sans); color: #a9c3de; padding: 0 4px; }
+.c2-tile.svc:hover, .c2-tile.svc:focus-visible, .c2-tile.svc.on { background: var(--steel); border-color: #fff; }
+.c2-tile.svc.on span, .c2-tile.svc:hover span { color: #fff; }
+.c2-tile.tech span { font: 600 calc(var(--s) / 30)/1.2 var(--sans); color: rgba(169, 195, 222, .7); padding: 0 6px; }
+.c2-wrap { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(28px, 5vw, 72px); align-items: center; }
+@media (max-width: 860px) { .c2-wrap { grid-template-columns: 1fr; } }
+.c2-panel { min-height: 140px; border-left: 3px solid var(--sky); padding-left: 22px; }
+.c2-k { font: italic 500 clamp(30px, 3vw, 42px)/1.1 var(--serif); color: #fff; margin: 0 0 10px; }
+.c2-d { color: #b9c6d4; margin: 0 0 14px; max-width: 46ch; }

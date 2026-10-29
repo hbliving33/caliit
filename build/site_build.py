@@ -102,7 +102,7 @@ SERVICES = [
   case=('A roadmap and a budget that held', 'Growing companies needed IT that kept pace with acquisitions, new sites and new budgets.', ['Built a technology roadmap by business function, with a 3 to 5 year view', 'Managed IT budgets up to $12 million and negotiated 50+ IT contracts', 'Replaced an outside managed service provider with an in-house service desk'], 'A clear plan, predictable spending and support that answered to the business.')),
 ]
 SVC = {s['slug']: s for s in SERVICES}
-TOPICS = ['IT and security assessment'] + [s['name'] for s in SERVICES] + ['Regulated industry support', 'Something else']
+TOPICS = ['IT and security assessment', 'Managed IT plan'] + [s['name'] for s in SERVICES] + ['Regulated industry support', 'Something else']
 
 STATS = [('30', 'Years in IT leadership'), ('10+', 'Acquisitions integrated'), ('30+', 'Sites networked worldwide'), ('$12M', 'Largest IT budget managed')]
 STEPS = [('Assess', 'We look at what you have, what it costs and where the risks are, then hand you a ranked, written plan.'),
@@ -132,8 +132,8 @@ INDUSTRIES = [
 ]
 ENGAGE = [('Projects', 'A defined job with a clear finish line.', 'A fixed scope and a price agreed before work starts.  When it is done, it is documented and handed back to you.',
            ['Written scope, timeline and fixed price', 'One senior lead from start to finish', 'Documentation and handoff when the job is done'], ['Office or headquarters moves', 'Microsoft 365 migrations', 'Network or Wi-Fi refreshes', 'Security assessments', 'Access control installs'], 'one-time needs with a clear goal'),
-          ('Managed support', 'We keep it running, every month.', 'A monthly agreement that covers the day-to-day: users, devices, updates, vendors and a real person when something breaks.',
-           ['Monitoring and patching', 'User onboarding and offboarding', 'Vendor and license management', 'Help when something breaks', 'A regular review of what changed and what is next'], ['Companies without in-house IT', 'Teams whose IT person left', 'Offices that need backup for a small IT staff'], 'teams without in-house IT'),
+          ('Managed IT, your way', 'A right-sized MSP plan, built around you.', "We're not a big-box MSP with one plan for everyone.  We sit down with you, choose what we manage and how, and price it to fit, from a few key systems to the whole stack.",
+           ['Monitoring and patching', 'User onboarding and offboarding', 'Vendor and license management', 'Help when something breaks', 'A monthly review of what changed and what is next', 'A scope you can grow or shrink as you go'], ['Companies without in-house IT', 'Teams whose IT person left', 'Co-managed support alongside a small IT staff'], 'teams that want MSP-style coverage without a one-size contract'),
           ('Fractional IT leadership', 'A senior IT leader, part time.', 'The judgment of an IT director for a set number of days a month, without a full-time salary.',
            ['Technology roadmap and budget', 'Vendor contract review and negotiation', 'Audit, compliance and risk ownership', 'Leadership and board reporting', 'Hiring and managing outside providers'], ['Growing companies', 'Businesses facing an audit or acquisition', 'Leadership teams that need an IT voice at the table'], 'companies not ready for a full-time IT director')]
 QUOTES = [('“[His] commitment to providing his clients with the highest level of service … is unsurpassed!”', 'President, equipment financing firm'),
