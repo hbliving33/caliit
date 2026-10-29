@@ -428,3 +428,13 @@ h3 { font: 700 21px/1.25 var(--sans); }
 .c2-k { font: italic 500 clamp(30px, 3vw, 42px)/1.1 var(--serif); color: #fff; margin: 0 0 10px; }
 .c2-d { color: #b9c6d4; margin: 0 0 14px; max-width: 46ch; }
 .map.us svg { overflow: hidden; }
+/* hero: pull the map left into the gap beside the headline and let it fill its column */
+@media (min-width: 901px) {
+  .hero .wrap { grid-template-columns: minmax(0, .82fr) minmax(0, 1.18fr); gap: 8px; }
+  .map.us { margin-left: -36px; width: calc(100% + 36px); }
+}
+@media (min-width: 901px) {
+  .hero .wrap { gap: 20px; }
+  .map.us { margin-left: -16px; width: calc(100% + 16px); }
+  .hero h1 .h-heavy { font-size: clamp(28px, 3.3vw, 44px); }
+}
