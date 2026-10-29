@@ -74,10 +74,10 @@ def us_chart(cls=''):
         dur = 2.4 + (i % 4) * .45
         packets += f'<circle class="packet" r="1.25"><animateMotion dur="{dur:.2f}s" begin="{2.4 + i * .3:.1f}s" repeatCount="indefinite" path="{d}"/></circle>'
     pins = ''
-    for (x, y), name, sub, lx, ly in [((ax, ay), 'Arcata', 'North Coast', 20, 52), ((hx, hy), 'Huntington Beach', 'Headquarters', 52, 192)]:
+    for (x, y), name, sub, lx, ly in [((ax, ay), 'Arcata', 'North Coast', 20, 52), ((hx, hy), 'Huntington Beach', 'Headquarters', 52, 192), (tuple(US['payson']), 'Payson', 'Arizona', 95, 150)]:
         pins += (f'<circle class="pin-halo" cx="{x}" cy="{y}" r="1.8"/><circle class="pin" cx="{x}" cy="{y}" r="1.8"/><line class="lead-line" x1="{x + 1.6}" y1="{y + (-1.2 if y < 100 else 1.2)}" x2="{lx - 1.5}" y2="{ly - 3}"/>'
                  f'<text class="pin-t us" x="{lx}" y="{ly}">{name}</text><text class="pin-s us" x="{lx}" y="{ly + 6.5}">{sub}</text>')
-    return (f'<svg class="{cls}" viewBox="-14 -6 428 270" role="img" aria-label="Map of the United States.  California is highlighted with marks at Arcata and at our Huntington Beach headquarters.  Lines run from Huntington Beach to cities across the country.">'
+    return (f'<svg class="{cls}" viewBox="-14 -6 428 270" role="img" aria-label="Map of the United States.  California is highlighted with marks at Arcata and at our Huntington Beach headquarters, plus a mark at Payson, Arizona.  Lines run from Huntington Beach to cities across the country.">'
             f'<g>{grat}</g><path class="nation" d="{US["nation"]}"/><path class="borders" d="{US["borders"]}"/>'
             f'<path class="land" d="{US["ca"]}" style="stroke-width:.7"/>{trees}<g class="links">{arcs}{nodes}{packets}</g>{pins}</svg>')
 
@@ -265,7 +265,7 @@ def close_block():
     st = f'<svg class="close-state" viewBox="0 0 200 220" aria-hidden="true"><path d="{CA}" fill="#8fb3d9"/></svg>'
     return f'''<section class="chart-sec close-sec on-dark" id="talk">{st}<div class="wrap">
   <div><h2>Tell us what you're working on.</h2><p class="lead" style="margin-top:20px">An audit on the calendar, an office move, a security worry or an IT person who just gave notice.  Send a few lines and we'll reply within one business day.</p>
-  <p style="margin-top:28px;color:#8ea2b8;font-size:15px">Headquarters in Huntington Beach, California.<br>On-site across California.  Remote support in all 50 states.</p></div>
+  <p style="margin-top:28px;color:#8ea2b8;font-size:15px">Headquarters in Huntington Beach, California.<br>On-site across California and Arizona.  Remote support in all 50 states.</p></div>
   {form(True)}
 </div></section>'''
 
@@ -279,7 +279,7 @@ def home():
     <h1><span class="h-serif">Your IT, run right.</span><span class="h-heavy">Infrastructure and IT operations, handled.</span></h1>
     <p class="lead">We design, build and run the systems your business depends on: servers, networks, data centers, Microsoft 365 and security.  Thirty years of running IT operations, now working for you.</p>
     <div class="acts"><a class="btn" href="#talk">Contact us</a><a class="btn line" href="services.html">See our services</a></div>
-    <p class="reach-note">On-site across California.  Remote support in all 50 states.</p>
+    <p class="reach-note">On-site across California and Arizona.  Remote support in all 50 states.</p>
   </div>
   {us_map_block()}
 </div></section>
@@ -367,7 +367,7 @@ def about():
 </div></section>
 <section class="band fog"><div class="wrap two">
   <div><h2>What we do.</h2></div>
-  <div class="prose"><p class="lead">We've led more than ten acquisitions, moved headquarters and data centers, built certified labs, and passed SOX, HIPAA and ISO audits.</p><p>We handle Microsoft 365, cybersecurity, networks, cloud, data centers, physical security, compliance and IT strategy.  We work on-site across California and support clients remotely in all 50 states, traveling on-site as required.  You get senior-level answers from people who have done the work, not a sales pitch.</p></div>
+  <div class="prose"><p class="lead">We've led more than ten acquisitions, moved headquarters and data centers, built certified labs, and passed SOX, HIPAA and ISO audits.</p><p>We handle Microsoft 365, cybersecurity, networks, cloud, data centers, physical security, compliance and IT strategy.  We work on-site across California and Arizona and support clients remotely in all 50 states, traveling on-site as required.  You get senior-level answers from people who have done the work, not a sales pitch.</p></div>
 </div></section>
 <section class="standard-sec on-dark"><div class="wrap"><h2>What we stand for.</h2><div class="promises">{vals}</div></div></section>
 {notes_block()}
@@ -386,7 +386,7 @@ def testimonials():
 def contact():
     body = phero('Tell us what', "you're working on.", 'Fill out the form and a senior consultant will get back to you within one business day.') + f'''
 <section class="band white"><div class="wrap two">
-  <div><h2>California headquarters.  Nationwide clients.</h2><ul class="ticks" style="margin-top:28px"><li>Headquarters in Huntington Beach, California</li><li>On-site across California</li><li>Remote support in all 50 states, with on-site travel as required</li><li>A reply from a senior consultant within one business day</li></ul></div>
+  <div><h2>California headquarters.  Nationwide clients.</h2><ul class="ticks" style="margin-top:28px"><li>Headquarters in Huntington Beach, California</li><li>On-site across California and Arizona</li><li>Remote support in all 50 states, with on-site travel as required</li><li>A reply from a senior consultant within one business day</li></ul></div>
   {form(False)}
 </div></section>'''
     page('contact.html', 'Contact | Cali IT Consulting', 'Contact Cali IT Consulting.  California headquarters, clients nationwide.  A senior consultant will reply within one business day.', body)
