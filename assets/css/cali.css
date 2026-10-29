@@ -427,3 +427,4 @@ h3 { font: 700 21px/1.25 var(--sans); }
 .c2-panel { min-height: 140px; border-left: 3px solid var(--sky); padding-left: 22px; }
 .c2-k { font: italic 500 clamp(30px, 3vw, 42px)/1.1 var(--serif); color: #fff; margin: 0 0 10px; }
 .c2-d { color: #b9c6d4; margin: 0 0 14px; max-width: 46ch; }
+.map.us svg { overflow: hidden; }
