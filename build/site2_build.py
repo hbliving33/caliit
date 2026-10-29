@@ -81,11 +81,11 @@ def us_chart(cls=''):
             f'<defs><clipPath id="usgrat"><rect x="-14" y="-6" width="428" height="270"/></clipPath></defs><g clip-path="url(#usgrat)">{grat}</g><path class="nation" d="{US["nation"]}"/><path class="borders" d="{US["borders"]}"/>'
             f'<path class="land" d="{US["ca"]}" style="stroke-width:.7"/>{trees}<g class="links">{arcs}{nodes}{packets}</g>{pins}</svg>')
 
-CHIPS = [('Chicago', ['Microsoft 365', 'Exchange Online', 'Teams', 'SharePoint']),
-         ('NewYork', ['Azure', 'Entra ID', 'Intune', 'Conditional access']),
-         ('Miami', ['VMware', 'NetApp', 'Synology', 'Cloud backup']),
-         ('Dallas', ['Cisco Meraki', 'UniFi', 'Site-to-site VPN', 'Dell and HP servers']),
-         ('Atlanta', ['Power Automate', 'Power Apps', 'NetSuite', 'HubSpot and Pipedrive'])]
+CHIPS = [('Chicago', ['Microsoft 365', 'Identity', 'Exchange Online', 'SharePoint', 'OneDrive', 'Teams', 'Single sign-on', 'Mail migration']),
+         ('NewYork', ['Cybersecurity', 'Entra ID', 'MFA', 'Conditional access', 'Zero trust', 'Intune', 'Penetration testing', 'Email security']),
+         ('Miami', ['Cloud backup', 'Azure', 'VMware', 'Hyper-V', 'NetApp', 'Synology', 'Disaster recovery', 'Data center']),
+         ('Dallas', ['Cisco Meraki', 'Firewalls', 'Site-to-site VPN', 'UniFi', 'SD-WAN', 'Wi-Fi', 'Dell and HP servers', 'Network monitoring']),
+         ('Atlanta', ['Power Automate', 'NetSuite', 'ADP', 'MasterControl', 'HubSpot', 'Pipedrive', 'Patch management', 'Help desk', 'Asset management', 'Onboarding'])]
 def us_map_block():
     chips = ''
     for i, (city, words) in enumerate(CHIPS):
