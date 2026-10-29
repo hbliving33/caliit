@@ -199,13 +199,14 @@ def ledger_block():
 
 def run_block():
     rows = [('Core infrastructure', 'Servers, storage, virtualization, networks, Wi-Fi and the links between sites.  Data centers and colocation, designed, built, moved and kept running.'),
-            ('Licensing', 'Microsoft 365 and software licensing reviewed, right-sized and kept that way.  Renewals, true-ups and vendor contracts negotiated so you stop paying for seats nobody uses.'),
-            ('IT operations', 'The day-to-day: users, devices, patching, monitoring, backups, onboarding and offboarding, vendors and documentation.  Run the same way every time.'),
+            ('IT operations', 'The day-to-day: users, devices, patching, monitoring, backups, onboarding and offboarding, vendors and documentation.  Run the same way every time, with written processes.'),
+            ('Microsoft 365 and cloud', 'Mail, Teams, SharePoint and OneDrive, identity and devices, Azure and hybrid servers, set up right, secured and kept clean, licensing included.'),
+            ('Security', 'Penetration testing, email gateway security, MFA and conditional access, staff training and a written plan for a bad day.'),
             ('Facilities', 'When the building is part of the job: office moves and build-outs, server room power and cooling, badge access and cameras.'),
             ('Compliance', 'When audits come, the evidence is ready: SOX, HIPAA, ISO and FDA-regulated environments.')]
     trs = ''.join(f'<tr><th scope="row">{a}</th><td>{b}</td></tr>' for a, b in rows)
     return f'''<section class="ledger-sec"><div class="wrap">
-  <div><h2>What we run.</h2><p class="lead" style="margin-top:20px">Our specialty is the core of IT: the infrastructure, the licenses and the day-to-day operations that keep a business moving.  Facilities and compliance come along when the work calls for it.</p><p><a class="link" href="engagement.html">See how we work</a></p></div>
+  <div><h2>What we run.</h2><p class="lead" style="margin-top:20px">Our specialty is the core of IT: the infrastructure and the day-to-day operations that keep a business moving.  Facilities and compliance come along when the work calls for it.</p><p><a class="link" href="engagement.html">See how we work</a></p></div>
   <table class="ledger"><caption class="hp">What we run</caption><tbody>{trs}</tbody></table>
 </div></section>'''
 
@@ -259,8 +260,8 @@ def home():
 <section class="chart-sec hero on-dark"><div class="wrap">
   <div>
     <p class="kicker">Rooted in California.  Serving businesses nationwide.</p>
-    <h1><span class="h-serif">Your IT, run right.</span><span class="h-heavy">Infrastructure, licensing and IT operations.</span></h1>
-    <p class="lead">We manage the core of your IT: servers, networks, data centers, Microsoft 365 and the licenses and vendors behind them.  Thirty years of running IT operations, now working for you.</p>
+    <h1><span class="h-serif">Your IT, run right.</span><span class="h-heavy">Infrastructure and IT operations, handled.</span></h1>
+    <p class="lead">We design, build and run the systems your business depends on: servers, networks, data centers, Microsoft 365 and security.  Thirty years of running IT operations, now working for you.</p>
     <div class="acts"><a class="btn" href="#talk">Contact us</a><a class="btn line" href="services.html">See our services</a></div>
     <p class="reach-note">On-site across California.  Remote support in all 50 states.</p>
   </div>
@@ -268,7 +269,7 @@ def home():
 </div></section>
 
 <section class="statement"><div class="wrap">
-  <p class="big">For <b>thirty years</b> we've built and run the infrastructure behind growing companies: the servers, the networks, the data centers, the licenses and the vendors.  Now we run it for you.</p>
+  <p class="big">For <b>thirty years</b>, companies have handed us the hard parts of IT: moving a headquarters, standing up a data center, joining ten acquisitions onto one network, keeping everything running at 2 a.m.  Now we do it for you.</p>
   <div class="margin">{stats}</div>
 </div></section>
 
@@ -279,7 +280,7 @@ def home():
 {standard_block()}
 {quote_block(1)}
 {close_block()}'''
-    page('index.html', 'Cali IT Consulting | IT infrastructure, licensing and operations, nationwide', "Cali IT Consulting manages core IT infrastructure, software licensing and day-to-day IT operations: servers, networks, data centers, Microsoft 365 and vendors.  Headquartered in Huntington Beach, California, serving clients nationwide.", body, CUBE_JS())
+    page('index.html', 'Cali IT Consulting | IT infrastructure and operations, nationwide', "Cali IT Consulting designs, builds and runs core IT infrastructure and day-to-day IT operations: servers, networks, data centers, Microsoft 365 and security.  Headquartered in Huntington Beach, California, serving clients nationwide.", body, CUBE_JS())
 
 def services():
     body = phero('Everything your IT needs,', 'under one roof.', 'Nine practice areas, one team.  Bring us a single project or hand us the whole stack.') + index_block(head=False) + f'''
