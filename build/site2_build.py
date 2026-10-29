@@ -48,11 +48,11 @@ def chart(cls='', labels=True, draw=False, vb='-34 -12 276 246'):
     trees = (redwood(22.8, 74, 22, '#3c5c80', 1, wr=.42) + redwood(37.2, 74, 22, '#3c5c80', 1, wr=.42) + redwood(30, 74, 29, '#46688e', 1, wr=.42)   # three redwoods: equal flanks, taller center, one base line
              + wave(104, 180, 16, '#4a6d94'))
     pins = ''
-    for (x, y), name, sub, lx, ly, anchor in [(ARCATA, 'Arcata', 'North Coast', 46, 12, 'start'), (HB, 'Huntington Beach', 'Headquarters', 168, 226, 'start')]:
+    for (x, y), name, sub, lx, ly, anchor in [(ARCATA, 'Arcata', 'Remote office', 46, 12, 'start'), (HB, 'Huntington Beach', 'Headquarters', 168, 226, 'start')]:
         pins += f'<circle class="pin-halo" cx="{x}" cy="{y}" r="2.6"/><circle class="pin" cx="{x}" cy="{y}" r="2.6"/>'
         if labels:
             pins += f'<line class="lead-line" x1="{x + 2.5}" y1="{y - 1.5 if y < 100 else y + 1.5}" x2="{lx - 2}" y2="{ly - 2}"/><text class="pin-t" x="{lx}" y="{ly}" text-anchor="{anchor}">{name}</text><text class="pin-s" x="{lx}" y="{ly + 6}">{sub}</text>'
-    return (f'<svg class="{cls}" viewBox="{vb}" role="img" aria-label="Map of California marking Arcata on the North Coast and Huntington Beach, our headquarters">'
+    return (f'<svg class="{cls}" viewBox="{vb}" role="img" aria-label="Map of California marking our Arcata remote office and Huntington Beach headquarters">'
             f'<g>{grat}{gl}</g><path class="land" d="{CA}"/>{rings}{trees}{pins}</svg>')
 
 
@@ -74,10 +74,10 @@ def us_chart(cls=''):
         dur = 2.4 + (i % 4) * .45
         packets += f'<circle class="packet" r="1.25"><animateMotion dur="{dur:.2f}s" begin="{2.4 + i * .3:.1f}s" repeatCount="indefinite" path="{d}"/></circle>'
     pins = ''
-    for (x, y), name, sub, lx, ly in [((ax, ay), 'Arcata', 'North Coast', 20, 52), ((hx, hy), 'Huntington Beach', 'Headquarters', 52, 192), (tuple(US['payson']), 'Payson, Arizona', 'Remote office', 95, 150)]:
+    for (x, y), name, sub, lx, ly in [((ax, ay), 'Arcata', 'Remote office', 20, 52), ((hx, hy), 'Huntington Beach', 'Headquarters', 52, 192), (tuple(US['payson']), 'Payson, Arizona', 'Remote office', 95, 150)]:
         pins += (f'<circle class="pin-halo" cx="{x}" cy="{y}" r="1.8"/><circle class="pin" cx="{x}" cy="{y}" r="1.8"/><line class="lead-line" x1="{x + 1.6}" y1="{y + (-1.2 if y < 100 else 1.2)}" x2="{lx - 1.5}" y2="{ly - 3}"/>'
                  f'<text class="pin-t us" x="{lx}" y="{ly}">{name}</text><text class="pin-s us" x="{lx}" y="{ly + 6.5}">{sub}</text>')
-    return (f'<svg class="{cls}" viewBox="-14 -6 428 270" role="img" aria-label="Map of the United States.  California is highlighted with marks at Arcata and at our Huntington Beach headquarters, plus a mark at Payson, Arizona.  Lines run from Huntington Beach to cities across the country.">'
+    return (f'<svg class="{cls}" viewBox="-14 -6 428 270" role="img" aria-label="Map of the United States.  California is highlighted with marks at our Huntington Beach headquarters and our Arcata remote office, plus a mark at Payson, Arizona.  Lines run from Huntington Beach to cities across the country.">'
             f'<defs><clipPath id="usgrat"><rect x="-14" y="-6" width="428" height="270"/></clipPath></defs><g clip-path="url(#usgrat)">{grat}</g><path class="nation" d="{US["nation"]}"/><path class="borders" d="{US["borders"]}"/>'
             f'<path class="land" d="{US["ca"]}" style="stroke-width:.7"/>{trees}<g class="links">{arcs}{nodes}{packets}</g>{pins}</svg>')
 
