@@ -438,3 +438,8 @@ h3 { font: 700 21px/1.25 var(--sans); }
   .map.us { margin-left: -16px; width: calc(100% + 16px); }
   .hero h1 .h-heavy { font-size: clamp(28px, 3.3vw, 44px); }
 }
+
+/* inner pages: the US map replaces the California-only map */
+@media (min-width: 861px) { .phero .wrap { grid-template-columns: minmax(0, 1fr) minmax(320px, 460px); align-items: center; } }
+.phero .us-mini svg { max-height: none; width: 100%; height: auto; display: block; }
+@media (min-width: 901px) { .phero .map.us { margin-left: 0; width: 100%; } }

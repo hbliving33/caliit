@@ -130,7 +130,7 @@ def two_voice(h):
 
 def phero(serif, heavy, lead, trail=None, mini=True):
     tr = f'<div class="trail">{trail}</div>' if trail else ''
-    m = f'<div class="mini map">{chart(labels=False)}</div>' if mini else ''
+    m = f'<div class="mini map us us-mini">{us_chart(cls="draw")}</div>' if mini else ''
     return f'''<section class="chart-sec phero on-dark"><div class="wrap"><div>{tr}<h1><span class="h-serif">{serif}</span><span class="h-heavy">{heavy}</span></h1><p class="lead">{lead}</p></div>{m}</div></section>'''
 
 def page(fname, title, desc, body, extra_js='', hero_header=True):
