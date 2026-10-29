@@ -10,11 +10,19 @@ E = html.escape
 GRID = json.loads((ROOT / 'build' / 'ca_grid.json').read_text())
 CX, CY = GRID['centroid']
 ARCATA, HB = (14.1, 27.9), (124.5, 191.2)
-ORDER = ['network', 'cloud', 'data-center', 'microsoft-365', 'it-strategy', 'cybersecurity', 'business-automation', 'access-control', 'compliance']
+sb.SERVICES.append(dict(slug='ai', name='AI', h='Put AI to work, <em>safely and on purpose</em>.', short='Copilot readiness, AI policies and guardrails, and practical automation that saves real time.',
+  intro="AI is only as safe as the data it can reach.  We get your permissions, policies and people ready, then put AI to work where it actually saves time.",
+  pains=[('Copilot sees too much', 'Old sharing links and loose permissions mean AI can surface files people were never meant to see.'), ('No rules yet', 'Staff are already pasting company data into free AI tools, and nobody has said what is allowed.'), ('Pilots that go nowhere', 'A few licenses were bought, a few people tried it, and nobody can say what it is worth.')],
+  get=['Copilot for Microsoft 365 readiness review', 'SharePoint and OneDrive permission cleanup before AI is turned on', 'AI acceptable use policy and guardrails', 'Tool selection and a pilot with clear goals', 'AI-assisted automation in Power Automate and Copilot Studio', 'Staff training on using AI well and safely'],
+  plat=['Copilot for Microsoft 365', 'Copilot Studio', 'Power Automate', 'Azure OpenAI', 'SharePoint and OneDrive', 'Entra ID', 'Sensitivity labels'],
+  case=('Ready, then useful', 'Every AI engagement starts the same way, so you get value without surprises.', ['Review who can see what across Microsoft 365, and fix the oversharing', 'Write a short, plain-English AI policy your staff will follow', 'Pilot with a small team on two or three real tasks, then measure the time saved'], 'AI turned on with guardrails, and a clear answer on what it is worth.'),
+  case_label='How we start', case_note=''))
+sb.TOPICS.insert(sb.TOPICS.index('Something else'), 'AI')
+ORDER = ['network', 'cloud', 'data-center', 'microsoft-365', 'ai', 'it-strategy', 'cybersecurity', 'business-automation', 'access-control', 'compliance']
 sb.SERVICES.sort(key=lambda x: ORDER.index(x['slug']))
 for _x in sb.SERVICES:
     if _x['slug'] == 'cloud': _x['short'] = 'Servers, storage and virtualization, with backups you have tested.'
-    if _x['slug'] == 'microsoft-365': _x['short'] = 'The whole platform: mail, Teams, SharePoint and OneDrive, sharing and file permissions, identity, devices and licensing, set up right and kept clean.'
+    if _x['slug'] == 'microsoft-365': _x['short'] = 'Identity first, then email, SharePoint/OneDrive and Teams, with devices, file permissions and licensing set up right and kept clean.'
     if _x['slug'] == 'cybersecurity': _x['short'] = 'Penetration testing, risk assessments, MFA, email gateway security and a plan for a bad day.'
     if _x['slug'] == 'access-control': _x['short'] = 'Badge access, security cameras and monitoring for every door and every site.'
     if _x['slug'] == 'it-strategy': _x['short'] = 'IT operations leadership, repeatable processes, roadmaps, budgets and vendor management.'
@@ -175,7 +183,7 @@ CUBE_JS = lambda: f'<script src="assets/js/cube.js?v={sb.ver("assets/js/cube.js"
 # ---------- shared blocks ----------
 def index_block(head=True):
     rows = ''.join(f'<li data-name="{s["name"]}"><a href="{s["slug"]}.html"><span class="nm">{s["name"]}</span><span class="ds">{s["short"]}</span></a></li>' for s in sb.SERVICES)
-    h = '<div class="index-head"><h2>Nine practice areas, one team.</h2><p class="lead" style="margin-top:16px">Bring us a single project or hand us the whole stack.  Point at a service to turn the cube, or open it to read more.</p></div>' if head else ''
+    h = '<div class="index-head"><h2>Ten practice areas, one team.</h2><p class="lead" style="margin-top:16px">Bring us a single project or hand us the whole stack.  Point at a service to turn the cube, or open it to read more.</p></div>' if head else ''
     return f'''<section class="index-sec on-dark"><div class="wrap">
   <div>{h}<ul class="svc-list" id="svcList">{rows}</ul></div>
   <div class="cube-col">
@@ -200,7 +208,8 @@ def ledger_block():
 def run_block():
     rows = [('Core infrastructure', 'Servers, storage, virtualization, networks, Wi-Fi and the links between sites.  Data centers and colocation, designed, built, moved and kept running.'),
             ('IT operations', 'The day-to-day: users, devices, patching, monitoring, backups, onboarding and offboarding, vendors and documentation.  Run the same way every time, with written processes.'),
-            ('Microsoft 365 and cloud', 'Mail, Teams, SharePoint and OneDrive, identity and devices, Azure and hybrid servers, set up right, secured and kept clean, licensing included.'),
+            ('Microsoft 365 and cloud', 'Identity first: Entra ID, MFA and conditional access.  Then email, SharePoint/OneDrive, Teams and devices, plus Azure and hybrid servers, set up right and kept clean.'),
+            ('AI', 'Copilot readiness, permission cleanup before AI is switched on, plain-English AI policies, and automation that saves real time.'),
             ('Security', 'Penetration testing, email gateway security, MFA and conditional access, staff training and a written plan for a bad day.'),
             ('Facilities', 'When the building is part of the job: office moves and build-outs, server room power and cooling, badge access and cameras.'),
             ('Compliance', 'When audits come, the evidence is ready: SOX, HIPAA, ISO and FDA-regulated environments.')]
@@ -283,7 +292,7 @@ def home():
     page('index.html', 'Cali IT Consulting | IT infrastructure and operations, nationwide', "Cali IT Consulting designs, builds and runs core IT infrastructure and day-to-day IT operations: servers, networks, data centers, Microsoft 365 and security.  Headquartered in Huntington Beach, California, serving clients nationwide.", body, CUBE_JS())
 
 def services():
-    body = phero('Everything your IT needs,', 'under one roof.', 'Nine practice areas, one team.  Bring us a single project or hand us the whole stack.') + index_block(head=False) + f'''
+    body = phero('Everything your IT needs,', 'under one roof.', 'Ten practice areas, one team.  Bring us a single project or hand us the whole stack.') + index_block(head=False) + f'''
 <section class="band white"><div class="wrap two">
   <div><h2>Not sure where to start?  Start with an assessment.</h2><p class="lead" style="margin-top:18px">We review your environment, rank the risks and hand you a written plan.  You decide what to fix, and who fixes it.</p><p style="margin-top:26px"><a class="btn ink" href="contact.html?topic=IT%20and%20security%20assessment">Ask about an assessment</a></p></div>
   <ul class="ticks"><li>Microsoft 365 and identity security</li><li>Backups and recovery</li><li>Network, firewall and Wi-Fi</li><li>Licensing and vendor spend</li><li>Compliance gaps and evidence</li><li>A ranked, written remediation plan</li></ul>
@@ -301,8 +310,8 @@ def service(i, s):
 <section class="band fog"><div class="wrap two">
   <div><h2>What you get.</h2><ul class="ticks" style="margin-top:30px">{''.join(f'<li>{g}</li>' for g in s['get'])}</ul>
   <p style="margin-top:30px"><a class="btn ink" href="contact.html?topic={E(s["name"])}">Talk to us about {s["name"]}</a></p></div>
-  <div><article class="story"><p style="color:#8fb3d9;font-weight:600;margin-bottom:10px">From the field</p><h3>{ct}</h3><p>{cs}</p><ul class="ticks on-dark" style="border-top-color:#8fb3d9">{''.join(f'<li>{x}</li>' for x in cl)}</ul><div class="out">{co}</div></article>
-  <p class="fine">Client names are kept confidential.</p>
+  <div><article class="story"><p style="color:#8fb3d9;font-weight:600;margin-bottom:10px">{s.get('case_label', 'From the field')}</p><h3>{ct}</h3><p>{cs}</p><ul class="ticks on-dark" style="border-top-color:#8fb3d9">{''.join(f'<li>{x}</li>' for x in cl)}</ul><div class="out">{co}</div></article>
+  {'<p class="fine">' + s.get('case_note', 'Client names are kept confidential.') + '</p>' if s.get('case_note', 'x') else ''}
   <h3 style="margin-top:34px">Platforms and standards</h3><p class="inline-list" style="margin-top:10px">{''.join(f'<span>{p}</span>' for p in s['plat'])}</p></div>
 </div></section>
 <section class="band white"><div class="wrap"><nav class="next-prev" aria-label="More services"><a href="{prev['slug']}.html"><small>Previous service</small><b>{prev['name']}</b></a><a href="{nxt['slug']}.html" style="text-align:right"><small>Next service</small><b>{nxt['name']}</b></a></nav></div></section>
