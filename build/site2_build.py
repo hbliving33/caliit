@@ -66,9 +66,9 @@ def us_chart(cls=''):
             f'<g>{grat}</g><path class="nation" d="{US["nation"]}"/><path class="borders" d="{US["borders"]}"/>'
             f'<path class="land" d="{US["ca"]}" style="stroke-width:.7"/>{trees}<g class="links">{arcs}{nodes}{packets}</g>{pins}</svg>')
 
-CHIPS = [('Minneapolis', ['Microsoft 365', 'Exchange Online', 'Teams', 'SharePoint']),
+CHIPS = [('Chicago', ['Microsoft 365', 'Exchange Online', 'Teams', 'SharePoint']),
          ('NewYork', ['Azure', 'Entra ID', 'Intune', 'Conditional access']),
-         ('Denver', ['VMware', 'NetApp', 'Synology', 'Cloud backup']),
+         ('Miami', ['VMware', 'NetApp', 'Synology', 'Cloud backup']),
          ('Dallas', ['Cisco Meraki', 'UniFi', 'Site-to-site VPN', 'Dell and HP servers']),
          ('Atlanta', ['Power Automate', 'Power Apps', 'NetSuite', 'HubSpot and Pipedrive'])]
 def us_map_block():
