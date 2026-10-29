@@ -102,7 +102,7 @@ SERVICES = [
   case=('A roadmap and a budget that held', 'Growing companies needed IT that kept pace with acquisitions, new sites and new budgets.', ['Built a technology roadmap by business function, with a 3 to 5 year view', 'Managed IT budgets up to $12 million and negotiated 50+ IT contracts', 'Replaced an outside managed service provider with an in-house service desk'], 'A clear plan, predictable spending and support that answered to the business.')),
 ]
 SVC = {s['slug']: s for s in SERVICES}
-TOPICS = ['IT and security assessment', 'Managed IT plan'] + [s['name'] for s in SERVICES] + ['Regulated industry support', 'Something else']
+TOPICS = ['IT and security assessment'] + [s['name'] for s in SERVICES] + ['Regulated industry support', 'Something else']
 
 STATS = [('30', 'Years in IT leadership'), ('10+', 'Acquisitions integrated'), ('30+', 'Sites networked worldwide'), ('$12M', 'Largest IT budget managed')]
 STEPS = [('Assess', 'We look at what you have, what it costs and where the risks are, then hand you a ranked, written plan.'),

@@ -17,8 +17,15 @@ sb.SERVICES.append(dict(slug='ai', name='AI', h='Put AI to work, <em>safely and 
   plat=['Copilot for Microsoft 365', 'Copilot Studio', 'Power Automate', 'Azure OpenAI', 'SharePoint and OneDrive', 'Entra ID', 'Sensitivity labels'],
   case=('Ready, then useful', 'Every AI engagement starts the same way, so you get value without surprises.', ['Review who can see what across Microsoft 365, and fix the oversharing', 'Write a short, plain-English AI policy your staff will follow', 'Pilot with a small team on two or three real tasks, then measure the time saved'], 'AI turned on with guardrails, and a clear answer on what it is worth.'),
   case_label='How we start', case_note=''))
-sb.TOPICS.insert(sb.TOPICS.index('Something else'), 'AI')
-ORDER = ['network', 'cloud', 'data-center', 'microsoft-365', 'ai', 'it-strategy', 'cybersecurity', 'business-automation', 'access-control', 'compliance']
+sb.SERVICES.append(dict(slug='managed-it', name='Managed IT', h='Managed IT, <em>sized to fit</em>.', short='A right-sized MSP plan built around you: monitoring, patching, users and vendors, from a few systems to the whole stack.',
+  intro="We're not a big-box MSP with one plan for everyone.  We sit down with you, choose what we manage and how, and price it to fit.",
+  pains=[('One-size contracts', 'The big MSPs sell a package, and you pay for what you never use.'), ('Tickets, not answers', 'Every call goes to a queue and a different person who has never seen your setup.'), ('Too small for in-house IT', 'You need someone watching the systems, but not a full-time hire.')],
+  get=['Monitoring and patching for servers, network and devices', 'User onboarding and offboarding', 'Vendor and license management', 'Help when something breaks, from people who know your setup', 'A monthly review of what changed and what is next', 'A scope you can grow or shrink as you go'],
+  plat=['Remote monitoring', 'Patch management', 'Microsoft 365', 'Intune', 'Cisco Meraki', 'UniFi', 'Cloud backup', 'Co-managed IT'],
+  case=('Built around you', 'Every managed plan starts with a short conversation, not a price sheet.', ['We list what you have and what matters most', 'You choose what we manage, from a few key systems to the whole stack', 'We agree on response times and a monthly price, in writing'], 'MSP-style coverage, without a one-size contract.'),
+  case_label='How it works', case_note=''))
+sb.TOPICS.insert(sb.TOPICS.index('Something else'), 'AI'); sb.TOPICS.insert(sb.TOPICS.index('Something else'), 'Managed IT')
+ORDER = ['network', 'cloud', 'data-center', 'microsoft-365', 'ai', 'managed-it', 'it-strategy', 'cybersecurity', 'business-automation', 'access-control', 'compliance']
 sb.SERVICES.sort(key=lambda x: ORDER.index(x['slug']))
 for _x in sb.SERVICES:
     if _x['slug'] == 'cloud': _x['short'] = 'Servers, storage and virtualization, with backups you have tested.'
@@ -183,7 +190,7 @@ CUBE_JS = lambda: f'<script src="assets/js/cube.js?v={sb.ver("assets/js/cube.js"
 # ---------- shared blocks ----------
 def index_block(head=True):
     rows = ''.join(f'<li data-name="{s["name"]}"><a href="{s["slug"]}.html"><span class="nm">{s["name"]}</span><span class="ds">{s["short"]}</span></a></li>' for s in sb.SERVICES)
-    h = '<div class="index-head"><h2>Ten practice areas, one team.</h2><p class="lead" style="margin-top:16px">Bring us a single project or hand us the whole stack.  Point at a service to turn the cube, or open it to read more.</p></div>' if head else ''
+    h = '<div class="index-head"><h2>Eleven practice areas, one team.</h2><p class="lead" style="margin-top:16px">Bring us a single project or hand us the whole stack.  Point at a service to turn the cube, or open it to read more.</p></div>' if head else ''
     return f'''<section class="index-sec on-dark"><div class="wrap">
   <div>{h}<ul class="svc-list" id="svcList">{rows}</ul></div>
   <div class="cube-col">
@@ -292,7 +299,7 @@ def home():
     page('index.html', 'Cali IT Consulting | IT infrastructure and operations, nationwide', "Cali IT Consulting designs, builds and runs core IT infrastructure and day-to-day IT operations: servers, networks, data centers, Microsoft 365 and security.  Headquartered in Huntington Beach, California, serving clients nationwide.", body, CUBE_JS())
 
 def services():
-    body = phero('Everything your IT needs,', 'under one roof.', 'Ten practice areas, one team.  Bring us a single project or hand us the whole stack.') + index_block(head=False) + f'''
+    body = phero('Everything your IT needs,', 'under one roof.', 'Eleven practice areas, one team.  Bring us a single project or hand us the whole stack.') + index_block(head=False) + f'''
 <section class="band white"><div class="wrap two">
   <div><h2>Not sure where to start?  Start with an assessment.</h2><p class="lead" style="margin-top:18px">We review your environment, rank the risks and hand you a written plan.  You decide what to fix, and who fixes it.</p><p style="margin-top:26px"><a class="btn ink" href="contact.html?topic=IT%20and%20security%20assessment">Ask about an assessment</a></p></div>
   <ul class="ticks"><li>Microsoft 365 and identity security</li><li>Backups and recovery</li><li>Network, firewall and Wi-Fi</li><li>Licensing and vendor spend</li><li>Compliance gaps and evidence</li><li>A ranked, written remediation plan</li></ul>
