@@ -14,7 +14,7 @@ ORDER = ['network', 'cloud', 'data-center', 'microsoft-365', 'it-strategy', 'cyb
 sb.SERVICES.sort(key=lambda x: ORDER.index(x['slug']))
 for _x in sb.SERVICES:
     if _x['slug'] == 'cloud': _x['short'] = 'Servers, storage and virtualization, with backups you have tested.'
-    if _x['slug'] == 'microsoft-365': _x['short'] = 'Licensing under control, plus tenant security and migrations.'
+    if _x['slug'] == 'microsoft-365': _x['short'] = 'Exchange, Teams, SharePoint, OneDrive, Entra ID and Intune, secured, migrated, managed and licensed right.'
     if _x['slug'] == 'it-strategy': _x['short'] = 'Day-to-day IT operations leadership, roadmaps, budgets and vendors.'
 S = {s['slug']: s for s in sb.SERVICES}
 STATS2 = [('30', 'Years in IT leadership'), ('10+', 'Acquisitions integrated'), ('30+', 'Sites networked worldwide'), ('$12M', 'Largest IT budget managed')]
@@ -178,7 +178,7 @@ def index_block(head=True):
   <div>{h}<ul class="svc-list" id="svcList">{rows}</ul></div>
   <div class="cube-col">
     <section class="stage" id="stage" aria-label="Rotating cube with one piece for each service.  Drag to spin it."><div class="glow"></div><div class="cube" id="cube"></div><div class="core"><div class="word" id="coreText" aria-live="polite"></div></div></section>
-    <p class="cube-cap">Nine services, one cube.  Drag it to spin.</p>
+    <p class="cube-cap">Drag the cube to spin it.</p>
     <div class="picker-hidden" id="picker" aria-hidden="true"></div>
   </div>
 </div></section>'''
