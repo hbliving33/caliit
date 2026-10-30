@@ -40,7 +40,7 @@ for _x in sb.SERVICES:
     if _x['slug'] == 'microsoft-365': _x['short'] = 'Identity first, then email, SharePoint/OneDrive and Teams, with devices, file permissions and licensing set up right and kept clean.'
     if _x['slug'] == 'cybersecurity': _x['short'] = 'Penetration testing, risk assessments, MFA, email gateway security and a plan for a bad day.'
     if _x['slug'] == 'access-control': _x['short'] = 'Badge access, security cameras and monitoring for every door and every site.'
-    if _x['slug'] == 'it-strategy': _x['short'] = 'IT operations leadership, repeatable processes, roadmaps, budgets and vendor management.'
+    if _x['slug'] == 'it-strategy': _x['short'] = 'IT operations leadership, repeatable processes, roadmaps, budget control and forecasting, and vendor management.'
 # ---- launch refresh (Oct 2026): current terms, identity first, unique meta descriptions ----
 def _upd(slug, **kw):
     for _x in sb.SERVICES:
@@ -77,7 +77,7 @@ TOPICS = ['A project or assessment', 'Ongoing IT support', 'Security or complian
 TOPIC_OF = {'managed-it': 'Ongoing IT support', 'cybersecurity': 'Security or compliance', 'compliance': 'Security or compliance', 'access-control': 'Security or compliance', 'it-strategy': 'IT leadership and strategy'}   # everything else is a project
 sb.SVC.update(S)
 sb.PAINS.insert(sb.PAINS.index(next(x for x in sb.PAINS if x[1] == 'business-automation')), ('Nobody can say how many apps you pay for, or who still has access to them.', 'business-applications'))
-STATS2 = [('30', 'Years in IT leadership'), ('10+', 'Acquisitions integrated'), ('50', 'States we support remotely'), ('$12M', 'Largest IT budget managed')]
+STATS2 = [('30', 'Years in IT leadership')]
 
 def chart(cls='', labels=True, draw=False, vb='-34 -12 276 246'):
     grat = ''.join(f'<path class="grat" d="{p["d"]}"/>' for p in GRID['par'] if p['lat'] % 2 == 0) + ''.join(f'<path class="grat" d="{m["d"]}"/>' for m in GRID['mer'] if m['lon'] % 2 == 0)
@@ -436,12 +436,12 @@ def about():
     stats = ''.join(f'<div><strong>{n}</strong>{t}</div>' for n, t in STATS2)
     body = phero('Built by people', 'who ran IT, not just sold it.', "Cali IT Consulting brings 30 years of IT leadership to businesses that can't afford downtime.") + f'''
 <section class="statement"><div class="wrap">
-  <p class="big">Our team has run technology for medical device and diagnostics companies, manufacturers and growing firms, from the North Coast to Huntington Beach and across the country.</p>
+  <p class="big">Our team has run technology for medical device and diagnostics companies, manufacturers, startups and growing firms, from coast to coast.</p>
   <div class="margin">{stats}</div>
 </div></section>
 <section class="band fog"><div class="wrap two">
   <div><h2>What we do.</h2></div>
-  <div class="prose"><p class="lead">We've integrated IT for more than ten acquisitions, moved headquarters and data centers, built certified labs, and passed SOX and ISO audits and HIPAA reviews.</p><p>We handle networks, servers and cloud, data centers, Microsoft 365, business applications, cybersecurity, physical security, compliance and IT strategy.  We work on-site across California and Arizona and support clients remotely in all 50 states, traveling on-site as required.  You get senior-level answers from people who have done the work, not a sales pitch.</p><p>Some of our longest client relationships began at OC TechWorks LLC, the Orange County IT firm our founder co-owned from start to finish.  When it wound down, its clients came with us.</p></div>
+  <div class="prose"><p class="lead">We've moved headquarters and data centers, built certified labs, and passed SOX and ISO audits and HIPAA reviews.</p><p>We handle networks, servers and cloud, data centers, Microsoft 365, business applications, cybersecurity, physical security, compliance and IT strategy.  We work on-site across California and Arizona and support clients remotely in all 50 states, traveling on-site as required.  You get senior-level answers from people who have done the work, not a sales pitch.</p><p>Some of our longest client relationships began at OC TechWorks LLC, the Orange County IT firm our founder co-owned from start to finish.  When it wound down, its clients came with us.</p></div>
 </div></section>
 <section class="standard-sec on-dark"><div class="wrap"><h2>What we stand for.</h2><div class="promises">{vals}</div></div></section>
 {notes_block()}

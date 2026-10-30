@@ -97,9 +97,9 @@ SERVICES = [
  dict(slug='it-strategy', name='IT Strategy', h='A plan that matches the business, and <em>a budget to back it</em>.', short='Roadmaps, budgets, vendors and part-time IT leadership.',
   intro='Fractional IT leadership for companies that need a senior IT voice without a full-time hire.  Roadmaps, budgets, vendors and the hard calls.',
   pains=[('IT is a pile of vendors', 'Contracts renew on their own, and nobody knows what you are paying for.'), ('Growth is coming', 'An acquisition, a new site or a funding round, and IT has to keep up.'), ('No one to ask', 'Leadership needs someone who can explain the risks and the costs in plain English.')],
-  get=['Technology roadmap with a 3 to 5 year view', 'Written IT processes: onboarding, offboarding, change, access and vendor management', 'IT budget and annual operating plan', 'Vendor contract review and negotiation', 'Merger and acquisition IT integration', 'Managed service provider selection, or replacement', 'Cybersecurity and IT updates for your board and audit committee, in plain English'],
+  get=['Technology roadmap with a 3 to 5 year view', 'Written IT processes: onboarding, offboarding, change, access and vendor management', 'IT budget control and forecasting, with an annual operating plan', 'Vendor contract review and negotiation', 'Merger and acquisition IT integration', 'Managed service provider selection, or replacement', 'Cybersecurity and IT updates for your board and audit committee, in plain English'],
   plat=['IT roadmaps', 'Budgets', 'Vendor contracts', 'M&A integration', 'NetSuite', 'Service desk'],
-  case=('A roadmap and a budget that held', 'Growing companies needed IT that kept pace with acquisitions, new sites and new budgets.', ['Built a technology roadmap by business function, with a 3 to 5 year view', 'Managed IT budgets up to $12 million and negotiated 50+ IT contracts', 'Replaced an outside managed service provider with an in-house service desk'], 'A clear plan, predictable spending and support that answered to the business.')),
+  case=('A roadmap and a budget that held', 'Growing companies needed IT that kept pace with acquisitions, new sites and new budgets.', ['Built a technology roadmap by business function, with a 3 to 5 year view', 'Brought IT budgets under control, built multi-year forecasts and renegotiated IT contracts', 'Replaced an outside managed service provider with an in-house service desk'], 'A clear plan, predictable spending and support that answered to the business.')),
 ]
 SVC = {s['slug']: s for s in SERVICES}
 TOPICS = ['IT and security assessment'] + [s['name'] for s in SERVICES] + ['Audit support', 'Something else']
@@ -110,7 +110,6 @@ STEPS = [('Assess', 'We look at what you have, what it costs and where the risks
          ('Manage', 'We keep it running: users, devices, updates, vendors and a real person when something breaks.'),
          ('Protect', 'We keep watch, test the backups, train your people and keep the evidence ready for audits.')]
 RESULTS = [('Facilities', 'Headquarters and lab, rebuilt and moved', 'Moved a diagnostics company into a new 26,800 sq ft headquarters, including network design, building systems input and lab layout, then relocated a production lab and biobank.', 'New certified and R&D labs built out'),
-           ('Mergers and acquisitions', 'More than ten companies, joined into one', 'Integrated systems, networks and applications for more than ten acquisitions, with every system, network and app brought onto one standard.', '10+ acquisitions integrated'),
            ('Cost', '$4.5 million out of the IT budget', 'For a large manufacturer: virtualized 80% of servers across six regional hubs, moved the data center to a colocation facility with failover, and restructured outside partners.', '$4.5M cut over two years')]
 STANDARD = [('clock', 'A reply within one business day', 'Every message through our contact form gets a real answer from a senior consultant, not an autoresponder.'),
             ('doc', 'Written scope and price first', 'You see the scope, timeline and price in plain English before any work starts.  No surprise invoices.'),
@@ -379,7 +378,7 @@ def about():
 <section class="section"><div class="wrap split" style="align-items:start">
   <div><div class="label">Who we are</div><h2>Senior consultants.  <em>Real experience.</em></h2></div>
   <div class="prose"><p class="lede">Our team has run technology for medical device and diagnostics companies, manufacturers and growing firms.</p>
-  <p>We've integrated IT for more than ten acquisitions, moved headquarters and data centers, built certified labs, and passed SOX and ISO audits and HIPAA reviews.  We handle Microsoft 365, cybersecurity, networks, cloud, data centers, physical security, compliance and IT strategy.</p>
+  <p>We've moved headquarters and data centers, built certified labs, and passed SOX and ISO audits and HIPAA reviews.  We handle Microsoft 365, cybersecurity, networks, cloud, data centers, physical security, compliance and IT strategy.</p>
   <p>We're based in Huntington Beach, California.  We work on-site across Southern California and remotely anywhere in the United States.  You get senior-level answers from people who have done the work, not a sales pitch.</p></div>
 </div></section>
 <section class="proof" aria-label="Experience"><div class="wrap">{stats}</div></section>
