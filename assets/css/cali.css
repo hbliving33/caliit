@@ -503,3 +503,7 @@ h3 { font: 700 21px/1.25 var(--sans); }
 .light .field input, .light .field select, .light .field textarea { background-color: #f8fafc; border-color: #c3cfdc; }
 .field input:focus, .field select:focus, .field textarea:focus { border-color: var(--sky); box-shadow: 0 0 0 3px rgba(143, 179, 217, .25); }
 .form-note { margin: 0; }
+/* one short call to action at the end of each page */
+.cta-sec { background: var(--ink); padding: 40px 0; }
+.cta-sec .wrap { display: flex; align-items: center; justify-content: center; gap: 24px; flex-wrap: wrap; text-align: center; }
+.cta-t { margin: 0; font: italic 400 clamp(24px, 2.6vw, 34px)/1.2 var(--serif); color: #fff; }

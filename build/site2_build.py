@@ -329,6 +329,10 @@ def form(dark=True):
   <p class="form-note">A senior consultant replies within one business day.  We only use your details to reply.  <a href="privacy.html" style="color:inherit">Privacy policy</a>.</p>
 </form>'''
 
+def cta_block():
+    """One short call to action at the bottom of each page.  The only form lives on the Contact page."""
+    return '''<section class="cta-sec on-dark"><div class="wrap"><p class="cta-t">Ready to talk about your IT?</p><a class="btn" href="contact.html">Contact us</a></div></section>'''
+
 def close_block():
     st = ''   # no background art: keeps the contact section clean
     return f'''<section class="chart-sec close-sec on-dark" id="talk">{st}<div class="wrap">
@@ -346,7 +350,7 @@ def home():
     <p class="kicker">Rooted in California.  Serving businesses nationwide.</p>
     <h1><span class="h-serif">Your IT, run right.</span><span class="h-heavy">Infrastructure and IT operations, handled.</span></h1>
     <p class="lead">We design, build and run the systems your business depends on: servers, networks, data centers, Microsoft 365, business applications and security.  Thirty years of running IT operations, now working for you.</p>
-    <div class="acts"><a class="btn" href="#talk">Contact us</a><a class="btn line" href="services.html">See our services</a></div>
+    <div class="acts"><a class="btn" href="contact.html">Contact us</a><a class="btn line" href="services.html">See our services</a></div>
     <p class="reach-note">On-site across California and Arizona.  Remote support in all 50 states.</p>
   </div>
   {us_map_block()}
@@ -355,10 +359,7 @@ def home():
 {fit_block()}
 {index_block()}
 {news_block()}
-{compare_block()}
-{standard_block()}
-{quote_block(1)}
-{close_block()}
+{cta_block()}
 <script type="application/ld+json">{ORG_LD}</script>'''
     page('index.html', 'Cali IT Consulting | IT infrastructure and operations, nationwide', "IT infrastructure and operations, handled: servers, networks, Microsoft 365, business applications and security.  California-based, serving clients nationwide.", body, CUBE_JS())
 
@@ -368,7 +369,7 @@ def services():
   <div><h2>Not sure where to start?  Start with an assessment.</h2><p class="lead" style="margin-top:18px">We review your environment, rank the risks and hand you a written plan.  You decide what to fix, and who fixes it.</p><p style="margin-top:26px"><a class="btn ink" href="contact.html?topic=A%20project%20or%20assessment">Ask about an assessment</a></p></div>
   <ul class="ticks"><li>Microsoft 365 and identity security</li><li>Backups and recovery</li><li>Network, firewall and Wi-Fi</li><li>Licensing and vendor spend</li><li>Compliance gaps and evidence</li><li>A ranked, written remediation plan</li></ul>
 </div></section>
-{close_block()}'''
+{cta_block()}'''
     page('services.html', 'Services | Cali IT Consulting', 'Twelve IT practice areas, one team: network, cloud, data center, Microsoft 365, business applications, AI, managed IT, security and compliance.', body, CUBE_JS())
 
 def service(i, s):
@@ -386,7 +387,7 @@ def service(i, s):
   <h3 style="margin-top:34px">Platforms and standards</h3><p class="inline-list" style="margin-top:10px">{''.join(f'<span>{p}</span>' for p in s['plat'])}</p></div>
 </div></section>
 <section class="band white"><div class="wrap"><nav class="next-prev" aria-label="More services"><a href="{prev['slug']}.html"><small>Previous service</small><b>{prev['name']}</b></a><a href="{nxt['slug']}.html" style="text-align:right"><small>Next service</small><b>{nxt['name']}</b></a></nav></div></section>
-{close_block()}'''
+{cta_block()}'''
     page(s['slug'] + '.html', f'{s["name"]} | Cali IT Consulting', s.get('desc') or f'{s["name"]} from Cali IT Consulting.  {s["intro"].split("  ")[0]}', body)
 
 def industries():
@@ -394,7 +395,7 @@ def industries():
     body = phero('IT for businesses', 'that answer to someone.', 'Regulators, auditors, clients or a board.  Our team has run IT where downtime and audit findings are not an option.') + f'''
 <section class="band white"><div class="wrap">{rows}</div></section>
 {ledger_block()}
-{close_block()}'''
+{cta_block()}'''
     page('industries.html', 'Industries | Cali IT Consulting', 'IT consulting for life sciences, FDA-regulated companies, clinical labs, manufacturing, finance and growing companies.', body)
 
 
@@ -421,7 +422,7 @@ def engagement():
 <section class="standard-sec on-dark"><div class="wrap"><h2>How an engagement starts.</h2><div class="promises four">{st}</div></div></section>
 {standard_block().replace('standard-sec on-dark', 'band white').replace('class="promises"', 'class="promises light-p"')}
 {faq_block()}
-{close_block()}'''
+{cta_block()}'''
     page('engagement.html', 'How We Work | Cali IT Consulting', 'Projects, a managed IT plan built around you, or fractional IT leadership.  Written scope and price before work starts.', body)
 
 def why():
@@ -434,9 +435,7 @@ def why():
   <div class="score"><div class="n" id="gaugeNum">0<small> of {len(sb.QUESTIONS)}</small></div><h3 id="verdictTitle">Answer the questions</h3><p id="verdictText">Every "No" is a gap worth closing.  Most businesses have at least one.</p><a class="btn" id="checkCta" href="contact.html" hidden>Send us your results</a></div></div>
 </div></section>
 <section class="index-sec on-dark"><div class="wrap" style="grid-template-columns:1fr"><div><div class="index-head"><h2>If you nodded at any of these, we should talk.</h2></div><ul class="svc-list">{pains}</ul></div></div></section>
-{notes_block()}
-{standard_block()}
-{close_block()}'''
+{cta_block()}'''
     page('why-us.html', 'Why Us | Cali IT Consulting', 'Mom-and-pop care, enterprise experience: a small IT team for small and growing companies.  Take the free 60-second IT health check.', body)
 
 def about():
@@ -454,7 +453,7 @@ def about():
 <section class="standard-sec on-dark"><div class="wrap"><h2>What we stand for.</h2><div class="promises">{vals}</div></div></section>
 {notes_block()}
 {quote_block(2)}
-{close_block()}'''
+{cta_block()}'''
     page('about.html', 'About | Cali IT Consulting', 'Thirty years of IT leadership in regulated companies, from data centers to Microsoft 365.  Headquartered in Huntington Beach, serving clients nationwide.', body)
 
 def news_block(limit=6, full=False):
@@ -467,7 +466,7 @@ def news_block(limit=6, full=False):
 </div></section>'''
 
 def news_page():
-    body = phero('Cybersecurity news,', 'refreshed every hour.', 'Advisories from CISA and Microsoft, plus the stories security teams are reading.  We collect the headlines; every link goes to the original publisher.') + news_block(30, True) + close_block()
+    body = phero('Cybersecurity news,', 'refreshed every hour.', 'Advisories from CISA and Microsoft, plus the stories security teams are reading.  We collect the headlines; every link goes to the original publisher.') + news_block(30, True) + cta_block()
     page('news.html', 'Cybersecurity News | Cali IT Consulting', 'Cybersecurity headlines from CISA, Microsoft and the security press, plus Microsoft 365 service status, refreshed every hour.', body)
 
 def testimonials():
@@ -475,7 +474,7 @@ def testimonials():
     for t in sb.TESTIMONIALS:
         ps = ''.join(f'<p>{E(p)}</p>' for p in t['paras'])
         rows += f'<figure class="tq" style="margin:0"><figcaption class="who">{E(t["cap"][0])}<span>{E(t["cap"][1]) if len(t["cap"]) > 1 else ""}</span></figcaption><blockquote>{ps}</blockquote></figure>'
-    body = phero('In their', 'own words.', 'What clients and colleagues have said about the work of our team\'s leader.  Quoted from LinkedIn recommendations, with names left out for privacy.') + f'<section class="band white"><div class="wrap tquotes">{rows}</div></section>{close_block()}'
+    body = phero('In their', 'own words.', 'What clients and colleagues have said about the work of our team\'s leader.  Quoted from LinkedIn recommendations, with names left out for privacy.') + f'<section class="band white"><div class="wrap tquotes">{rows}</div></section>{cta_block()}'
     page('testimonials.html', 'Testimonials | Cali IT Consulting', 'What clients and colleagues say about working with the Cali IT Consulting team.', body)
 
 def contact():
