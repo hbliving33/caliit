@@ -479,3 +479,10 @@ h3 { font: 700 21px/1.25 var(--sans); }
 .map.us .borders { stroke: #2d5078; }
 .map.us .land { fill: #2a5f99; stroke: #bcd6f2; }
 .map .land.de { stroke-width: .25; }
+/* mom-and-pop fit band */
+.fit-sec { text-align: center; }
+.fit-tag { font: italic 400 clamp(34px, 4.6vw, 64px)/1.1 var(--serif); color: var(--ink); margin: 0; }
+.fit-tag span { color: #2f5a8a; }
+.fit-lead { max-width: 760px; margin: 22px auto 0; }
+.fit-cards { margin-top: 44px; text-align: left; }
+@media (min-width: 761px) { .fit-cards { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
