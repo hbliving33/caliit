@@ -179,10 +179,10 @@ def two_voice(h):
     a, b, c = m.groups()
     return f'<span class="h-serif">{a.strip().rstrip(",")}</span><span class="h-heavy">{b}{c}</span>'
 
-def phero(serif, heavy, lead, trail=None, mini=True):
+def phero(serif, heavy, lead, trail=None, mini=False):   # inner pages: centered text, no map (the map lives on the home page)
     tr = f'<div class="trail">{trail}</div>' if trail else ''
     m = f'<div class="mini map us us-mini">{us_chart(cls="draw")}</div>' if mini else ''
-    return f'''<section class="chart-sec phero on-dark"><div class="wrap"><div>{tr}<h1><span class="h-serif">{serif}</span><span class="h-heavy">{heavy}</span></h1><p class="lead">{lead}</p></div>{m}</div></section>'''
+    return f'''<section class="chart-sec phero on-dark{" has-map" if mini else ""}"><div class="wrap"><div>{tr}<h1><span class="h-serif">{serif}</span><span class="h-heavy">{heavy}</span></h1><p class="lead">{lead}</p></div>{m}</div></section>'''
 
 def page(fname, title, desc, body, extra_js='', hero_header=True):
     css, js = sb.ver('assets/css/cali.css'), sb.ver('assets/js/site.js')

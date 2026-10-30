@@ -486,3 +486,10 @@ h3 { font: 700 21px/1.25 var(--sans); }
 .fit-lead { max-width: 760px; margin: 22px auto 0; }
 .fit-cards { margin-top: 44px; text-align: left; }
 @media (min-width: 761px) { .fit-cards { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+/* inner page heroes: no map, centered, compact so the content shows above the fold */
+.phero:not(.has-map) { padding: 124px 0 44px; text-align: center; }
+.phero:not(.has-map) .wrap { grid-template-columns: minmax(0, 1fr); justify-items: center; }
+.phero:not(.has-map) .wrap > div { max-width: 820px; }
+.phero:not(.has-map) .lead { margin-left: auto; margin-right: auto; max-width: 720px; }
+.phero:not(.has-map) .trail { margin-bottom: 14px; }
+@media (max-width: 900px) { .phero:not(.has-map) { padding: 100px 0 36px; } }
