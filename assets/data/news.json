@@ -1,8 +1,8 @@
 {
- "updated": "2026-10-30T05:04:31.980447+00:00",
+ "updated": "2026-10-30T05:05:20.285332+00:00",
  "m365": {
   "status": "Available",
-  "checked": "2026-10-30T05:04:32.124381+00:00",
+  "checked": "2026-10-30T05:05:20.414163+00:00",
   "link": "https://status.cloud.microsoft/"
  },
  "items": [
@@ -71,6 +71,18 @@
    "link": "https://www.securityweek.com/when-risk-becomes-personal-what-security-leaders-can-learn-from-a-cancer-diagnosis/",
    "source": "SecurityWeek",
    "date": "2026-10-29T16:30:00+00:00"
+  },
+  {
+   "title": "Tracking AI adoption in North Korean threat actor tradecraft",
+   "link": "https://www.microsoft.com/en-us/security/blog/2026/10/29/tracking-ai-adoption-in-north-korean-threat-actor-tradecraft/",
+   "source": "Microsoft Security Blog",
+   "date": "2026-10-29T16:00:00+00:00"
+  },
+  {
+   "title": "IDC MarketScape names Microsoft a Leader in the 2026 Worldwide Modern Endpoint Security for Enterprises Vendor Assessment",
+   "link": "https://www.microsoft.com/en-us/security/blog/2026/10/29/idc-marketscape-names-microsoft-a-leader-in-the-2026-worldwide-modern-endpoint-security-for-enterprises-vendor-assessment/",
+   "source": "Microsoft Security Blog",
+   "date": "2026-10-29T16:00:00+00:00"
   },
   {
    "title": "Linux Kernel TCP Flaw With 9.8 CVSS Score Affects Ubuntu, Red Hat and Other Distributions",
@@ -151,6 +163,18 @@
    "date": "2026-10-29T08:00:00+00:00"
   },
   {
+   "title": "Actively exploited: GitLab Community Edition and Enterprise Edition (CVE-2026-97229)",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-97229",
+   "source": "CISA",
+   "date": "2026-10-29T00:00:00+00:00"
+  },
+  {
+   "title": "Actively exploited: Cisco Secure Firewall ASA Software and Cisco Secure FTD Software (CVE-2026-76418)",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-76418",
+   "source": "CISA",
+   "date": "2026-10-29T00:00:00+00:00"
+  },
+  {
    "title": "Widespread PHP Flaw May Cause Many Site Outages Today",
    "link": "https://krebsonsecurity.com/2026/10/widespread-php-flaw-may-cause-many-site-outages-today/",
    "source": "Krebs on Security",
@@ -161,34 +185,9 @@
    "link": "https://krebsonsecurity.com/2026/10/feds-suspect-ransom-negotiator-ran-shinyhunters-extortion-site/",
    "source": "Krebs on Security",
    "date": "2026-10-19T13:48:56+00:00"
-  },
-  {
-   "title": "U.K. Sanctions Cryptomus for RU Money Laundering",
-   "link": "https://krebsonsecurity.com/2026/10/u-k-sanctions-cryptomus-for-ru-money-laundering/",
-   "source": "Krebs on Security",
-   "date": "2026-10-14T14:22:49+00:00"
-  },
-  {
-   "title": "Microsoft Patches More Than 1,400 Security Flaws",
-   "link": "https://krebsonsecurity.com/2026/10/microsoft-patches-more-than-1400-security-flaws/",
-   "source": "Krebs on Security",
-   "date": "2026-10-13T23:24:53+00:00"
-  },
-  {
-   "title": "FBI Arrests Executive at Ransomware Negotiation Firm",
-   "link": "https://krebsonsecurity.com/2026/10/fbi-arrests-founder-of-ransomware-negotiation-firm/",
-   "source": "Krebs on Security",
-   "date": "2026-10-10T00:17:42+00:00"
-  },
-  {
-   "title": "ShinyHunters Extorted Boeing Spin-off Prior to Arrests",
-   "link": "https://krebsonsecurity.com/2026/10/shinyhunters-extorted-boeing-spin-off-prior-to-arrests/",
-   "source": "Krebs on Security",
-   "date": "2026-10-07T13:48:45+00:00"
   }
  ],
  "errors": {
-  "CISA": "HTTP Error 403: Forbidden",
   "Microsoft Security Response Center": "not well-formed (invalid token): line 124, column 158"
  }
 }
