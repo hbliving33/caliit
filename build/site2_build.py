@@ -210,7 +210,7 @@ def page(fname, title, desc, body, extra_js='', hero_header=True):
     <div class="cols">
       <div><a class="brand" href="index.html" aria-label="Cali IT Consulting, home">{sb.logo_dark()}</a><p>IT infrastructure and operations consulting.  Headquartered in Huntington Beach, California, serving clients across the United States.</p></div>
       <div><h4>Services</h4><ul>{svc_links}</ul></div>
-      <div><h4>Company</h4><ul><li><a href="industries.html">Industries</a></li><li><a href="engagement.html">How we work</a></li><li><a href="why-us.html">Why us</a></li><li><a href="about.html">About</a></li><li><a href="testimonials.html">Testimonials</a></li></ul></div>
+      <div><h4>Company</h4><ul><li><a href="industries.html">Industries</a></li><li><a href="engagement.html">How we work</a></li><li><a href="why-us.html">Why us</a></li><li><a href="about.html">About</a></li><li><a href="testimonials.html">Testimonials</a></li><li><a href="news.html">Security news</a></li></ul></div>
       <div><h4>Get in touch</h4><ul><li><a href="contact.html">Contact us</a></li><li><a href="why-us.html#check">Free IT health check</a></li><li><a href="privacy.html">Privacy</a></li></ul></div>
     </div>
     <div class="base"><span>&copy; {sb.YEAR} Cali IT Consulting</span><span>Huntington Beach, California</span></div>
@@ -331,6 +331,7 @@ def home():
 {run_block()}
 {index_block()}
 {notes_block()}
+{news_block()}
 {compare_block()}
 {standard_block()}
 {quote_block(1)}
@@ -432,6 +433,19 @@ def about():
 {close_block()}'''
     page('about.html', 'About | Cali IT Consulting', 'Thirty years of IT leadership in regulated companies, from data centers to Microsoft 365.  Headquartered in Huntington Beach, serving clients nationwide.', body)
 
+def news_block(limit=6, full=False):
+    more = '' if full else '<p style="margin-top:26px"><a class="link" href="news.html">All security news</a></p>'
+    return f'''<section class="band white news-sec"><div class="wrap two">
+  <div><h2>{'Latest headlines.' if full else 'Security briefing.'}</h2><p class="lead" style="margin-top:18px">The latest from CISA, Microsoft and the security press, refreshed every hour.  Each headline links to the original source.</p>
+  <a class="m365" id="m365Status" href="https://status.cloud.microsoft/" target="_blank" rel="noopener"><span class="dot" aria-hidden="true"></span><span><b>Microsoft 365 service status</b><span class="m365-t">Checking Microsoft's public status page.</span></span></a>
+  <p class="fine" style="margin-top:12px">From Microsoft's public status page, which covers widespread incidents.  Issues in a single company's tenant show in its own admin center.</p>{more}</div>
+  <ol class="news" id="newsList" data-limit="{limit}"><li class="news-empty">Loading the latest headlines.</li></ol>
+</div></section>'''
+
+def news_page():
+    body = phero('Security news,', 'refreshed every hour.', 'Advisories from CISA and Microsoft, plus the stories security teams are reading.  We collect the headlines; every link goes to the original publisher.') + news_block(30, True) + close_block()
+    page('news.html', 'Security News | Cali IT Consulting', 'Cybersecurity headlines from CISA, Microsoft and the security press, plus Microsoft 365 service status, refreshed every hour.', body)
+
 def testimonials():
     rows = ''
     for t in sb.TESTIMONIALS:
@@ -485,7 +499,7 @@ def cube_preview():
 
 if __name__ == '__main__':
     privacy()   # reads the current privacy text first
-    home(); services(); [service(i, s) for i, s in enumerate(sb.SERVICES)]; industries(); engagement(); why(); about(); testimonials(); contact(); thanks(); notfound(); cube_preview()
+    home(); services(); [service(i, s) for i, s in enumerate(sb.SERVICES)]; industries(); engagement(); why(); about(); testimonials(); contact(); news_page(); thanks(); notfound(); cube_preview()
     for _n in ('thanks.html', '404.html'):   # keep these out of search results
         _f = ROOT / _n; _t = _f.read_text()
         if 'name="robots"' not in _t: _f.write_text(_t.replace('<meta name="theme-color"', '<meta name="robots" content="noindex">\n<meta name="theme-color"', 1))

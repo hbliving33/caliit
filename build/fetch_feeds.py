@@ -1,0 +1,93 @@
+"""Pull security news headlines and Microsoft 365 public status into assets/data/news.json.
+
+Runs on a schedule in GitHub Actions (.github/workflows/feeds.yml).  Only headlines, sources,
+dates and links are kept, so the site links out to each publisher instead of copying articles.
+Uses only the Python standard library.
+"""
+import json, re, html, pathlib, urllib.request, email.utils, datetime as dt
+import xml.etree.ElementTree as ET
+
+ROOT = pathlib.Path(__file__).resolve().parent.parent
+OUT = ROOT / 'assets' / 'data' / 'news.json'
+FEEDS = [
+    ('CISA', 'https://www.cisa.gov/cybersecurity-advisories/all.xml'),
+    ('Microsoft Security Response Center', 'https://msrc.microsoft.com/blog/feed'),
+    ('BleepingComputer', 'https://www.bleepingcomputer.com/feed/'),
+    ('The Hacker News', 'https://feeds.feedburner.com/TheHackersNews'),
+    ('SecurityWeek', 'https://www.securityweek.com/feed/'),
+    ('Krebs on Security', 'https://krebsonsecurity.com/feed/'),
+    ('Dark Reading', 'https://www.darkreading.com/rss.xml'),
+]
+M365_FEED = 'https://status.cloud.microsoft/api/feed/mac'
+PER_SOURCE, TOTAL = 6, 30
+UA = {'User-Agent': 'caliit.com news fetcher (+https://caliit.com)'}
+
+def get(url):
+    with urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=25) as r:
+        return r.read()
+
+def text(el, *names):
+    for n in names:
+        x = el.find(n)
+        if x is not None:
+            if x.text and x.text.strip(): return x.text.strip()
+            if x.get('href'): return x.get('href').strip()
+    return ''
+
+def when(s):
+    if not s: return None
+    try: return email.utils.parsedate_to_datetime(s).astimezone(dt.timezone.utc)
+    except Exception: pass
+    try: return dt.datetime.fromisoformat(s.replace('Z', '+00:00')).astimezone(dt.timezone.utc)
+    except Exception: return None
+
+def clean(s):
+    return re.sub(r'\s+', ' ', html.unescape(re.sub(r'<[^>]+>', '', s))).strip()
+
+def parse(source, raw):
+    root = ET.fromstring(raw)
+    for el in root.iter():           # drop namespaces so RSS and Atom read the same
+        if isinstance(el.tag, str) and '}' in el.tag: el.tag = el.tag.split('}', 1)[1]
+    items = root.findall('.//item') or root.findall('.//entry')
+    out = []
+    for it in items:
+        title, link = clean(text(it, 'title')), text(it, 'link', 'guid')
+        d = when(text(it, 'pubDate', 'published', 'updated', 'date'))
+        if title and link.startswith('http') and d:
+            out.append({'title': title[:180], 'link': link, 'source': source, 'date': d.isoformat()})
+    out.sort(key=lambda x: x['date'], reverse=True)
+    return out[:PER_SOURCE]
+
+def m365():
+    try:
+        root = ET.fromstring(get(M365_FEED))
+        it = root.find('.//item')
+        status = (it.findtext('status') or '').strip() if it is not None else ''
+        return {'status': status or 'Unknown', 'checked': dt.datetime.now(dt.timezone.utc).isoformat(), 'link': 'https://status.cloud.microsoft/'}
+    except Exception as e:
+        print('M365 status failed:', e)
+        return {'status': 'Unknown', 'checked': dt.datetime.now(dt.timezone.utc).isoformat(), 'link': 'https://status.cloud.microsoft/'}
+
+def main():
+    prev = {}
+    if OUT.exists():
+        try: prev = json.loads(OUT.read_text())
+        except Exception: prev = {}
+    items, ok = [], []
+    for source, url in FEEDS:
+        try:
+            got = parse(source, get(url)); items += got; ok.append(f'{source}: {len(got)}')
+        except Exception as e:
+            print(f'{source} failed: {e}')
+            items += [x for x in prev.get('items', []) if x.get('source') == source]   # keep last good headlines
+    seen, uniq = set(), []
+    for x in sorted(items, key=lambda x: x['date'], reverse=True):
+        k = x['title'].lower()
+        if k not in seen: seen.add(k); uniq.append(x)
+    data = {'updated': dt.datetime.now(dt.timezone.utc).isoformat(), 'm365': m365(), 'items': uniq[:TOTAL]}
+    if not data['items'] and prev.get('items'): data['items'] = prev['items']
+    OUT.write_text(json.dumps(data, indent=1))
+    print('\n'.join(ok)); print('M365:', data['m365']['status'], '| headlines:', len(data['items']))
+
+if __name__ == '__main__':
+    main()

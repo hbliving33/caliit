@@ -42,6 +42,30 @@
     });
   }
 
+  // security news and Microsoft 365 status: assets/data/news.json is refreshed hourly by a GitHub Action
+  const newsList = document.getElementById("newsList"), m365 = document.getElementById("m365Status");
+  if (newsList || m365) {
+    const ago = (iso) => { const m = Math.round((Date.now() - new Date(iso)) / 60000); if (!(m >= 0)) return ""; if (m < 60) return m <= 1 ? "just now" : m + " minutes ago"; const h = Math.round(m / 60); if (h < 24) return h + (h === 1 ? " hour ago" : " hours ago"); const d = Math.round(h / 24); return d + (d === 1 ? " day ago" : " days ago"); };
+    fetch("assets/data/news.json?t=" + Math.floor(Date.now() / 600000)).then((r) => r.json()).then((data) => {
+      if (newsList) {
+        const items = (data.items || []).slice(0, +newsList.dataset.limit || 6);
+        newsList.textContent = "";
+        if (!items.length) { const li = document.createElement("li"); li.className = "news-empty"; li.textContent = "Headlines will appear here shortly."; newsList.appendChild(li); }
+        items.forEach((it) => {
+          const li = document.createElement("li"), a = document.createElement("a"), meta = document.createElement("span");
+          a.href = it.link; a.target = "_blank"; a.rel = "noopener"; a.textContent = it.title;
+          meta.className = "news-meta"; meta.textContent = it.source + "  \u00b7  " + ago(it.date);
+          li.append(meta, a); newsList.appendChild(li);
+        });
+      }
+      if (m365 && data.m365) {
+        const st = (data.m365.status || "Unknown"), ok = /^available$/i.test(st), t = m365.querySelector(".m365-t");
+        m365.classList.add(ok ? "ok" : st === "Unknown" ? "unk" : "warn");
+        t.textContent = ok ? "No widespread incidents reported" + (data.m365.checked ? ", checked " + ago(data.m365.checked) : "") + "." : st === "Unknown" ? "Status unavailable right now.  Open Microsoft's status page." : "Microsoft reports: " + st + ".  Open the status page for details.";
+      }
+    }).catch(() => { if (newsList) newsList.innerHTML = '<li class="news-empty">Headlines are unavailable right now.</li>'; });
+  }
+
   // testimonial rotator
   const rot = document.getElementById("quoteRot");
   if (rot) {
