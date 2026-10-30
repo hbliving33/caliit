@@ -1,21 +1,51 @@
 {
- "updated": "2026-10-30T07:18:19.169371+00:00",
+ "updated": "2026-10-30T09:07:02.579377+00:00",
  "m365": {
   "status": "Available",
-  "checked": "2026-10-30T07:18:19.334588+00:00",
+  "checked": "2026-10-30T09:07:02.729237+00:00",
   "link": "https://status.cloud.microsoft/"
  },
  "aws": {
   "status": "3 open events",
   "link": "https://health.aws.amazon.com/health/status",
-  "checked": "2026-10-30T07:18:19.169371+00:00"
+  "checked": "2026-10-30T09:07:02.579377+00:00"
  },
  "wasabi": {
   "status": "Service Under Maintenance",
   "link": "https://status.wasabi.com/",
-  "checked": "2026-10-30T07:18:19.169371+00:00"
+  "checked": "2026-10-30T09:07:02.579377+00:00"
  },
  "items": [
+  {
+   "title": "TeamViewer Flaw Could Let Malicious Hosts Take Over Support Technicians\u2019 Machines",
+   "link": "https://www.securityweek.com/teamviewer-flaw-could-let-malicious-hosts-take-over-support-technicians-machines/",
+   "source": "SecurityWeek",
+   "date": "2026-10-30T08:44:49+00:00"
+  },
+  {
+   "title": "$6 Billion Binance Hack Bears Hallmarks of North Korea\u2019s TraderTraitor",
+   "link": "https://www.securityweek.com/6-billion-binance-hack-bears-hallmarks-of-north-koreas-tradertraitor/",
+   "source": "SecurityWeek",
+   "date": "2026-10-30T08:16:26+00:00"
+  },
+  {
+   "title": "As Russia's Cyberwar Evolves, Belarus Steps Forward",
+   "link": "https://www.darkreading.com/physical-security/russia-cyber-war-belarus-steps-forward",
+   "source": "Dark Reading",
+   "date": "2026-10-30T08:00:00+00:00"
+  },
+  {
+   "title": "Hackers Actively Exploit Highly Critical Drupal Commerce Core Authorization Bypass Flaw",
+   "link": "https://thehackernews.com/2026/10/hackers-actively-exploit-highly.html",
+   "source": "The Hacker News",
+   "date": "2026-10-30T07:45:30+00:00"
+  },
+  {
+   "title": "CISA Adds Actively Exploited GitLab RCE and Cisco Firewall DoS Flaws to KEV",
+   "link": "https://thehackernews.com/2026/10/cisa-adds-actively-exploited-gitlab-rce.html",
+   "source": "The Hacker News",
+   "date": "2026-10-30T07:27:05+00:00"
+  },
   {
    "title": "Binance Suffers Security Breach Affecting $6.3 Billion in Assets, Nearly $3 Billion Frozen",
    "link": "https://thehackernews.com/2026/10/binance-suffers-security-breach.html",
@@ -137,40 +167,10 @@
    "date": "2026-10-29T14:18:03+00:00"
   },
   {
-   "title": "Adobe, Veeam, Juniper Networks Patch Critical Vulnerabilities",
-   "link": "https://www.securityweek.com/adobe-veeam-juniper-networks-patch-critical-vulnerabilities/",
-   "source": "SecurityWeek",
-   "date": "2026-10-29T13:42:52+00:00"
-  },
-  {
-   "title": "Google's Gemini 4 Carbon Leads Benchmarks for Finding, Exploiting, and Patching Vulnerabilities",
-   "link": "https://thehackernews.com/2026/10/googles-gemini-4-carbon-leads.html",
-   "source": "The Hacker News",
-   "date": "2026-10-29T13:42:40+00:00"
-  },
-  {
-   "title": "BAE Says No Data Extracted in Incident Hitting Bankruptcy Courts",
-   "link": "https://www.securityweek.com/bae-says-no-data-extracted-in-incident-hitting-bankruptcy-courts/",
-   "source": "SecurityWeek",
-   "date": "2026-10-29T13:26:49+00:00"
-  },
-  {
-   "title": "Webinar: How to Build AI Threat Readiness Into Your Security Operations",
-   "link": "https://thehackernews.com/2026/08/learn-how-to-build-security-operations.html",
-   "source": "The Hacker News",
-   "date": "2026-10-29T11:39:41+00:00"
-  },
-  {
    "title": "Shadowy AI Relay Disables OpenAI Codex, Claude Code Sandboxes",
    "link": "https://www.darkreading.com/threat-intelligence/ai-relay-service-openai-codex-claude-code-sandboxes",
    "source": "Dark Reading",
    "date": "2026-10-29T10:00:00+00:00"
-  },
-  {
-   "title": "Cyber Vulnerabilities Besiege Italy, Absent Clear Cause",
-   "link": "https://www.darkreading.com/cybersecurity-analytics/cyber-vulnerabilities-besiege-italy",
-   "source": "Dark Reading",
-   "date": "2026-10-29T08:00:00+00:00"
   },
   {
    "title": "Actively exploited: GitLab Community Edition and Enterprise Edition (CVE-2026-97229)",
