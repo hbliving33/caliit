@@ -12,7 +12,6 @@ OUT = ROOT / 'assets' / 'data' / 'news.json'
 FEEDS = [
     ('CISA', 'https://www.cisa.gov/cybersecurity-advisories/all.xml'),
     ('Microsoft Security Blog', 'https://www.microsoft.com/en-us/security/blog/feed/'),
-    ('Microsoft Security Response Center', 'https://msrc.microsoft.com/blog/feed'),
     ('BleepingComputer', 'https://www.bleepingcomputer.com/feed/'),
     ('The Hacker News', 'https://feeds.feedburner.com/TheHackersNews'),
     ('SecurityWeek', 'https://www.securityweek.com/feed/'),
