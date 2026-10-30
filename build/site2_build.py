@@ -425,7 +425,7 @@ def about():
 </div></section>
 <section class="band fog"><div class="wrap two">
   <div><h2>What we do.</h2></div>
-  <div class="prose"><p class="lead">We've integrated IT for more than ten acquisitions, moved headquarters and data centers, built certified labs, and passed SOX and ISO audits and HIPAA reviews.</p><p>We handle networks, servers and cloud, data centers, Microsoft 365, business applications, cybersecurity, physical security, compliance and IT strategy.  We work on-site across California and Arizona and support clients remotely in all 50 states, traveling on-site as required.  You get senior-level answers from people who have done the work, not a sales pitch.</p></div>
+  <div class="prose"><p class="lead">We've integrated IT for more than ten acquisitions, moved headquarters and data centers, built certified labs, and passed SOX and ISO audits and HIPAA reviews.</p><p>We handle networks, servers and cloud, data centers, Microsoft 365, business applications, cybersecurity, physical security, compliance and IT strategy.  We work on-site across California and Arizona and support clients remotely in all 50 states, traveling on-site as required.  You get senior-level answers from people who have done the work, not a sales pitch.</p><p>Some of our longest client relationships began at OC TechWorks LLC, the Orange County IT firm our founder co-owned from start to finish.  When it wound down, its clients came with us.</p></div>
 </div></section>
 <section class="standard-sec on-dark"><div class="wrap"><h2>What we stand for.</h2><div class="promises">{vals}</div></div></section>
 {notes_block()}
