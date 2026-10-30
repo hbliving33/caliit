@@ -1,5 +1,5 @@
 (() => {
-  // 11 services spread over all six sides: one at each face center, five on edge pieces, so every side carries two or three.
+  // 12 services spread over all six sides: one at each face center, six on edge pieces, so every side carries three.
   const services = [
     { name: "Microsoft 365", slug: "microsoft-365", pos: [0, 0, 1] },          // front
     { name: "Cybersecurity", slug: "cybersecurity", pos: [1, 0, 0] },          // right
@@ -11,11 +11,12 @@
     { name: "Access Control", slug: "access-control", pos: [1, -1, 0] },       // right / top edge
     { name: "Business Automation", slug: "business-automation", pos: [0, -1, -1] }, // top / back edge
     { name: "Data Center", slug: "data-center", pos: [-1, 0, -1] },            // back / left edge
-    { name: "Managed IT", slug: "managed-it", pos: [-1, 1, 0] }                // left / bottom edge
+    { name: "Managed IT", slug: "managed-it", pos: [-1, 1, 0] },               // left / bottom edge
+    { name: "Business Applications", slug: "business-applications", pos: [0, 1, 1] } // bottom / front edge
   ];
   // rotation that brings each piece toward the viewer (rotateX, rotateY), with a slight tilt
   const aim = { "0,0,1": [-14, -18], "1,0,0": [-14, -108], "0,0,-1": [-14, 162], "-1,0,0": [-14, 72], "0,-1,0": [-74, -18], "0,1,0": [74, -18],
-                "1,0,1": [-10, -45], "1,-1,0": [-45, -90], "0,-1,-1": [-45, 180], "-1,0,-1": [-10, 135], "-1,1,0": [45, 90] };   // edge angles measured so each piece faces the viewer
+                "1,0,1": [-10, -45], "1,-1,0": [-45, -90], "0,-1,-1": [-45, 180], "-1,0,-1": [-10, 135], "-1,1,0": [45, 90], "0,1,1": [32, -14] };   // edge angles measured so each piece faces the viewer
   const glyphs = "ABCDEFGHJKLMNPQRSTUVWXYZ0123456789#%&?/*|+<>[]{}$@=";
   const rnd = s => s[Math.floor(Math.random() * s.length)];
   const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;

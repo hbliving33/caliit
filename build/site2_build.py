@@ -24,8 +24,15 @@ sb.SERVICES.append(dict(slug='managed-it', name='Managed IT', h='Managed IT, <em
   plat=['Remote monitoring', 'Patch management', 'Microsoft 365', 'Intune', 'Cisco Meraki', 'UniFi', 'Cloud backup', 'Co-managed IT'],
   case=('Built around you', 'Every managed plan starts with a short conversation, not a price sheet.', ['We list what you have and what matters most', 'You choose what we manage, from a few key systems to the whole stack', 'We agree on response times and a monthly price, in writing'], 'MSP-style coverage, without a one-size contract.'),
   case_label='How it works', case_note=''))
-sb.TOPICS.insert(sb.TOPICS.index('Something else'), 'AI'); sb.TOPICS.insert(sb.TOPICS.index('Something else'), 'Managed IT')
-ORDER = ['network', 'cloud', 'data-center', 'microsoft-365', 'ai', 'managed-it', 'it-strategy', 'cybersecurity', 'business-automation', 'access-control', 'compliance']
+sb.SERVICES.append(dict(slug='business-applications', name='Business Applications', h='Every app, <em>with an owner</em>.', short='ERP, HR and payroll, CRM and quality systems: single sign-on, access by role, licenses and renewals, managed.',
+  intro="Your business runs on a stack of apps: ERP, HR and payroll, CRM, quality and document systems.  We give every one an owner, put sign-in through one identity, and keep access, licenses and renewals under control.",
+  pains=[('Nobody owns the apps', 'Each department bought its own tools, and IT finds out when something breaks or the invoice arrives.'), ('Logins everywhere', 'Every app has its own password, and nobody is sure who still has access after someone leaves.'), ('Renewals on autopilot', 'Contracts renew themselves, seat counts only go up, and no one has compared what you pay to what you use.')],
+  get=['Administration for ERP, HR and payroll, CRM and quality systems', 'Single sign-on and automatic user provisioning through Entra ID', 'Roles and permissions set by job, with regular access reviews', 'One onboarding and offboarding checklist across every app', 'An app inventory with owners, costs and renewal dates', 'License and renewal reviews before the contract auto-renews', 'App selection, rollout and vendor management, start to finish'],
+  plat=['NetSuite', 'Oracle', 'ADP', 'MasterControl', 'HubSpot', 'Pipedrive', 'Entra ID single sign-on', 'SCIM provisioning'],
+  case=('One owner for the whole stack', 'A diagnostics company ran its ERP, payroll, CRM and quality systems with separate logins and no single owner.', ['Took over ERP administration: roles, approvals and license types', 'Connected the HR and payroll platform to Entra ID for single sign-on', 'Earlier led an Oracle ERP rollout alongside acquisition integrations for a global manufacturer'], 'Every app with an owner, access set by role, and renewals on a calendar.'),
+  desc='Business application management: ERP, HR and payroll, CRM and quality systems, with single sign-on, access by role and license control.'))
+sb.TOPICS.insert(sb.TOPICS.index('Something else'), 'AI'); sb.TOPICS.insert(sb.TOPICS.index('Something else'), 'Managed IT'); sb.TOPICS.insert(sb.TOPICS.index('Microsoft 365') + 1, 'Business Applications')
+ORDER = ['network', 'cloud', 'data-center', 'microsoft-365', 'business-applications', 'ai', 'managed-it', 'it-strategy', 'cybersecurity', 'business-automation', 'access-control', 'compliance']
 sb.SERVICES.sort(key=lambda x: ORDER.index(x['slug']))
 for _x in sb.SERVICES:
     if _x['slug'] == 'cloud': _x['short'] = 'Servers, storage and virtualization, with backups you have tested.'
@@ -33,7 +40,38 @@ for _x in sb.SERVICES:
     if _x['slug'] == 'cybersecurity': _x['short'] = 'Penetration testing, risk assessments, MFA, email gateway security and a plan for a bad day.'
     if _x['slug'] == 'access-control': _x['short'] = 'Badge access, security cameras and monitoring for every door and every site.'
     if _x['slug'] == 'it-strategy': _x['short'] = 'IT operations leadership, repeatable processes, roadmaps, budgets and vendor management.'
+# ---- launch refresh (Oct 2026): current terms, identity first, unique meta descriptions ----
+def _upd(slug, **kw):
+    for _x in sb.SERVICES:
+        if _x['slug'] == slug: _x.update(kw)
+_upd('network', desc='Network design and support: firewalls, switching, Wi-Fi, SD-WAN, site-to-site VPN and zero trust remote access, documented and monitored.',
+     get=['Network design from core to edge', 'Firewall, switching and Wi-Fi installs', 'Site-to-site VPN and SD-WAN between offices, labs and plants', 'Remote access, from VPN to zero trust (ZTNA)', 'Office moves and new building cutovers', 'Guest Wi-Fi kept separate from your business network', 'Monitoring and documentation you keep'],
+     plat=['Cisco Meraki', 'UniFi', 'SD-WAN', 'Site-to-site VPN', 'ZTNA', 'Wi-Fi', 'Phone systems', 'Network monitoring'])
+_upd('cloud', desc='Servers, storage, virtualization and backup: Azure and hybrid design, VMware and Hyper-V, immutable offsite backups and tested disaster recovery.',
+     get=['Cloud readiness review and migration plan', 'Azure and hybrid server design', 'Virtualization and storage: VMware, Hyper-V and NetApp', 'Immutable, offsite backups with tested restores', 'Disaster recovery with recovery times agreed in writing', 'Cloud cost reviews'],
+     plat=['Azure', 'VMware', 'Hyper-V', 'NetApp', 'Dell', 'HP', 'Synology', 'Immutable backups', 'Colocation'])
+_upd('data-center', desc='Data center and server room design, colocation selection and moves: power, cooling, racks and cabling, with a cutover and rollback plan.')
+_upd('microsoft-365', h='Your workplace, <em>secured from the sign-in up</em>.',
+     intro='Microsoft 365 starts with identity: who can sign in, from where, on what device.  Then email, files and meetings.  We set it up right, secure it, and keep licensing under control.',
+     get=['Identity first: Entra ID, phishing-resistant MFA, passkeys and conditional access', 'Tenant security review with a ranked fix list, tracked in Secure Score', 'Exchange Online, Teams, SharePoint and OneDrive migrations', 'SharePoint and OneDrive sharing and permissions cleaned up and kept that way', 'Devices enrolled and managed with Intune and Autopilot', 'Licensing review and cleanup', 'Standard onboarding and offboarding for every user'],
+     plat=['Entra ID', 'Conditional access', 'Passkeys', 'Exchange Online', 'Teams', 'SharePoint', 'OneDrive', 'Intune', 'Autopilot'],
+     desc='Microsoft 365, identity first: Entra ID, phishing-resistant MFA and conditional access, then Exchange Online, SharePoint, OneDrive, Teams, Intune and licensing.')
+_upd('ai', get=['Copilot for Microsoft 365 readiness review', 'SharePoint and OneDrive oversharing cleanup before AI is turned on', 'Shadow AI check: which AI tools staff already use, and with what data', 'AI acceptable use policy and guardrails', 'Tool selection and a pilot with clear goals', 'Agents and automation in Copilot Studio and Power Automate', 'Staff training on using AI well and safely'],
+     desc='AI readiness for Microsoft 365: Copilot readiness, oversharing cleanup, shadow AI checks, AI policies and practical agents in Copilot Studio.')
+_upd('managed-it', desc='Managed IT sized to fit: monitoring, patching, users, devices and vendors, fully managed or co-managed alongside your own IT staff.')
+_upd('it-strategy', intro='Fractional CIO and IT director support for companies that need a senior IT voice without a full-time hire.  Roadmaps, budgets, vendors, written processes and the hard calls.',
+     desc='Fractional CIO and IT leadership: technology roadmaps, IT budgets, written processes, vendor contracts, M&A integration and board reporting.')
+_upd('cybersecurity', get=['Penetration testing, including autonomous pentesting, and vulnerability scanning', 'Security assessment with a ranked remediation plan', 'Phishing-resistant MFA and conditional access for every account', 'Endpoint protection (EDR) and managed detection (MDR) chosen and set up with the right partner', 'Email gateway security and phishing defenses', 'Security awareness training for staff', 'Incident response plan and tabletop exercise', 'Hands-on help when an incident happens'],
+     plat=['Penetration testing', 'EDR and MDR', 'Email gateway', 'Entra ID', 'Conditional access', 'Passkeys', 'Intune', 'Security awareness training'],
+     desc='Cybersecurity based on risk: penetration testing, phishing-resistant MFA, EDR and MDR, email security, staff training and an incident response plan.')
+_upd('business-automation', desc='Business automation with Power Apps, Power Automate and CRM workflows: approvals, handoffs and data entry done by the system, not by people.')
+_upd('access-control', desc='Physical security that works with IT: badge access, security cameras, visitor management and monitoring, shut off the day someone leaves.')
+_upd('compliance', get=['IT general controls for SOX', 'IT support for 21 CFR Part 11 and GxP: access, audit trails and change records', 'HIPAA and data protection readiness', 'Written policies and procedures that match reality', 'Evidence collection and audit support', 'Change management and access reviews', 'Support for FDA-regulated and certified lab environments'],
+     plat=['SOX', '21 CFR Part 11', 'GxP', 'HIPAA', 'GDPR', 'ISO 9001', 'ISO 14001', 'ISO 27001', 'ITIL', 'CLIA labs'],
+     desc='IT compliance for regulated companies: SOX IT general controls, 21 CFR Part 11 and GxP support, HIPAA, ISO audits and evidence that is ready on time.')
 S = {s['slug']: s for s in sb.SERVICES}
+sb.SVC.update(S)
+sb.PAINS.insert(sb.PAINS.index(next(x for x in sb.PAINS if x[1] == 'business-automation')), ('Nobody can say how many apps you pay for, or who still has access to them.', 'business-applications'))
 STATS2 = [('30', 'Years in IT leadership'), ('10+', 'Acquisitions integrated'), ('30+', 'Sites networked worldwide'), ('$12M', 'Largest IT budget managed')]
 
 def chart(cls='', labels=True, draw=False, vb='-34 -12 276 246'):
@@ -170,7 +208,7 @@ def page(fname, title, desc, body, extra_js='', hero_header=True):
 <footer class="foot">
   <div class="wrap">
     <div class="cols">
-      <div><a class="brand" href="index.html" aria-label="Cali IT Consulting, home">{sb.logo_dark()}</a><p>Senior IT consulting, headquartered in Huntington Beach, California and serving clients across the United States.</p></div>
+      <div><a class="brand" href="index.html" aria-label="Cali IT Consulting, home">{sb.logo_dark()}</a><p>IT infrastructure and operations consulting.  Headquartered in Huntington Beach, California, serving clients across the United States.</p></div>
       <div><h4>Services</h4><ul>{svc_links}</ul></div>
       <div><h4>Company</h4><ul><li><a href="industries.html">Industries</a></li><li><a href="engagement.html">How we work</a></li><li><a href="why-us.html">Why us</a></li><li><a href="about.html">About</a></li><li><a href="testimonials.html">Testimonials</a></li></ul></div>
       <div><h4>Get in touch</h4><ul><li><a href="contact.html">Contact us</a></li><li><a href="why-us.html#check">Free IT health check</a></li><li><a href="privacy.html">Privacy</a></li></ul></div>
@@ -190,7 +228,7 @@ CUBE_JS = lambda: f'<script src="assets/js/cube.js?v={sb.ver("assets/js/cube.js"
 # ---------- shared blocks ----------
 def index_block(head=True):
     rows = ''.join(f'<li data-name="{s["name"]}"><a href="{s["slug"]}.html"><span class="nm">{s["name"]}</span><span class="ds">{s["short"]}</span></a></li>' for s in sb.SERVICES)
-    h = '<div class="index-head"><h2>Eleven practice areas, one team.</h2><p class="lead" style="margin-top:16px">Bring us a single project or hand us the whole stack.  Point at a service to turn the cube, or open it to read more.</p></div>' if head else ''
+    h = '<div class="index-head"><h2>Twelve practice areas, one team.</h2><p class="lead" style="margin-top:16px">Bring us a single project or hand us the whole stack.  Point at a service to turn the cube, or open it to read more.</p></div>' if head else ''
     return f'''<section class="index-sec on-dark"><div class="wrap">
   <div>{h}<ul class="svc-list" id="svcList">{rows}</ul></div>
   <div class="cube-col">
@@ -205,7 +243,7 @@ def ledger_block():
             ('SOX', 'IT general controls: testing, evidence and reporting for publicly traded companies, every audit cycle.'),
             ('HIPAA and GDPR', 'Data protection readiness, access by role and documented handling of patient and personal data.'),
             ('ISO 9001, 14001, 27001', 'IT support for quality, environmental and information security audits at global manufacturers.'),
-            ('Physical security', 'Badge access, cameras and visitor logs tied to user accounts, so access ends the day someone leaves.')]
+            ('Physical security', 'Badge access, cameras and visitor logs, with badges shut off the day someone leaves.')]
     trs = ''.join(f'<tr><th scope="row">{a}</th><td>{b}</td></tr>' for a, b in rows)
     return f'''<section class="ledger-sec"><div class="wrap">
   <div><h2>For businesses that answer to auditors.</h2><p class="lead" style="margin-top:20px">Most IT shops stop at HIPAA.  Our team has run IT where a change isn't finished until it is documented, approved and provable.</p><p><a class="link" href="industries.html">See the industries we serve</a></p></div>
@@ -215,9 +253,10 @@ def ledger_block():
 def run_block():
     rows = [('Core infrastructure', 'Servers, storage, virtualization, networks, Wi-Fi and the links between sites.  Data centers and colocation, designed, built, moved and kept running.'),
             ('IT operations', 'The day-to-day: users, devices, patching, monitoring, backups, onboarding and offboarding, vendors and documentation.  Run the same way every time, with written processes.'),
-            ('Microsoft 365 and cloud', 'Identity first: Entra ID, MFA and conditional access.  Then email, SharePoint/OneDrive, Teams and devices, plus Azure and hybrid servers, set up right and kept clean.'),
-            ('AI', 'Copilot readiness, permission cleanup before AI is switched on, plain-English AI policies, and automation that saves real time.'),
-            ('Security', 'Penetration testing, email gateway security, MFA and conditional access, staff training and a written plan for a bad day.'),
+            ('Microsoft 365 and cloud', 'Identity first: Entra ID, phishing-resistant MFA and conditional access.  Then email, SharePoint/OneDrive, Teams and devices, plus Azure and hybrid servers, set up right and kept clean.'),
+            ('Business applications', 'ERP, HR and payroll, CRM and quality systems, each with an owner.  Single sign-on, access by role, and licenses and renewals kept in check.'),
+            ('AI', 'Copilot readiness, oversharing cleanup before AI is switched on, plain-English AI policies, and agents and automation that save real time.'),
+            ('Security', 'Penetration testing, phishing-resistant MFA, endpoint protection, email security, staff training and a written plan for a bad day.'),
             ('Facilities', 'When the building is part of the job: office moves and build-outs, server room power and cooling, badge access and cameras.'),
             ('Compliance', 'When audits come, the evidence is ready: SOX, HIPAA, ISO and FDA-regulated environments.')]
     trs = ''.join(f'<tr><th scope="row">{a}</th><td>{b}</td></tr>' for a, b in rows)
@@ -262,7 +301,7 @@ def form(dark=True):
 </form>'''
 
 def close_block():
-    st = f'<svg class="close-state" viewBox="0 0 200 220" aria-hidden="true"><path d="{CA}" fill="#8fb3d9"/></svg>'
+    st = f'<svg class="close-state us-shape" viewBox="-14 -6 428 270" aria-hidden="true"><path d="{US["nation"]}" fill="#8fb3d9"/></svg>'
     return f'''<section class="chart-sec close-sec on-dark" id="talk">{st}<div class="wrap">
   <div><h2>Tell us what you're working on.</h2><p class="lead" style="margin-top:20px">An audit on the calendar, an office move, a security worry or an IT person who just gave notice.  Send a few lines and we'll reply within one business day.</p>
   <p style="margin-top:28px;color:#8ea2b8;font-size:15px">Headquarters in Huntington Beach, California.<br>On-site across California and Arizona.  Remote support in all 50 states.</p></div>
@@ -277,7 +316,7 @@ def home():
   <div>
     <p class="kicker">Rooted in California.  Serving businesses nationwide.</p>
     <h1><span class="h-serif">Your IT, run right.</span><span class="h-heavy">Infrastructure and IT operations, handled.</span></h1>
-    <p class="lead">We design, build and run the systems your business depends on: servers, networks, data centers, Microsoft 365 and security.  Thirty years of running IT operations, now working for you.</p>
+    <p class="lead">We design, build and run the systems your business depends on: servers, networks, data centers, Microsoft 365, business applications and security.  Thirty years of running IT operations, now working for you.</p>
     <div class="acts"><a class="btn" href="#talk">Contact us</a><a class="btn line" href="services.html">See our services</a></div>
     <p class="reach-note">On-site across California and Arizona.  Remote support in all 50 states.</p>
   </div>
@@ -295,17 +334,18 @@ def home():
 {compare_block()}
 {standard_block()}
 {quote_block(1)}
-{close_block()}'''
-    page('index.html', 'Cali IT Consulting | IT infrastructure and operations, nationwide', "Cali IT Consulting designs, builds and runs core IT infrastructure and day-to-day IT operations: servers, networks, data centers, Microsoft 365 and security.  Headquartered in Huntington Beach, California, serving clients nationwide.", body, CUBE_JS())
+{close_block()}
+<script type="application/ld+json">{ORG_LD}</script>'''
+    page('index.html', 'Cali IT Consulting | IT infrastructure and operations, nationwide', "IT infrastructure and operations, handled: servers, networks, Microsoft 365, business applications and security.  California-based, serving clients nationwide.", body, CUBE_JS())
 
 def services():
-    body = phero('Everything your IT needs,', 'under one roof.', 'Eleven practice areas, one team.  Bring us a single project or hand us the whole stack.') + index_block(head=False) + f'''
+    body = phero('Everything your IT needs,', 'under one roof.', 'Twelve practice areas, one team.  Bring us a single project or hand us the whole stack.') + index_block(head=False) + f'''
 <section class="band white"><div class="wrap two">
   <div><h2>Not sure where to start?  Start with an assessment.</h2><p class="lead" style="margin-top:18px">We review your environment, rank the risks and hand you a written plan.  You decide what to fix, and who fixes it.</p><p style="margin-top:26px"><a class="btn ink" href="contact.html?topic=IT%20and%20security%20assessment">Ask about an assessment</a></p></div>
   <ul class="ticks"><li>Microsoft 365 and identity security</li><li>Backups and recovery</li><li>Network, firewall and Wi-Fi</li><li>Licensing and vendor spend</li><li>Compliance gaps and evidence</li><li>A ranked, written remediation plan</li></ul>
 </div></section>
 {close_block()}'''
-    page('services.html', 'Services | Cali IT Consulting', 'Microsoft 365, cybersecurity, network, cloud, data center, compliance, access control, business automation and IT strategy, for clients nationwide.', body, CUBE_JS())
+    page('services.html', 'Services | Cali IT Consulting', 'Twelve IT practice areas, one team: network, cloud, data center, Microsoft 365, business applications, AI, managed IT, security and compliance.', body, CUBE_JS())
 
 def service(i, s):
     m = re.match(r'(.*?)<em>(.*?)</em>(.*)', s['h']); a, b, c = m.groups()
@@ -323,7 +363,7 @@ def service(i, s):
 </div></section>
 <section class="band white"><div class="wrap"><nav class="next-prev" aria-label="More services"><a href="{prev['slug']}.html"><small>Previous service</small><b>{prev['name']}</b></a><a href="{nxt['slug']}.html" style="text-align:right"><small>Next service</small><b>{nxt['name']}</b></a></nav></div></section>
 {close_block()}'''
-    page(s['slug'] + '.html', f'{s["name"]} | Cali IT Consulting', f'{s["name"]} from Cali IT Consulting, serving clients nationwide.  {s["intro"].split("  ")[0]}', body)
+    page(s['slug'] + '.html', f'{s["name"]} | Cali IT Consulting', s.get('desc') or f'{s["name"]} from Cali IT Consulting.  {s["intro"].split("  ")[0]}', body)
 
 def industries():
     rows = ''.join(f'<article class="ind"><div><h3>{t}</h3><p>{d}</p></div><ul class="ticks">{"".join(f"<li>{x}</li>" for x in l)}</ul></article>' for _, t, d, l in sb.INDUSTRIES)
@@ -333,12 +373,29 @@ def industries():
 {close_block()}'''
     page('industries.html', 'Industries | Cali IT Consulting', 'IT consulting for life sciences, FDA-regulated companies, clinical labs, manufacturing, finance and growing companies.', body)
 
+
+FAQ = [('Do you only work in California?', 'No.  Our headquarters is in Huntington Beach, and we work on-site across California and Arizona.  We support clients remotely in all 50 states and travel on-site as required.'),
+       ('Are you an MSP?', "Not a big-box one.  You can hire us for a single project, a managed IT plan built around what you actually need, or part-time IT leadership.  Many clients start with a project and keep going from there."),
+       ('Can you work alongside our IT person or current provider?', 'Yes.  Co-managed IT is a common setup for us: your team keeps the day-to-day, and we take the projects, the security work or the parts nobody has time for.'),
+       ('Do you work with FDA-regulated companies?', "Yes.  Our team has spent years running IT for medical device, diagnostics and certified lab companies, where access, change records and audit evidence have to hold up."),
+       ('What happens if we stop working together?', 'You keep everything: passwords, admin access and documentation.  We hand it over in writing, so the next person can pick it up on day one.'),
+       ('How do we get started?', 'Send a few lines through the contact form.  A senior consultant replies within one business day, and you get a written scope and price before any work starts.')]
+def faq_block():
+    items = ''.join(f'<details class="faq-i"><summary>{q}</summary><p>{a}</p></details>' for q, a in FAQ)
+    ld = json.dumps({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a.replace('  ', ' ')}} for q, a in FAQ]})
+    return f'''<section class="band fog"><div class="wrap"><h2>Common questions.</h2><div class="faq">{items}</div></div></section><script type="application/ld+json">{ld}</script>'''
+
+ORG_LD = json.dumps({"@context": "https://schema.org", "@type": "ProfessionalService", "name": "Cali IT Consulting", "url": "https://caliit.com/", "logo": "https://caliit.com/assets/brand/og.png",
+    "description": "IT infrastructure, IT operations, Microsoft 365, business applications, cybersecurity and compliance consulting.",
+    "address": {"@type": "PostalAddress", "addressLocality": "Huntington Beach", "addressRegion": "CA", "addressCountry": "US"}, "areaServed": "US"})
+
 def engagement():
     steps = [('Send us a message', "Tell us what's going on through the contact form.  We reply within one business day."), ('Get a written proposal', 'A clear scope, timeline and price, in plain English.'), ('Kick off', 'We get to work, keep you posted and document everything as we go.'), ('Hand-off or ongoing', 'Projects end with documentation you own.  Managed and fractional work continue month to month.')]
     st = ''.join(f'<div><h3><span style="font:400 15px var(--heavy);color:#8fb3d9;display:block;margin-bottom:8px">Step {n}</span>{t}</h3><p>{d}</p></div>' for n, (t, d) in enumerate(steps, 1))
     body = phero('Work with us', 'the way that fits.', 'One job, a managed IT plan built around you, or a senior IT leader part time.  Start with one, add another later.') + compare_block(intro=False) + f'''
 <section class="standard-sec on-dark"><div class="wrap"><h2>How an engagement starts.</h2><div class="promises four">{st}</div></div></section>
 {standard_block().replace('standard-sec on-dark', 'band white').replace('class="promises"', 'class="promises light-p"')}
+{faq_block()}
 {close_block()}'''
     page('engagement.html', 'How We Work | Cali IT Consulting', 'Projects, a managed IT plan built around you, or fractional IT leadership.  Written scope and price before work starts.', body)
 
@@ -355,7 +412,7 @@ def why():
 {notes_block()}
 {standard_block()}
 {close_block()}'''
-    page('why-us.html', 'Why Us | Cali IT Consulting', 'Senior IT consultants with 30 years of experience in regulated companies.  Take the free 60-second IT health check.', body)
+    page('why-us.html', 'Why Us | Cali IT Consulting', 'Thirty years of running IT where downtime and audit findings are not an option.  Take the free 60-second IT health check.', body)
 
 def about():
     vals = ''.join(f'<div><h3>{t}</h3><p>{d}</p></div>' for t, d in [('Straight answers', "Plain English, no jargon.  If something doesn't need fixing, we'll say so."), ('Senior people', 'The people who scope your project are the ones who do the work.'), ('Documented', "Every change is written down, so you're never locked in to us."), ('Built to last', 'We design for the next five years, not the next invoice.')])
@@ -367,13 +424,13 @@ def about():
 </div></section>
 <section class="band fog"><div class="wrap two">
   <div><h2>What we do.</h2></div>
-  <div class="prose"><p class="lead">We've led more than ten acquisitions, moved headquarters and data centers, built certified labs, and passed SOX, HIPAA and ISO audits.</p><p>We handle Microsoft 365, cybersecurity, networks, cloud, data centers, physical security, compliance and IT strategy.  We work on-site across California and Arizona and support clients remotely in all 50 states, traveling on-site as required.  You get senior-level answers from people who have done the work, not a sales pitch.</p></div>
+  <div class="prose"><p class="lead">We've led more than ten acquisitions, moved headquarters and data centers, built certified labs, and passed SOX, HIPAA and ISO audits.</p><p>We handle networks, servers and cloud, data centers, Microsoft 365, business applications, cybersecurity, physical security, compliance and IT strategy.  We work on-site across California and Arizona and support clients remotely in all 50 states, traveling on-site as required.  You get senior-level answers from people who have done the work, not a sales pitch.</p></div>
 </div></section>
 <section class="standard-sec on-dark"><div class="wrap"><h2>What we stand for.</h2><div class="promises">{vals}</div></div></section>
 {notes_block()}
 {quote_block(2)}
 {close_block()}'''
-    page('about.html', 'About | Cali IT Consulting', 'Cali IT Consulting: senior IT consultants with 30 years of leadership in regulated companies.  Headquartered in Huntington Beach, California, serving clients nationwide.', body)
+    page('about.html', 'About | Cali IT Consulting', 'Thirty years of IT leadership in regulated companies, from data centers to Microsoft 365.  Headquartered in Huntington Beach, serving clients nationwide.', body)
 
 def testimonials():
     rows = ''
@@ -398,8 +455,8 @@ def thanks():
 def privacy():
     src = (ROOT / 'privacy.html').read_text()
     prose = src[src.index('<div class="wrap prose">') + len('<div class="wrap prose">'):src.index('</div></section>', src.index('<div class="wrap prose">'))] if '<div class="wrap prose">' in src else ''
-    body = phero('Privacy', 'policy.', f'Effective October 25, {sb.YEAR}.', mini=False) + f'<section class="band white"><div class="wrap prose">{prose}</div></section>'
-    page('privacy.html', 'Privacy | Cali IT Consulting', 'How Cali IT Consulting handles information sent through this website.', body)
+    body = phero('Privacy', 'policy.', f'Effective October 29, {sb.YEAR}.', mini=False) + f'<section class="band white"><div class="wrap prose">{prose}</div></section>'
+    page('privacy.html', 'Privacy | Cali IT Consulting', 'How Cali IT Consulting collects, uses and protects information sent through this website and its contact form.', body)
 
 def notfound():
     body = phero('This page', 'is off the map.', "The page you're looking for isn't here.") + '<section class="band white"><div class="wrap"><a class="btn ink" href="index.html">Home page</a> &nbsp; <a class="link" href="services.html">Services</a></div></section>'
@@ -429,4 +486,7 @@ def cube_preview():
 if __name__ == '__main__':
     privacy()   # reads the current privacy text first
     home(); services(); [service(i, s) for i, s in enumerate(sb.SERVICES)]; industries(); engagement(); why(); about(); testimonials(); contact(); thanks(); notfound(); cube_preview()
+    for _n in ('thanks.html', '404.html'):   # keep these out of search results
+        _f = ROOT / _n; _t = _f.read_text()
+        if 'name="robots"' not in _t: _f.write_text(_t.replace('<meta name="theme-color"', '<meta name="robots" content="noindex">\n<meta name="theme-color"', 1))
     print('built field-chart site')

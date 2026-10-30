@@ -270,7 +270,7 @@ h3 { font: 700 21px/1.25 var(--sans); }
 .band.fog { background: var(--fog); }
 .band.navy { background: var(--ground); }
 .two { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: clamp(28px, 6vw, 96px); align-items: start; }
-@media (max-width: 860px) { .two { grid-template-columns: 1fr; } }
+@media (max-width: 860px) { .two { grid-template-columns: minmax(0, 1fr); } }
 .ticks { list-style: none; margin: 0; padding: 0; border-top: 1.5px solid var(--ink); }
 .ticks li { padding: 15px 0 15px 34px; border-bottom: 1px solid var(--hair); position: relative; }
 .ticks li::before { content: ""; position: absolute; left: 4px; top: 22px; width: 14px; height: 7px; border-left: 2px solid var(--steel); border-bottom: 2px solid var(--steel); transform: rotate(-45deg); }
@@ -283,6 +283,7 @@ h3 { font: 700 21px/1.25 var(--sans); }
 .symptoms p { color: var(--slate); margin: 0; }
 @media (max-width: 860px) { .symptoms { grid-template-columns: 1fr; gap: 28px; } }
 .inline-list { font: 600 16px/1.9 var(--sans); color: var(--slate); }
+.inline-list span { display: inline-block; }
 .inline-list span:not(:last-child)::after { content: "/"; color: var(--hair); margin: 0 12px; }
 .on-dark .inline-list { color: #a9b8c9; }
 .on-dark .inline-list span:not(:last-child)::after { color: #3b5576; }
@@ -443,3 +444,14 @@ h3 { font: 700 21px/1.25 var(--sans); }
 @media (min-width: 861px) { .phero .wrap { grid-template-columns: minmax(0, 1fr) minmax(320px, 460px); align-items: center; } }
 .phero .us-mini svg { max-height: none; width: 100%; height: auto; display: block; }
 @media (min-width: 901px) { .phero .map.us { margin-left: 0; width: 100%; } }
+/* FAQ */
+.faq { margin-top: 30px; border-top: 1px solid rgba(20, 34, 52, .18); max-width: 900px; }
+.faq-i { border-bottom: 1px solid rgba(20, 34, 52, .18); }
+.faq-i summary { cursor: pointer; list-style: none; padding: 20px 40px 20px 0; position: relative; font: 700 clamp(17px, 1.6vw, 20px)/1.35 var(--sans); color: var(--ink, #142234); }
+.faq-i summary::-webkit-details-marker { display: none; }
+.faq-i summary::after { content: "+"; position: absolute; right: 4px; top: 16px; font: 400 26px/1 var(--sans); color: #4a6d94; transition: transform .2s; }
+.faq-i[open] summary::after { transform: rotate(45deg); }
+.faq-i summary:focus-visible { outline: 2px solid #4a6d94; outline-offset: 4px; }
+.faq-i p { padding: 0 40px 22px 0; max-width: 760px; color: #33465c; }
+.close-state.us-shape { left: -10%; bottom: -18%; height: auto; width: 78%; opacity: .07; }
+@media (max-width: 900px) { .close-state.us-shape { width: 160%; left: -30%; bottom: -6%; } }
