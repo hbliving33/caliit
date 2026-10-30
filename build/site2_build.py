@@ -229,7 +229,7 @@ def page(fname, title, desc, body, extra_js='', hero_header=True):
     <div class="cols">
       <div><a class="brand" href="index.html" aria-label="Cali IT Consulting, home">{sb.logo_dark()}</a><p>IT infrastructure and operations consulting.  Headquartered in Huntington Beach, California, serving clients across the United States.</p></div>
       <div><h4>Services</h4><ul>{svc_links}</ul></div>
-      <div><h4>Company</h4><ul><li><a href="industries.html">Industries</a></li><li><a href="engagement.html">How we work</a></li><li><a href="why-us.html">Why us</a></li><li><a href="about.html">About</a></li><li><a href="testimonials.html">Testimonials</a></li><li><a href="news.html">Cybersecurity news</a></li></ul></div>
+      <div><h4>Company</h4><ul><li><a href="engagement.html">How we work</a></li><li><a href="why-us.html">Why us</a></li><li><a href="about.html">About</a></li><li><a href="testimonials.html">Testimonials</a></li><li><a href="news.html">Cybersecurity news</a></li></ul></div>
       <div><h4>Get in touch</h4><ul><li><a href="contact.html">Contact us</a></li><li><a href="why-us.html#check">Free IT health check</a></li><li><a href="privacy.html">Privacy</a></li></ul></div>
     </div>
     <div class="base"><span>&copy; {sb.YEAR} Cali IT Consulting</span><span>Huntington Beach, California</span></div>
@@ -365,8 +365,11 @@ def home():
     page('index.html', 'Cali IT Consulting | IT infrastructure and operations, nationwide', "IT infrastructure and operations, handled: servers, networks, Microsoft 365, business applications and security.  California-based, serving clients nationwide.", body, CUBE_JS())
 
 def services():
-    body = phero('Twelve practice areas.', 'One team that has run them all.', 'Bring us a single project or hand us the whole stack.') + index_block(head=False) + f'''
-<section class="band white"><div class="wrap two">
+    cube = '''<div class="cube-col"><section class="stage" id="stage" aria-label="Rotating cube with one piece for each service.  Drag to spin it."><div class="glow"></div><div class="cube" id="cube"></div><div class="core"><div class="word" id="coreText" aria-live="polite"></div></div></section><p class="cube-cap">Drag the cube to spin it.</p><div class="picker-hidden" id="picker" aria-hidden="true"></div></div>'''
+    rows = ''.join(f'''<article class="ind" id="{s['slug']}"><div><h3><a href="{s['slug']}.html">{s['name']}</a></h3><p>{s['short']}</p><p style="margin-top:16px"><a class="link" href="{s['slug']}.html">More about {s['name']}</a></p></div><ul class="ticks">{''.join(f'<li>{g}</li>' for g in s['get'][:4])}</ul></article>''' for s in sb.SERVICES)
+    body = phero('Twelve practice areas.', 'One team that has run them all.', 'Bring us a single project or hand us the whole stack.', side=cube).replace('phero on-dark has-map', 'phero on-dark has-map svc-hero') + f'''
+<section class="band white"><div class="wrap">{rows}</div></section>
+<section class="band fog"><div class="wrap two">
   <div><h2>Not sure where to start?  Start with an assessment.</h2><p class="lead" style="margin-top:18px">We review your environment, rank the risks and hand you a written plan.  You decide what to fix, and who fixes it.</p><p style="margin-top:26px"><a class="btn ink" href="contact.html?topic=A%20project%20or%20assessment">Ask about an assessment</a></p></div>
   <ul class="ticks"><li>Microsoft 365 and identity security</li><li>Backups and recovery</li><li>Network, firewall and Wi-Fi</li><li>Licensing and vendor spend</li><li>Compliance gaps and evidence</li><li>A ranked, written remediation plan</li></ul>
 </div></section>
@@ -397,6 +400,7 @@ def industries():
 <section class="band white"><div class="wrap">{rows}</div></section>
 {ledger_block()}
 {cta_block()}'''
+    return   # Industries page retired (Oct 2026); industries.html now redirects to services.html
     page('industries.html', 'Industries | Cali IT Consulting', 'IT consulting for life sciences, medical device companies, clinical labs, manufacturing, finance and growing companies.', body)
 
 
