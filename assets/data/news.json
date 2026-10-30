@@ -1,21 +1,39 @@
 {
- "updated": "2026-10-30T14:15:22.011827+00:00",
+ "updated": "2026-10-30T15:12:30.045798+00:00",
  "m365": {
   "status": "Available",
-  "checked": "2026-10-30T14:15:22.040558+00:00",
+  "checked": "2026-10-30T15:12:30.490089+00:00",
   "link": "https://status.cloud.microsoft/"
  },
  "aws": {
   "status": "3 open events",
   "link": "https://health.aws.amazon.com/health/status",
-  "checked": "2026-10-30T14:15:22.011827+00:00"
+  "checked": "2026-10-30T15:12:30.045798+00:00"
  },
  "wasabi": {
   "status": "Service Under Maintenance",
   "link": "https://status.wasabi.com/",
-  "checked": "2026-10-30T14:15:22.011827+00:00"
+  "checked": "2026-10-30T15:12:30.045798+00:00"
  },
  "items": [
+  {
+   "title": "In Other News: Anthropic Breach Dispute, UEFI Flaw Hits Most Servers, Cloudflare AI Data Leak",
+   "link": "https://www.securityweek.com/in-other-news-anthropic-breach-dispute-uefi-flaw-hits-most-servers-cloudflare-ai-data-leak/",
+   "source": "SecurityWeek",
+   "date": "2026-10-30T14:41:35+00:00"
+  },
+  {
+   "title": "Malicious Claude Code extension on Cursor planted SSH backdoors",
+   "link": "https://www.bleepingcomputer.com/news/security/malicious-claude-code-extension-on-cursor-planted-ssh-backdoors/",
+   "source": "BleepingComputer",
+   "date": "2026-10-30T14:36:54+00:00"
+  },
+  {
+   "title": "Undead Software Projects Continue to Raise Security Risks",
+   "link": "https://www.darkreading.com/application-security/undead-software-projects-raise-security-risks",
+   "source": "Dark Reading",
+   "date": "2026-10-30T14:10:37+00:00"
+  },
   {
    "title": "SS7 and Diameter Attacks: How Signaling Flaws Expose Your Phone",
    "link": "https://www.bleepingcomputer.com/news/security/ss7-and-diameter-attacks-how-signaling-flaws-expose-your-phone/",
@@ -89,12 +107,6 @@
    "date": "2026-10-30T09:41:36+00:00"
   },
   {
-   "title": "Max-Severity GitLab Vulnerability Exploited Against Alpine Linux",
-   "link": "https://www.securityweek.com/max-severity-gitlab-vulnerability-exploited-against-alpine-linux/",
-   "source": "SecurityWeek",
-   "date": "2026-10-30T09:32:27+00:00"
-  },
-  {
    "title": "Binance links $6.3 billion crypto theft to compromised DevOps laptop",
    "link": "https://www.bleepingcomputer.com/news/security/binance-links-63-billion-crypto-theft-to-compromised-devops-laptop/",
    "source": "BleepingComputer",
@@ -123,12 +135,6 @@
    "link": "https://thehackernews.com/2026/10/cisa-adds-actively-exploited-gitlab-rce.html",
    "source": "The Hacker News",
    "date": "2026-10-30T07:27:05+00:00"
-  },
-  {
-   "title": "OpenAI doubles ChatGPT Pro usage limits after backlash over planned 50% cut",
-   "link": "https://www.bleepingcomputer.com/news/artificial-intelligence/openai-doubles-chatgpt-pro-usage-limits-after-backlash-over-planned-50-percent-cut/",
-   "source": "BleepingComputer",
-   "date": "2026-10-29T23:35:52+00:00"
   },
   {
    "title": "Anthropic-Themed Phishing Emails Bypass Top Security Tools",
@@ -165,12 +171,6 @@
    "link": "https://www.microsoft.com/en-us/security/blog/2026/10/29/idc-marketscape-names-microsoft-a-leader-in-the-2026-worldwide-modern-endpoint-security-for-enterprises-vendor-assessment/",
    "source": "Microsoft Security Blog",
    "date": "2026-10-29T16:00:00+00:00"
-  },
-  {
-   "title": "Threat Modeling With 4 Simple Questions on a White Board",
-   "link": "https://www.darkreading.com/cyber-risk/threat-modeling-4-simple-questions",
-   "source": "Dark Reading",
-   "date": "2026-10-29T15:44:04+00:00"
   },
   {
    "title": "Actively exploited: GitLab Community Edition and Enterprise Edition (CVE-2026-97229)",
