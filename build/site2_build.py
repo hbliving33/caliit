@@ -71,6 +71,8 @@ _upd('compliance', get=['IT general controls for SOX', 'IT support for 21 CFR Pa
      plat=['SOX', '21 CFR Part 11', 'GxP', 'HIPAA', 'GDPR', 'ISO 9001', 'ISO 14001', 'ISO 27001', 'ITIL', 'CLIA labs'],
      desc='IT compliance for regulated companies: SOX IT general controls, 21 CFR Part 11 and GxP support, HIPAA, ISO audits and evidence that is ready on time.')
 S = {s['slug']: s for s in sb.SERVICES}
+PRELAUNCH = True   # keep the whole site out of search results until launch; set False on launch day
+PRE_META = '<meta name="robots" content="noindex, nofollow">\n' if PRELAUNCH else ''
 TOPICS = ['A project or assessment', 'Ongoing IT support', 'Security or compliance', 'IT leadership and strategy', 'Something else']
 TOPIC_OF = {'managed-it': 'Ongoing IT support', 'cybersecurity': 'Security or compliance', 'compliance': 'Security or compliance', 'access-control': 'Security or compliance', 'it-strategy': 'IT leadership and strategy'}   # everything else is a project
 sb.SVC.update(S)
@@ -200,7 +202,7 @@ def page(fname, title, desc, body, extra_js='', hero_header=True):
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>{E(title)}</title>
 <meta name="description" content="{E(desc)}">
-<meta name="theme-color" content="#0f1c2d">
+{PRE_META}<meta name="theme-color" content="#0f1c2d">
 <link rel="canonical" href="https://caliit.com/{canon}">
 <meta property="og:type" content="website"><meta property="og:site_name" content="Cali IT Consulting"><meta property="og:title" content="{E(title)}"><meta property="og:description" content="{E(desc)}"><meta property="og:url" content="https://caliit.com/{canon}"><meta property="og:image" content="https://caliit.com/assets/brand/og.png">
 <link rel="icon" href="assets/brand/favicon.svg" type="image/svg+xml">
@@ -524,7 +526,7 @@ def cube_preview():
 </div></section>
 <script type="application/json" id="cube2-data">{data}</script>"""
     page('cube-preview.html', 'Cube preview | Cali IT Consulting', 'Preview of a clickable service cube.', body, f'<script src="assets/js/cube2.js?v={sb.ver("assets/js/cube2.js")}" defer></script>')
-    f = ROOT / 'cube-preview.html'; f.write_text(f.read_text().replace('<meta name="theme-color"', '<meta name="robots" content="noindex">\n<meta name="theme-color"', 1))
+    f = ROOT / 'cube-preview.html'; _t = f.read_text(); f.write_text(_t if 'name="robots"' in _t else _t.replace('<meta name="theme-color"', '<meta name="robots" content="noindex">\n<meta name="theme-color"', 1))
 
 def map_preview():
     global DE_CITY
@@ -537,7 +539,7 @@ def map_preview():
     body = (band('opt-a', 'Option A: current colors', 'The map as it is on the live site today, with a red dot in Germany.').replace('padding:60px 0', 'padding:140px 0 60px')
             + band('opt-b', 'Option B: bluer', 'The same map in a richer blue.  California and Germany stand out in a brighter blue.'))
     page('map-preview.html', 'Map preview | Cali IT Consulting', 'Map color preview.', body)
-    f = ROOT / 'map-preview.html'; f.write_text(f.read_text().replace('<meta name="theme-color"', '<meta name="robots" content="noindex">\n<meta name="theme-color"', 1))
+    f = ROOT / 'map-preview.html'; _t = f.read_text(); f.write_text(_t if 'name="robots"' in _t else _t.replace('<meta name="theme-color"', '<meta name="robots" content="noindex">\n<meta name="theme-color"', 1))
 
 if __name__ == '__main__':
     privacy()   # reads the current privacy text first
