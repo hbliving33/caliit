@@ -76,6 +76,27 @@ def m365():
         print('M365 status failed:', e)
         return {'status': 'Unknown', 'checked': dt.datetime.now(dt.timezone.utc).isoformat(), 'link': 'https://status.cloud.microsoft/'}
 
+def aws():
+    # AWS Health Dashboard public events (no sign-in needed).  An empty list means no open public events.
+    url = 'https://health.aws.amazon.com/public/currentevents'
+    try:
+        raw = get(url).decode('utf-16') if get(url)[:2] in (b'\xff\xfe', b'\xfe\xff') else get(url).decode('utf-8-sig')
+        ev = json.loads(raw or '[]')
+        n = len(ev) if isinstance(ev, list) else 0
+        return {'status': 'Available' if n == 0 else f'{n} open event' + ('' if n == 1 else 's'), 'link': 'https://health.aws.amazon.com/health/status'}, None
+    except Exception as e:
+        return {'status': 'Unknown', 'link': 'https://health.aws.amazon.com/health/status'}, str(e)[:160]
+
+def wasabi():
+    # Wasabi's status page; this checks the standard status-page summary it publishes.
+    try:
+        d = json.loads(get('https://status.wasabi.com/api/v2/status.json'))
+        ind = (d.get('status') or {}).get('indicator', '')
+        desc = (d.get('status') or {}).get('description', '')
+        return {'status': 'Available' if ind == 'none' else (desc or 'Unknown'), 'link': 'https://status.wasabi.com/'}, None
+    except Exception as e:
+        return {'status': 'Unknown', 'link': 'https://status.wasabi.com/'}, str(e)[:160]
+
 def main():
     prev = {}
     if OUT.exists():
@@ -106,7 +127,11 @@ def main():
     first = [x for src, _ in FEEDS for x in [y for y in uniq if y['source'] == src][:2]]
     rest = [x for x in uniq if x not in first]
     pick = sorted(first + rest[:max(0, TOTAL - len(first))], key=lambda x: x['date'], reverse=True)
-    data = {'updated': dt.datetime.now(dt.timezone.utc).isoformat(), 'm365': m365(), 'items': pick, 'errors': errors}
+    a, ae = aws(); w, we = wasabi()
+    if ae: errors['AWS status'] = ae
+    if we: errors['Wasabi status'] = we
+    now = dt.datetime.now(dt.timezone.utc).isoformat(); a['checked'] = w['checked'] = now
+    data = {'updated': now, 'm365': m365(), 'aws': a, 'wasabi': w, 'items': pick, 'errors': errors}
     if not data['items'] and prev.get('items'): data['items'] = prev['items']
     OUT.write_text(json.dumps(data, indent=1))
     print('\n'.join(ok)); print('M365:', data['m365']['status'], '| headlines:', len(data['items']))
