@@ -247,7 +247,7 @@ CUBE_JS = lambda: f'<script src="assets/js/cube.js?v={sb.ver("assets/js/cube.js"
 # ---------- shared blocks ----------
 def index_block(head=True):
     rows = ''.join(f'<li data-name="{s["name"]}"><a href="{s["slug"]}.html"><span class="nm">{s["name"]}</span><span class="ds">{s["short"]}</span></a></li>' for s in sb.SERVICES)
-    h = '<div class="index-head"><h2>Twelve practice areas, one team.</h2><p class="lead" style="margin-top:16px">Bring us a single project or hand us the whole stack.  Point at a service to turn the cube, or open it to read more.</p></div>' if head else ''
+    h = '<div class="index-head"><h2>Everything IT, one team.</h2><p class="lead" style="margin-top:16px">Bring us a single project or hand us the whole stack.  Point at a service to turn the cube, or open it to read more.</p></div>' if head else ''
     return f'''<section class="index-sec on-dark"><div class="wrap">
   <div>{h}<ul class="svc-list" id="svcList">{rows}</ul></div>
   <div class="cube-col">
@@ -367,14 +367,14 @@ def home():
 def services():
     cube = '''<div class="cube-col"><section class="stage" id="stage" aria-label="Rotating cube with one piece for each service.  Drag to spin it."><div class="glow"></div><div class="cube" id="cube"></div><div class="core"><div class="word" id="coreText" aria-live="polite"></div></div></section><p class="cube-cap">Drag the cube to spin it.</p><div class="picker-hidden" id="picker" aria-hidden="true"></div></div>'''
     rows = ''.join(f'''<article class="ind" id="{s['slug']}"><div><h3><a href="{s['slug']}.html">{s['name']}</a></h3><p>{s['short']}</p><p style="margin-top:16px"><a class="link" href="{s['slug']}.html">More about {s['name']}</a></p></div><ul class="ticks">{''.join(f'<li>{g}</li>' for g in s['get'][:4])}</ul></article>''' for s in sb.SERVICES)
-    body = phero('Twelve practice areas.', 'One team that has run them all.', 'Bring us a single project or hand us the whole stack.', side=cube).replace('phero on-dark has-map', 'phero on-dark has-map svc-hero') + f'''
+    body = phero('From the server room', 'to the help desk.', 'Networks, cloud, Microsoft 365, security and everything in between, from one team that has run it all.  Bring us a single project or hand us the whole stack.', side=cube).replace('phero on-dark has-map', 'phero on-dark has-map svc-hero') + f'''
 <section class="band white"><div class="wrap">{rows}</div></section>
 <section class="band fog"><div class="wrap two">
   <div><h2>Not sure where to start?  Start with an assessment.</h2><p class="lead" style="margin-top:18px">We review your environment, rank the risks and hand you a written plan.  You decide what to fix, and who fixes it.</p><p style="margin-top:26px"><a class="btn ink" href="contact.html?topic=A%20project%20or%20assessment">Ask about an assessment</a></p></div>
   <ul class="ticks"><li>Microsoft 365 and identity security</li><li>Backups and recovery</li><li>Network, firewall and Wi-Fi</li><li>Licensing and vendor spend</li><li>Compliance gaps and evidence</li><li>A ranked, written remediation plan</li></ul>
 </div></section>
 {cta_block()}'''
-    page('services.html', 'Services | Cali IT Consulting', 'Twelve IT practice areas, one team: network, cloud, data center, Microsoft 365, business applications, AI, managed IT, security and compliance.', body, CUBE_JS())
+    page('services.html', 'Services | Cali IT Consulting', 'Everything IT, one team: network, cloud, data center, Microsoft 365, business applications, AI, managed IT, security and compliance.', body, CUBE_JS())
 
 def service(i, s):
     m = re.match(r'(.*?)<em>(.*?)</em>(.*)', s['h']); a, b, c = m.groups()
@@ -522,7 +522,7 @@ def cube_preview():
     data = json.dumps({'front': front, 'top': top, 'techs': techs})
     body = phero('A cube you', 'can click.', 'Preview only.  Each tile on the front is a service.  Point at one to read about it, click it to open it, or drag to spin and see the technologies on the other sides.', mini=False) + f"""
 <section class="index-sec on-dark"><div class="wrap c2-wrap">
-  <div><h2>Ten practice areas, one team.</h2><p class="lead" style="margin:16px 0 30px">Nine services on the front, compliance on top, and the platforms we support on every other side.</p><div class="c2-panel" id="cube2-panel" aria-live="polite"></div></div>
+  <div><h2>Everything IT, one team.</h2><p class="lead" style="margin:16px 0 30px">Nine services on the front, compliance on top, and the platforms we support on every other side.</p><div class="c2-panel" id="cube2-panel" aria-live="polite"></div></div>
   <div class="c2-stage"><div class="c2-cube" id="cube2"></div></div>
 </div></section>
 <script type="application/json" id="cube2-data">{data}</script>"""
