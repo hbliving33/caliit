@@ -1,5 +1,6 @@
 """Cali IT Consulting site, "field chart" design.  Content comes from site_build.py; this file owns the layout.
 Run from the repo root:  python3 build/site2_build.py"""
+from urllib.parse import quote
 import json, pathlib, re, html, sys, importlib.util
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / 'build'))
@@ -70,6 +71,8 @@ _upd('compliance', get=['IT general controls for SOX', 'IT support for 21 CFR Pa
      plat=['SOX', '21 CFR Part 11', 'GxP', 'HIPAA', 'GDPR', 'ISO 9001', 'ISO 14001', 'ISO 27001', 'ITIL', 'CLIA labs'],
      desc='IT compliance for regulated companies: SOX IT general controls, 21 CFR Part 11 and GxP support, HIPAA, ISO audits and evidence that is ready on time.')
 S = {s['slug']: s for s in sb.SERVICES}
+TOPICS = ['A project or assessment', 'Ongoing IT support', 'Security or compliance', 'IT leadership and strategy', 'Something else']
+TOPIC_OF = {'managed-it': 'Ongoing IT support', 'cybersecurity': 'Security or compliance', 'compliance': 'Security or compliance', 'access-control': 'Security or compliance', 'it-strategy': 'IT leadership and strategy'}   # everything else is a project
 sb.SVC.update(S)
 sb.PAINS.insert(sb.PAINS.index(next(x for x in sb.PAINS if x[1] == 'business-automation')), ('Nobody can say how many apps you pay for, or who still has access to them.', 'business-applications'))
 STATS2 = [('30', 'Years in IT leadership'), ('10+', 'Acquisitions integrated'), ('50', 'States we support remotely'), ('$12M', 'Largest IT budget managed')]
@@ -311,12 +314,12 @@ def quote_block(i=0):
     return f'<section class="quote-sec"><div class="wrap"><figure style="margin:0"><blockquote>{q}</blockquote><figcaption>{c}.  <a class="link" href="testimonials.html">Read the testimonials</a></figcaption></figure></div></section>'
 
 def form(dark=True):
-    opts = ''.join(f'<option>{E(t)}</option>' for t in sb.TOPICS)
+    opts = ''.join(f'<option>{E(t)}</option>' for t in TOPICS)
     sizes = ''.join(f'<option>{t}</option>' for t in ['1 to 10 people', '11 to 50 people', '51 to 200 people', '200+ people'])
     return f'''<form class="form{'' if dark else ' light'}" id="contactForm" novalidate>
   <div class="row"><div class="field"><label for="f-name">Name</label><input id="f-name" name="name" autocomplete="name" required maxlength="120"></div><div class="field"><label for="f-company">Company</label><input id="f-company" name="company" autocomplete="organization" maxlength="160"></div></div>
   <div class="row"><div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required maxlength="200"></div><div class="field"><label for="f-phone">Phone (optional)</label><input id="f-phone" name="phone" type="tel" autocomplete="tel" maxlength="40"></div></div>
-  <div class="row"><div class="field"><label for="f-topic">What can we help with?</label><select id="f-topic" name="topic" required><option value="">Choose one</option>{opts}</select></div><div class="field"><label for="f-size">Company size</label><select id="f-size" name="size"><option value="">Choose one</option>{sizes}</select></div></div>
+  <div class="row"><div class="field"><label for="f-topic">What can we help with?</label><select id="f-topic" name="topic" required><option value="">Choose one</option>{opts}</select></div><div class="field"><label for="f-size">Company size (optional)</label><select id="f-size" name="size"><option value="">Choose one</option>{sizes}</select></div></div>
   <div class="field"><label for="f-msg">Tell us what's going on</label><textarea id="f-msg" name="message" required maxlength="5000"></textarea></div>
   <div class="hp" aria-hidden="true"><label for="f-hp">Leave this empty</label><input id="f-hp" name="_honey" tabindex="-1" autocomplete="off"></div>
   <div><button class="btn{'' if dark else ' ink'}" type="submit">Send message</button></div>
@@ -325,7 +328,7 @@ def form(dark=True):
 </form>'''
 
 def close_block():
-    st = f'<svg class="close-state us-shape" viewBox="-14 -6 428 270" aria-hidden="true"><path d="{US["nation"]}" fill="#8fb3d9"/></svg>'
+    st = ''   # no background art: keeps the contact section clean
     return f'''<section class="chart-sec close-sec on-dark" id="talk">{st}<div class="wrap">
   <div><h2>Tell us what you're working on.</h2><p class="lead" style="margin-top:20px">An audit on the calendar, an office move, a security worry or an IT person who just gave notice.  Send a few lines and we'll reply within one business day.</p>
   <p style="margin-top:28px;color:#8ea2b8;font-size:15px">Headquarters in Huntington Beach, California.  Remote offices in Arcata, California and Payson, Arizona.<br>On-site across California and Arizona.  Remote support in all 50 states.</p></div>
@@ -367,7 +370,7 @@ def home():
 def services():
     body = phero('Twelve practice areas.', 'One team that has run them all.', 'Bring us a single project or hand us the whole stack.') + index_block(head=False) + f'''
 <section class="band white"><div class="wrap two">
-  <div><h2>Not sure where to start?  Start with an assessment.</h2><p class="lead" style="margin-top:18px">We review your environment, rank the risks and hand you a written plan.  You decide what to fix, and who fixes it.</p><p style="margin-top:26px"><a class="btn ink" href="contact.html?topic=IT%20and%20security%20assessment">Ask about an assessment</a></p></div>
+  <div><h2>Not sure where to start?  Start with an assessment.</h2><p class="lead" style="margin-top:18px">We review your environment, rank the risks and hand you a written plan.  You decide what to fix, and who fixes it.</p><p style="margin-top:26px"><a class="btn ink" href="contact.html?topic=A%20project%20or%20assessment">Ask about an assessment</a></p></div>
   <ul class="ticks"><li>Microsoft 365 and identity security</li><li>Backups and recovery</li><li>Network, firewall and Wi-Fi</li><li>Licensing and vendor spend</li><li>Compliance gaps and evidence</li><li>A ranked, written remediation plan</li></ul>
 </div></section>
 {close_block()}'''
@@ -382,7 +385,7 @@ def service(i, s):
 <section class="band white"><div class="wrap"><h2>Sound familiar?</h2><div class="symptoms">{sym}</div></div></section>
 <section class="band fog"><div class="wrap two">
   <div><h2>What you get.</h2><ul class="ticks" style="margin-top:30px">{''.join(f'<li>{g}</li>' for g in s['get'])}</ul>
-  <p style="margin-top:30px"><a class="btn ink" href="contact.html?topic={E(s["name"])}">Talk to us about {s["name"]}</a></p></div>
+  <p style="margin-top:30px"><a class="btn ink" href="contact.html?topic={quote(TOPIC_OF.get(s['slug'], 'A project or assessment'))}&amp;msg={quote('About ' + s['name'] + ': ')}">Talk to us about {s["name"]}</a></p></div>
   <div><article class="story"><p style="color:#8fb3d9;font-weight:600;margin-bottom:10px">{s.get('case_label', 'From the field')}</p><h3>{ct}</h3><p>{cs}</p><ul class="ticks on-dark" style="border-top-color:#8fb3d9">{''.join(f'<li>{x}</li>' for x in cl)}</ul><div class="out">{co}</div></article>
   {'<p class="fine">' + s.get('case_note', 'Client names are kept confidential.') + '</p>' if s.get('case_note', 'x') else ''}
   <h3 style="margin-top:34px">Platforms and standards</h3><p class="inline-list" style="margin-top:10px">{''.join(f'<span>{p}</span>' for p in s['plat'])}</p></div>

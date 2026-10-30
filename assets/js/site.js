@@ -91,7 +91,7 @@
       text.textContent = gaps === 0 ? "Nice work.  A second set of eyes can still confirm it holds up." : `You answered "No" ${gaps} time${gaps > 1 ? "s" : ""}.  Each one is a gap worth closing, and most are quick to fix.`;
       const missed = [...qs.querySelectorAll("li")].filter((li) => answers[li.dataset.q] === false).map((li) => "- " + li.querySelector("p").textContent.trim());
       const msg = `IT health check: ${yes} of ${total}.` + (missed.length ? `\nAnswered "No" to:\n${missed.join("\n")}` : "");
-      cta.href = "contact.html?topic=" + encodeURIComponent("IT and security assessment") + "&msg=" + encodeURIComponent(msg);
+      cta.href = "contact.html?topic=" + encodeURIComponent("A project or assessment") + "&msg=" + encodeURIComponent(msg);
       cta.hidden = false;
     });
   }
