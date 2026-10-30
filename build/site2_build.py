@@ -61,7 +61,7 @@ _upd('ai', get=['Microsoft 365 Copilot readiness review', 'SharePoint and OneDri
 _upd('managed-it', desc='Managed IT sized to fit: monitoring, patching, users, devices and vendors, fully managed or co-managed alongside your own IT staff.')
 _upd('it-strategy', intro='Fractional CIO and IT director support for companies that need a senior IT voice without a full-time hire.  Roadmaps, budgets, vendors, written processes and the hard calls.',
      desc='Fractional CIO and IT leadership: technology roadmaps, IT budgets, written processes, vendor contracts, M&A integration and board reporting.')
-_upd('cybersecurity', get=['Penetration testing, including autonomous pentesting, and vulnerability scanning', 'Security assessment with a ranked remediation plan', 'Phishing-resistant MFA and conditional access for every account', 'Endpoint protection (EDR) and managed detection (MDR) chosen and set up with the right partner', 'Email gateway security and phishing defenses', 'Security awareness training for staff', 'Incident response plan and tabletop exercise', 'Hands-on help when an incident happens'],
+_upd('cybersecurity', get=['Penetration testing, including autonomous pentesting, and vulnerability scanning', 'Security assessment with a ranked remediation plan', 'Phishing-resistant MFA and conditional access for every account', 'Endpoint protection (EDR) and managed detection (MDR) chosen and set up with the right partner', 'Email gateway security and phishing defenses', 'Security awareness training for staff', 'Board and audit committee cybersecurity briefings: risks, progress and what is next', 'Incident response plan and tabletop exercise', 'Hands-on help when an incident happens'],
      plat=['Penetration testing', 'EDR and MDR', 'Email gateway', 'Entra ID', 'Conditional access', 'Passkeys', 'Intune', 'Security awareness training'],
      desc='Cybersecurity based on risk: penetration testing, phishing-resistant MFA, EDR and MDR, email security, staff training and an incident response plan.')
 _upd('business-automation', desc='Business automation with Power Apps, Power Automate and CRM workflows: approvals, handoffs and data entry done by the system, not by people.')
@@ -256,7 +256,7 @@ def run_block():
             ('Microsoft 365 and cloud', 'Identity first: Entra ID, phishing-resistant MFA and conditional access.  Then email, SharePoint/OneDrive, Teams and devices, plus Azure and hybrid servers, set up right and kept clean.'),
             ('Business applications', 'ERP, HR and payroll, CRM and quality systems, each with an owner.  Single sign-on, access by role, and licenses and renewals kept in check.'),
             ('AI', 'Copilot readiness, oversharing cleanup before AI is switched on, plain-English AI policies, and agents and automation that save real time.'),
-            ('Security', 'Penetration testing, phishing-resistant MFA, endpoint protection, email security, staff training and a written plan for a bad day.'),
+            ('Security', 'Penetration testing, phishing-resistant MFA, endpoint protection, email security, staff training, a written plan for a bad day, and cybersecurity updates your board and audit committee can follow.'),
             ('Facilities', 'When the building is part of the job: office moves and build-outs, server room power and cooling, badge access and cameras.'),
             ('Compliance', 'When audits come, the evidence is ready: SOX, HIPAA, ISO and FDA-regulated environments.')]
     trs = ''.join(f'<tr><th scope="row">{a}</th><td>{b}</td></tr>' for a, b in rows)
