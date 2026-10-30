@@ -270,13 +270,13 @@ def ledger_block():
 </div></section>'''
 
 def fit_block():
-    pts = [('Small and growing companies', 'Our sweet spot is the business without a full IT department, or with one IT person stretched thin.'),
+    pts = [('Startups, small and growing companies', 'Our sweet spot is the business without a full IT department, or with one IT person stretched thin.  We have been part of a few startups ourselves.'),
            ('People who know your name', 'You talk to the same small team every time, people who know your setup and your people.'),
            ('Enterprise experience', 'Big-company know-how: secure, documented and audit-ready IT, sized and priced for a small business.')]
     cards = ''.join(f'<div><h3>{t}</h3><p>{d}</p></div>' for t, d in pts)
     return f'''<section class="band white fit-sec"><div class="wrap">
   <p class="fit-tag">Mom-and-pop care.  <span>Enterprise experience.</span></p>
-  <p class="lead fit-lead">We're a small team, and we're built for small companies.  We don't chase large accounts; we'd rather be the IT partner a growing business can call by name.</p>
+  <p class="lead fit-lead">We're a small team, and we're built for startups and small companies.  We don't chase large accounts; we'd rather be the IT partner a growing business can call by name.</p>
   <div class="promises light-p fit-cards">{cards}</div>
 </div></section>'''
 
@@ -394,7 +394,7 @@ def industries():
 
 
 FAQ = [('Do you only work in California?', 'No.  Our headquarters is in Huntington Beach, and we work on-site across California and Arizona.  We support clients remotely in all 50 states and travel on-site as required.'),
-       ('How big are the companies you work with?', "Small and growing companies are our sweet spot: usually businesses without a full IT department, or with one IT person who needs backup.  We're a small team on purpose, and we keep our client list small enough to know every one of them."),
+       ('How big are the companies you work with?', "Startups, small and growing companies are our sweet spot: usually businesses without a full IT department, or with one IT person who needs backup.  Our team has been part of a few startups, so we know how to build IT that can grow without overspending early.  We're a small team on purpose, and we keep our client list small enough to know every one of them."),
        ('Are you an MSP?', "Not a big-box one.  You can hire us for a single project, a managed IT plan built around what you actually need, or part-time IT leadership.  Many clients start with a project and keep going from there."),
        ('Can you work alongside our IT person or current provider?', 'Yes.  Co-managed IT is a common setup for us: your team keeps the day-to-day, and we take the projects, the security work or the parts nobody has time for.'),
        ('Do you work with medical device and life sciences companies?', "Yes.  Our team has spent years running IT for medical device, diagnostics and certified lab companies, where access, change records and audit evidence have to hold up."),
@@ -421,7 +421,7 @@ def engagement():
 def why():
     qs = ''.join(f'<li data-q="{i}"><p>{q}</p><div class="yn"><button type="button" data-v="1" aria-pressed="false">Yes</button><button type="button" data-v="0" aria-pressed="false">No</button></div></li>' for i, q in enumerate(sb.QUESTIONS))
     pains = ''.join(f'<li><a href="{s}.html"><span class="nm" style="font:italic 500 clamp(20px,2vw,26px)/1.25 var(--serif)">{t}</span><span class="ds">{sb.SVC[s]["name"]}</span></a></li>' for t, s in sb.PAINS)
-    body = phero('Mom-and-pop care.', 'Enterprise experience.', "A small team for small and growing companies.  You get people who know your name and your systems, backed by thirty years of running IT where downtime and audit findings aren't an option.") + f'''
+    body = phero('Mom-and-pop care.', 'Enterprise experience.', "A small team for startups, small and growing companies.  You get people who know your name and your systems, backed by thirty years of running IT where downtime and audit findings aren't an option.") + f'''
 <section class="band white" id="check"><div class="wrap">
   <h2>The 60-second IT health check.</h2><p class="lead" style="margin-top:16px">Six honest questions.  No email required, and your answers stay in your browser.</p>
   <div class="check"><ol class="questions" id="questions">{qs}</ol>
@@ -429,7 +429,7 @@ def why():
 </div></section>
 <section class="index-sec on-dark"><div class="wrap" style="grid-template-columns:1fr"><div><div class="index-head"><h2>If you nodded at any of these, we should talk.</h2></div><ul class="svc-list">{pains}</ul></div></div></section>
 '''
-    page('why-us.html', 'Why Us | Cali IT Consulting', 'Mom-and-pop care, enterprise experience: a small IT team for small and growing companies.  Take the free 60-second IT health check.', body)
+    page('why-us.html', 'Why Us | Cali IT Consulting', 'Mom-and-pop care, enterprise experience: a small IT team for startups, small and growing companies.  Take the free 60-second IT health check.', body)
 
 def about():
     vals = ''.join(f'<div><h3>{t}</h3><p>{d}</p></div>' for t, d in [('Straight answers', "Plain English, no jargon.  If something doesn't need fixing, we'll say so."), ('Senior people', 'The people who scope your project are the ones who do the work.'), ('Documented', "Every change is written down, so you're never locked in to us."), ('Built to last', 'We design for the next five years, not the next invoice.')])
