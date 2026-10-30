@@ -1,21 +1,39 @@
 {
- "updated": "2026-10-30T15:12:30.045798+00:00",
+ "updated": "2026-10-30T16:03:45.424734+00:00",
  "m365": {
   "status": "Available",
-  "checked": "2026-10-30T15:12:30.490089+00:00",
+  "checked": "2026-10-30T16:03:45.563343+00:00",
   "link": "https://status.cloud.microsoft/"
  },
  "aws": {
   "status": "3 open events",
   "link": "https://health.aws.amazon.com/health/status",
-  "checked": "2026-10-30T15:12:30.045798+00:00"
+  "checked": "2026-10-30T16:03:45.424734+00:00"
  },
  "wasabi": {
   "status": "Service Under Maintenance",
   "link": "https://status.wasabi.com/",
-  "checked": "2026-10-30T15:12:30.045798+00:00"
+  "checked": "2026-10-30T16:03:45.424734+00:00"
  },
  "items": [
+  {
+   "title": "Trezor warns of suspected crypto-theft implant in hardware wallet",
+   "link": "https://www.bleepingcomputer.com/news/security/trezor-warns-of-suspected-crypto-theft-implant-in-hardware-wallet/",
+   "source": "BleepingComputer",
+   "date": "2026-10-30T15:58:20+00:00"
+  },
+  {
+   "title": "L\u2019Italia \u00e8 afflitta da vulnerabilit\u00e0 informatiche, senza una causa chiara",
+   "link": "https://www.darkreading.com/cybersecurity-analytics/cyber-vulnerabilities-besiege-italy-italian",
+   "source": "Dark Reading",
+   "date": "2026-10-30T15:39:54+00:00"
+  },
+  {
+   "title": "PHP2Shell Attacks Root Palo Alto Firewalls but Fail Against WordPress",
+   "link": "https://www.securityweek.com/php2shell-attacks-root-palo-alto-firewalls-but-fail-against-wordpress/",
+   "source": "SecurityWeek",
+   "date": "2026-10-30T15:09:25+00:00"
+  },
   {
    "title": "In Other News: Anthropic Breach Dispute, UEFI Flaw Hits Most Servers, Cloudflare AI Data Leak",
    "link": "https://www.securityweek.com/in-other-news-anthropic-breach-dispute-uefi-flaw-hits-most-servers-cloudflare-ai-data-leak/",
@@ -101,18 +119,6 @@
    "date": "2026-10-30T10:16:07+00:00"
   },
   {
-   "title": "$2 Million+ Drained From Polymarket Traders in New Supply Chain Attack",
-   "link": "https://www.securityweek.com/2-million-drained-from-polymarket-traders-in-new-supply-chain-attack/",
-   "source": "SecurityWeek",
-   "date": "2026-10-30T09:41:36+00:00"
-  },
-  {
-   "title": "Binance links $6.3 billion crypto theft to compromised DevOps laptop",
-   "link": "https://www.bleepingcomputer.com/news/security/binance-links-63-billion-crypto-theft-to-compromised-devops-laptop/",
-   "source": "BleepingComputer",
-   "date": "2026-10-30T09:18:13+00:00"
-  },
-  {
    "title": "Official Claude Code Extension on Cursor Marketplace Trojanized with Persistent SSH Backdoor",
    "link": "https://thehackernews.com/2026/10/official-claude-code-vs-code-extension.html",
    "source": "The Hacker News",
@@ -153,12 +159,6 @@
    "link": "https://www.darkreading.com/cybersecurity-operations/why-ctf-more-important-than-ever",
    "source": "Dark Reading",
    "date": "2026-10-29T19:56:44+00:00"
-  },
-  {
-   "title": "Claude Model Builds Exploits Across Major Browsers & OSes",
-   "link": "https://www.darkreading.com/application-security/claude-model-exploits-major-browsers-oses",
-   "source": "Dark Reading",
-   "date": "2026-10-29T18:15:59+00:00"
   },
   {
    "title": "Tracking AI adoption in North Korean threat actor tradecraft",
