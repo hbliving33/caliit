@@ -11,6 +11,7 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 OUT = ROOT / 'assets' / 'data' / 'news.json'
 FEEDS = [
     ('CISA', 'https://www.cisa.gov/cybersecurity-advisories/all.xml'),
+    ('Microsoft Security Blog', 'https://www.microsoft.com/en-us/security/blog/feed/'),
     ('Microsoft Security Response Center', 'https://msrc.microsoft.com/blog/feed'),
     ('BleepingComputer', 'https://www.bleepingcomputer.com/feed/'),
     ('The Hacker News', 'https://feeds.feedburner.com/TheHackersNews'),
@@ -18,6 +19,7 @@ FEEDS = [
     ('Krebs on Security', 'https://krebsonsecurity.com/feed/'),
     ('Dark Reading', 'https://www.darkreading.com/rss.xml'),
 ]
+KEV_JSON = 'https://raw.githubusercontent.com/cisagov/kev-data/main/known_exploited_vulnerabilities.json'   # CISA's official KEV catalog on GitHub
 M365_FEED = 'https://status.cloud.microsoft/api/feed/mac'
 PER_SOURCE, TOTAL = 6, 30
 UA = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36 caliit-news/1.0',
@@ -87,6 +89,16 @@ def main():
         except Exception as e:
             print(f'{source} failed: {e}'); errors[source] = str(e)[:160]
             items += [x for x in prev.get('items', []) if x.get('source') == source]   # keep last good headlines
+    if not any(x['source'] == 'CISA' for x in items):   # CISA's site often blocks cloud runners; use its KEV catalog instead
+        try:
+            kev = json.loads(get(KEV_JSON)).get('vulnerabilities', [])
+            kev.sort(key=lambda v: v.get('dateAdded', ''), reverse=True)
+            for v in kev[:PER_SOURCE]:
+                d = dt.datetime.fromisoformat(v['dateAdded']).replace(tzinfo=dt.timezone.utc)
+                items.append({'title': clean(f"Actively exploited: {v.get('vendorProject', '')} {v.get('product', '')} ({v['cveID']})"), 'link': f"https://nvd.nist.gov/vuln/detail/{v['cveID']}", 'source': 'CISA', 'date': d.isoformat()})
+            errors.pop('CISA', None); ok.append('CISA KEV: %d' % min(len(kev), PER_SOURCE))
+        except Exception as e:
+            errors['CISA KEV'] = str(e)[:160]
     seen, uniq = set(), []
     for x in sorted(items, key=lambda x: x['date'], reverse=True):
         k = x['title'].lower()
