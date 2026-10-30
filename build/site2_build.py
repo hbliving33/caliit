@@ -95,7 +95,8 @@ def chart(cls='', labels=True, draw=False, vb='-34 -12 276 246'):
 
 
 US = json.loads((ROOT / 'build' / 'us_chart.json').read_text())
-DE = json.loads((ROOT / 'build' / 'de_inset.json').read_text())   # Germany inset: we support clients there today
+DE = json.loads((ROOT / 'build' / 'de_inset.json').read_text())
+DE_CITY = None   # set to a key in DE['cities'] once confirmed   # Germany inset: we support clients there today
 def us_chart(cls=''):
     """Lower 48 in outline, California highlighted with redwoods, wave and board, two marks, and live-looking links:
     arcs from Huntington Beach to cities across the country with light traveling along them."""
@@ -118,13 +119,17 @@ def us_chart(cls=''):
                  f'<text class="pin-t us" x="{lx}" y="{ly}">{name}</text><text class="pin-s us" x="{lx}" y="{ly + 6.5}">{sub}</text>')
     return (f'<svg class="{cls}" viewBox="-14 -6 428 270" role="img" aria-label="Map of the United States.  California is highlighted with marks at our Huntington Beach headquarters and our Arcata remote office, plus a mark at Payson, Arizona, and an inset for Germany, where we also support clients.  Lines run from Huntington Beach to cities across the country.">'
             f'<defs><clipPath id="usgrat"><rect x="-14" y="-6" width="428" height="270"/></clipPath></defs><g clip-path="url(#usgrat)">{grat}</g><path class="nation" d="{US["nation"]}"/><path class="borders" d="{US["borders"]}"/>'
-            f'<path class="land" d="{US["ca"]}" style="stroke-width:.7"/>{trees}<g class="links">{arcs}{nodes}{packets}</g>{pins}{germany()}</svg>')
+            f'<path class="land" d="{US["ca"]}" style="stroke-width:.7"/>{trees}<g class="links">{arcs}{nodes}{packets}</g>{pins}{germany(DE_CITY)}</svg>')
 
-def germany():
+def germany(city=None):
     cx, cy = DE['cx'], DE['cy']; r = 24
+    dot = ''
+    if city:
+        x, y = DE['cities'][city]
+        dot = f'<circle class="pin-halo" cx="{x}" cy="{y}" r="1.6"/><circle class="pin" cx="{x}" cy="{y}" r="1.6"/>'
     d = f'M360.9 85.4 Q{cx + 6} {cy - 62} {cx} {cy - r - 1}'
     return (f'<g class="de-inset"><path class="arc" d="{d}"/><circle class="packet" r="1.25"><animateMotion dur="3.2s" begin="3s" repeatCount="indefinite" path="{d}"/></circle>'
-            f'<circle class="de-ring" cx="{cx}" cy="{cy}" r="{r}"/><path class="land de" d="{DE["d"]}"/>'
+            f'<circle class="de-ring" cx="{cx}" cy="{cy}" r="{r}"/><path class="land de" d="{DE["d"]}"/>{dot}'
             f'<text class="pin-t us" x="{cx}" y="{cy + r + 8}" text-anchor="middle">Germany</text><text class="pin-s us" x="{cx}" y="{cy + r + 14.5}" text-anchor="middle">Remote support</text></g>')
 
 CHIPS = [('Chicago', ['Microsoft 365', 'Identity', 'Exchange Online', 'SharePoint', 'OneDrive', 'Teams', 'Single sign-on', 'Mail migration']),
@@ -505,9 +510,22 @@ def cube_preview():
     page('cube-preview.html', 'Cube preview | Cali IT Consulting', 'Preview of a clickable service cube.', body, f'<script src="assets/js/cube2.js?v={sb.ver("assets/js/cube2.js")}" defer></script>')
     f = ROOT / 'cube-preview.html'; f.write_text(f.read_text().replace('<meta name="theme-color"', '<meta name="robots" content="noindex">\n<meta name="theme-color"', 1))
 
+def map_preview():
+    global DE_CITY
+    keep = DE_CITY; DE_CITY = 'Tuttlingen'
+    blk = us_map_block()
+    DE_CITY = keep
+    def band(tag, title, note):
+        return f'''<section class="chart-sec hero on-dark {tag}" style="min-height:0;padding:60px 0"><div class="wrap" style="display:block;max-width:1200px">
+  <h2 style="color:#fff;margin-bottom:6px">{title}</h2><p class="lead" style="margin-bottom:24px">{note}</p>{blk}</div></section>'''
+    body = (band('opt-a', 'Option A: current colors', 'The map as it is on the live site today, with a red dot in Germany.').replace('padding:60px 0', 'padding:140px 0 60px')
+            + band('opt-b', 'Option B: bluer', 'The same map in a richer blue.  California and Germany stand out in a brighter blue.'))
+    page('map-preview.html', 'Map preview | Cali IT Consulting', 'Map color preview.', body)
+    f = ROOT / 'map-preview.html'; f.write_text(f.read_text().replace('<meta name="theme-color"', '<meta name="robots" content="noindex">\n<meta name="theme-color"', 1))
+
 if __name__ == '__main__':
     privacy()   # reads the current privacy text first
-    home(); services(); [service(i, s) for i, s in enumerate(sb.SERVICES)]; industries(); engagement(); why(); about(); testimonials(); contact(); news_page(); thanks(); notfound(); cube_preview()
+    home(); services(); [service(i, s) for i, s in enumerate(sb.SERVICES)]; industries(); engagement(); why(); about(); testimonials(); contact(); news_page(); thanks(); notfound(); cube_preview(); map_preview()
     for _n in ('thanks.html', '404.html'):   # keep these out of search results
         _f = ROOT / _n; _t = _f.read_text()
         if 'name="robots"' not in _t: _f.write_text(_t.replace('<meta name="theme-color"', '<meta name="robots" content="noindex">\n<meta name="theme-color"', 1))

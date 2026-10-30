@@ -475,3 +475,7 @@ h3 { font: 700 21px/1.25 var(--sans); }
 .map .land.de { stroke-width: .6; }
 .draw .de-inset { opacity: 0; animation: fadein .6s 2.3s forwards; }
 @media (prefers-reduced-motion: reduce) { .draw .de-inset { animation: none; opacity: 1; } }
+/* map preview: Option B (bluer) */
+.opt-b .map.us .nation { fill: #173a63; stroke: #5d86b5; }
+.opt-b .map.us .borders { stroke: #2d5078; }
+.opt-b .map .land { fill: #2a5f99; stroke: #bcd6f2; }

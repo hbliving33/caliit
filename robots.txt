@@ -4,4 +4,5 @@ Disallow: /logos.html
 Disallow: /focus.html
 Disallow: /pick.html
 Disallow: /cube-preview.html
+Disallow: /map-preview.html
 Sitemap: https://caliit.com/sitemap.xml
