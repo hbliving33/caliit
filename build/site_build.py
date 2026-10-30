@@ -63,14 +63,14 @@ SERVICES = [
   pains=[('The Wi-Fi drops', 'Everyone has learned which conference room to avoid.'), ("Sites don't talk", 'Branch offices or labs connect through workarounds nobody wants to touch.'), ('The office is moving', "A new building means cabling, firewalls, phones and a cutover that can't go wrong.")],
   get=['Network design from core to edge', 'Firewall, switching and Wi-Fi installs', 'Site-to-site and remote access VPN', 'Office moves and new building cutovers', 'Guest Wi-Fi that stays separate from your business network', 'Monitoring and documentation you keep'],
   plat=['Cisco Meraki', 'UniFi', 'Site-to-site VPN', 'Wi-Fi', 'Phone systems', 'Network monitoring'],
-  case=('One network, many countries', 'A global manufacturer had offices and plants on multiple continents running on separate networks.', ['Built private networks linking 30+ facilities in more than 10 countries', 'Rolled out 2,000+ internet phones across 10 sites', 'Later designed and deployed a Cisco Meraki network with site-to-site VPN for a multi-site lab company'], 'Every site on one managed network, with phones and security handled centrally.')),
+  case=('One network, many countries', 'A global manufacturer had offices and plants on multiple continents running on separate networks.', ['Built private networks linking 30+ facilities in more than 10 countries', 'Rolled out 2,000+ VoIP phones across 10 sites', 'Later designed and deployed a Cisco Meraki network with site-to-site VPN for a multi-site lab company'], 'Every site on one managed network, with phones and security handled centrally.')),
  dict(slug='cloud', name='Cloud', h="Move what makes sense.  <em>Keep what doesn't.</em>", short='Migration plans, servers, storage and backups you have tested.',
   intro="Not everything belongs in the cloud, and not everything belongs in your closet.  We help you decide, then move it, back it up and keep the bill in check.",
   pains=[('The server closet is aging', 'The hardware is out of warranty and the one person who understood it has left.'), ('Backups are a hope', 'Backups run, but nobody has tested a real restore in years.'), ('The cloud bill keeps climbing', 'Resources were spun up for a project and never turned off.')],
   get=['Cloud readiness review and migration plan', 'Azure and hybrid server design', 'Virtualization and storage', 'Cloud backup with tested restores', 'Disaster recovery you have actually practiced', 'Cloud cost reviews'],
   plat=['Azure', 'VMware', 'NetApp', 'Dell', 'HP', 'Synology', 'Cloud backup', 'Colocation'],
   case=('Out of the server room', 'A medical device company ran its systems in an on-site data center with local backups.', ['Moved the corporate data center to a colocation facility', 'Replaced local backup appliances with an offsite cloud backup partner', 'Set up disaster recovery on cloud-based virtual servers'], 'Systems in a professional facility, backups offsite and a working recovery plan.')),
- dict(slug='data-center', name='Data Center', h='Data centers and colocation, <em>built right the first time</em>.', short='Server rooms, colocation and moves without the surprises.',
+ dict(slug='data-center', name='Data Center', h='Data centers and colocation, <em>planned down to the rack</em>.', short='Server rooms, colocation and moves without the surprises.',
   intro='We have designed, built and moved data centers and server rooms for companies across the country.  From picking a colocation provider to the last cable in the rack, we plan it, build it and move you in without the surprises.',
   pains=[('The server room is out of room', 'Power, cooling or rack space has run out, and adding one more server is a risk.'), ('A colocation contract is up', 'The renewal is coming, the price went up, and nobody has compared providers in years.'), ('A move is on the calendar', 'A new office, a closing facility or a lease ending, and the servers have to go somewhere without downtime.')],
   get=['Data center and server room design and build-outs', 'Colocation provider selection and contract negotiation', 'Server and data center moves, between facilities or to the cloud', 'Power, cooling and backup generator planning', 'Rack layout, structured cabling and labeling', 'Move plans with cutover steps and a rollback plan'],
@@ -81,7 +81,7 @@ SERVICES = [
   pains=[('Evidence is scattered', 'Screenshots in email, spreadsheets on desktops, and a scramble every audit season.'), ('Policies are out of date', 'Written years ago, never followed, and now they contradict what you really do.'), ('New rules apply to you', 'Growth, a new customer or going public just put you in scope.')],
   get=['IT general controls for SOX', 'HIPAA and data protection readiness', 'Written policies and procedures that match reality', 'Evidence collection and audit support', 'Change management and access reviews', 'Support for FDA-regulated and certified lab environments'],
   plat=['SOX', 'HIPAA', 'GDPR', 'ISO 9001', 'ISO 14001', 'ISO 27001', 'ITIL', 'CLIA labs'],
-  case=('Audits without the scramble', 'A publicly traded diagnostics company needed IT controls tested every year.', ['Served as business lead for SOX IT general controls testing and reporting', 'Supported certified clinical labs in multiple states and countries', 'Earlier ran ISO 9001, 14001 and 27001 audits for a global manufacturer'], 'Controls documented, tested on schedule and ready for every audit cycle.')),
+  case=('Audits without the scramble', 'A publicly traded diagnostics company needed IT controls tested every year.', ['Served as business lead for SOX IT general controls testing and reporting', 'Supported certified clinical labs in multiple states and countries', 'Earlier led IT through ISO 9001, 14001 and 27001 audits for a global manufacturer'], 'Controls documented, tested on schedule and ready for every audit cycle.')),
  dict(slug='access-control', name='Access Control', h='Badge doors, cameras and alarms that <em>work with your IT</em>.', short='Badge access, cameras and monitoring tied to your accounts.',
   intro='Physical security is part of security.  We design badge access, cameras and monitoring, and build them into offboarding, so access ends the day someone leaves.',
   pains=[('Old badges still work', 'People who left months ago can still open the front door.'), ('Cameras nobody can use', 'The system records, but nobody knows how to find or export footage.'), ('A new building is coming', 'Doors, readers, cameras and network all need to be planned before the walls close.')],
@@ -102,7 +102,7 @@ SERVICES = [
   case=('A roadmap and a budget that held', 'Growing companies needed IT that kept pace with acquisitions, new sites and new budgets.', ['Built a technology roadmap by business function, with a 3 to 5 year view', 'Managed IT budgets up to $12 million and negotiated 50+ IT contracts', 'Replaced an outside managed service provider with an in-house service desk'], 'A clear plan, predictable spending and support that answered to the business.')),
 ]
 SVC = {s['slug']: s for s in SERVICES}
-TOPICS = ['IT and security assessment'] + [s['name'] for s in SERVICES] + ['Regulated industry support', 'Something else']
+TOPICS = ['IT and security assessment'] + [s['name'] for s in SERVICES] + ['FDA-regulated or audit support', 'Something else']
 
 STATS = [('30', 'Years in IT leadership'), ('10+', 'Acquisitions integrated'), ('30+', 'Sites networked worldwide'), ('$12M', 'Largest IT budget managed')]
 STEPS = [('Assess', 'We look at what you have, what it costs and where the risks are, then hand you a ranked, written plan.'),
@@ -132,9 +132,9 @@ INDUSTRIES = [
 ]
 ENGAGE = [('Projects', 'A defined job with a clear finish line.', 'A fixed scope and a price agreed before work starts.  When it is done, it is documented and handed back to you.',
            ['Written scope, timeline and fixed price', 'One senior lead from start to finish', 'Documentation and handoff when the job is done'], ['Office or headquarters moves', 'Microsoft 365 migrations', 'Network or Wi-Fi refreshes', 'Security assessments', 'Access control installs'], 'one-time needs with a clear goal'),
-          ('Managed IT, your way', 'A right-sized MSP plan, built around you.', "We're not a big-box MSP with one plan for everyone.  We sit down with you, choose what we manage and how, and price it to fit, from a few key systems to the whole stack.",
+          ('Managed IT, your way', 'A right-sized MSP plan, built around you.', "We're not a big-box managed service provider (MSP) with one plan for everyone.  We sit down with you, choose what we manage and how, and price it to fit, from a few key systems to the whole stack.",
            ['Monitoring and patching', 'User onboarding and offboarding', 'Vendor and license management', 'Help when something breaks', 'A monthly review of what changed and what is next', 'A scope you can grow or shrink as you go'], ['Companies without in-house IT', 'Teams whose IT person left', 'Co-managed support alongside a small IT staff'], 'teams that want MSP-style coverage without a one-size contract'),
-          ('Fractional IT leadership', 'A senior IT leader, part time.', 'The judgment of an IT director for a set number of days a month, without a full-time salary.',
+          ('Fractional IT leadership', 'An IT director, part time.', 'The judgment of an IT director for a set number of days a month, without a full-time salary.',
            ['Technology roadmap and budget', 'Vendor contract review and negotiation', 'Audit, compliance and risk ownership', 'Leadership and board reporting', 'Hiring and managing outside providers'], ['Growing companies', 'Businesses facing an audit or acquisition', 'Leadership teams that need an IT voice at the table'], 'companies not ready for a full-time IT director')]
 QUOTES = [('“[His] commitment to providing his clients with the highest level of service … is unsurpassed!”', 'President, equipment financing firm'),
           ('“Always assured of [his] passion to do what is right, what is technically sound, and what is cost effective.”', 'Former manager'),
@@ -275,7 +275,7 @@ def home():
   <div class="reveal">
     <div class="label">Regulated industries</div>
     <h2>Built for businesses that <em>answer to auditors</em>.</h2>
-    <p class="lede">Most IT shops stop at HIPAA.  Our team has run IT for FDA-regulated medical device and diagnostics companies, certified clinical labs and publicly traded firms.</p>
+    <p class="lede">Our team has run IT for FDA-regulated medical device and diagnostics companies, certified clinical labs and publicly traded firms.</p>
     <ul class="checks">{inds}</ul>
     <a class="arrow" href="industries.html">See the industries we serve</a>
   </div>
@@ -362,7 +362,7 @@ def why():
 <section class="section" id="check"><div class="wrap">
   <div class="section-head"><div class="label">Free 60-second IT health check</div><h2>Where do you <em>stand</em>?</h2><p class="lede">Six honest questions.  No email required, and your answers stay in your browser.</p></div>
   <div class="check">
-    <div class="gauge"><div class="gauge-num" id="gaugeNum">0<small> of {len(QUESTIONS)}</small></div><h3 id="verdictTitle">Answer the questions</h3><p id="verdictText">Every "No" is a gap worth closing.  Most businesses we meet have at least two.</p><a class="btn btn-primary" id="checkCta" href="contact.html" hidden style="background:#8fb3d9;color:#0f1c2d">Send us your results</a></div>
+    <div class="gauge"><div class="gauge-num" id="gaugeNum">0<small> of {len(QUESTIONS)}</small></div><h3 id="verdictTitle">Answer the questions</h3><p id="verdictText">Every "No" is a gap worth closing.  Most businesses have at least one.</p><a class="btn btn-primary" id="checkCta" href="contact.html" hidden style="background:#8fb3d9;color:#0f1c2d">Send us your results</a></div>
     <ol class="questions" id="questions">{qs}</ol>
   </div>
 </div></section>
@@ -379,7 +379,7 @@ def about():
 <section class="section"><div class="wrap split" style="align-items:start">
   <div><div class="label">Who we are</div><h2>Senior consultants.  <em>Real experience.</em></h2></div>
   <div class="prose"><p class="lede">Our team has run technology for FDA-regulated medical device and diagnostics companies, global manufacturers and growing firms.</p>
-  <p>We've led more than ten acquisitions, moved headquarters and data centers, built certified labs, and passed SOX, HIPAA and ISO audits.  We handle Microsoft 365, cybersecurity, networks, cloud, data centers, physical security, compliance and IT strategy.</p>
+  <p>We've integrated IT for more than ten acquisitions, moved headquarters and data centers, built certified labs, and passed SOX and ISO audits and HIPAA reviews.  We handle Microsoft 365, cybersecurity, networks, cloud, data centers, physical security, compliance and IT strategy.</p>
   <p>We're based in Huntington Beach, California.  We work on-site across Southern California and remotely anywhere in the United States.  You get senior-level answers from people who have done the work, not a sales pitch.</p></div>
 </div></section>
 <section class="proof" aria-label="Experience"><div class="wrap">{stats}</div></section>
@@ -395,7 +395,7 @@ def testimonials():
         paras = ''.join(f'<p style="color:#2b3644;font-size:16.5px">{E(p)}</p>' for p in t['paras'])
         cap = t['cap'][0]; sub = t['cap'][1] if len(t['cap']) > 1 else ''
         cards += f'<figure class="card reveal" style="margin:0"><div style="font:700 54px/0.6 var(--accent);color:#8fb3d9;margin-bottom:10px">&ldquo;</div>{paras}<figcaption style="border-top:1px solid #e2e7ee;padding-top:14px"><b style="font-family:var(--head)">{E(cap)}</b><br><span class="muted" style="font-size:14px">{E(sub)}</span></figcaption></figure>'
-    body = page_hero('Testimonials', 'In their <em>own words</em>.', 'What the people we have worked for, and alongside, have said about the work.  Quoted from LinkedIn recommendations, with names left out for privacy.') + f'''
+    body = page_hero('Testimonials', 'In their <em>own words</em>.', 'What clients and colleagues have said about the work of our team\'s leader.  Quoted from LinkedIn recommendations, with names left out for privacy.') + f'''
 <section class="section"><div class="wrap"><div class="grid g2">{cards}</div></div></section>
 {cta()}'''
     page('testimonials.html', 'Testimonials | Cali IT Consulting', 'What clients and colleagues say about working with the Cali IT Consulting team.', body)

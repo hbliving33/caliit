@@ -13,12 +13,12 @@ ARCATA, HB = (14.1, 27.9), (124.5, 191.2)
 sb.SERVICES.append(dict(slug='ai', name='AI', h='Put AI to work, <em>safely and on purpose</em>.', short='Copilot readiness, AI policies and guardrails, and practical automation that saves real time.',
   intro="AI is only as safe as the data it can reach.  We get your permissions, policies and people ready, then put AI to work where it actually saves time.",
   pains=[('Copilot sees too much', 'Old sharing links and loose permissions mean AI can surface files people were never meant to see.'), ('No rules yet', 'Staff are already pasting company data into free AI tools, and nobody has said what is allowed.'), ('Pilots that go nowhere', 'A few licenses were bought, a few people tried it, and nobody can say what it is worth.')],
-  get=['Copilot for Microsoft 365 readiness review', 'SharePoint and OneDrive permission cleanup before AI is turned on', 'AI acceptable use policy and guardrails', 'Tool selection and a pilot with clear goals', 'AI-assisted automation in Power Automate and Copilot Studio', 'Staff training on using AI well and safely'],
-  plat=['Copilot for Microsoft 365', 'Copilot Studio', 'Power Automate', 'Azure OpenAI', 'SharePoint and OneDrive', 'Entra ID', 'Sensitivity labels'],
+  get=['Microsoft 365 Copilot readiness review', 'SharePoint and OneDrive permission cleanup before AI is turned on', 'AI acceptable use policy and guardrails', 'Tool selection and a pilot with clear goals', 'AI-assisted automation in Power Automate and Copilot Studio', 'Staff training on using AI well and safely'],
+  plat=['Microsoft 365 Copilot', 'Copilot Studio', 'Power Automate', 'Azure OpenAI', 'SharePoint and OneDrive', 'Entra ID', 'Sensitivity labels'],
   case=('Ready, then useful', 'Every AI engagement starts the same way, so you get value without surprises.', ['Review who can see what across Microsoft 365, and fix the oversharing', 'Write a short, plain-English AI policy your staff will follow', 'Pilot with a small team on two or three real tasks, then measure the time saved'], 'AI turned on with guardrails, and a clear answer on what it is worth.'),
   case_label='How we start', case_note=''))
 sb.SERVICES.append(dict(slug='managed-it', name='Managed IT', h='Managed IT, <em>sized to fit</em>.', short='A right-sized MSP plan built around you: monitoring, patching, users and vendors, from a few systems to the whole stack.',
-  intro="We're not a big-box MSP with one plan for everyone.  We sit down with you, choose what we manage and how, and price it to fit.",
+  intro="We're not a big-box managed service provider (MSP) with one plan for everyone.  We sit down with you, choose what we manage and how, and price it to fit.",
   pains=[('One-size contracts', 'The big MSPs sell a package, and you pay for what you never use.'), ('Tickets, not answers', 'Every call goes to a queue and a different person who has never seen your setup.'), ('Too small for in-house IT', 'You need someone watching the systems, but not a full-time hire.')],
   get=['Monitoring and patching for servers, network and devices', 'User onboarding and offboarding', 'Vendor and license management', 'Help when something breaks, from people who know your setup', 'A monthly review of what changed and what is next', 'A scope you can grow or shrink as you go'],
   plat=['Remote monitoring', 'Patch management', 'Microsoft 365', 'Intune', 'Cisco Meraki', 'UniFi', 'Cloud backup', 'Co-managed IT'],
@@ -35,7 +35,7 @@ sb.TOPICS.insert(sb.TOPICS.index('Something else'), 'AI'); sb.TOPICS.insert(sb.T
 ORDER = ['network', 'cloud', 'data-center', 'microsoft-365', 'business-applications', 'ai', 'managed-it', 'it-strategy', 'cybersecurity', 'business-automation', 'access-control', 'compliance']
 sb.SERVICES.sort(key=lambda x: ORDER.index(x['slug']))
 for _x in sb.SERVICES:
-    if _x['slug'] == 'cloud': _x['short'] = 'Servers, storage and virtualization, with backups you have tested.'
+    if _x['slug'] == 'cloud': _x['short'] = 'Azure and hybrid servers, storage and virtualization, with backups you have tested.'
     if _x['slug'] == 'microsoft-365': _x['short'] = 'Identity first, then email, SharePoint/OneDrive and Teams, with devices, file permissions and licensing set up right and kept clean.'
     if _x['slug'] == 'cybersecurity': _x['short'] = 'Penetration testing, risk assessments, MFA, email gateway security and a plan for a bad day.'
     if _x['slug'] == 'access-control': _x['short'] = 'Badge access, security cameras and monitoring for every door and every site.'
@@ -56,7 +56,7 @@ _upd('microsoft-365', h='Your workplace, <em>secured from the sign-in up</em>.',
      get=['Identity first: Entra ID, phishing-resistant MFA, passkeys and conditional access', 'Tenant security review with a ranked fix list, tracked in Secure Score', 'Exchange Online, Teams, SharePoint and OneDrive migrations', 'SharePoint and OneDrive sharing and permissions cleaned up and kept that way', 'Devices enrolled and managed with Intune and Autopilot', 'Licensing review and cleanup', 'Standard onboarding and offboarding for every user'],
      plat=['Entra ID', 'Conditional access', 'Passkeys', 'Exchange Online', 'Teams', 'SharePoint', 'OneDrive', 'Intune', 'Autopilot'],
      desc='Microsoft 365, identity first: Entra ID, phishing-resistant MFA and conditional access, then Exchange Online, SharePoint, OneDrive, Teams, Intune and licensing.')
-_upd('ai', get=['Copilot for Microsoft 365 readiness review', 'SharePoint and OneDrive oversharing cleanup before AI is turned on', 'Shadow AI check: which AI tools staff already use, and with what data', 'AI acceptable use policy and guardrails', 'Tool selection and a pilot with clear goals', 'Agents and automation in Copilot Studio and Power Automate', 'Staff training on using AI well and safely'],
+_upd('ai', get=['Microsoft 365 Copilot readiness review', 'SharePoint and OneDrive oversharing cleanup before AI is turned on', 'Shadow AI check: which AI tools staff already use, and with what data', 'AI acceptable use policy and guardrails', 'Tool selection and a pilot with clear goals', 'Agents and automation in Copilot Studio and Power Automate', 'Staff training on using AI well and safely'],
      desc='AI readiness for Microsoft 365: Copilot readiness, oversharing cleanup, shadow AI checks, AI policies and practical agents in Copilot Studio.')
 _upd('managed-it', desc='Managed IT sized to fit: monitoring, patching, users, devices and vendors, fully managed or co-managed alongside your own IT staff.')
 _upd('it-strategy', intro='Fractional CIO and IT director support for companies that need a senior IT voice without a full-time hire.  Roadmaps, budgets, vendors, written processes and the hard calls.',
@@ -246,7 +246,7 @@ def ledger_block():
             ('Physical security', 'Badge access, cameras and visitor logs, with badges shut off the day someone leaves.')]
     trs = ''.join(f'<tr><th scope="row">{a}</th><td>{b}</td></tr>' for a, b in rows)
     return f'''<section class="ledger-sec"><div class="wrap">
-  <div><h2>For businesses that answer to auditors.</h2><p class="lead" style="margin-top:20px">Most IT shops stop at HIPAA.  Our team has run IT where a change isn't finished until it is documented, approved and provable.</p><p><a class="link" href="industries.html">See the industries we serve</a></p></div>
+  <div><h2>For businesses that answer to auditors.</h2><p class="lead" style="margin-top:20px">Our team has run IT where a change isn't finished until it is documented, approved and provable.</p></div>
   <table class="ledger"><caption class="hp">Standards and environments we support</caption><tbody>{trs}</tbody></table>
 </div></section>'''
 
@@ -304,7 +304,7 @@ def close_block():
     st = f'<svg class="close-state us-shape" viewBox="-14 -6 428 270" aria-hidden="true"><path d="{US["nation"]}" fill="#8fb3d9"/></svg>'
     return f'''<section class="chart-sec close-sec on-dark" id="talk">{st}<div class="wrap">
   <div><h2>Tell us what you're working on.</h2><p class="lead" style="margin-top:20px">An audit on the calendar, an office move, a security worry or an IT person who just gave notice.  Send a few lines and we'll reply within one business day.</p>
-  <p style="margin-top:28px;color:#8ea2b8;font-size:15px">Headquarters in Huntington Beach, California.<br>On-site across California and Arizona.  Remote support in all 50 states.</p></div>
+  <p style="margin-top:28px;color:#8ea2b8;font-size:15px">Headquarters in Huntington Beach, California.  Remote offices in Arcata, California and Payson, Arizona.<br>On-site across California and Arizona.  Remote support in all 50 states.</p></div>
   {form(True)}
 </div></section>'''
 
@@ -324,7 +324,7 @@ def home():
 </div></section>
 
 <section class="statement"><div class="wrap">
-  <p class="big">For <b>thirty years</b>, companies have handed us the hard parts of IT: moving a headquarters, standing up a data center, joining ten acquisitions onto one network, keeping everything running at 2 a.m.  Now we do it for you.</p>
+  <p class="big">Our team has spent <b>thirty years</b> on the hard parts of IT: moving a headquarters, standing up a data center, joining ten acquisitions onto one network, fixing what broke at 2 a.m.  Now we do it for you.</p>
   <div class="margin">{stats}</div>
 </div></section>
 
@@ -339,7 +339,7 @@ def home():
     page('index.html', 'Cali IT Consulting | IT infrastructure and operations, nationwide', "IT infrastructure and operations, handled: servers, networks, Microsoft 365, business applications and security.  California-based, serving clients nationwide.", body, CUBE_JS())
 
 def services():
-    body = phero('Everything your IT needs,', 'under one roof.', 'Twelve practice areas, one team.  Bring us a single project or hand us the whole stack.') + index_block(head=False) + f'''
+    body = phero('Twelve practice areas.', 'One team that has run them all.', 'Bring us a single project or hand us the whole stack.') + index_block(head=False) + f'''
 <section class="band white"><div class="wrap two">
   <div><h2>Not sure where to start?  Start with an assessment.</h2><p class="lead" style="margin-top:18px">We review your environment, rank the risks and hand you a written plan.  You decide what to fix, and who fixes it.</p><p style="margin-top:26px"><a class="btn ink" href="contact.html?topic=IT%20and%20security%20assessment">Ask about an assessment</a></p></div>
   <ul class="ticks"><li>Microsoft 365 and identity security</li><li>Backups and recovery</li><li>Network, firewall and Wi-Fi</li><li>Licensing and vendor spend</li><li>Compliance gaps and evidence</li><li>A ranked, written remediation plan</li></ul>
@@ -406,7 +406,7 @@ def why():
 <section class="band white" id="check"><div class="wrap">
   <h2>The 60-second IT health check.</h2><p class="lead" style="margin-top:16px">Six honest questions.  No email required, and your answers stay in your browser.</p>
   <div class="check"><ol class="questions" id="questions">{qs}</ol>
-  <div class="score"><div class="n" id="gaugeNum">0<small> of {len(sb.QUESTIONS)}</small></div><h3 id="verdictTitle">Answer the questions</h3><p id="verdictText">Every "No" is a gap worth closing.  Most businesses we meet have at least two.</p><a class="btn" id="checkCta" href="contact.html" hidden>Send us your results</a></div></div>
+  <div class="score"><div class="n" id="gaugeNum">0<small> of {len(sb.QUESTIONS)}</small></div><h3 id="verdictTitle">Answer the questions</h3><p id="verdictText">Every "No" is a gap worth closing.  Most businesses have at least one.</p><a class="btn" id="checkCta" href="contact.html" hidden>Send us your results</a></div></div>
 </div></section>
 <section class="index-sec on-dark"><div class="wrap" style="grid-template-columns:1fr"><div><div class="index-head"><h2>If you nodded at any of these, we should talk.</h2></div><ul class="svc-list">{pains}</ul></div></div></section>
 {notes_block()}
@@ -424,7 +424,7 @@ def about():
 </div></section>
 <section class="band fog"><div class="wrap two">
   <div><h2>What we do.</h2></div>
-  <div class="prose"><p class="lead">We've led more than ten acquisitions, moved headquarters and data centers, built certified labs, and passed SOX, HIPAA and ISO audits.</p><p>We handle networks, servers and cloud, data centers, Microsoft 365, business applications, cybersecurity, physical security, compliance and IT strategy.  We work on-site across California and Arizona and support clients remotely in all 50 states, traveling on-site as required.  You get senior-level answers from people who have done the work, not a sales pitch.</p></div>
+  <div class="prose"><p class="lead">We've integrated IT for more than ten acquisitions, moved headquarters and data centers, built certified labs, and passed SOX and ISO audits and HIPAA reviews.</p><p>We handle networks, servers and cloud, data centers, Microsoft 365, business applications, cybersecurity, physical security, compliance and IT strategy.  We work on-site across California and Arizona and support clients remotely in all 50 states, traveling on-site as required.  You get senior-level answers from people who have done the work, not a sales pitch.</p></div>
 </div></section>
 <section class="standard-sec on-dark"><div class="wrap"><h2>What we stand for.</h2><div class="promises">{vals}</div></div></section>
 {notes_block()}
@@ -437,13 +437,13 @@ def testimonials():
     for t in sb.TESTIMONIALS:
         ps = ''.join(f'<p>{E(p)}</p>' for p in t['paras'])
         rows += f'<figure class="tq" style="margin:0"><figcaption class="who">{E(t["cap"][0])}<span>{E(t["cap"][1]) if len(t["cap"]) > 1 else ""}</span></figcaption><blockquote>{ps}</blockquote></figure>'
-    body = phero('In their', 'own words.', 'What the people we have worked for, and alongside, have said about the work.  Quoted from LinkedIn recommendations, with names left out for privacy.') + f'<section class="band white"><div class="wrap tquotes">{rows}</div></section>{close_block()}'
+    body = phero('In their', 'own words.', 'What clients and colleagues have said about the work of our team\'s leader.  Quoted from LinkedIn recommendations, with names left out for privacy.') + f'<section class="band white"><div class="wrap tquotes">{rows}</div></section>{close_block()}'
     page('testimonials.html', 'Testimonials | Cali IT Consulting', 'What clients and colleagues say about working with the Cali IT Consulting team.', body)
 
 def contact():
     body = phero('Tell us what', "you're working on.", 'Fill out the form and a senior consultant will get back to you within one business day.') + f'''
 <section class="band white"><div class="wrap two">
-  <div><h2>California headquarters.  Nationwide clients.</h2><ul class="ticks" style="margin-top:28px"><li>Headquarters in Huntington Beach, California</li><li>On-site across California and Arizona</li><li>Remote support in all 50 states, with on-site travel as required</li><li>A reply from a senior consultant within one business day</li></ul></div>
+  <div><h2>California headquarters.  Nationwide clients.</h2><ul class="ticks" style="margin-top:28px"><li>Headquarters in Huntington Beach, California</li><li>Remote offices in Arcata, California and Payson, Arizona</li><li>On-site across California and Arizona</li><li>Remote support in all 50 states, with on-site travel as required</li><li>A reply from a senior consultant within one business day</li></ul></div>
   {form(False)}
 </div></section>'''
     page('contact.html', 'Contact | Cali IT Consulting', 'Contact Cali IT Consulting.  California headquarters, clients nationwide.  A senior consultant will reply within one business day.', body)
