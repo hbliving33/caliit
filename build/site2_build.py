@@ -184,9 +184,10 @@ def two_voice(h):
     a, b, c = m.groups()
     return f'<span class="h-serif">{a.strip().rstrip(",")}</span><span class="h-heavy">{b}{c}</span>'
 
-def phero(serif, heavy, lead, trail=None, mini=False):   # inner pages: centered text, no map (the map lives on the home page)
+def phero(serif, heavy, lead, trail=None, mini=False, side=''):   # inner pages: centered text, no map (the map lives on the home page)
     tr = f'<div class="trail">{trail}</div>' if trail else ''
-    m = f'<div class="mini map us us-mini">{us_chart(cls="draw")}</div>' if mini else ''
+    m = f'<div class="mini map us us-mini">{us_chart(cls="draw")}</div>' if mini else side
+    mini = mini or bool(side)
     return f'''<section class="chart-sec phero on-dark{" has-map" if mini else ""}"><div class="wrap"><div>{tr}<h1><span class="h-serif">{serif}</span><span class="h-heavy">{heavy}</span></h1><p class="lead">{lead}</p></div>{m}</div></section>'''
 
 def page(fname, title, desc, body, extra_js='', hero_header=True):
@@ -271,7 +272,7 @@ def ledger_block():
 def fit_block():
     pts = [('Small and growing companies', 'Our sweet spot is the business without a full IT department, or with one IT person stretched thin.'),
            ('People who know your name', 'You talk to the same small team every time, people who know your setup and your people.'),
-           ('Enterprise experience', 'Thirty years of running IT for regulated and growing companies, put to work at your size and your budget.')]
+           ('Enterprise experience', 'Big-company know-how: secure, documented and audit-ready IT, sized and priced for a small business.')]
     cards = ''.join(f'<div><h3>{t}</h3><p>{d}</p></div>' for t, d in pts)
     return f'''<section class="band white fit-sec"><div class="wrap">
   <p class="fit-tag">Mom-and-pop care.  <span>Enterprise experience.</span></p>
@@ -456,18 +457,22 @@ def about():
 {cta_block()}'''
     page('about.html', 'About | Cali IT Consulting', 'Thirty years of IT leadership in regulated companies, from data centers to Microsoft 365.  Headquartered in Huntington Beach, serving clients nationwide.', body)
 
+STATUS = [('m365', 'Microsoft 365', 'https://status.cloud.microsoft/'), ('aws', 'Amazon Web Services', 'https://health.aws.amazon.com/health/status'), ('wasabi', 'Wasabi cloud storage', 'https://status.wasabi.com/')]
+def status_panel(dark=False):
+    rows = ''.join(f'<a class="sp-row" data-status="{k}" href="{u}" target="_blank" rel="noopener"><span class="dot" aria-hidden="true"></span><b>{n}</b><span class="sp-t">Checking.</span></a>' for k, n, u in STATUS)
+    return f'''<div class="status-panel{' dark' if dark else ''}"><p class="sp-h">Cloud service status</p>{rows}<p class="sp-note">From each provider's public status page, checked every hour.  Problems limited to one company's account show only in its own admin console.</p></div>'''
+
 def news_block(limit=6, full=False):
     more = '' if full else '<p style="margin-top:26px"><a class="link" href="news.html">See all the latest headlines</a></p>'
     return f'''<section class="band white news-sec"><div class="wrap two">
   <div><h2>{'Latest headlines.' if full else 'Cybersecurity and technology news.'}</h2><p class="lead" style="margin-top:18px">The latest from CISA, Microsoft and the security press, refreshed every hour.  Each headline links to the original source.</p>
-  <a class="m365" id="m365Status" href="https://status.cloud.microsoft/" target="_blank" rel="noopener"><span class="dot" aria-hidden="true"></span><span><b>Microsoft 365 service status</b><span class="m365-t">Checking Microsoft's public status page.</span></span></a>
-  <p class="fine" style="margin-top:12px">From Microsoft's public status page, which covers widespread incidents.  Issues in a single company's tenant show in its own admin center.</p>{more}</div>
+  {'' if full else status_panel()}{more}</div>
   <ol class="news" id="newsList" data-limit="{limit}"><li class="news-empty">Loading the latest headlines.</li></ol>
 </div></section>'''
 
 def news_page():
-    body = phero('Cybersecurity news,', 'refreshed every hour.', 'Advisories from CISA and Microsoft, plus the stories security teams are reading.  We collect the headlines; every link goes to the original publisher.') + news_block(30, True) + cta_block()
-    page('news.html', 'Cybersecurity News | Cali IT Consulting', 'Cybersecurity headlines from CISA, Microsoft and the security press, plus Microsoft 365 service status, refreshed every hour.', body)
+    body = phero('Cybersecurity news,', 'refreshed every hour.', 'Advisories from CISA and Microsoft, plus the stories security teams are reading.  We collect the headlines; every link goes to the original publisher.', side=status_panel(True)) + news_block(30, True) + cta_block()
+    page('news.html', 'Cybersecurity News | Cali IT Consulting', 'Cybersecurity headlines from CISA, Microsoft and the security press, plus Microsoft 365, AWS and Wasabi service status, refreshed every hour.', body)
 
 def testimonials():
     rows = ''

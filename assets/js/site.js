@@ -43,7 +43,7 @@
   }
 
   // security news and Microsoft 365 status: assets/data/news.json is refreshed hourly by a GitHub Action
-  const newsList = document.getElementById("newsList"), m365 = document.getElementById("m365Status");
+  const newsList = document.getElementById("newsList"), m365 = document.querySelector("[data-status]");
   if (newsList || m365) {
     const ago = (iso) => { const m = Math.round((Date.now() - new Date(iso)) / 60000); if (!(m >= 0)) return ""; if (m < 60) return m <= 1 ? "just now" : m + " minutes ago"; const h = Math.round(m / 60); if (h < 24) return h + (h === 1 ? " hour ago" : " hours ago"); const d = Math.round(h / 24); return d + (d === 1 ? " day ago" : " days ago"); };
     fetch("assets/data/news.json?t=" + Math.floor(Date.now() / 600000)).then((r) => r.json()).then((data) => {
@@ -58,11 +58,12 @@
           li.append(meta, a); newsList.appendChild(li);
         });
       }
-      if (m365 && data.m365) {
-        const st = (data.m365.status || "Unknown"), ok = /^available$/i.test(st), t = m365.querySelector(".m365-t");
-        m365.classList.add(ok ? "ok" : st === "Unknown" ? "unk" : "warn");
-        t.textContent = ok ? "No widespread incidents reported" + (data.m365.checked ? ", checked " + ago(data.m365.checked) : "") + "." : st === "Unknown" ? "Status unavailable right now.  Open Microsoft's status page." : "Microsoft reports: " + st + ".  Open the status page for details.";
-      }
+      document.querySelectorAll("[data-status]").forEach((row) => {
+        const d = data[row.dataset.status]; const t = row.querySelector(".sp-t"); if (!d || !t) return;
+        const st = d.status || "Unknown", ok = /^available$/i.test(st), unk = st === "Unknown";
+        row.classList.add(ok ? "ok" : unk ? "unk" : "warn");
+        t.textContent = ok ? "No widespread issues reported" : unk ? "Status unavailable.  Open the status page." : st;
+      });
     }).catch(() => { if (newsList) newsList.innerHTML = '<li class="news-empty">Headlines are unavailable right now.</li>'; });
   }
 
