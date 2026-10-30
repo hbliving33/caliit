@@ -1,8 +1,8 @@
 {
- "updated": "2026-10-30T05:05:20.285332+00:00",
+ "updated": "2026-10-30T05:05:48.587102+00:00",
  "m365": {
   "status": "Available",
-  "checked": "2026-10-30T05:05:20.414163+00:00",
+  "checked": "2026-10-30T05:05:48.710159+00:00",
   "link": "https://status.cloud.microsoft/"
  },
  "items": [
@@ -188,6 +188,6 @@
   }
  ],
  "errors": {
-  "Microsoft Security Response Center": "not well-formed (invalid token): line 124, column 158"
+  "CISA": "HTTP Error 403: Forbidden"
  }
 }
