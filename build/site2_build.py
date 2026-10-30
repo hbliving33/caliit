@@ -67,9 +67,9 @@ _upd('cybersecurity', get=['Penetration testing, including autonomous pentesting
      desc='Cybersecurity based on risk: penetration testing, phishing-resistant MFA, EDR and MDR, email security, staff training and an incident response plan.')
 _upd('business-automation', desc='Business automation with Power Apps, Power Automate and CRM workflows: approvals, handoffs and data entry done by the system, not by people.')
 _upd('access-control', desc='Physical security that works with IT: badge access, security cameras, visitor management and monitoring, shut off the day someone leaves.')
-_upd('compliance', get=['IT general controls for SOX', 'IT support for 21 CFR Part 11 and GxP: access, audit trails and change records', 'HIPAA and data protection readiness', 'Written policies and procedures that match reality', 'Evidence collection and audit support', 'Change management and access reviews', 'Support for FDA-regulated and certified lab environments'],
-     plat=['SOX', '21 CFR Part 11', 'GxP', 'HIPAA', 'GDPR', 'ISO 9001', 'ISO 14001', 'ISO 27001', 'ITIL', 'CLIA labs'],
-     desc='IT compliance for regulated companies: SOX IT general controls, 21 CFR Part 11 and GxP support, HIPAA, ISO audits and evidence that is ready on time.')
+_upd('compliance', get=['IT general controls for SOX', 'HIPAA and data protection readiness', 'Written policies and procedures that match reality', 'Evidence collection and audit support', 'Change management and access reviews', 'Support for certified lab environments'],
+     plat=['SOX', 'HIPAA', 'GDPR', 'ISO 9001', 'ISO 14001', 'ISO 27001', 'ITIL', 'CLIA labs'],
+     desc='IT compliance for regulated companies: SOX IT general controls, HIPAA, ISO audits and evidence that is ready on time.')
 S = {s['slug']: s for s in sb.SERVICES}
 PRELAUNCH = True   # keep the whole site out of search results until launch; set False on launch day
 PRE_META = '<meta name="robots" content="noindex, nofollow">\n' if PRELAUNCH else ''
@@ -258,7 +258,7 @@ def index_block(head=True):
 </div></section>'''
 
 def ledger_block():
-    rows = [('FDA-regulated', 'IT controls, access reviews and change records for medical device, diagnostics and biotech companies, plus certified clinical labs.'),
+    rows = [('Life sciences', 'IT controls, access reviews and change records for medical device, diagnostics and biotech companies, plus certified clinical labs.'),
             ('SOX', 'IT general controls: testing, evidence and reporting for publicly traded companies, every audit cycle.'),
             ('HIPAA and GDPR', 'Data protection readiness, access by role and documented handling of patient and personal data.'),
             ('ISO 9001, 14001, 27001', 'IT support for quality, environmental and information security audits at large manufacturers.'),
@@ -288,7 +288,7 @@ def run_block():
             ('AI', 'Copilot readiness, oversharing cleanup before AI is switched on, plain-English AI policies, and agents and automation that save real time.'),
             ('Security', 'Penetration testing, phishing-resistant MFA, endpoint protection, email security, staff training, a written plan for a bad day, and cybersecurity updates your board and audit committee can follow.'),
             ('Facilities', 'When the building is part of the job: office moves and build-outs, server room power and cooling, badge access and cameras.'),
-            ('Compliance', 'When audits come, the evidence is ready: SOX, HIPAA, ISO and FDA-regulated environments.')]
+            ('Compliance', 'When audits come, the evidence is ready: SOX, HIPAA and ISO environments.')]
     trs = ''.join(f'<tr><th scope="row">{a}</th><td>{b}</td></tr>' for a, b in rows)
     return f'''<section class="ledger-sec"><div class="wrap">
   <div><h2>What we run.</h2><p class="lead" style="margin-top:20px">Our specialty is the core of IT: the infrastructure and the day-to-day operations that keep a business moving.  Facilities and compliance come along when the work calls for it.</p><p><a class="link" href="engagement.html">See how we work</a></p></div>
@@ -397,14 +397,14 @@ def industries():
 <section class="band white"><div class="wrap">{rows}</div></section>
 {ledger_block()}
 {cta_block()}'''
-    page('industries.html', 'Industries | Cali IT Consulting', 'IT consulting for life sciences, FDA-regulated companies, clinical labs, manufacturing, finance and growing companies.', body)
+    page('industries.html', 'Industries | Cali IT Consulting', 'IT consulting for life sciences, medical device companies, clinical labs, manufacturing, finance and growing companies.', body)
 
 
 FAQ = [('Do you only work in California?', 'No.  Our headquarters is in Huntington Beach, and we work on-site across California and Arizona.  We support clients remotely in all 50 states and travel on-site as required.'),
        ('How big are the companies you work with?', "Small and growing companies are our sweet spot: usually businesses without a full IT department, or with one IT person who needs backup.  We're a small team on purpose, and we keep our client list small enough to know every one of them."),
        ('Are you an MSP?', "Not a big-box one.  You can hire us for a single project, a managed IT plan built around what you actually need, or part-time IT leadership.  Many clients start with a project and keep going from there."),
        ('Can you work alongside our IT person or current provider?', 'Yes.  Co-managed IT is a common setup for us: your team keeps the day-to-day, and we take the projects, the security work or the parts nobody has time for.'),
-       ('Do you work with FDA-regulated companies?', "Yes.  Our team has spent years running IT for medical device, diagnostics and certified lab companies, where access, change records and audit evidence have to hold up."),
+       ('Do you work with medical device and life sciences companies?', "Yes.  Our team has spent years running IT for medical device, diagnostics and certified lab companies, where access, change records and audit evidence have to hold up."),
        ('What happens if we stop working together?', 'You keep everything: passwords, admin access and documentation.  We hand it over in writing, so the next person can pick it up on day one.'),
        ('How do we get started?', 'Send a few lines through the contact form.  A senior consultant replies within one business day, and you get a written scope and price before any work starts.')]
 def faq_block():
@@ -444,7 +444,7 @@ def about():
     stats = ''.join(f'<div><strong>{n}</strong>{t}</div>' for n, t in STATS2)
     body = phero('Built by people', 'who ran IT, not just sold it.', "Cali IT Consulting brings 30 years of IT leadership to businesses that can't afford downtime.") + f'''
 <section class="statement"><div class="wrap">
-  <p class="big">Our team has run technology for FDA-regulated medical device and diagnostics companies, manufacturers and growing firms, from the North Coast to Huntington Beach and across the country.</p>
+  <p class="big">Our team has run technology for medical device and diagnostics companies, manufacturers and growing firms, from the North Coast to Huntington Beach and across the country.</p>
   <div class="margin">{stats}</div>
 </div></section>
 <section class="band fog"><div class="wrap two">
@@ -514,7 +514,7 @@ def cube_preview():
              'Azure', 'VMware', 'NetApp', 'Synology', 'Dell servers', 'HP servers', 'Cloud backup', 'Colocation', 'Disaster recovery',
              'Entra ID', 'Exchange Online', 'SharePoint', 'OneDrive', 'Teams', 'Intune', 'Conditional access', 'Copilot', 'Power Apps',
              'Power Automate', 'NetSuite', 'HubSpot', 'Pipedrive', 'Pen testing', 'Email gateway', 'Badge access', 'Cameras', 'UPS and power']
-    top = ['SOX', 'HIPAA', 'ISO 27001', 'GDPR', it('compliance'), 'FDA-regulated', 'ITIL', 'CLIA labs', 'Audit evidence']
+    top = ['SOX', 'HIPAA', 'ISO 27001', 'GDPR', it('compliance'), 'ITIL', 'CLIA labs', 'Audit evidence']
     data = json.dumps({'front': front, 'top': top, 'techs': techs})
     body = phero('A cube you', 'can click.', 'Preview only.  Each tile on the front is a service.  Point at one to read about it, click it to open it, or drag to spin and see the technologies on the other sides.', mini=False) + f"""
 <section class="index-sec on-dark"><div class="wrap c2-wrap">

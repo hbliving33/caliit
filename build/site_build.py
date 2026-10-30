@@ -76,10 +76,10 @@ SERVICES = [
   get=['Data center and server room design and build-outs', 'Colocation provider selection and contract negotiation', 'Server and data center moves, between facilities or to the cloud', 'Power, cooling and backup generator planning', 'Rack layout, structured cabling and labeling', 'Move plans with cutover steps and a rollback plan'],
   plat=['Colocation', 'Server rooms', 'Rack and cabling', 'UPS and power', 'Cooling', 'Generators', 'Data center moves'],
   case=('Into a professional facility', 'A large manufacturer was running its data center on-site, with servers spread across regional hubs.', ['Virtualized 80% of servers across six regional hubs', 'Moved the data center to a colocation facility with failover', 'Restructured outside partners as part of the same program'], '$4.5 million in operating costs cut over two years, with failover built in.')),
- dict(slug='compliance', name='Compliance', h='Ready when the <em>auditors show up</em>.', short='SOX, HIPAA, ISO and FDA-regulated IT controls and evidence.',
-  intro="We've sat on the IT side of SOX, HIPAA, ISO and FDA-regulated audits.  We help you build the controls, keep the evidence and walk into the audit calm.",
+ dict(slug='compliance', name='Compliance', h='Ready when the <em>auditors show up</em>.', short='SOX, HIPAA and ISO IT controls, with audit evidence ready when you need it.',
+  intro="We've sat on the IT side of SOX, HIPAA and ISO audits.  We help you build the controls, keep the evidence and walk into the audit calm.",
   pains=[('Evidence is scattered', 'Screenshots in email, spreadsheets on desktops, and a scramble every audit season.'), ('Policies are out of date', 'Written years ago, never followed, and now they contradict what you really do.'), ('New rules apply to you', 'Growth, a new customer or going public just put you in scope.')],
-  get=['IT general controls for SOX', 'HIPAA and data protection readiness', 'Written policies and procedures that match reality', 'Evidence collection and audit support', 'Change management and access reviews', 'Support for FDA-regulated and certified lab environments'],
+  get=['IT general controls for SOX', 'HIPAA and data protection readiness', 'Written policies and procedures that match reality', 'Evidence collection and audit support', 'Change management and access reviews', 'Support for certified lab environments'],
   plat=['SOX', 'HIPAA', 'GDPR', 'ISO 9001', 'ISO 14001', 'ISO 27001', 'ITIL', 'CLIA labs'],
   case=('Audits without the scramble', 'A publicly traded diagnostics company needed IT controls tested every year.', ['Served as business lead for SOX IT general controls testing and reporting', 'Supported certified clinical labs in multiple states', 'Earlier led IT through ISO 9001, 14001 and 27001 audits for a large manufacturer'], 'Controls documented, tested on schedule and ready for every audit cycle.')),
  dict(slug='access-control', name='Access Control', h='Badge doors, cameras and alarms that <em>work with your IT</em>.', short='Badge access, cameras and monitoring tied to your accounts.',
@@ -102,7 +102,7 @@ SERVICES = [
   case=('A roadmap and a budget that held', 'Growing companies needed IT that kept pace with acquisitions, new sites and new budgets.', ['Built a technology roadmap by business function, with a 3 to 5 year view', 'Managed IT budgets up to $12 million and negotiated 50+ IT contracts', 'Replaced an outside managed service provider with an in-house service desk'], 'A clear plan, predictable spending and support that answered to the business.')),
 ]
 SVC = {s['slug']: s for s in SERVICES}
-TOPICS = ['IT and security assessment'] + [s['name'] for s in SERVICES] + ['FDA-regulated or audit support', 'Something else']
+TOPICS = ['IT and security assessment'] + [s['name'] for s in SERVICES] + ['Audit support', 'Something else']
 
 STATS = [('30', 'Years in IT leadership'), ('10+', 'Acquisitions integrated'), ('50', 'States we support remotely'), ('$12M', 'Largest IT budget managed')]
 STEPS = [('Assess', 'We look at what you have, what it costs and where the risks are, then hand you a ranked, written plan.'),
@@ -119,8 +119,8 @@ STANDARD = [('clock', 'A reply within one business day', 'Every message through 
             ('talk', 'Straight answers', "If something doesn't need fixing, we'll say so.  If it's urgent, we'll say that too."),
             ('it-strategy', 'Built for the next five years', 'We design for where the business is going, not for the next invoice.')]
 INDUSTRIES = [
- ('flask', 'Life sciences and FDA-regulated companies', 'Medical device, diagnostics and biotech teams where systems, records and audits are under a regulator\'s eye.',
-  ['IT controls, access reviews and change management that hold up in audits', 'Experience supporting FDA-regulated and certified clinical lab environments', 'Lab build-outs, biobank moves and validated-system support', 'Account and role management for lab and quality systems']),
+ ('flask', 'Life sciences and medical device companies', 'Medical device, diagnostics and biotech teams where systems, records and audits are under a regulator\'s eye.',
+  ['IT controls, access reviews and change management that hold up in audits', 'Experience supporting certified clinical lab environments', 'Lab build-outs, biobank moves and validated-system support', 'Account and role management for lab and quality systems']),
  ('compliance', 'Clinical and diagnostics labs', 'Certified labs that cannot stop for an IT problem, from a single site to several states.',
   ['Lab network and Wi-Fi design that stays up', 'Physical security for labs: badges, cameras and visitor logs', 'Backups and recovery you have actually tested', 'Support across sites in several states']),
  ('factory', 'Manufacturing and distribution', 'Plants, warehouses and offices that need one network, one standard and costs under control.',
@@ -243,7 +243,7 @@ def home():
         <div class="hs-item hs-default on">
           <div class="label">IT consulting · Huntington Beach, California</div>
           <h1>Senior IT for businesses that <em>can't afford</em> to get it wrong.</h1>
-          <p class="lede">Thirty years of running IT inside regulated companies, from FDA-regulated labs to manufacturers.  We find the gaps, build it right the first time, and keep it running.</p>
+          <p class="lede">Thirty years of running IT inside regulated companies, from clinical labs to manufacturers.  We find the gaps, build it right the first time, and keep it running.</p>
           <div class="hero-actions"><a class="btn btn-primary" href="contact.html">Contact us</a><a class="btn btn-ghost" href="services.html">See our services</a></div>
         </div>
         {hs}
@@ -275,15 +275,15 @@ def home():
   <div class="reveal">
     <div class="label">Regulated industries</div>
     <h2>Built for businesses that <em>answer to auditors</em>.</h2>
-    <p class="lede">Our team has run IT for FDA-regulated medical device and diagnostics companies, certified clinical labs and publicly traded firms.</p>
+    <p class="lede">Our team has run IT for medical device and diagnostics companies, certified clinical labs and publicly traded firms.</p>
     <ul class="checks">{inds}</ul>
     <a class="arrow" href="industries.html">See the industries we serve</a>
   </div>
   <div class="panel reveal">{STATE}
     <div class="label">Audit-ready IT</div>
-    <h3 style="font-size:26px">SOX, HIPAA, ISO and FDA-regulated environments.</h3>
+    <h3 style="font-size:26px">SOX, HIPAA and ISO environments.</h3>
     <p style="color:#c3ccd4">IT general controls, access reviews, change management and evidence that is ready before the auditors ask.</p>
-    <div class="tags">{''.join(f'<span>{t}</span>' for t in ['SOX', 'HIPAA', 'GDPR', 'ISO 9001', 'ISO 27001', 'CLIA labs', 'FDA-regulated'])}</div>
+    <div class="tags">{''.join(f'<span>{t}</span>' for t in ['SOX', 'HIPAA', 'GDPR', 'ISO 9001', 'ISO 27001', 'CLIA labs'])}</div>
   </div>
 </div></section>
 
@@ -343,7 +343,7 @@ def industries():
   <ul class="checks"><li>Every change written down and traceable</li><li>Access granted by role, reviewed on a schedule, removed the day someone leaves</li><li>Backups tested, with the results on file</li><li>Policies that match what you actually do</li><li>Evidence ready before the auditors ask</li></ul>
 </div></section>
 {cta("Tell us about your environment.")}'''
-    page('industries.html', 'Industries | Cali IT Consulting', 'IT consulting for life sciences, FDA-regulated companies, clinical labs, manufacturing, finance and growing companies.', body)
+    page('industries.html', 'Industries | Cali IT Consulting', 'IT consulting for life sciences, medical device companies, clinical labs, manufacturing, finance and growing companies.', body)
 
 def engagement():
     cards = ''.join(f'''<div class="card reveal"><div class="num">OPTION 0{n + 1}</div><h3 style="margin-top:10px;font-size:24px">{t}</h3><p style="font-weight:600;color:#0f1c2d">{s}</p><p>{d}</p><h4>What's included</h4><ul>{''.join(f'<li>{x}</li>' for x in inc)}</ul><h4>Typical examples</h4><ul>{''.join(f'<li>{x}</li>' for x in ex)}</ul><div class="best"><b>Best for:</b> {b}.</div></div>''' for n, (t, s, d, inc, ex, b) in enumerate(ENGAGE))
@@ -378,7 +378,7 @@ def about():
     body = page_hero('About us', 'Built by people who <em>ran IT</em>, not just sold it.', "Cali IT Consulting brings 30 years of IT leadership to businesses that can't afford downtime.") + f'''
 <section class="section"><div class="wrap split" style="align-items:start">
   <div><div class="label">Who we are</div><h2>Senior consultants.  <em>Real experience.</em></h2></div>
-  <div class="prose"><p class="lede">Our team has run technology for FDA-regulated medical device and diagnostics companies, manufacturers and growing firms.</p>
+  <div class="prose"><p class="lede">Our team has run technology for medical device and diagnostics companies, manufacturers and growing firms.</p>
   <p>We've integrated IT for more than ten acquisitions, moved headquarters and data centers, built certified labs, and passed SOX and ISO audits and HIPAA reviews.  We handle Microsoft 365, cybersecurity, networks, cloud, data centers, physical security, compliance and IT strategy.</p>
   <p>We're based in Huntington Beach, California.  We work on-site across Southern California and remotely anywhere in the United States.  You get senior-level answers from people who have done the work, not a sales pitch.</p></div>
 </div></section>
