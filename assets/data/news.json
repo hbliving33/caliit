@@ -1,21 +1,27 @@
 {
- "updated": "2026-10-30T10:05:56.760126+00:00",
+ "updated": "2026-10-30T10:58:56.741975+00:00",
  "m365": {
   "status": "Available",
-  "checked": "2026-10-30T10:05:56.813313+00:00",
+  "checked": "2026-10-30T10:58:56.841694+00:00",
   "link": "https://status.cloud.microsoft/"
  },
  "aws": {
   "status": "3 open events",
   "link": "https://health.aws.amazon.com/health/status",
-  "checked": "2026-10-30T10:05:56.760126+00:00"
+  "checked": "2026-10-30T10:58:56.741975+00:00"
  },
  "wasabi": {
   "status": "Service Under Maintenance",
   "link": "https://status.wasabi.com/",
-  "checked": "2026-10-30T10:05:56.760126+00:00"
+  "checked": "2026-10-30T10:58:56.741975+00:00"
  },
  "items": [
+  {
+   "title": "Drupal warns of critical Commerce Core flaw exploited in attacks",
+   "link": "https://www.bleepingcomputer.com/news/security/drupal-warns-of-critical-commerce-core-flaw-exploited-in-attacks/",
+   "source": "BleepingComputer",
+   "date": "2026-10-30T10:16:07+00:00"
+  },
   {
    "title": "$2 Million+ Drained From Polymarket Traders in New Supply Chain Attack",
    "link": "https://www.securityweek.com/2-million-drained-from-polymarket-traders-in-new-supply-chain-attack/",
@@ -33,6 +39,12 @@
    "link": "https://www.bleepingcomputer.com/news/security/binance-links-63-billion-crypto-theft-to-compromised-devops-laptop/",
    "source": "BleepingComputer",
    "date": "2026-10-30T09:18:13+00:00"
+  },
+  {
+   "title": "Official Claude Code VS Code Extension Compromised to Install Persistent SSH Backdoor",
+   "link": "https://thehackernews.com/2026/10/official-claude-code-vs-code-extension.html",
+   "source": "The Hacker News",
+   "date": "2026-10-30T08:55:47+00:00"
   },
   {
    "title": "TeamViewer Flaw Could Let Malicious Hosts Take Over Support Technicians\u2019 Machines",
@@ -95,12 +107,6 @@
    "date": "2026-10-29T22:08:04+00:00"
   },
   {
-   "title": "Polymarket halts trading after crypto-draining script breach, $2.5M traced",
-   "link": "https://www.bleepingcomputer.com/news/security/polymarket-halts-trading-after-crypto-draining-script-breach-25m-traced/",
-   "source": "BleepingComputer",
-   "date": "2026-10-29T21:47:25+00:00"
-  },
-  {
    "title": "Anthropic-Themed Phishing Emails Bypass Top Security Tools",
    "link": "https://www.darkreading.com/cyberattacks-data-breaches/anthropic-phishing-emails-bypass-security-tools",
    "source": "Dark Reading",
@@ -153,12 +159,6 @@
    "link": "https://www.darkreading.com/cyber-risk/threat-modeling-4-simple-questions",
    "source": "Dark Reading",
    "date": "2026-10-29T15:44:04+00:00"
-  },
-  {
-   "title": "Fake ChatGPT and Claude Apps Abuse Signed Executables to Deploy Crypto Miners",
-   "link": "https://thehackernews.com/2026/10/fake-chatgpt-and-claude-apps-abuse.html",
-   "source": "The Hacker News",
-   "date": "2026-10-29T15:20:29+00:00"
   },
   {
    "title": "Google Touts Powerful Cybersecurity Capabilities in Gemini 4 Carbon Model",
