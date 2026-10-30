@@ -1,9 +1,19 @@
 {
- "updated": "2026-10-30T05:58:58.894357+00:00",
+ "updated": "2026-10-30T06:45:29.987357+00:00",
  "m365": {
   "status": "Available",
-  "checked": "2026-10-30T05:58:59.016793+00:00",
+  "checked": "2026-10-30T06:45:30.113069+00:00",
   "link": "https://status.cloud.microsoft/"
+ },
+ "aws": {
+  "status": "3 open events",
+  "link": "https://health.aws.amazon.com/health/status",
+  "checked": "2026-10-30T06:45:29.987357+00:00"
+ },
+ "wasabi": {
+  "status": "Service Under Maintenance",
+  "link": "https://status.wasabi.com/",
+  "checked": "2026-10-30T06:45:29.987357+00:00"
  },
  "items": [
   {
