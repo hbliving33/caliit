@@ -359,7 +359,7 @@ def home():
 
 {fit_block()}
 <script type="application/ld+json">{ORG_LD}</script>'''
-    page('index.html', 'Cali IT Consulting | IT infrastructure and operations, nationwide', "IT infrastructure and operations, handled: servers, networks, Microsoft 365, business applications and security.  California-based, serving clients nationwide.", body, CUBE_JS())
+    page('index.html', 'Cali IT Consulting | IT infrastructure and operations, nationwide', "IT infrastructure and operations, handled: servers, networks, Microsoft 365, business applications and security.  California-based, serving clients nationwide.", body)
 
 def services():
     body = index_block().replace('<section class="index-sec on-dark">', '<section class="index-sec on-dark page-top">', 1).replace('<h2>Everything IT, one team.</h2>', '<h1 class="idx-h1">Everything IT, one team.</h1>', 1)
