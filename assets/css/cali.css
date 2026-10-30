@@ -534,3 +534,5 @@ h3 { font: 700 21px/1.25 var(--sans); }
 .svc-hero .cube-col { width: 100%; }
 .svc-hero .stage { --s: min(180px, 46vw); width: 100%; }
 @media (max-width: 900px) { .svc-hero .cube-col { order: 0; } .svc-hero .stage { --s: min(150px, 40vw); } }
+.page-top { padding-top: clamp(120px, 12vw, 150px); }
+.idx-h1 { font: italic 500 clamp(34px, 4.4vw, 60px)/1.05 var(--serif); letter-spacing: -.01em; color: #fff; }
