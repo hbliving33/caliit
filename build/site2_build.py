@@ -102,8 +102,8 @@ def us_chart(cls=''):
     arcs from Huntington Beach to cities across the country with light traveling along them."""
     hx, hy = US['hb']['x'], US['hb']['y']; ax, ay = US['ar']['x'], US['ar']['y']
     grat = ''.join(f'<path class="grat" d="{d}"/>' for d in US['grat'])
-    trees = (redwood(10.2, 88, 8.5, '#3c5c80', 1, wr=.42) + redwood(15.8, 88, 8.5, '#3c5c80', 1, wr=.42) + redwood(13, 88, 11, '#46688e', 1, wr=.42)   # same three, scaled down
-             + wave(30, 145.5, 6, '#5a7ea6'))
+    trees = (redwood(10.2, 88, 8.5, '#6f97c4', 1, wr=.42) + redwood(15.8, 88, 8.5, '#6f97c4', 1, wr=.42) + redwood(13, 88, 11, '#8db3dc', 1, wr=.42)   # same three, scaled down; lighter so they read on the bluer map
+             + wave(30, 145.5, 6, '#8db3dc'))
     arcs = nodes = packets = ''
     for i, (name, (x, y)) in enumerate(US['cities'].items()):
         mx, my = (hx + x) / 2, (hy + y) / 2

@@ -472,10 +472,10 @@ h3 { font: 700 21px/1.25 var(--sans); }
 .m365.ok .dot { background: #2f9e5b; box-shadow: 0 0 0 4px rgba(47, 158, 91, .15); }
 .m365.warn .dot { background: #d9822b; box-shadow: 0 0 0 4px rgba(217, 130, 43, .18); }
 .map .de-ring { fill: #0c1a2b; stroke: #3b5576; stroke-width: .6; }
-.map .land.de { stroke-width: .6; }
 .draw .de-inset { opacity: 0; animation: fadein .6s 2.3s forwards; }
 @media (prefers-reduced-motion: reduce) { .draw .de-inset { animation: none; opacity: 1; } }
-/* map preview: Option B (bluer) */
-.opt-b .map.us .nation { fill: #173a63; stroke: #5d86b5; }
-.opt-b .map.us .borders { stroke: #2d5078; }
-.opt-b .map .land { fill: #2a5f99; stroke: #bcd6f2; }
+/* bluer map (chosen Oct 2026): richer blue states, brighter California and Germany */
+.map.us .nation { fill: #173a63; stroke: #5d86b5; }
+.map.us .borders { stroke: #2d5078; }
+.map.us .land { fill: #2a5f99; stroke: #bcd6f2; }
+.map .land.de { stroke-width: .25; }
