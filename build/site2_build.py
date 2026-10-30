@@ -47,7 +47,7 @@ def _upd(slug, **kw):
         if _x['slug'] == slug: _x.update(kw)
 _upd('network', desc='Network design and support: firewalls, switching, Wi-Fi, SD-WAN, site-to-site VPN and zero trust remote access, documented and monitored.',
      get=['Network design from core to edge', 'Firewall, switching and Wi-Fi installs', 'Site-to-site VPN and SD-WAN between offices, labs and plants', 'Remote access, from VPN to zero trust (ZTNA)', 'Office moves and new building cutovers', 'Guest Wi-Fi kept separate from your business network', 'Monitoring and documentation you keep'],
-     plat=['Cisco Meraki', 'UniFi', 'SD-WAN', 'Site-to-site VPN', 'ZTNA', 'Wi-Fi', 'Phone systems', 'Network monitoring'])
+     plat=['Cisco Meraki', 'UniFi', 'SD-WAN', 'Site-to-site VPN', 'ZTNA', 'Wi-Fi', 'Network monitoring'])
 _upd('cloud', desc='Servers, storage, virtualization and backup: Azure and hybrid design, VMware and Hyper-V, immutable offsite backups and tested disaster recovery.',
      get=['Cloud readiness review and migration plan', 'Azure and hybrid server design', 'Virtualization and storage: VMware, Hyper-V and NetApp', 'Immutable, offsite backups with tested restores', 'Disaster recovery with recovery times agreed in writing', 'Cloud cost reviews'],
      plat=['Azure', 'VMware', 'Hyper-V', 'NetApp', 'Dell', 'HP', 'Synology', 'Immutable backups', 'Colocation'])
@@ -122,9 +122,9 @@ def us_chart(cls=''):
     for (x, y), name, sub, lx, ly in [((ax, ay), 'Arcata', 'Remote office', 20, 52), ((hx, hy), 'Huntington Beach', 'Headquarters', 52, 192), (tuple(US['payson']), 'Payson, Arizona', 'Remote office', 95, 150)]:
         pins += (f'<circle class="pin-halo" cx="{x}" cy="{y}" r="1.8"/><circle class="pin" cx="{x}" cy="{y}" r="1.8"/><line class="lead-line" x1="{x + 1.6}" y1="{y + (-1.2 if y < 100 else 1.2)}" x2="{lx - 1.5}" y2="{ly - 3}"/>'
                  f'<text class="pin-t us" x="{lx}" y="{ly}">{name}</text><text class="pin-s us" x="{lx}" y="{ly + 6.5}">{sub}</text>')
-    return (f'<svg class="{cls}" viewBox="-14 -6 428 270" role="img" aria-label="Map of the United States.  California is highlighted with marks at our Huntington Beach headquarters and our Arcata remote office, plus a mark at Payson, Arizona, and an inset for Germany, where we also support clients.  Lines run from Huntington Beach to cities across the country.">'
+    return (f'<svg class="{cls}" viewBox="-14 -6 428 270" role="img" aria-label="Map of the United States.  California is highlighted with marks at our Huntington Beach headquarters and our Arcata remote office, plus a mark at Payson, Arizona.  Lines run from Huntington Beach to cities across the country.">'
             f'<defs><clipPath id="usgrat"><rect x="-14" y="-6" width="428" height="270"/></clipPath></defs><g clip-path="url(#usgrat)">{grat}</g><path class="nation" d="{US["nation"]}"/><path class="borders" d="{US["borders"]}"/>'
-            f'<path class="land" d="{US["ca"]}" style="stroke-width:.7"/>{trees}<g class="links">{arcs}{nodes}{packets}</g>{pins}{germany(DE_CITY)}</svg>')
+            f'<path class="land" d="{US["ca"]}" style="stroke-width:.7"/>{trees}<g class="links">{arcs}{nodes}{packets}</g>{pins}</svg>')
 
 def germany(city=None):
     cx, cy = DE['cx'], DE['cy']; r = 24
@@ -510,7 +510,7 @@ def cube_preview():
              'it-strategy': 'STRAT', 'business-automation': 'AUTO', 'access-control': 'ACS', 'compliance': 'CMP'}
     it = lambda slug: {'slug': slug, 'code': codes[slug], 'name': {'ai': 'Artificial intelligence'}.get(slug, S2[slug]['name']), 'short': S2[slug]['short']}
     front = [it(x) for x in ['network', 'cloud', 'data-center', 'microsoft-365', 'ai', 'cybersecurity', 'it-strategy', 'business-automation', 'access-control']]
-    techs = ['Cisco Meraki', 'UniFi', 'Site-to-site VPN', 'Wi-Fi', 'Firewalls', 'Switching', 'Remote access', 'Monitoring', 'Phone systems',
+    techs = ['Cisco Meraki', 'UniFi', 'Site-to-site VPN', 'Wi-Fi', 'Firewalls', 'Switching', 'Remote access', 'Monitoring',
              'Azure', 'VMware', 'NetApp', 'Synology', 'Dell servers', 'HP servers', 'Cloud backup', 'Colocation', 'Disaster recovery',
              'Entra ID', 'Exchange Online', 'SharePoint', 'OneDrive', 'Teams', 'Intune', 'Conditional access', 'Copilot', 'Power Apps',
              'Power Automate', 'NetSuite', 'HubSpot', 'Pipedrive', 'Pen testing', 'Email gateway', 'Badge access', 'Cameras', 'UPS and power']
@@ -540,7 +540,7 @@ def map_preview():
 
 if __name__ == '__main__':
     privacy()   # reads the current privacy text first
-    home(); services(); [service(i, s) for i, s in enumerate(sb.SERVICES)]; industries(); engagement(); why(); about(); testimonials(); contact(); news_page(); thanks(); notfound(); cube_preview(); map_preview()
+    home(); services(); [service(i, s) for i, s in enumerate(sb.SERVICES)]; industries(); engagement(); why(); about(); testimonials(); contact(); news_page(); thanks(); notfound(); cube_preview()
     for _n in ('thanks.html', '404.html'):   # keep these out of search results
         _f = ROOT / _n; _t = _f.read_text()
         if 'name="robots"' not in _t: _f.write_text(_t.replace('<meta name="theme-color"', '<meta name="robots" content="noindex">\n<meta name="theme-color"', 1))
