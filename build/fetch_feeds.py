@@ -20,7 +20,8 @@ FEEDS = [
 ]
 M365_FEED = 'https://status.cloud.microsoft/api/feed/mac'
 PER_SOURCE, TOTAL = 6, 30
-UA = {'User-Agent': 'caliit.com news fetcher (+https://caliit.com)'}
+UA = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36 caliit-news/1.0',
+      'Accept': 'application/rss+xml, application/atom+xml, application/xml;q=0.9, */*;q=0.8'}
 
 def get(url):
     with urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=25) as r:
@@ -45,7 +46,13 @@ def clean(s):
     return re.sub(r'\s+', ' ', html.unescape(re.sub(r'<[^>]+>', '', s))).strip()
 
 def parse(source, raw):
-    root = ET.fromstring(raw)
+    try:
+        root = ET.fromstring(raw)
+    except ET.ParseError:   # some feeds ship a stray & or control character; repair and retry
+        t = raw.decode('utf-8', 'replace')
+        t = re.sub(r'&(?!(?:[a-zA-Z]+|#\d+|#x[0-9a-fA-F]+);)', '&amp;', t)
+        t = re.sub(r'[\x00-\x08\x0b\x0c\x0e-\x1f]', '', t)
+        root = ET.fromstring(t.encode('utf-8'))
     for el in root.iter():           # drop namespaces so RSS and Atom read the same
         if isinstance(el.tag, str) and '}' in el.tag: el.tag = el.tag.split('}', 1)[1]
     items = root.findall('.//item') or root.findall('.//entry')
