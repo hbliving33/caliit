@@ -29,7 +29,7 @@ sb.SERVICES.append(dict(slug='business-applications', name='Business Application
   pains=[('Nobody owns the apps', 'Each department bought its own tools, and IT finds out when something breaks or the invoice arrives.'), ('Logins everywhere', 'Every app has its own password, and nobody is sure who still has access after someone leaves.'), ('Renewals on autopilot', 'Contracts renew themselves, seat counts only go up, and no one has compared what you pay to what you use.')],
   get=['Administration for ERP, HR and payroll, CRM and quality systems', 'Single sign-on and automatic user provisioning through Entra ID', 'Roles and permissions set by job, with regular access reviews', 'One onboarding and offboarding checklist across every app', 'An app inventory with owners, costs and renewal dates', 'License and renewal reviews before the contract auto-renews', 'App selection, rollout and vendor management, start to finish'],
   plat=['NetSuite', 'Oracle', 'ADP', 'MasterControl', 'HubSpot', 'Pipedrive', 'Entra ID single sign-on', 'SCIM provisioning'],
-  case=('One owner for the whole stack', 'A diagnostics company ran its ERP, payroll, CRM and quality systems with separate logins and no single owner.', ['Took over ERP administration: roles, approvals and license types', 'Connected the HR and payroll platform to Entra ID for single sign-on', 'Earlier led an Oracle ERP rollout alongside acquisition integrations for a global manufacturer'], 'Every app with an owner, access set by role, and renewals on a calendar.'),
+  case=('One owner for the whole stack', 'A diagnostics company ran its ERP, payroll, CRM and quality systems with separate logins and no single owner.', ['Took over ERP administration: roles, approvals and license types', 'Connected the HR and payroll platform to Entra ID for single sign-on', 'Earlier led an Oracle ERP rollout alongside acquisition integrations for a large manufacturer'], 'Every app with an owner, access set by role, and renewals on a calendar.'),
   desc='Business application management: ERP, HR and payroll, CRM and quality systems, with single sign-on, access by role and license control.'))
 sb.TOPICS.insert(sb.TOPICS.index('Something else'), 'AI'); sb.TOPICS.insert(sb.TOPICS.index('Something else'), 'Managed IT'); sb.TOPICS.insert(sb.TOPICS.index('Microsoft 365') + 1, 'Business Applications')
 ORDER = ['network', 'cloud', 'data-center', 'microsoft-365', 'business-applications', 'ai', 'managed-it', 'it-strategy', 'cybersecurity', 'business-automation', 'access-control', 'compliance']
@@ -72,7 +72,7 @@ _upd('compliance', get=['IT general controls for SOX', 'IT support for 21 CFR Pa
 S = {s['slug']: s for s in sb.SERVICES}
 sb.SVC.update(S)
 sb.PAINS.insert(sb.PAINS.index(next(x for x in sb.PAINS if x[1] == 'business-automation')), ('Nobody can say how many apps you pay for, or who still has access to them.', 'business-applications'))
-STATS2 = [('30', 'Years in IT leadership'), ('10+', 'Acquisitions integrated'), ('30+', 'Sites networked worldwide'), ('$12M', 'Largest IT budget managed')]
+STATS2 = [('30', 'Years in IT leadership'), ('10+', 'Acquisitions integrated'), ('50', 'States we support remotely'), ('$12M', 'Largest IT budget managed')]
 
 def chart(cls='', labels=True, draw=False, vb='-34 -12 276 246'):
     grat = ''.join(f'<path class="grat" d="{p["d"]}"/>' for p in GRID['par'] if p['lat'] % 2 == 0) + ''.join(f'<path class="grat" d="{m["d"]}"/>' for m in GRID['mer'] if m['lon'] % 2 == 0)
@@ -95,6 +95,7 @@ def chart(cls='', labels=True, draw=False, vb='-34 -12 276 246'):
 
 
 US = json.loads((ROOT / 'build' / 'us_chart.json').read_text())
+DE = json.loads((ROOT / 'build' / 'de_inset.json').read_text())   # Germany inset: we support clients there today
 def us_chart(cls=''):
     """Lower 48 in outline, California highlighted with redwoods, wave and board, two marks, and live-looking links:
     arcs from Huntington Beach to cities across the country with light traveling along them."""
@@ -115,9 +116,16 @@ def us_chart(cls=''):
     for (x, y), name, sub, lx, ly in [((ax, ay), 'Arcata', 'Remote office', 20, 52), ((hx, hy), 'Huntington Beach', 'Headquarters', 52, 192), (tuple(US['payson']), 'Payson, Arizona', 'Remote office', 95, 150)]:
         pins += (f'<circle class="pin-halo" cx="{x}" cy="{y}" r="1.8"/><circle class="pin" cx="{x}" cy="{y}" r="1.8"/><line class="lead-line" x1="{x + 1.6}" y1="{y + (-1.2 if y < 100 else 1.2)}" x2="{lx - 1.5}" y2="{ly - 3}"/>'
                  f'<text class="pin-t us" x="{lx}" y="{ly}">{name}</text><text class="pin-s us" x="{lx}" y="{ly + 6.5}">{sub}</text>')
-    return (f'<svg class="{cls}" viewBox="-14 -6 428 270" role="img" aria-label="Map of the United States.  California is highlighted with marks at our Huntington Beach headquarters and our Arcata remote office, plus a mark at Payson, Arizona.  Lines run from Huntington Beach to cities across the country.">'
+    return (f'<svg class="{cls}" viewBox="-14 -6 428 270" role="img" aria-label="Map of the United States.  California is highlighted with marks at our Huntington Beach headquarters and our Arcata remote office, plus a mark at Payson, Arizona, and an inset for Germany, where we also support clients.  Lines run from Huntington Beach to cities across the country.">'
             f'<defs><clipPath id="usgrat"><rect x="-14" y="-6" width="428" height="270"/></clipPath></defs><g clip-path="url(#usgrat)">{grat}</g><path class="nation" d="{US["nation"]}"/><path class="borders" d="{US["borders"]}"/>'
-            f'<path class="land" d="{US["ca"]}" style="stroke-width:.7"/>{trees}<g class="links">{arcs}{nodes}{packets}</g>{pins}</svg>')
+            f'<path class="land" d="{US["ca"]}" style="stroke-width:.7"/>{trees}<g class="links">{arcs}{nodes}{packets}</g>{pins}{germany()}</svg>')
+
+def germany():
+    cx, cy = DE['cx'], DE['cy']; r = 24
+    d = f'M360.9 85.4 Q{cx + 6} {cy - 62} {cx} {cy - r - 1}'
+    return (f'<g class="de-inset"><path class="arc" d="{d}"/><circle class="packet" r="1.25"><animateMotion dur="3.2s" begin="3s" repeatCount="indefinite" path="{d}"/></circle>'
+            f'<circle class="de-ring" cx="{cx}" cy="{cy}" r="{r}"/><path class="land de" d="{DE["d"]}"/>'
+            f'<text class="pin-t us" x="{cx}" y="{cy + r + 8}" text-anchor="middle">Germany</text><text class="pin-s us" x="{cx}" y="{cy + r + 14.5}" text-anchor="middle">Remote support</text></g>')
 
 CHIPS = [('Chicago', ['Microsoft 365', 'Identity', 'Exchange Online', 'SharePoint', 'OneDrive', 'Teams', 'Single sign-on', 'Mail migration']),
          ('NewYork', ['Cybersecurity', 'Entra ID', 'MFA', 'Conditional access', 'Zero trust', 'Intune', 'Penetration testing', 'Email security']),
@@ -242,7 +250,7 @@ def ledger_block():
     rows = [('FDA-regulated', 'IT controls, access reviews and change records for medical device, diagnostics and biotech companies, plus certified clinical labs.'),
             ('SOX', 'IT general controls: testing, evidence and reporting for publicly traded companies, every audit cycle.'),
             ('HIPAA and GDPR', 'Data protection readiness, access by role and documented handling of patient and personal data.'),
-            ('ISO 9001, 14001, 27001', 'IT support for quality, environmental and information security audits at global manufacturers.'),
+            ('ISO 9001, 14001, 27001', 'IT support for quality, environmental and information security audits at large manufacturers.'),
             ('Physical security', 'Badge access, cameras and visitor logs, with badges shut off the day someone leaves.')]
     trs = ''.join(f'<tr><th scope="row">{a}</th><td>{b}</td></tr>' for a, b in rows)
     return f'''<section class="ledger-sec"><div class="wrap">
@@ -420,7 +428,7 @@ def about():
     stats = ''.join(f'<div><strong>{n}</strong>{t}</div>' for n, t in STATS2)
     body = phero('Built by people', 'who ran IT, not just sold it.', "Cali IT Consulting brings 30 years of IT leadership to businesses that can't afford downtime.") + f'''
 <section class="statement"><div class="wrap">
-  <p class="big">Our team has run technology for FDA-regulated medical device and diagnostics companies, global manufacturers and growing firms, from the North Coast to Huntington Beach and across the country.</p>
+  <p class="big">Our team has run technology for FDA-regulated medical device and diagnostics companies, manufacturers and growing firms, from the North Coast to Huntington Beach and across the country.</p>
   <div class="margin">{stats}</div>
 </div></section>
 <section class="band fog"><div class="wrap two">

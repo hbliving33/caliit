@@ -57,13 +57,13 @@ SERVICES = [
   pains=[('MFA is "mostly" on', 'A few accounts, often admins or shared mailboxes, were left out, and those are the ones attackers find.'), ('No plan for a bad day', 'If ransomware hit tomorrow, nobody knows who calls whom, or what gets shut off first.'), ('Staff are the target', 'Phishing and phone scams now impersonate your help desk and your vendors.')],
   get=['Penetration testing and vulnerability scanning', 'Security assessment with a ranked remediation plan', 'MFA and conditional access everywhere', 'Email gateway security and phishing defenses', 'Security awareness training for staff', 'Incident response plan and tabletop exercise', 'Hands-on help when an incident happens'],
   plat=['Penetration testing', 'Email gateway', 'Entra ID', 'Conditional access', 'Intune', 'Cisco Meraki', 'Remote access VPN', 'Security awareness training'],
-  case=('Security leadership for a regulated company', 'A global medical device company needed someone to own security across the US and Europe.', ['Served as acting chief security officer for incident response and risk management', 'Led HIPAA and GDPR compliance work', 'Ran secure remote access for thousands of users at a global manufacturer'], 'Security had an owner, a plan and a response process that held up across two continents.')),
+  case=('Security leadership for a regulated company', 'A medical device company needed someone to own security end to end.', ['Served as acting chief security officer for incident response and risk management', 'Led HIPAA compliance work', 'Ran secure remote access for thousands of users at a large manufacturer'], 'Security had an owner, a plan and a response process that held up.')),
  dict(slug='network', name='Network', h='Fast, stable and <em>built to grow</em>.', short='Firewalls, switching, Wi-Fi, VPN and the links between your sites.',
   intro='Firewalls, switches, Wi-Fi and the links between your sites.  We design it, install it, document it and watch it, so the network is the last thing anyone thinks about.',
   pains=[('The Wi-Fi drops', 'Everyone has learned which conference room to avoid.'), ("Sites don't talk", 'Branch offices or labs connect through workarounds nobody wants to touch.'), ('The office is moving', "A new building means cabling, firewalls, phones and a cutover that can't go wrong.")],
   get=['Network design from core to edge', 'Firewall, switching and Wi-Fi installs', 'Site-to-site and remote access VPN', 'Office moves and new building cutovers', 'Guest Wi-Fi that stays separate from your business network', 'Monitoring and documentation you keep'],
   plat=['Cisco Meraki', 'UniFi', 'Site-to-site VPN', 'Wi-Fi', 'Phone systems', 'Network monitoring'],
-  case=('One network, many countries', 'A global manufacturer had offices and plants on multiple continents running on separate networks.', ['Built private networks linking 30+ facilities in more than 10 countries', 'Rolled out 2,000+ VoIP phones across 10 sites', 'Later designed and deployed a Cisco Meraki network with site-to-site VPN for a multi-site lab company'], 'Every site on one managed network, with phones and security handled centrally.')),
+  case=('One network, every site', 'A multi-site lab company needed all of its locations on one secure, managed network.', ['Designed and deployed a Cisco Meraki network across its sites', 'Linked every location with site-to-site VPN', 'Earlier rolled out 2,000+ VoIP phones across 10 sites for a large manufacturer'], 'Every site on one managed network, with security handled centrally.')),
  dict(slug='cloud', name='Cloud', h="Move what makes sense.  <em>Keep what doesn't.</em>", short='Migration plans, servers, storage and backups you have tested.',
   intro="Not everything belongs in the cloud, and not everything belongs in your closet.  We help you decide, then move it, back it up and keep the bill in check.",
   pains=[('The server closet is aging', 'The hardware is out of warranty and the one person who understood it has left.'), ('Backups are a hope', 'Backups run, but nobody has tested a real restore in years.'), ('The cloud bill keeps climbing', 'Resources were spun up for a project and never turned off.')],
@@ -75,13 +75,13 @@ SERVICES = [
   pains=[('The server room is out of room', 'Power, cooling or rack space has run out, and adding one more server is a risk.'), ('A colocation contract is up', 'The renewal is coming, the price went up, and nobody has compared providers in years.'), ('A move is on the calendar', 'A new office, a closing facility or a lease ending, and the servers have to go somewhere without downtime.')],
   get=['Data center and server room design and build-outs', 'Colocation provider selection and contract negotiation', 'Server and data center moves, between facilities or to the cloud', 'Power, cooling and backup generator planning', 'Rack layout, structured cabling and labeling', 'Move plans with cutover steps and a rollback plan'],
   plat=['Colocation', 'Server rooms', 'Rack and cabling', 'UPS and power', 'Cooling', 'Generators', 'Data center moves'],
-  case=('Into a professional facility', 'A global manufacturer was running its data center on-site, with servers spread across regional hubs.', ['Virtualized 80% of servers across six regional hubs', 'Moved the data center to a colocation facility with failover', 'Restructured outside partners as part of the same program'], '$4.5 million in operating costs cut over two years, with failover built in.')),
+  case=('Into a professional facility', 'A large manufacturer was running its data center on-site, with servers spread across regional hubs.', ['Virtualized 80% of servers across six regional hubs', 'Moved the data center to a colocation facility with failover', 'Restructured outside partners as part of the same program'], '$4.5 million in operating costs cut over two years, with failover built in.')),
  dict(slug='compliance', name='Compliance', h='Ready when the <em>auditors show up</em>.', short='SOX, HIPAA, ISO and FDA-regulated IT controls and evidence.',
   intro="We've sat on the IT side of SOX, HIPAA, ISO and FDA-regulated audits.  We help you build the controls, keep the evidence and walk into the audit calm.",
   pains=[('Evidence is scattered', 'Screenshots in email, spreadsheets on desktops, and a scramble every audit season.'), ('Policies are out of date', 'Written years ago, never followed, and now they contradict what you really do.'), ('New rules apply to you', 'Growth, a new customer or going public just put you in scope.')],
   get=['IT general controls for SOX', 'HIPAA and data protection readiness', 'Written policies and procedures that match reality', 'Evidence collection and audit support', 'Change management and access reviews', 'Support for FDA-regulated and certified lab environments'],
   plat=['SOX', 'HIPAA', 'GDPR', 'ISO 9001', 'ISO 14001', 'ISO 27001', 'ITIL', 'CLIA labs'],
-  case=('Audits without the scramble', 'A publicly traded diagnostics company needed IT controls tested every year.', ['Served as business lead for SOX IT general controls testing and reporting', 'Supported certified clinical labs in multiple states and countries', 'Earlier led IT through ISO 9001, 14001 and 27001 audits for a global manufacturer'], 'Controls documented, tested on schedule and ready for every audit cycle.')),
+  case=('Audits without the scramble', 'A publicly traded diagnostics company needed IT controls tested every year.', ['Served as business lead for SOX IT general controls testing and reporting', 'Supported certified clinical labs in multiple states', 'Earlier led IT through ISO 9001, 14001 and 27001 audits for a large manufacturer'], 'Controls documented, tested on schedule and ready for every audit cycle.')),
  dict(slug='access-control', name='Access Control', h='Badge doors, cameras and alarms that <em>work with your IT</em>.', short='Badge access, cameras and monitoring tied to your accounts.',
   intro='Physical security is part of security.  We design badge access, cameras and monitoring, and build them into offboarding, so access ends the day someone leaves.',
   pains=[('Old badges still work', 'People who left months ago can still open the front door.'), ('Cameras nobody can use', 'The system records, but nobody knows how to find or export footage.'), ('A new building is coming', 'Doors, readers, cameras and network all need to be planned before the walls close.')],
@@ -93,7 +93,7 @@ SERVICES = [
   pains=[('Approvals live in email', 'Purchase requests, time off and sign-offs bounce between inboxes, and nobody knows where things stand.'), ('Double data entry', 'The same customer or order gets typed into the CRM, the accounting system and a spreadsheet.'), ('Spreadsheets run the business', 'A critical process depends on one workbook and the one person who understands it.')],
   get=['Process review to find what is worth automating', 'Power Apps that replace paper forms and spreadsheets', 'Power Automate flows for approvals, alerts and handoffs', 'CRM setup and automation in Pipedrive or HubSpot', 'Connections between Microsoft 365, your CRM and accounting', 'Documentation and training so your team owns it'],
   plat=['Power Apps', 'Power Automate', 'SharePoint lists', 'Microsoft Forms', 'Teams approvals', 'Pipedrive', 'HubSpot', 'NetSuite'],
-  case=('Business apps that keep up', 'A global medical device company needed its business systems to work together.', ['Supported the business application stack, data integrations and data warehousing', 'Delivered reporting, business intelligence and Power Apps for the business', 'Later managed the business application stack and change management for a diagnostics company'], 'Systems connected, data flowing, and fewer manual steps between teams.')),
+  case=('Business apps that keep up', 'A medical device company needed its business systems to work together.', ['Supported the business application stack, data integrations and data warehousing', 'Delivered reporting, business intelligence and Power Apps for the business', 'Later managed the business application stack and change management for a diagnostics company'], 'Systems connected, data flowing, and fewer manual steps between teams.')),
  dict(slug='it-strategy', name='IT Strategy', h='A plan that matches the business, and <em>a budget to back it</em>.', short='Roadmaps, budgets, vendors and part-time IT leadership.',
   intro='Fractional IT leadership for companies that need a senior IT voice without a full-time hire.  Roadmaps, budgets, vendors and the hard calls.',
   pains=[('IT is a pile of vendors', 'Contracts renew on their own, and nobody knows what you are paying for.'), ('Growth is coming', 'An acquisition, a new site or a funding round, and IT has to keep up.'), ('No one to ask', 'Leadership needs someone who can explain the risks and the costs in plain English.')],
@@ -104,14 +104,14 @@ SERVICES = [
 SVC = {s['slug']: s for s in SERVICES}
 TOPICS = ['IT and security assessment'] + [s['name'] for s in SERVICES] + ['FDA-regulated or audit support', 'Something else']
 
-STATS = [('30', 'Years in IT leadership'), ('10+', 'Acquisitions integrated'), ('30+', 'Sites networked worldwide'), ('$12M', 'Largest IT budget managed')]
+STATS = [('30', 'Years in IT leadership'), ('10+', 'Acquisitions integrated'), ('50', 'States we support remotely'), ('$12M', 'Largest IT budget managed')]
 STEPS = [('Assess', 'We look at what you have, what it costs and where the risks are, then hand you a ranked, written plan.'),
          ('Deploy', 'We build it right the first time, on a written scope and price, with every change documented.'),
          ('Manage', 'We keep it running: users, devices, updates, vendors and a real person when something breaks.'),
          ('Protect', 'We keep watch, test the backups, train your people and keep the evidence ready for audits.')]
 RESULTS = [('Facilities', 'Headquarters and lab, rebuilt and moved', 'Moved a diagnostics company into a new 26,800 sq ft headquarters, including network design, building systems input and lab layout, then relocated a production lab and biobank.', 'New certified and R&D labs built out'),
-           ('Mergers and acquisitions', 'More than ten companies, joined into one', 'Integrated systems, networks and applications for more than ten acquisitions, including companies in the US and Europe.', '10+ acquisitions integrated'),
-           ('Cost', '$4.5 million out of the IT budget', 'For a global manufacturer: virtualized 80% of servers across six regional hubs, moved the data center to a colocation facility with failover, and restructured outside partners.', '$4.5M cut over two years')]
+           ('Mergers and acquisitions', 'More than ten companies, joined into one', 'Integrated systems, networks and applications for more than ten acquisitions, with every system, network and app brought onto one standard.', '10+ acquisitions integrated'),
+           ('Cost', '$4.5 million out of the IT budget', 'For a large manufacturer: virtualized 80% of servers across six regional hubs, moved the data center to a colocation facility with failover, and restructured outside partners.', '$4.5M cut over two years')]
 STANDARD = [('clock', 'A reply within one business day', 'Every message through our contact form gets a real answer from a senior consultant, not an autoresponder.'),
             ('doc', 'Written scope and price first', 'You see the scope, timeline and price in plain English before any work starts.  No surprise invoices.'),
             ('person', 'Senior people do the work', 'The people who scope your project are the people who deliver it.'),
@@ -121,8 +121,8 @@ STANDARD = [('clock', 'A reply within one business day', 'Every message through 
 INDUSTRIES = [
  ('flask', 'Life sciences and FDA-regulated companies', 'Medical device, diagnostics and biotech teams where systems, records and audits are under a regulator\'s eye.',
   ['IT controls, access reviews and change management that hold up in audits', 'Experience supporting FDA-regulated and certified clinical lab environments', 'Lab build-outs, biobank moves and validated-system support', 'Account and role management for lab and quality systems']),
- ('compliance', 'Clinical and diagnostics labs', 'Certified labs that cannot stop for an IT problem, from a single site to multiple states and countries.',
-  ['Lab network and Wi-Fi design that stays up', 'Physical security for labs: badges, cameras and visitor logs', 'Backups and recovery you have actually tested', 'Support across sites in multiple states and countries']),
+ ('compliance', 'Clinical and diagnostics labs', 'Certified labs that cannot stop for an IT problem, from a single site to several states.',
+  ['Lab network and Wi-Fi design that stays up', 'Physical security for labs: badges, cameras and visitor logs', 'Backups and recovery you have actually tested', 'Support across sites in several states']),
  ('factory', 'Manufacturing and distribution', 'Plants, warehouses and offices that need one network, one standard and costs under control.',
   ['Multi-site networks and phone systems', 'Data center and colocation moves', 'ISO 9001, 14001 and 27001 audit support', 'Vendor consolidation and cost reduction']),
  ('briefcase', 'Finance and professional services', 'Firms that live on email, documents and client trust, and answer to auditors and clients.',
@@ -243,7 +243,7 @@ def home():
         <div class="hs-item hs-default on">
           <div class="label">IT consulting · Huntington Beach, California</div>
           <h1>Senior IT for businesses that <em>can't afford</em> to get it wrong.</h1>
-          <p class="lede">Thirty years of running IT inside regulated companies, from FDA-regulated labs to global manufacturers.  We find the gaps, build it right the first time, and keep it running.</p>
+          <p class="lede">Thirty years of running IT inside regulated companies, from FDA-regulated labs to manufacturers.  We find the gaps, build it right the first time, and keep it running.</p>
           <div class="hero-actions"><a class="btn btn-primary" href="contact.html">Contact us</a><a class="btn btn-ghost" href="services.html">See our services</a></div>
         </div>
         {hs}
@@ -378,7 +378,7 @@ def about():
     body = page_hero('About us', 'Built by people who <em>ran IT</em>, not just sold it.', "Cali IT Consulting brings 30 years of IT leadership to businesses that can't afford downtime.") + f'''
 <section class="section"><div class="wrap split" style="align-items:start">
   <div><div class="label">Who we are</div><h2>Senior consultants.  <em>Real experience.</em></h2></div>
-  <div class="prose"><p class="lede">Our team has run technology for FDA-regulated medical device and diagnostics companies, global manufacturers and growing firms.</p>
+  <div class="prose"><p class="lede">Our team has run technology for FDA-regulated medical device and diagnostics companies, manufacturers and growing firms.</p>
   <p>We've integrated IT for more than ten acquisitions, moved headquarters and data centers, built certified labs, and passed SOX and ISO audits and HIPAA reviews.  We handle Microsoft 365, cybersecurity, networks, cloud, data centers, physical security, compliance and IT strategy.</p>
   <p>We're based in Huntington Beach, California.  We work on-site across Southern California and remotely anywhere in the United States.  You get senior-level answers from people who have done the work, not a sales pitch.</p></div>
 </div></section>

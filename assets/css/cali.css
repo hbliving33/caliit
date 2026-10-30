@@ -471,3 +471,7 @@ h3 { font: 700 21px/1.25 var(--sans); }
 .m365 .dot { flex: none; width: 12px; height: 12px; border-radius: 50%; margin-top: 4px; background: #9aa9b9; }
 .m365.ok .dot { background: #2f9e5b; box-shadow: 0 0 0 4px rgba(47, 158, 91, .15); }
 .m365.warn .dot { background: #d9822b; box-shadow: 0 0 0 4px rgba(217, 130, 43, .18); }
+.map .de-ring { fill: #0c1a2b; stroke: #3b5576; stroke-width: .6; }
+.map .land.de { stroke-width: .6; }
+.draw .de-inset { opacity: 0; animation: fadein .6s 2.3s forwards; }
+@media (prefers-reduced-motion: reduce) { .draw .de-inset { animation: none; opacity: 1; } }
