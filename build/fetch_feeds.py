@@ -73,18 +73,22 @@ def main():
     if OUT.exists():
         try: prev = json.loads(OUT.read_text())
         except Exception: prev = {}
-    items, ok = [], []
+    items, ok, errors = [], [], {}
     for source, url in FEEDS:
         try:
             got = parse(source, get(url)); items += got; ok.append(f'{source}: {len(got)}')
         except Exception as e:
-            print(f'{source} failed: {e}')
+            print(f'{source} failed: {e}'); errors[source] = str(e)[:160]
             items += [x for x in prev.get('items', []) if x.get('source') == source]   # keep last good headlines
     seen, uniq = set(), []
     for x in sorted(items, key=lambda x: x['date'], reverse=True):
         k = x['title'].lower()
         if k not in seen: seen.add(k); uniq.append(x)
-    data = {'updated': dt.datetime.now(dt.timezone.utc).isoformat(), 'm365': m365(), 'items': uniq[:TOTAL]}
+    # every source gets its two newest headlines in, then the rest fill by date
+    first = [x for src, _ in FEEDS for x in [y for y in uniq if y['source'] == src][:2]]
+    rest = [x for x in uniq if x not in first]
+    pick = sorted(first + rest[:max(0, TOTAL - len(first))], key=lambda x: x['date'], reverse=True)
+    data = {'updated': dt.datetime.now(dt.timezone.utc).isoformat(), 'm365': m365(), 'items': pick, 'errors': errors}
     if not data['items'] and prev.get('items'): data['items'] = prev['items']
     OUT.write_text(json.dumps(data, indent=1))
     print('\n'.join(ok)); print('M365:', data['m365']['status'], '| headlines:', len(data['items']))
