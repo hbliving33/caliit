@@ -1,21 +1,27 @@
 {
- "updated": "2026-10-31T17:47:37.908550+00:00",
+ "updated": "2026-10-31T19:00:06.727821+00:00",
  "m365": {
   "status": "Available",
-  "checked": "2026-10-31T17:47:38.043084+00:00",
+  "checked": "2026-10-31T19:00:06.927919+00:00",
   "link": "https://status.cloud.microsoft/"
  },
  "aws": {
   "status": "2 open events",
   "link": "https://health.aws.amazon.com/health/status",
-  "checked": "2026-10-31T17:47:37.908550+00:00"
+  "checked": "2026-10-31T19:00:06.727821+00:00"
  },
  "wasabi": {
   "status": "Available",
   "link": "https://status.wasabi.com/",
-  "checked": "2026-10-31T17:47:37.908550+00:00"
+  "checked": "2026-10-31T19:00:06.727821+00:00"
  },
  "items": [
+  {
+   "title": "Northflank security breach leads to abuse of customers' AI API keys",
+   "link": "https://www.bleepingcomputer.com/news/security/northflank-security-breach-leads-to-abuse-of-customers-ai-api-keys/",
+   "source": "BleepingComputer",
+   "date": "2026-10-31T18:01:12+00:00"
+  },
   {
    "title": "New Android SMS of Death exploit can remotely crash unpatched phones",
    "link": "https://www.bleepingcomputer.com/news/security/new-android-sms-of-death-exploit-can-remotely-crash-unpatched-phones/",
@@ -105,12 +111,6 @@
    "link": "https://www.microsoft.com/en-us/security/blog/2026/10/30/help-desk-impersonation-ad-cs-abuse-investigating-esc1-esc8-intrusion-paths/",
    "source": "Microsoft Security Blog",
    "date": "2026-10-30T16:11:44+00:00"
-  },
-  {
-   "title": "Trezor warns of suspected crypto-theft implant in hardware wallet",
-   "link": "https://www.bleepingcomputer.com/news/security/trezor-warns-of-suspected-crypto-theft-implant-in-hardware-wallet/",
-   "source": "BleepingComputer",
-   "date": "2026-10-30T15:58:20+00:00"
   },
   {
    "title": "L\u2019Italia \u00e8 afflitta da vulnerabilit\u00e0 informatiche, senza una causa chiara",
