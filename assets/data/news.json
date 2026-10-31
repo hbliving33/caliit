@@ -1,21 +1,27 @@
 {
- "updated": "2026-10-31T14:51:10.342810+00:00",
+ "updated": "2026-10-31T15:50:28.483194+00:00",
  "m365": {
   "status": "Available",
-  "checked": "2026-10-31T14:51:10.470280+00:00",
+  "checked": "2026-10-31T15:50:28.729292+00:00",
   "link": "https://status.cloud.microsoft/"
  },
  "aws": {
   "status": "2 open events",
   "link": "https://health.aws.amazon.com/health/status",
-  "checked": "2026-10-31T14:51:10.342810+00:00"
+  "checked": "2026-10-31T15:50:28.483194+00:00"
  },
  "wasabi": {
   "status": "Available",
   "link": "https://status.wasabi.com/",
-  "checked": "2026-10-31T14:51:10.342810+00:00"
+  "checked": "2026-10-31T15:50:28.483194+00:00"
  },
  "items": [
+  {
+   "title": "New Android SMS of Death exploit can remotely crash unpatched phones",
+   "link": "https://www.bleepingcomputer.com/news/security/new-android-sms-of-death-exploit-can-remotely-crash-unpatched-phones/",
+   "source": "BleepingComputer",
+   "date": "2026-10-31T15:35:11+00:00"
+  },
   {
    "title": "Reddit to lock content behind logins to fight scrapers",
    "link": "https://www.bleepingcomputer.com/news/security/reddit-to-lock-content-behind-logins-to-fight-scrapers/",
@@ -129,12 +135,6 @@
    "link": "https://www.securityweek.com/in-other-news-anthropic-breach-dispute-uefi-flaw-hits-most-servers-cloudflare-ai-data-leak/",
    "source": "SecurityWeek",
    "date": "2026-10-30T14:41:35+00:00"
-  },
-  {
-   "title": "Malicious Claude Code extension on Cursor planted SSH backdoors",
-   "link": "https://www.bleepingcomputer.com/news/security/malicious-claude-code-extension-on-cursor-planted-ssh-backdoors/",
-   "source": "BleepingComputer",
-   "date": "2026-10-30T14:36:54+00:00"
   },
   {
    "title": "Undead Software Projects Continue to Raise Security Risks",
