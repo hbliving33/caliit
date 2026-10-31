@@ -2,8 +2,7 @@
 (() => {
   const SB_URL = "https://mefvxxoytleyfjbwtxix.supabase.co";   // Supabase project "valve-partners" (shared by all Valve Partners sites)
   const SB_KEY = "sb_publishable_Ex6vMImvvkTdQsFYprve7g_awiuqxEs";   // public key: can only add form entries and count visits
-  const MAIL_TO = "[email removed]";
-  const W3F_KEY = "b88fef65-1434-4f2b-8b2d-9b9cb760e7f0";   // Web3Forms access key for [email removed] (public by design; it can only send to that address)
+  const W3F_KEY = "b88fef65-1434-4f2b-8b2d-9b9cb760e7f0";   // Web3Forms access key (public by design; it can only send to the owner's inbox)
   const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   // mobile menu
@@ -116,11 +115,8 @@
       const db = fetch(`${SB_URL}/rest/v1/contact_requests`, { method: "POST", headers: { apikey: SB_KEY, "Content-Type": "application/json", Prefer: "return=minimal" }, body: JSON.stringify(row) })
         .then((r) => r.ok).catch(() => false);
       const fields = { Name: row.name, Company: row.company || "", Email: row.email, Phone: row.phone || "", Topic: row.topic || "", "Company size": row.company_size || "", Message: row.message };
-      const mail = (W3F_KEY
-        ? fetch("https://api.web3forms.com/submit", { method: "POST", headers: { "Content-Type": "application/json", Accept: "application/json" },
+      const mail = fetch("https://api.web3forms.com/submit", { method: "POST", headers: { "Content-Type": "application/json", Accept: "application/json" },
             body: JSON.stringify({ access_key: W3F_KEY, subject: "New Cali IT website message", from_name: "Cali IT website", replyto: row.email, ...fields }) })
-        : fetch(`https://formsubmit.co/ajax/${MAIL_TO}`, { method: "POST", headers: { "Content-Type": "application/json", Accept: "application/json" },
-            body: JSON.stringify({ _subject: "New Cali IT website message", _template: "table", _captcha: "false", _replyto: row.email, ...fields }) }))
         .then((r) => r.ok).catch(() => false);
       const [a, b] = await Promise.all([db, mail]);
       if (a || b) { location.href = "thanks.html"; return; }
