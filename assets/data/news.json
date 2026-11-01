@@ -1,21 +1,27 @@
 {
- "updated": "2026-11-01T10:53:38.646274+00:00",
+ "updated": "2026-11-01T11:49:43.778085+00:00",
  "m365": {
   "status": "Available",
-  "checked": "2026-11-01T10:53:38.697833+00:00",
+  "checked": "2026-11-01T11:49:43.847648+00:00",
   "link": "https://status.cloud.microsoft/"
  },
  "aws": {
   "status": "2 open events",
   "link": "https://health.aws.amazon.com/health/status",
-  "checked": "2026-11-01T10:53:38.646274+00:00"
+  "checked": "2026-11-01T11:49:43.778085+00:00"
  },
  "wasabi": {
   "status": "Available",
   "link": "https://status.wasabi.com/",
-  "checked": "2026-11-01T10:53:38.646274+00:00"
+  "checked": "2026-11-01T11:49:43.778085+00:00"
  },
  "items": [
+  {
+   "title": "Northstar Security Exits Stealth With $7M to Expose Toxic Risk Combinations",
+   "link": "https://www.securityweek.com/northstar-security-exits-stealth-with-7m-to-expose-toxic-risk-combinations/",
+   "source": "SecurityWeek",
+   "date": "2026-11-01T11:15:00+00:00"
+  },
   {
    "title": "CVSS 10.0 LXD, MicroCloud Flaw Lets Attackers Impersonate Trusted Clients Without a Private Key",
    "link": "https://thehackernews.com/2026/11/critical-lxd-and-microcloud-flaw-cvss.html",
@@ -153,12 +159,6 @@
    "link": "https://www.securityweek.com/bulletproof-host-virtualine-loses-its-domain-to-fbi-seizure/",
    "source": "SecurityWeek",
    "date": "2026-10-30T13:36:12+00:00"
-  },
-  {
-   "title": "Fresh WordPress Vulnerability in Attackers\u2019 Crosshairs",
-   "link": "https://www.securityweek.com/fresh-wordpress-vulnerability-in-attackers-crosshairs/",
-   "source": "SecurityWeek",
-   "date": "2026-10-30T12:04:13+00:00"
   },
   {
    "title": "As Russia's Cyberwar Evolves, Belarus Steps Forward",
