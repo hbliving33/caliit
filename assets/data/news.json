@@ -1,21 +1,39 @@
 {
- "updated": "2026-11-01T07:20:27.325143+00:00",
+ "updated": "2026-11-01T09:00:21.456821+00:00",
  "m365": {
   "status": "Available",
-  "checked": "2026-11-01T07:20:27.456968+00:00",
+  "checked": "2026-11-01T09:00:21.591177+00:00",
   "link": "https://status.cloud.microsoft/"
  },
  "aws": {
   "status": "2 open events",
   "link": "https://health.aws.amazon.com/health/status",
-  "checked": "2026-11-01T07:20:27.325143+00:00"
+  "checked": "2026-11-01T09:00:21.456821+00:00"
  },
  "wasabi": {
   "status": "Available",
   "link": "https://status.wasabi.com/",
-  "checked": "2026-11-01T07:20:27.325143+00:00"
+  "checked": "2026-11-01T09:00:21.456821+00:00"
  },
  "items": [
+  {
+   "title": "Hackers Steal About $2.7 Million From Polymarket Traders via Hijacked DebugBear Script",
+   "link": "https://thehackernews.com/2026/11/hackers-steal-about-27-million-from.html",
+   "source": "The Hacker News",
+   "date": "2026-11-01T07:25:40+00:00"
+  },
+  {
+   "title": "NetamLoader Malware Targets Government Windows 10 Systems in Asia via .NET Injection",
+   "link": "https://thehackernews.com/2026/11/netamloader-malware-targets-government.html",
+   "source": "The Hacker News",
+   "date": "2026-11-01T07:02:58+00:00"
+  },
+  {
+   "title": "FBI Links North Korea's TraderTraitor to Record $6.43 Billion Binance Crypto Heist",
+   "link": "https://thehackernews.com/2026/11/fbi-links-north-koreas-tradertraitor-to.html",
+   "source": "The Hacker News",
+   "date": "2026-11-01T06:44:27+00:00"
+  },
   {
    "title": "Northflank security breach leads to abuse of customers' AI API keys",
    "link": "https://www.bleepingcomputer.com/news/security/northflank-security-breach-leads-to-abuse-of-customers-ai-api-keys/",
@@ -71,12 +89,6 @@
    "date": "2026-10-31T05:33:41+00:00"
   },
   {
-   "title": "Cloudflare Reports 18.2 Million Network-Layer DDoS Attacks in Q3, Up 38%",
-   "link": "https://thehackernews.com/2026/10/cloudflare-reports-182-million-network.html",
-   "source": "The Hacker News",
-   "date": "2026-10-31T04:56:12+00:00"
-  },
-  {
    "title": "Inside a malicious Claude Code-branded extension and its persistent SSH backdoor",
    "link": "https://www.microsoft.com/en-us/security/blog/2026/10/30/inside-malicious-claude-code-branded-cursor-extension-persistent-ssh-backdoor/",
    "source": "Microsoft Security Blog",
@@ -101,12 +113,6 @@
    "date": "2026-10-30T19:46:08+00:00"
   },
   {
-   "title": "Chinese Hackers Use AI-Powered ARTEX to Target Over 200 Organizations Worldwide",
-   "link": "https://thehackernews.com/2026/10/chinese-hackers-use-ai-powered-artex-to.html",
-   "source": "The Hacker News",
-   "date": "2026-10-30T16:58:44+00:00"
-  },
-  {
    "title": "From help desk impersonation to AD CS abuse: Investigating ESC1 and ESC8 intrusion paths",
    "link": "https://www.microsoft.com/en-us/security/blog/2026/10/30/help-desk-impersonation-ad-cs-abuse-investigating-esc1-esc8-intrusion-paths/",
    "source": "Microsoft Security Blog",
@@ -117,12 +123,6 @@
    "link": "https://www.darkreading.com/cybersecurity-analytics/cyber-vulnerabilities-besiege-italy-italian",
    "source": "Dark Reading",
    "date": "2026-10-30T15:39:54+00:00"
-  },
-  {
-   "title": "TeamViewer Flaw Lets Remote Computers Attack Users Who Connect to Control Them",
-   "link": "https://thehackernews.com/2026/10/teamviewer-flaw-lets-remote-computers.html",
-   "source": "The Hacker News",
-   "date": "2026-10-30T15:17:28+00:00"
   },
   {
    "title": "PHP2Shell Attacks Root Palo Alto Firewalls but Fail Against WordPress",
