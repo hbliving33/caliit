@@ -1,21 +1,27 @@
 {
- "updated": "2026-11-01T19:51:56.558030+00:00",
+ "updated": "2026-11-01T20:52:17.165818+00:00",
  "m365": {
   "status": "Available",
-  "checked": "2026-11-01T19:51:56.672918+00:00",
+  "checked": "2026-11-01T20:52:17.361146+00:00",
   "link": "https://status.cloud.microsoft/"
  },
  "aws": {
   "status": "2 open events",
   "link": "https://health.aws.amazon.com/health/status",
-  "checked": "2026-11-01T19:51:56.558030+00:00"
+  "checked": "2026-11-01T20:52:17.165818+00:00"
  },
  "wasabi": {
   "status": "Available",
   "link": "https://status.wasabi.com/",
-  "checked": "2026-11-01T19:51:56.558030+00:00"
+  "checked": "2026-11-01T20:52:17.165818+00:00"
  },
  "items": [
+  {
+   "title": "FBI links $6.3 billion Binance crypto heist to North Korean hackers",
+   "link": "https://www.bleepingcomputer.com/news/security/fbi-links-63-billion-binance-crypto-heist-to-north-korean-hackers/",
+   "source": "BleepingComputer",
+   "date": "2026-11-01T19:57:53+00:00"
+  },
   {
    "title": "Alpine Linux rebuilds GitLab after attempted RCE attack",
    "link": "https://www.bleepingcomputer.com/news/security/alpine-linux-rebuilds-gitlab-after-attempted-rce-attack/",
@@ -75,12 +81,6 @@
    "link": "https://www.bleepingcomputer.com/news/security/reddit-to-lock-content-behind-logins-to-fight-scrapers/",
    "source": "BleepingComputer",
    "date": "2026-10-31T14:05:15+00:00"
-  },
-  {
-   "title": "From Beginner to Bug Hunter: Learning Cybersecurity in the AI Era.",
-   "link": "https://www.bleepingcomputer.com/news/security/from-beginner-to-bug-hunter-learning-cybersecurity-in-the-ai-era/",
-   "source": "BleepingComputer",
-   "date": "2026-10-31T13:10:19+00:00"
   },
   {
    "title": "Chainalysis Confirms Intrusion Into Internal Tools and Exposure of Customer Identity Data",
