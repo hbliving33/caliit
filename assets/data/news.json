@@ -1,21 +1,45 @@
 {
- "updated": "2026-11-02T11:13:34.742380+00:00",
+ "updated": "2026-11-02T12:09:40.055134+00:00",
  "m365": {
   "status": "Available",
-  "checked": "2026-11-02T11:13:34.912901+00:00",
+  "checked": "2026-11-02T12:09:40.416387+00:00",
   "link": "https://status.cloud.microsoft/"
  },
  "aws": {
   "status": "2 open events",
   "link": "https://health.aws.amazon.com/health/status",
-  "checked": "2026-11-02T11:13:34.742380+00:00"
+  "checked": "2026-11-02T12:09:40.055134+00:00"
  },
  "wasabi": {
   "status": "Available",
   "link": "https://status.wasabi.com/",
-  "checked": "2026-11-02T11:13:34.742380+00:00"
+  "checked": "2026-11-02T12:09:40.055134+00:00"
  },
  "items": [
+  {
+   "title": "Malicious Claude Code Extension Served in Cursor Supply Chain Attack",
+   "link": "https://www.securityweek.com/malicious-claude-code-extension-served-in-cursor-supply-chain-attack/",
+   "source": "SecurityWeek",
+   "date": "2026-11-02T11:29:39+00:00"
+  },
+  {
+   "title": "Synology warns of C3RB3R ransomware attacks targeting NAS devices",
+   "link": "https://www.bleepingcomputer.com/news/security/synology-warns-customers-of-ongoing-c3rb3r-ransomware-attacks/",
+   "source": "BleepingComputer",
+   "date": "2026-11-02T11:28:42+00:00"
+  },
+  {
+   "title": "Attackers Pose as IT Support on Microsoft Teams, Abuse AD CS to Steal Company Data",
+   "link": "https://thehackernews.com/2026/11/attackers-pose-as-it-support-on.html",
+   "source": "The Hacker News",
+   "date": "2026-11-02T11:08:45+00:00"
+  },
+  {
+   "title": "Government Linux Servers Targeted With SysGoRAT and Suspected AI-Generated Scripts",
+   "link": "https://thehackernews.com/2026/11/government-linux-servers-targeted-with.html",
+   "source": "The Hacker News",
+   "date": "2026-11-02T10:49:59+00:00"
+  },
   {
    "title": "Chainalysis Discloses Data Breach Following AI-Driven Cyberattack",
    "link": "https://www.securityweek.com/chainalysis-discloses-data-breach-following-ai-driven-cyberattack/",
@@ -95,34 +119,10 @@
    "date": "2026-11-01T07:03:00+00:00"
   },
   {
-   "title": "NetamLoader Malware Targets Government Windows 10 Systems in Asia via .NET Injection",
-   "link": "https://thehackernews.com/2026/11/netamloader-malware-targets-government.html",
-   "source": "The Hacker News",
-   "date": "2026-11-01T07:02:58+00:00"
-  },
-  {
    "title": "Northflank security breach leads to abuse of customers' AI API keys",
    "link": "https://www.bleepingcomputer.com/news/security/northflank-security-breach-leads-to-abuse-of-customers-ai-api-keys/",
    "source": "BleepingComputer",
    "date": "2026-10-31T18:01:12+00:00"
-  },
-  {
-   "title": "New Android SMS of Death exploit can remotely crash unpatched phones",
-   "link": "https://www.bleepingcomputer.com/news/security/new-android-sms-of-death-exploit-can-remotely-crash-unpatched-phones/",
-   "source": "BleepingComputer",
-   "date": "2026-10-31T15:35:11+00:00"
-  },
-  {
-   "title": "Chainalysis Confirms Intrusion Into Internal Tools and Exposure of Customer Identity Data",
-   "link": "https://thehackernews.com/2026/10/chainalysis-confirms-intrusion-into.html",
-   "source": "The Hacker News",
-   "date": "2026-10-31T12:01:56+00:00"
-  },
-  {
-   "title": "Syrian Hacker Gets Prison Time in US After Over a Decade on the Run",
-   "link": "https://www.securityweek.com/syrian-hacker-gets-prison-time-in-us-after-over-a-decade-on-the-run/",
-   "source": "SecurityWeek",
-   "date": "2026-10-31T11:00:00+00:00"
   },
   {
    "title": "Inside a malicious Claude Code-branded extension and its persistent SSH backdoor",
