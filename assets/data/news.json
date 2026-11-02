@@ -1,21 +1,33 @@
 {
- "updated": "2026-11-02T07:43:28.173431+00:00",
+ "updated": "2026-11-02T09:23:09.686581+00:00",
  "m365": {
   "status": "Available",
-  "checked": "2026-11-02T07:43:28.211323+00:00",
+  "checked": "2026-11-02T09:23:09.718047+00:00",
   "link": "https://status.cloud.microsoft/"
  },
  "aws": {
   "status": "2 open events",
   "link": "https://health.aws.amazon.com/health/status",
-  "checked": "2026-11-02T07:43:28.173431+00:00"
+  "checked": "2026-11-02T09:23:09.686581+00:00"
  },
  "wasabi": {
   "status": "Available",
   "link": "https://status.wasabi.com/",
-  "checked": "2026-11-02T07:43:28.173431+00:00"
+  "checked": "2026-11-02T09:23:09.686581+00:00"
  },
  "items": [
+  {
+   "title": "FBI Flags Over 600 Addresses Tied to North Korea\u2019s Binance Heist",
+   "link": "https://www.securityweek.com/fbi-flags-over-600-addresses-tied-to-north-koreas-binance-heist/",
+   "source": "SecurityWeek",
+   "date": "2026-11-02T08:40:36+00:00"
+  },
+  {
+   "title": "Ivanti Patches Two More Zero-Days Exploited in Connect Secure Attack Chain",
+   "link": "https://www.securityweek.com/ivanti-patches-two-more-zero-days-exploited-in-connect-secure-attack-chain/",
+   "source": "SecurityWeek",
+   "date": "2026-11-02T07:57:49+00:00"
+  },
   {
    "title": "New VOLTA Infostealer Uses Claude, Gemini, and Kimi AI to Rank Victims by Financial Value",
    "link": "https://thehackernews.com/2026/11/new-volta-infostealer-uses-claude.html",
@@ -147,18 +159,6 @@
    "link": "https://www.darkreading.com/application-security/undead-software-projects-raise-security-risks",
    "source": "Dark Reading",
    "date": "2026-10-30T14:10:37+00:00"
-  },
-  {
-   "title": "Passkeys Are Better Than Passwords. But They Are Not Enough.",
-   "link": "https://www.securityweek.com/passkeys-are-better-than-passwords-but-they-are-not-enough/",
-   "source": "SecurityWeek",
-   "date": "2026-10-30T14:00:00+00:00"
-  },
-  {
-   "title": "Bulletproof Host Virtualine Loses Its Domain to FBI Seizure",
-   "link": "https://www.securityweek.com/bulletproof-host-virtualine-loses-its-domain-to-fbi-seizure/",
-   "source": "SecurityWeek",
-   "date": "2026-10-30T13:36:12+00:00"
   },
   {
    "title": "As Russia's Cyberwar Evolves, Belarus Steps Forward",
