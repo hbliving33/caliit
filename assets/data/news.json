@@ -1,19 +1,19 @@
 {
- "updated": "2026-11-03T16:08:54.315805+00:00",
+ "updated": "2026-11-03T17:13:46.807813+00:00",
  "m365": {
   "status": "Available",
-  "checked": "2026-11-03T16:08:54.494127+00:00",
+  "checked": "2026-11-03T17:13:46.928452+00:00",
   "link": "https://status.cloud.microsoft/"
  },
  "aws": {
   "status": "2 open events",
   "link": "https://health.aws.amazon.com/health/status",
-  "checked": "2026-11-03T16:08:54.315805+00:00"
+  "checked": "2026-11-03T17:13:46.807813+00:00"
  },
  "wasabi": {
   "status": "Available",
   "link": "https://status.wasabi.com/",
-  "checked": "2026-11-03T16:08:54.315805+00:00"
+  "checked": "2026-11-03T17:13:46.807813+00:00"
  },
  "items": [
   {
@@ -21,6 +21,12 @@
    "link": "https://thehackernews.com/2026/11/google-warns-llmjacking-attacks-are.html",
    "source": "The Hacker News",
    "date": "2026-11-03T15:41:53+00:00"
+  },
+  {
+   "title": "9 Cyber Awareness Tips That Actually Match Today\u2019s Maze of Threats",
+   "link": "https://www.darkreading.com/cyber-risk/9-cyber-awareness-tips-todays-maze-threats",
+   "source": "Dark Reading",
+   "date": "2026-11-03T15:38:20+00:00"
   },
   {
    "title": "LLMJacking Emerges as Thriving Cybercriminal Enterprise",
@@ -59,15 +65,15 @@
    "date": "2026-11-03T14:12:44+00:00"
   },
   {
-   "title": "3AM Affiliate Embraces AI-Like Loops in European School Attack",
-   "link": "https://www.darkreading.com/data-privacy/3am-affiliate-ai-loops-european-school-attack",
-   "source": "Dark Reading",
-   "date": "2026-11-03T14:00:00+00:00"
-  },
-  {
    "title": "UK school estate hit by 3AM ransomware in suspected AI-assisted attack",
    "link": "https://www.bleepingcomputer.com/news/security/uk-school-estate-hit-by-3am-ransomware-in-suspected-ai-assisted-attack/",
    "source": "BleepingComputer",
+   "date": "2026-11-03T14:00:00+00:00"
+  },
+  {
+   "title": "3AM Affiliate Embraces AI-Like Loops in European School Attack",
+   "link": "https://www.darkreading.com/data-privacy/3am-affiliate-ai-loops-european-school-attack",
+   "source": "Dark Reading",
    "date": "2026-11-03T14:00:00+00:00"
   },
   {
@@ -171,12 +177,6 @@
    "link": "https://www.microsoft.com/en-us/security/blog/2026/10/30/inside-malicious-claude-code-branded-cursor-extension-persistent-ssh-backdoor/",
    "source": "Microsoft Security Blog",
    "date": "2026-10-31T01:02:57+00:00"
-  },
-  {
-   "title": "Investors Dish on New Startups & What They'd Back Next",
-   "link": "https://www.darkreading.com/cybersecurity-operations/investors-dish-new-startsup-what-back-next",
-   "source": "Dark Reading",
-   "date": "2026-10-30T21:08:25+00:00"
   },
   {
    "title": "Actively exploited: GitLab Community Edition and Enterprise Edition (CVE-2026-97229)",
