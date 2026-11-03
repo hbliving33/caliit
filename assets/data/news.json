@@ -1,21 +1,33 @@
 {
- "updated": "2026-11-03T05:10:58.985540+00:00",
+ "updated": "2026-11-03T06:08:52.985814+00:00",
  "m365": {
   "status": "Available",
-  "checked": "2026-11-03T05:10:59.006855+00:00",
+  "checked": "2026-11-03T06:08:53.012757+00:00",
   "link": "https://status.cloud.microsoft/"
  },
  "aws": {
   "status": "2 open events",
   "link": "https://health.aws.amazon.com/health/status",
-  "checked": "2026-11-03T05:10:58.985540+00:00"
+  "checked": "2026-11-03T06:08:52.985814+00:00"
  },
  "wasabi": {
   "status": "Available",
   "link": "https://status.wasabi.com/",
-  "checked": "2026-11-03T05:10:58.985540+00:00"
+  "checked": "2026-11-03T06:08:52.985814+00:00"
  },
  "items": [
+  {
+   "title": "Attackers Exploit Critical Siemens IoT2050 Flaw to Plant Remote Command Backdoors",
+   "link": "https://thehackernews.com/2026/11/attackers-exploit-critical-siemens.html",
+   "source": "The Hacker News",
+   "date": "2026-11-03T05:34:41+00:00"
+  },
+  {
+   "title": "Attackers Target Unpatched CryptoPayment Gateway Flaw That Can Expose Wallet Credentials",
+   "link": "https://thehackernews.com/2026/11/attackers-target-unpatched.html",
+   "source": "The Hacker News",
+   "date": "2026-11-03T05:34:37+00:00"
+  },
   {
    "title": "Tech Firms Dismantle Botnet That Turned 1.3M TV Boxes Into Proxies",
    "link": "https://krebsonsecurity.com/2026/11/tech-firms-dismantle-botnet-that-turned-1-3m-tv-boxes-into-proxies/",
@@ -131,22 +143,10 @@
    "date": "2026-11-02T11:50:00+00:00"
   },
   {
-   "title": "Is Your SOC Ready for AI Agents? A Maturity Check Before You Deploy",
-   "link": "https://thehackernews.com/2026/11/is-your-soc-ready-for-ai-agents.html",
-   "source": "The Hacker News",
-   "date": "2026-11-02T11:30:00+00:00"
-  },
-  {
    "title": "Malicious Claude Code Extension Served in Cursor Supply Chain Attack",
    "link": "https://www.securityweek.com/malicious-claude-code-extension-served-in-cursor-supply-chain-attack/",
    "source": "SecurityWeek",
    "date": "2026-11-02T11:29:39+00:00"
-  },
-  {
-   "title": "Attackers Pose as IT Support on Microsoft Teams, Abuse AD CS to Steal Company Data",
-   "link": "https://thehackernews.com/2026/11/attackers-pose-as-it-support-on.html",
-   "source": "The Hacker News",
-   "date": "2026-11-02T11:08:45+00:00"
   },
   {
    "title": "Chainalysis Discloses Data Breach Following AI-Driven Cyberattack",
