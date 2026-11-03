@@ -1,21 +1,39 @@
 {
- "updated": "2026-11-03T18:02:55.029690+00:00",
+ "updated": "2026-11-03T19:12:14.129131+00:00",
  "m365": {
   "status": "Available",
-  "checked": "2026-11-03T18:02:55.047126+00:00",
+  "checked": "2026-11-03T19:12:14.312277+00:00",
   "link": "https://status.cloud.microsoft/"
  },
  "aws": {
   "status": "2 open events",
   "link": "https://health.aws.amazon.com/health/status",
-  "checked": "2026-11-03T18:02:55.029690+00:00"
+  "checked": "2026-11-03T19:12:14.129131+00:00"
  },
  "wasabi": {
   "status": "Available",
   "link": "https://status.wasabi.com/",
-  "checked": "2026-11-03T18:02:55.029690+00:00"
+  "checked": "2026-11-03T19:12:14.129131+00:00"
  },
  "items": [
+  {
+   "title": "Google: LLMjacking attacks rack up $1 million in cloud AI charges",
+   "link": "https://www.bleepingcomputer.com/news/security/google-llmjacking-attacks-rack-up-1-million-in-cloud-ai-charges/",
+   "source": "BleepingComputer",
+   "date": "2026-11-03T18:51:04+00:00"
+  },
+  {
+   "title": "mSecure Warns Users to Change Passwords, Reset 2FA and Passkeys After Suspicious Activity",
+   "link": "https://thehackernews.com/2026/11/msecure-warns-users-to-change-passwords.html",
+   "source": "The Hacker News",
+   "date": "2026-11-03T18:46:38+00:00"
+  },
+  {
+   "title": "Chainstack Reports Production Systems Breach Exposing Customer Data and Password Hashes",
+   "link": "https://thehackernews.com/2026/11/chainstack-reports-production-systems.html",
+   "source": "The Hacker News",
+   "date": "2026-11-03T18:16:19+00:00"
+  },
   {
    "title": "Fake-download campaign uses trojanized installers to deliver monetization payloads",
    "link": "https://www.microsoft.com/en-us/security/blog/2026/11/03/fake-download-campaign-uses-trojanized-installers-deliver-monetization-payloads/",
@@ -47,13 +65,13 @@
    "date": "2026-11-03T15:41:53+00:00"
   },
   {
-   "title": "9 Cyber Awareness Tips That Actually Match Today\u2019s Maze of Threats",
+   "title": "9 Cyber Awareness Tips That Actually Match Today's Maze of Threats",
    "link": "https://www.darkreading.com/cyber-risk/9-cyber-awareness-tips-todays-maze-threats",
    "source": "Dark Reading",
    "date": "2026-11-03T15:38:20+00:00"
   },
   {
-   "title": "LLMJacking Emerges as Thriving Cybercriminal Enterprise",
+   "title": "LLMjacking Emerges as Thriving Cybercriminal Enterprise",
    "link": "https://www.darkreading.com/cloud-security/llmjacking-thriving-cybercriminal-enterprise",
    "source": "Dark Reading",
    "date": "2026-11-03T15:35:50+00:00"
@@ -123,24 +141,6 @@
    "link": "https://www.bleepingcomputer.com/news/google/google-adds-new-250-000-cloud-vrp-reward-for-root-in-cloud-bugs/",
    "source": "BleepingComputer",
    "date": "2026-11-03T12:05:52+00:00"
-  },
-  {
-   "title": "Red Hat Patches 9.8-Rated Linux TCP RCE Flaw While Ubuntu Releases Fixes for Testing",
-   "link": "https://thehackernews.com/2026/11/red-hat-patches-98-rated-linux-tcp-rce.html",
-   "source": "The Hacker News",
-   "date": "2026-11-03T11:23:53+00:00"
-  },
-  {
-   "title": "The 4 Elements of Exposure Prioritization and How to Operationalize Them",
-   "link": "https://thehackernews.com/2026/11/the-4-elements-of-exposure.html",
-   "source": "The Hacker News",
-   "date": "2026-11-03T11:18:20+00:00"
-  },
-  {
-   "title": "Harvard University data breach exposed info of 851,000 accounts",
-   "link": "https://www.bleepingcomputer.com/news/security/harvard-university-data-breach-exposed-info-of-851-000-accounts/",
-   "source": "BleepingComputer",
-   "date": "2026-11-03T10:53:25+00:00"
   },
   {
    "title": "UK Cyber Chief Says the UK Will Face AI Cyberattacks on Critical Infrastructure by 2028",
