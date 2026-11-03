@@ -1,21 +1,45 @@
 {
- "updated": "2026-11-03T15:05:05.324455+00:00",
+ "updated": "2026-11-03T16:08:54.315805+00:00",
  "m365": {
   "status": "Available",
-  "checked": "2026-11-03T15:05:05.471736+00:00",
+  "checked": "2026-11-03T16:08:54.494127+00:00",
   "link": "https://status.cloud.microsoft/"
  },
  "aws": {
   "status": "2 open events",
   "link": "https://health.aws.amazon.com/health/status",
-  "checked": "2026-11-03T15:05:05.324455+00:00"
+  "checked": "2026-11-03T16:08:54.315805+00:00"
  },
  "wasabi": {
   "status": "Available",
   "link": "https://status.wasabi.com/",
-  "checked": "2026-11-03T15:05:05.324455+00:00"
+  "checked": "2026-11-03T16:08:54.315805+00:00"
  },
  "items": [
+  {
+   "title": "Google Warns LLMjacking Attacks Are Costing Some Enterprises Up to $1 Million in Cloud Charges",
+   "link": "https://thehackernews.com/2026/11/google-warns-llmjacking-attacks-are.html",
+   "source": "The Hacker News",
+   "date": "2026-11-03T15:41:53+00:00"
+  },
+  {
+   "title": "LLMJacking Emerges as Thriving Cybercriminal Enterprise",
+   "link": "https://www.darkreading.com/cloud-security/llmjacking-thriving-cybercriminal-enterprise",
+   "source": "Dark Reading",
+   "date": "2026-11-03T15:35:50+00:00"
+  },
+  {
+   "title": "cPGuard Update Channel Hijacked to Backdoor Linux Servers and Collect Password Hashes",
+   "link": "https://thehackernews.com/2026/11/cpguard-update-channel-hijacked-to.html",
+   "source": "The Hacker News",
+   "date": "2026-11-03T15:16:32+00:00"
+  },
+  {
+   "title": "Barracuda warns of critical flaws allowing root access to devices",
+   "link": "https://www.bleepingcomputer.com/news/security/barracuda-warns-of-critical-flaws-allowing-root-access-to-devices/",
+   "source": "BleepingComputer",
+   "date": "2026-11-03T15:06:16+00:00"
+  },
   {
    "title": "Gartner Predicts SOCs Will Have 50% More Engineers Than Analysts by 2028",
    "link": "https://www.bleepingcomputer.com/news/security/gartner-predicts-socs-will-have-50-percent-more-engineers-than-analysts-by-2028/",
@@ -35,15 +59,15 @@
    "date": "2026-11-03T14:12:44+00:00"
   },
   {
-   "title": "UK school estate hit by 3AM ransomware in suspected AI-assisted attack",
-   "link": "https://www.bleepingcomputer.com/news/security/uk-school-estate-hit-by-3am-ransomware-in-suspected-ai-assisted-attack/",
-   "source": "BleepingComputer",
-   "date": "2026-11-03T14:00:00+00:00"
-  },
-  {
    "title": "3AM Affiliate Embraces AI-Like Loops in European School Attack",
    "link": "https://www.darkreading.com/data-privacy/3am-affiliate-ai-loops-european-school-attack",
    "source": "Dark Reading",
+   "date": "2026-11-03T14:00:00+00:00"
+  },
+  {
+   "title": "UK school estate hit by 3AM ransomware in suspected AI-assisted attack",
+   "link": "https://www.bleepingcomputer.com/news/security/uk-school-estate-hit-by-3am-ransomware-in-suspected-ai-assisted-attack/",
+   "source": "BleepingComputer",
    "date": "2026-11-03T14:00:00+00:00"
   },
   {
@@ -113,18 +137,6 @@
    "date": "2026-11-03T08:31:48+00:00"
   },
   {
-   "title": "Synology NAS Devices Targeted in Ransomware Attacks Exploiting Patched DSM Flaw",
-   "link": "https://thehackernews.com/2026/11/synology-nas-devices-targeted-in.html",
-   "source": "The Hacker News",
-   "date": "2026-11-03T07:43:07+00:00"
-  },
-  {
-   "title": "New Wave of Refrigeration Cyberattacks Hits Supermarkets Across Europe, Forcing Stores to Pull Food",
-   "link": "https://thehackernews.com/2026/11/second-wave-of-cyberattacks-hits.html",
-   "source": "The Hacker News",
-   "date": "2026-11-03T07:27:07+00:00"
-  },
-  {
    "title": "Tech Firms Dismantle Botnet That Turned 1.3M TV Boxes Into Proxies",
    "link": "https://krebsonsecurity.com/2026/11/tech-firms-dismantle-botnet-that-turned-1-3m-tv-boxes-into-proxies/",
    "source": "Krebs on Security",
@@ -137,10 +149,10 @@
    "date": "2026-11-02T22:27:24+00:00"
   },
   {
-   "title": "Chinese hackers use ARTEX AI in automated attacks against 200 orgs",
-   "link": "https://www.bleepingcomputer.com/news/security/chinese-hackers-use-artex-ai-in-automated-attacks-against-200-orgs/",
-   "source": "BleepingComputer",
-   "date": "2026-11-02T21:40:14+00:00"
+   "title": "What exploited vulnerabilities have in common: A data-driven analysis of real-world attacks",
+   "link": "https://www.microsoft.com/en-us/security/blog/2026/11/02/exploited-vulnerabilities-common-data-driven-analysis-real-world-attacks/",
+   "source": "Microsoft Security Blog",
+   "date": "2026-11-02T20:20:59+00:00"
   },
   {
    "title": "Microsoft's AI Risk Report Misses This Key Detail",
@@ -155,16 +167,16 @@
    "date": "2026-11-02T14:00:00+00:00"
   },
   {
+   "title": "Inside a malicious Claude Code-branded extension and its persistent SSH backdoor",
+   "link": "https://www.microsoft.com/en-us/security/blog/2026/10/30/inside-malicious-claude-code-branded-cursor-extension-persistent-ssh-backdoor/",
+   "source": "Microsoft Security Blog",
+   "date": "2026-10-31T01:02:57+00:00"
+  },
+  {
    "title": "Investors Dish on New Startups & What They'd Back Next",
    "link": "https://www.darkreading.com/cybersecurity-operations/investors-dish-new-startsup-what-back-next",
    "source": "Dark Reading",
    "date": "2026-10-30T21:08:25+00:00"
-  },
-  {
-   "title": "Devs Hit by Trojanized Claude Code Extension for Cursor",
-   "link": "https://www.darkreading.com/cyberattacks-data-breaches/devs-trojanized-claude-code-extension-cursor",
-   "source": "Dark Reading",
-   "date": "2026-10-30T20:05:58+00:00"
   },
   {
    "title": "Actively exploited: GitLab Community Edition and Enterprise Edition (CVE-2026-97229)",
@@ -183,18 +195,6 @@
    "link": "https://krebsonsecurity.com/2026/10/widespread-php-flaw-may-cause-many-site-outages-today/",
    "source": "Krebs on Security",
    "date": "2026-10-21T15:26:07+00:00"
-  },
-  {
-   "title": "Post-quantum authentication: Why organizations should start testing certificate ecosystems now",
-   "link": "https://www.microsoft.com/en-us/security/blog/2026/10/08/post-quantum-authentication-why-organizations-should-start-testing-certificate-ecosystems-now/",
-   "source": "Microsoft Security Blog",
-   "date": "2026-10-08T20:44:28+00:00"
-  },
-  {
-   "title": "3 lessons from frontier AI vulnerability research",
-   "link": "https://www.microsoft.com/en-us/security/blog/2026/10/07/3-lessons-from-frontier-ai-vulnerability-research/",
-   "source": "Microsoft Security Blog",
-   "date": "2026-10-07T16:00:00+00:00"
   }
  ],
  "errors": {
