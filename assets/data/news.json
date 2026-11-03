@@ -1,21 +1,45 @@
 {
- "updated": "2026-11-03T17:13:46.807813+00:00",
+ "updated": "2026-11-03T18:02:55.029690+00:00",
  "m365": {
   "status": "Available",
-  "checked": "2026-11-03T17:13:46.928452+00:00",
+  "checked": "2026-11-03T18:02:55.047126+00:00",
   "link": "https://status.cloud.microsoft/"
  },
  "aws": {
   "status": "2 open events",
   "link": "https://health.aws.amazon.com/health/status",
-  "checked": "2026-11-03T17:13:46.807813+00:00"
+  "checked": "2026-11-03T18:02:55.029690+00:00"
  },
  "wasabi": {
   "status": "Available",
   "link": "https://status.wasabi.com/",
-  "checked": "2026-11-03T17:13:46.807813+00:00"
+  "checked": "2026-11-03T18:02:55.029690+00:00"
  },
  "items": [
+  {
+   "title": "Fake-download campaign uses trojanized installers to deliver monetization payloads",
+   "link": "https://www.microsoft.com/en-us/security/blog/2026/11/03/fake-download-campaign-uses-trojanized-installers-deliver-monetization-payloads/",
+   "source": "Microsoft Security Blog",
+   "date": "2026-11-03T17:32:47+00:00"
+  },
+  {
+   "title": "Microsoft named a Leader in the 2026 Gartner\u00ae Magic Quadrant\u2122 for AI Agent Management Platforms",
+   "link": "https://www.microsoft.com/en-us/security/blog/2026/11/03/microsoft-named-a-leader-in-the-2026-gartner-magic-quadrant-for-ai-agent-management-platforms/",
+   "source": "Microsoft Security Blog",
+   "date": "2026-11-03T17:00:00+00:00"
+  },
+  {
+   "title": "Binance Reveals How Fake Job Interviews and AI Tool Abuse Led to $6.43 Billion Theft",
+   "link": "https://thehackernews.com/2026/11/binance-reveals-how-fake-job-interviews.html",
+   "source": "The Hacker News",
+   "date": "2026-11-03T16:55:58+00:00"
+  },
+  {
+   "title": "Barracuda Flaws Could Be Chained to Bypass Authorization and Gain Root Access",
+   "link": "https://thehackernews.com/2026/11/barracuda-flaws-could-be-chained-to.html",
+   "source": "The Hacker News",
+   "date": "2026-11-03T15:59:19+00:00"
+  },
   {
    "title": "Google Warns LLMjacking Attacks Are Costing Some Enterprises Up to $1 Million in Cloud Charges",
    "link": "https://thehackernews.com/2026/11/google-warns-llmjacking-attacks-are.html",
@@ -113,12 +137,6 @@
    "date": "2026-11-03T11:18:20+00:00"
   },
   {
-   "title": "Russia-Aligned Gorbag Hackers Exploit WinRAR Flaw to Deploy Data-Stealing Malware",
-   "link": "https://thehackernews.com/2026/11/russia-aligned-gorbag-hackers-exploit.html",
-   "source": "The Hacker News",
-   "date": "2026-11-03T11:00:45+00:00"
-  },
-  {
    "title": "Harvard University data breach exposed info of 851,000 accounts",
    "link": "https://www.bleepingcomputer.com/news/security/harvard-university-data-breach-exposed-info-of-851-000-accounts/",
    "source": "BleepingComputer",
@@ -135,12 +153,6 @@
    "link": "https://www.securityweek.com/google-dismantles-xcpe-botnet-of-1-3-million-android-devices/",
    "source": "SecurityWeek",
    "date": "2026-11-03T09:22:09+00:00"
-  },
-  {
-   "title": "Hackers Exploit BTCPay Server Flaw to Steal Bitcoin and Litecoin From Hot Wallets",
-   "link": "https://thehackernews.com/2026/11/hackers-exploit-btcpay-server-flaw-to.html",
-   "source": "The Hacker News",
-   "date": "2026-11-03T08:31:48+00:00"
   },
   {
    "title": "Tech Firms Dismantle Botnet That Turned 1.3M TV Boxes Into Proxies",
@@ -165,18 +177,6 @@
    "link": "https://www.darkreading.com/cyberattacks-data-breaches/microsoft-ai-cyber-risk-report-miss",
    "source": "Dark Reading",
    "date": "2026-11-02T15:00:00+00:00"
-  },
-  {
-   "title": "PapRAT Cyber-Espionage Campaign Leaves a 'Bitter' Taste in South Asia",
-   "link": "https://www.darkreading.com/cyberattacks-data-breaches/paprat-cyberespionage-campaign-bitter-south-asia",
-   "source": "Dark Reading",
-   "date": "2026-11-02T14:00:00+00:00"
-  },
-  {
-   "title": "Inside a malicious Claude Code-branded extension and its persistent SSH backdoor",
-   "link": "https://www.microsoft.com/en-us/security/blog/2026/10/30/inside-malicious-claude-code-branded-cursor-extension-persistent-ssh-backdoor/",
-   "source": "Microsoft Security Blog",
-   "date": "2026-10-31T01:02:57+00:00"
   },
   {
    "title": "Actively exploited: GitLab Community Edition and Enterprise Edition (CVE-2026-97229)",
