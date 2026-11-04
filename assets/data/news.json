@@ -1,21 +1,27 @@
 {
- "updated": "2026-11-04T21:08:55.841052+00:00",
+ "updated": "2026-11-04T22:01:49.572376+00:00",
  "m365": {
   "status": "Available",
-  "checked": "2026-11-04T21:08:56.017189+00:00",
+  "checked": "2026-11-04T22:01:49.604734+00:00",
   "link": "https://status.cloud.microsoft/"
  },
  "aws": {
   "status": "2 open events",
   "link": "https://health.aws.amazon.com/health/status",
-  "checked": "2026-11-04T21:08:55.841052+00:00"
+  "checked": "2026-11-04T22:01:49.572376+00:00"
  },
  "wasabi": {
   "status": "Available",
   "link": "https://status.wasabi.com/",
-  "checked": "2026-11-04T21:08:55.841052+00:00"
+  "checked": "2026-11-04T22:01:49.572376+00:00"
  },
  "items": [
+  {
+   "title": "Vercel rolls out new protection against stolen session cookie attacks",
+   "link": "https://www.bleepingcomputer.com/news/security/vercel-rolls-out-new-protection-against-stolen-session-cookie-attacks/",
+   "source": "BleepingComputer",
+   "date": "2026-11-04T21:31:18+00:00"
+  },
   {
    "title": "Zyxel fixes zero-day exploited to hack nearly 1,000 network switches",
    "link": "https://www.bleepingcomputer.com/news/security/zyxel-fixes-zero-day-exploited-to-hack-nearly-1-000-network-switches/",
@@ -69,12 +75,6 @@
    "link": "https://www.bleepingcomputer.com/news/security/msecure-password-manager-hack-prompts-password-reset-warnings/",
    "source": "BleepingComputer",
    "date": "2026-11-04T16:00:18+00:00"
-  },
-  {
-   "title": "Google Calendar phishing campaign hijacks sessions, bypasses MFA",
-   "link": "https://www.bleepingcomputer.com/news/security/google-calendar-phishing-campaign-hijacks-sessions-bypasses-mfa/",
-   "source": "BleepingComputer",
-   "date": "2026-11-04T15:00:10+00:00"
   },
   {
    "title": "Sysdig Adds Runtime Security and Governance for AI Agents",
