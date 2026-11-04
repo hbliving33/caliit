@@ -1,21 +1,69 @@
 {
- "updated": "2026-11-04T12:04:18.040196+00:00",
+ "updated": "2026-11-04T13:26:17.976560+00:00",
  "m365": {
   "status": "Available",
-  "checked": "2026-11-04T12:04:18.074719+00:00",
+  "checked": "2026-11-04T13:26:18.097125+00:00",
   "link": "https://status.cloud.microsoft/"
  },
  "aws": {
   "status": "2 open events",
   "link": "https://health.aws.amazon.com/health/status",
-  "checked": "2026-11-04T12:04:18.040196+00:00"
+  "checked": "2026-11-04T13:26:17.976560+00:00"
  },
  "wasabi": {
   "status": "Available",
   "link": "https://status.wasabi.com/",
-  "checked": "2026-11-04T12:04:18.040196+00:00"
+  "checked": "2026-11-04T13:26:17.976560+00:00"
  },
  "items": [
+  {
+   "title": "US charges two Canadians accused of hacking US universities",
+   "link": "https://www.bleepingcomputer.com/news/security/us-charges-two-canadians-accused-of-hacking-us-universities/",
+   "source": "BleepingComputer",
+   "date": "2026-11-04T13:13:20+00:00"
+  },
+  {
+   "title": "AI-Linked Breaches Mount as WorkOS, Northflank, Trigger.dev Disclose Hacks",
+   "link": "https://www.securityweek.com/ai-linked-breaches-mount-as-workos-northflank-trigger-dev-disclose-hacks/",
+   "source": "SecurityWeek",
+   "date": "2026-11-04T12:43:20+00:00"
+  },
+  {
+   "title": "Canadian Extradited to US Over Cryptomining Hacks on University Supercomputers",
+   "link": "https://www.securityweek.com/canadian-extradited-to-us-over-cryptomining-hacks-on-university-supercomputers/",
+   "source": "SecurityWeek",
+   "date": "2026-11-04T12:27:58+00:00"
+  },
+  {
+   "title": "CISA flags WordPress RCE flaw as actively exploited in attacks",
+   "link": "https://www.bleepingcomputer.com/news/security/cisa-flags-wordpress-rce-flaw-as-actively-exploited-in-attacks/",
+   "source": "BleepingComputer",
+   "date": "2026-11-04T12:11:05+00:00"
+  },
+  {
+   "title": "Critical Rails Flaw Lets Attackers Write Server Files via Crafted ImageMagick Uploads",
+   "link": "https://thehackernews.com/2026/11/critical-rails-flaw-lets-attackers.html",
+   "source": "The Hacker News",
+   "date": "2026-11-04T12:07:04+00:00"
+  },
+  {
+   "title": "Xen Hypervisor Flaws Let One Malicious VM Read and Write Any Other VM's Memory",
+   "link": "https://thehackernews.com/2026/11/xen-hypervisor-flaws-let-one-malicious.html",
+   "source": "The Hacker News",
+   "date": "2026-11-04T11:46:27+00:00"
+  },
+  {
+   "title": "Radio With No Radar: Why Agent Runtime Security Fails Without the Layers Beneath It",
+   "link": "https://thehackernews.com/2026/11/radio-with-no-radar-why-agent-runtime.html",
+   "source": "The Hacker News",
+   "date": "2026-11-04T11:34:20+00:00"
+  },
+  {
+   "title": "China-Aligned Hackers Hijack Sogou Input Method DNS Requests to Deploy DarkVigil Backdoor",
+   "link": "https://thehackernews.com/2026/11/china-aligned-hackers-hijack-sogou.html",
+   "source": "The Hacker News",
+   "date": "2026-11-04T11:24:31+00:00"
+  },
   {
    "title": "Malicious cPGuard Updates Served in OpsShield Supply Chain Attack",
    "link": "https://www.securityweek.com/malicious-cpguard-updates-served-in-opsshield-supply-chain-attack/",
@@ -47,12 +95,6 @@
    "date": "2026-11-04T09:23:22+00:00"
   },
   {
-   "title": "Meta Shares Top Muse Bug Bounty Findings as Payouts Reach $1.2 Million",
-   "link": "https://www.securityweek.com/meta-shares-top-muse-bug-bounty-findings-as-payouts-reach-1-2-million/",
-   "source": "SecurityWeek",
-   "date": "2026-11-04T08:27:05+00:00"
-  },
-  {
    "title": "Russian Police Arrest 3 Suspected VasyGrek Hackers, Dismantle Criminal Infrastructure",
    "link": "https://thehackernews.com/2026/11/russian-police-arrest-3-suspected.html",
    "source": "The Hacker News",
@@ -65,16 +107,16 @@
    "date": "2026-11-04T07:46:15+00:00"
   },
   {
-   "title": "CISA Confirms Hackers Exploiting WordPress Core Flaw During Software Upgrades",
-   "link": "https://thehackernews.com/2026/11/cisa-confirms-hackers-exploiting.html",
-   "source": "The Hacker News",
-   "date": "2026-11-04T05:43:11+00:00"
-  },
-  {
    "title": "Philippine Migrant Worker Data Likely Leaked in 69GB Government Breach",
    "link": "https://www.darkreading.com/cyberattacks-data-breaches/philippine-migrant-worker-data-69gb-government-breach",
    "source": "Dark Reading",
    "date": "2026-11-04T02:00:00+00:00"
+  },
+  {
+   "title": "Phishing-Resistant Isn't Enough; Yubico Takes Aim at Identity-Verification Gap",
+   "link": "https://www.darkreading.com/identity-access-management-security/beyond-phishing-resistant-yubico-identity-verification-gap",
+   "source": "Dark Reading",
+   "date": "2026-11-04T01:05:40+00:00"
   },
   {
    "title": "Hackers hijack cPGuard autoupdate to deploy backdoor, steal data",
@@ -107,24 +149,6 @@
    "date": "2026-11-03T20:05:50+00:00"
   },
   {
-   "title": "Google: LLMjacking attacks rack up $1 million in cloud AI charges",
-   "link": "https://www.bleepingcomputer.com/news/security/google-llmjacking-attacks-rack-up-1-million-in-cloud-ai-charges/",
-   "source": "BleepingComputer",
-   "date": "2026-11-03T18:51:04+00:00"
-  },
-  {
-   "title": "mSecure Warns Users to Change Passwords, Reset 2FA and Passkeys After Suspicious Activity",
-   "link": "https://thehackernews.com/2026/11/msecure-warns-users-to-change-passwords.html",
-   "source": "The Hacker News",
-   "date": "2026-11-03T18:46:38+00:00"
-  },
-  {
-   "title": "Chainstack Reports Production Systems Breach Exposing Customer Data and Password Hashes",
-   "link": "https://thehackernews.com/2026/11/chainstack-reports-production-systems.html",
-   "source": "The Hacker News",
-   "date": "2026-11-03T18:16:19+00:00"
-  },
-  {
    "title": "Fake-download campaign uses trojanized installers to deliver monetization payloads",
    "link": "https://www.microsoft.com/en-us/security/blog/2026/11/03/fake-download-campaign-uses-trojanized-installers-deliver-monetization-payloads/",
    "source": "Microsoft Security Blog",
@@ -137,12 +161,6 @@
    "date": "2026-11-03T17:00:00+00:00"
   },
   {
-   "title": "Binance Reveals How Fake Job Interviews and AI Tool Abuse Led to $6.43 Billion Theft",
-   "link": "https://thehackernews.com/2026/11/binance-reveals-how-fake-job-interviews.html",
-   "source": "The Hacker News",
-   "date": "2026-11-03T16:55:58+00:00"
-  },
-  {
    "title": "9 Cyber Awareness Tips That Actually Match Today's Maze of Threats",
    "link": "https://www.darkreading.com/cyber-risk/9-cyber-awareness-tips-todays-maze-threats",
    "source": "Dark Reading",
@@ -153,24 +171,6 @@
    "link": "https://www.darkreading.com/cloud-security/llmjacking-thriving-cybercriminal-enterprise",
    "source": "Dark Reading",
    "date": "2026-11-03T15:35:50+00:00"
-  },
-  {
-   "title": "Barracuda warns of critical flaws allowing root access to devices",
-   "link": "https://www.bleepingcomputer.com/news/security/barracuda-warns-of-critical-flaws-allowing-root-access-to-devices/",
-   "source": "BleepingComputer",
-   "date": "2026-11-03T15:06:16+00:00"
-  },
-  {
-   "title": "Frontline Education Data Breach Impacts Over 1.3 Million",
-   "link": "https://www.securityweek.com/frontline-education-data-breach-impacts-over-1-3-million/",
-   "source": "SecurityWeek",
-   "date": "2026-11-03T14:32:38+00:00"
-  },
-  {
-   "title": "3AM Affiliate Embraces AI-Like Loops in European School Attack",
-   "link": "https://www.darkreading.com/data-privacy/3am-affiliate-ai-loops-european-school-attack",
-   "source": "Dark Reading",
-   "date": "2026-11-03T14:00:00+00:00"
   },
   {
    "title": "Tech Firms Dismantle Botnet That Turned 1.3M TV Boxes Into Proxies",
