@@ -1,32 +1,38 @@
 {
- "updated": "2026-11-05T20:08:55.464175+00:00",
+ "updated": "2026-11-05T21:04:43.347074+00:00",
  "m365": {
   "status": "Available",
-  "checked": "2026-11-05T20:08:55.481952+00:00",
+  "checked": "2026-11-05T21:04:43.515691+00:00",
   "link": "https://status.cloud.microsoft/"
  },
  "aws": {
   "status": "2 open events",
   "link": "https://health.aws.amazon.com/health/status",
-  "checked": "2026-11-05T20:08:55.464175+00:00"
+  "checked": "2026-11-05T21:04:43.347074+00:00"
  },
  "wasabi": {
   "status": "Available",
   "link": "https://status.wasabi.com/",
-  "checked": "2026-11-05T20:08:55.464175+00:00"
+  "checked": "2026-11-05T21:04:43.347074+00:00"
  },
  "items": [
   {
-   "title": "OpenAI\u2019s GPT-6 Astra silently obstructed safety research tasks",
-   "link": "https://www.bleepingcomputer.com/news/security/openais-gpt-6-astra-silently-obstructed-safety-research-tasks/",
+   "title": "Nearly 1.5 million exposed secrets targeted in new revocation program",
+   "link": "https://www.bleepingcomputer.com/news/security/truffle-security-launches-program-to-revoke-14-million-live-secrets/",
    "source": "BleepingComputer",
-   "date": "2026-11-05T19:24:26+00:00"
+   "date": "2026-11-05T20:15:08+00:00"
   },
   {
    "title": "APT29's Watering Holes Target Thousands of Mobile Users",
    "link": "https://www.darkreading.com/mobile-security/apt29-watering-holes-target-mobile-users",
    "source": "Dark Reading",
-   "date": "2026-11-05T18:08:31+00:00"
+   "date": "2026-11-05T20:05:39+00:00"
+  },
+  {
+   "title": "OpenAI\u2019s GPT-6 Astra silently obstructed safety research tasks",
+   "link": "https://www.bleepingcomputer.com/news/security/openais-gpt-6-astra-silently-obstructed-safety-research-tasks/",
+   "source": "BleepingComputer",
+   "date": "2026-11-05T19:24:26+00:00"
   },
   {
    "title": "OpenSSH flaw lets attackers log into password-disabled Linux accounts",
@@ -135,12 +141,6 @@
    "link": "https://thehackernews.com/2026/11/5-active-cyber-threats-that-put-us.html",
    "source": "The Hacker News",
    "date": "2026-11-05T10:06:19+00:00"
-  },
-  {
-   "title": "GhostMap Android flaw lets malicious app trigger persistent boot loop",
-   "link": "https://www.bleepingcomputer.com/news/security/ghostmap-android-flaw-lets-malicious-app-trigger-persistent-boot-loop/",
-   "source": "BleepingComputer",
-   "date": "2026-11-05T09:18:29+00:00"
   },
   {
    "title": "Apple to Start Scanning Publicly Shared iCloud Photos and Files for Harmful Content",
