@@ -1,21 +1,27 @@
 {
- "updated": "2026-11-05T23:55:56.127645+00:00",
+ "updated": "2026-11-06T01:28:55.903636+00:00",
  "m365": {
   "status": "Available",
-  "checked": "2026-11-05T23:55:56.165236+00:00",
+  "checked": "2026-11-06T01:28:55.978244+00:00",
   "link": "https://status.cloud.microsoft/"
  },
  "aws": {
   "status": "2 open events",
   "link": "https://health.aws.amazon.com/health/status",
-  "checked": "2026-11-05T23:55:56.127645+00:00"
+  "checked": "2026-11-06T01:28:55.903636+00:00"
  },
  "wasabi": {
   "status": "Available",
   "link": "https://status.wasabi.com/",
-  "checked": "2026-11-05T23:55:56.127645+00:00"
+  "checked": "2026-11-06T01:28:55.903636+00:00"
  },
  "items": [
+  {
+   "title": "FBI, CISA warn of cyberattacks targeting refrigeration systems",
+   "link": "https://www.bleepingcomputer.com/news/security/fbi-cisa-warn-of-cyberattacks-targeting-refrigeration-systems/",
+   "source": "BleepingComputer",
+   "date": "2026-11-06T00:56:44+00:00"
+  },
   {
    "title": "US Government Email Systems Open to Abuse Thanks to Typos",
    "link": "https://www.darkreading.com/cybersecurity-operations/us-government-email-systems-abuse-typos",
@@ -99,12 +105,6 @@
    "link": "https://www.bleepingcomputer.com/news/security/hackers-backdoor-linux-servers-using-trojanized-cwp-web-server/",
    "source": "BleepingComputer",
    "date": "2026-11-05T16:24:26+00:00"
-  },
-  {
-   "title": "DigiCert data breach exposes customer information, identity documents",
-   "link": "https://www.bleepingcomputer.com/news/security/digicert-data-breach-exposes-customer-information-identity-documents/",
-   "source": "BleepingComputer",
-   "date": "2026-11-05T16:12:46+00:00"
   },
   {
    "title": "Email threat landscape: Q3 2026 trends and insights",
