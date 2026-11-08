@@ -1,21 +1,27 @@
 {
- "updated": "2026-11-08T11:53:44.497634+00:00",
+ "updated": "2026-11-08T13:10:47.404614+00:00",
  "m365": {
   "status": "Available",
-  "checked": "2026-11-08T11:53:44.550082+00:00",
+  "checked": "2026-11-08T13:10:47.556325+00:00",
   "link": "https://status.cloud.microsoft/"
  },
  "aws": {
   "status": "2 open events",
   "link": "https://health.aws.amazon.com/health/status",
-  "checked": "2026-11-08T11:53:44.497634+00:00"
+  "checked": "2026-11-08T13:10:47.404614+00:00"
  },
  "wasabi": {
   "status": "Available",
   "link": "https://status.wasabi.com/",
-  "checked": "2026-11-08T11:53:44.497634+00:00"
+  "checked": "2026-11-08T13:10:47.404614+00:00"
  },
  "items": [
+  {
+   "title": "Brava Security Emerges From Stealth With $15 Million in Funding",
+   "link": "https://www.securityweek.com/brava-security-emerges-from-stealth-with-15-million-in-funding/",
+   "source": "SecurityWeek",
+   "date": "2026-11-08T12:14:00+00:00"
+  },
   {
    "title": "Hackers pull off $133 million French bank heist via service provider",
    "link": "https://www.bleepingcomputer.com/news/security/hackers-pull-off-133-million-french-bank-heist-via-service-provider/",
@@ -129,12 +135,6 @@
    "link": "https://www.securityweek.com/openai-says-new-gpt-6-cyber-model-hunts-flaws-without-crossing-the-line/",
    "source": "SecurityWeek",
    "date": "2026-11-06T13:19:52+00:00"
-  },
-  {
-   "title": "US Agencies Urge Organizations to Harden Refrigeration Controllers",
-   "link": "https://www.securityweek.com/us-agencies-urge-organizations-to-harden-refrigeration-controllers/",
-   "source": "SecurityWeek",
-   "date": "2026-11-06T13:02:26+00:00"
   },
   {
    "title": "Microsoft Paint RCE Fix Now Available, but Windows Update Won't Deliver It",
