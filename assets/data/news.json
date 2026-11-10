@@ -1,21 +1,27 @@
 {
- "updated": "2026-11-10T11:06:03.365516+00:00",
+ "updated": "2026-11-10T12:03:50.283350+00:00",
  "m365": {
   "status": "Available",
-  "checked": "2026-11-10T11:06:03.578781+00:00",
+  "checked": "2026-11-10T12:03:50.418512+00:00",
   "link": "https://status.cloud.microsoft/"
  },
  "aws": {
   "status": "2 open events",
   "link": "https://health.aws.amazon.com/health/status",
-  "checked": "2026-11-10T11:06:03.365516+00:00"
+  "checked": "2026-11-10T12:03:50.283350+00:00"
  },
  "wasabi": {
   "status": "Available",
   "link": "https://status.wasabi.com/",
-  "checked": "2026-11-10T11:06:03.365516+00:00"
+  "checked": "2026-11-10T12:03:50.283350+00:00"
  },
  "items": [
+  {
+   "title": "Beyond the Alert: The Case for Rich Network Data",
+   "link": "https://thehackernews.com/2026/11/beyond-alert-case-for-rich-network-data.html",
+   "source": "The Hacker News",
+   "date": "2026-11-10T11:38:13+00:00"
+  },
   {
    "title": "Apple Patches iMessage Group Chat Privacy Flaws and Bluetooth Pairing Vulnerabilities",
    "link": "https://thehackernews.com/2026/11/apple-patches-imessage-group-chat.html",
@@ -87,12 +93,6 @@
    "link": "https://www.securityweek.com/france-blames-iran-for-a-cyberattack-that-heated-supermarket-refrigerators/",
    "source": "SecurityWeek",
    "date": "2026-11-10T07:35:05+00:00"
-  },
-  {
-   "title": "Google Issues Chrome Security Update for Eighth Actively Exploited Zero-Day of 2026",
-   "link": "https://thehackernews.com/2026/11/google-issues-chrome-security-update.html",
-   "source": "The Hacker News",
-   "date": "2026-11-10T06:52:54+00:00"
   },
   {
    "title": "Chrome Update Patches Exploited XML Zero-Day, Eighth This Year",
