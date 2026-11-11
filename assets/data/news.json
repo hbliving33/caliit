@@ -1,21 +1,69 @@
 {
- "updated": "2026-11-11T19:17:37.280487+00:00",
+ "updated": "2026-11-11T23:06:58.851920+00:00",
  "m365": {
   "status": "Available",
-  "checked": "2026-11-11T19:17:37.295649+00:00",
+  "checked": "2026-11-11T23:06:59.019257+00:00",
   "link": "https://status.cloud.microsoft/"
  },
  "aws": {
   "status": "3 open events",
   "link": "https://health.aws.amazon.com/health/status",
-  "checked": "2026-11-11T19:17:37.280487+00:00"
+  "checked": "2026-11-11T23:06:58.851920+00:00"
  },
  "wasabi": {
   "status": "Available",
   "link": "https://status.wasabi.com/",
-  "checked": "2026-11-11T19:17:37.280487+00:00"
+  "checked": "2026-11-11T23:06:58.851920+00:00"
  },
  "items": [
+  {
+   "title": "Baker Tilly notifies clients of data breach at third-party provider",
+   "link": "https://www.bleepingcomputer.com/news/security/baker-tilly-notifies-clients-of-data-breach-at-third-party-provider/",
+   "source": "BleepingComputer",
+   "date": "2026-11-11T23:01:31+00:00"
+  },
+  {
+   "title": "Active ScreenConnect attacks breach MSPs, impact dozens of organizations",
+   "link": "https://www.bleepingcomputer.com/news/security/active-screenconnect-attacks-breach-msps-impact-dozens-of-organizations/",
+   "source": "BleepingComputer",
+   "date": "2026-11-11T22:56:21+00:00"
+  },
+  {
+   "title": "Attackers Say 'Hello' to a Different Scale of Cloud Attack",
+   "link": "https://www.darkreading.com/cloud-security/attackers-hello-scale-cloud-attack",
+   "source": "Dark Reading",
+   "date": "2026-11-11T21:44:04+00:00"
+  },
+  {
+   "title": "eMudhra revokes 8 more CA certificates after private key mishap",
+   "link": "https://www.bleepingcomputer.com/news/security/emudhra-revokes-8-more-ca-certificates-after-private-key-mishap/",
+   "source": "BleepingComputer",
+   "date": "2026-11-11T21:27:40+00:00"
+  },
+  {
+   "title": "AI Raises the Stakes for Cyber Resilience",
+   "link": "https://www.darkreading.com/cyber-risk/ai-raises-stakes-cyber-resilience",
+   "source": "Dark Reading",
+   "date": "2026-11-11T21:20:41+00:00"
+  },
+  {
+   "title": "Notion says Fireworks breach exposed customer AI chat transcripts",
+   "link": "https://www.bleepingcomputer.com/news/security/notion-says-fireworks-breach-exposed-customer-ai-chat-transcripts/",
+   "source": "BleepingComputer",
+   "date": "2026-11-11T20:54:20+00:00"
+  },
+  {
+   "title": "N-able Takes N-central Platform Offline After Discovery of 33 Flaws",
+   "link": "https://www.darkreading.com/endpoint-security/n-able-n-central-offline-33-flaws",
+   "source": "Dark Reading",
+   "date": "2026-11-11T20:05:18+00:00"
+  },
+  {
+   "title": "The global socket: how threat actors are weaponizing GSocket for stealthy C2",
+   "link": "https://www.microsoft.com/en-us/security/blog/2026/11/11/global-socket-how-threat-actors-weaponizing-gsocket-stealthy-c2/",
+   "source": "Microsoft Security Blog",
+   "date": "2026-11-11T19:49:57+00:00"
+  },
   {
    "title": "Who Runs the Ransomware Group Qilin?",
    "link": "https://krebsonsecurity.com/2026/11/who-runs-the-ransomware-group-qilin/",
@@ -65,12 +113,6 @@
    "date": "2026-11-11T15:12:59+00:00"
   },
   {
-   "title": "eBPF Rootkits: Why Underground Actors Are Taking Notice",
-   "link": "https://www.bleepingcomputer.com/news/security/ebpf-rootkits-why-underground-actors-are-taking-notice/",
-   "source": "BleepingComputer",
-   "date": "2026-11-11T15:01:11+00:00"
-  },
-  {
    "title": "Hackers Target Qlik Sense Servers With Reverse Shells, Stage ActiveMQ and Veeam Exploits",
    "link": "https://thehackernews.com/2026/11/hackers-target-qlik-sense-servers-with.html",
    "source": "The Hacker News",
@@ -87,12 +129,6 @@
    "link": "https://www.securityweek.com/citrix-ivanti-patch-critical-and-high-severity-vulnerabilities/",
    "source": "SecurityWeek",
    "date": "2026-11-11T13:37:19+00:00"
-  },
-  {
-   "title": "N-able releases security hotfixes for zero-day vulnerabilities",
-   "link": "https://www.bleepingcomputer.com/news/security/n-able-releases-security-hotfixes-for-zero-day-vulnerabilities/",
-   "source": "BleepingComputer",
-   "date": "2026-11-11T12:32:27+00:00"
   },
   {
    "title": "Finite State Raises $27 Million to Secure Software and Firmware in Connected Devices",
@@ -125,18 +161,6 @@
    "date": "2026-11-11T12:00:53+00:00"
   },
   {
-   "title": "Microsoft fixes audio issues caused by September security updates",
-   "link": "https://www.bleepingcomputer.com/news/microsoft/microsoft-fixes-usb-audio-issues-caused-by-september-security-updates/",
-   "source": "BleepingComputer",
-   "date": "2026-11-11T11:18:36+00:00"
-  },
-  {
-   "title": "CISA flags Cisco BroadWorks flaw as actively exploited in attacks",
-   "link": "https://www.bleepingcomputer.com/news/security/cisa-flags-cisco-broadworks-flaw-as-actively-exploited-in-attacks/",
-   "source": "BleepingComputer",
-   "date": "2026-11-11T10:12:08+00:00"
-  },
-  {
    "title": "Detecting sleeper agents hiding in AI model neurons",
    "link": "https://www.microsoft.com/en-us/security/blog/2026/11/10/detecting-sleeper-agents-hiding-in-ai-model-neurons/",
    "source": "Microsoft Security Blog",
@@ -159,30 +183,6 @@
    "link": "https://www.darkreading.com/cyberattacks-data-breaches/artex-ai-pen-test-tool-hackers-weapon",
    "source": "Dark Reading",
    "date": "2026-11-10T21:01:14+00:00"
-  },
-  {
-   "title": "F-Secure Identifies 26 Ways AI Can Harm Consumers, and Where to Stop Them",
-   "link": "https://www.darkreading.com/application-security/f-secure-26-ways-ai-harm-consumers-where-to-stop-them",
-   "source": "Dark Reading",
-   "date": "2026-11-10T20:41:45+00:00"
-  },
-  {
-   "title": "Checkmarx Appoints Kobi Sivilya as Chief Information Security Officer",
-   "link": "https://www.darkreading.com/cybersecurity-careers/checkmarx-appoints-kobi-sivilya-chief-information-security-officer",
-   "source": "Dark Reading",
-   "date": "2026-11-10T20:35:34+00:00"
-  },
-  {
-   "title": "How to Assess OT Incident Response Preparedness",
-   "link": "https://www.darkreading.com/ics-ot-security/assess-ot-incident-response-preparedness",
-   "source": "Dark Reading",
-   "date": "2026-11-10T20:18:43+00:00"
-  },
-  {
-   "title": "AI Coding Agents Leak Thousands of Secrets to GitHub",
-   "link": "https://www.darkreading.com/cyber-risk/ai-coding-agents-leak-secrets-github",
-   "source": "Dark Reading",
-   "date": "2026-11-10T18:46:22+00:00"
   },
   {
    "title": "Actively exploited: GitLab Community Edition and Enterprise Edition (CVE-2026-97229)",
