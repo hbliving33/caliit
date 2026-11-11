@@ -1,21 +1,33 @@
 {
- "updated": "2026-11-11T15:08:06.113149+00:00",
+ "updated": "2026-11-11T16:08:27.151069+00:00",
  "m365": {
   "status": "Available",
-  "checked": "2026-11-11T15:08:06.172839+00:00",
+  "checked": "2026-11-11T16:08:27.230614+00:00",
   "link": "https://status.cloud.microsoft/"
  },
  "aws": {
-  "status": "2 open events",
+  "status": "3 open events",
   "link": "https://health.aws.amazon.com/health/status",
-  "checked": "2026-11-11T15:08:06.113149+00:00"
+  "checked": "2026-11-11T16:08:27.151069+00:00"
  },
  "wasabi": {
   "status": "Available",
   "link": "https://status.wasabi.com/",
-  "checked": "2026-11-11T15:08:06.113149+00:00"
+  "checked": "2026-11-11T16:08:27.151069+00:00"
  },
  "items": [
+  {
+   "title": "Critical Xen Orchestra Flaws Exploited in Attacks",
+   "link": "https://www.securityweek.com/critical-xen-orchestra-flaws-exploited-in-attacks/",
+   "source": "SecurityWeek",
+   "date": "2026-11-11T15:42:47+00:00"
+  },
+  {
+   "title": "Hackers use AntiFox AI agents in AWS credential-theft attacks",
+   "link": "https://www.bleepingcomputer.com/news/security/hackers-use-antifox-ai-agents-in-aws-credential-theft-attacks/",
+   "source": "BleepingComputer",
+   "date": "2026-11-11T15:12:59+00:00"
+  },
   {
    "title": "eBPF Rootkits: Why Underground Actors Are Taking Notice",
    "link": "https://www.bleepingcomputer.com/news/security/ebpf-rootkits-why-underground-actors-are-taking-notice/",
@@ -89,12 +101,6 @@
    "date": "2026-11-11T11:18:36+00:00"
   },
   {
-   "title": "Dreeze Emerges From Stealth With $33M to Rebuild Cloud Apps After Cyberattacks",
-   "link": "https://www.securityweek.com/dreeze-emerges-from-stealth-with-33m-to-rebuild-cloud-apps-after-cyberattacks/",
-   "source": "SecurityWeek",
-   "date": "2026-11-11T11:16:40+00:00"
-  },
-  {
    "title": "CISA flags Cisco BroadWorks flaw as actively exploited in attacks",
    "link": "https://www.bleepingcomputer.com/news/security/cisa-flags-cisco-broadworks-flaw-as-actively-exploited-in-attacks/",
    "source": "BleepingComputer",
@@ -129,12 +135,6 @@
    "link": "https://www.darkreading.com/vulnerabilities-threats/november-patch-tuesday-cornucopia-cves",
    "source": "Dark Reading",
    "date": "2026-11-10T22:26:51+00:00"
-  },
-  {
-   "title": "Railway breach leads to $740,000 in fraudulent AI charges",
-   "link": "https://www.bleepingcomputer.com/news/apple/railway-breach-leads-to-740-000-in-fraudulent-ai-charges/",
-   "source": "BleepingComputer",
-   "date": "2026-11-10T22:20:19+00:00"
   },
   {
    "title": "Microsoft Fixes Nearly 1,100 Security Vulnerabilities",
