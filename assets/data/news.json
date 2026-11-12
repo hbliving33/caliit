@@ -1,21 +1,51 @@
 {
- "updated": "2026-11-12T18:04:28.742398+00:00",
+ "updated": "2026-11-12T19:14:52.055947+00:00",
  "m365": {
-  "status": "Available",
-  "checked": "2026-11-12T18:04:30.223383+00:00",
+  "status": "ServiceDegradation",
+  "checked": "2026-11-12T19:14:53.624774+00:00",
   "link": "https://status.cloud.microsoft/"
  },
  "aws": {
   "status": "3 open events",
   "link": "https://health.aws.amazon.com/health/status",
-  "checked": "2026-11-12T18:04:28.742398+00:00"
+  "checked": "2026-11-12T19:14:52.055947+00:00"
  },
  "wasabi": {
   "status": "Available",
   "link": "https://status.wasabi.com/",
-  "checked": "2026-11-12T18:04:28.742398+00:00"
+  "checked": "2026-11-12T19:14:52.055947+00:00"
  },
  "items": [
+  {
+   "title": "Apache HTTP Server patches critical HTTP/2 remote code execution flaw",
+   "link": "https://www.bleepingcomputer.com/news/security/apache-http-server-patches-critical-http-2-remote-code-execution-flaw/",
+   "source": "BleepingComputer",
+   "date": "2026-11-12T19:12:55+00:00"
+  },
+  {
+   "title": "Webinar: See How Identity Blind Spots Put Your SOC at Risk and How to Close Them",
+   "link": "https://thehackernews.com/2026/11/your-soc-sees-alert-but-does-it-know.html",
+   "source": "The Hacker News",
+   "date": "2026-11-12T18:07:15+00:00"
+  },
+  {
+   "title": "ThreatsDay: 59 Linux Kernel Bugs, Falcon Spyware, GSocket Backdoors + 17 More Stories",
+   "link": "https://thehackernews.com/2026/11/threatsday-59-linux-kernel-bugs-falcon.html",
+   "source": "The Hacker News",
+   "date": "2026-11-12T18:02:51+00:00"
+  },
+  {
+   "title": "New SignDrop Zero-Day Exploit Turns Windows CLFS Security Feature Into SYSTEM Access",
+   "link": "https://thehackernews.com/2026/11/new-signdrop-zero-day-exploit-turns.html",
+   "source": "The Hacker News",
+   "date": "2026-11-12T17:50:27+00:00"
+  },
+  {
+   "title": "Trained to betray: How post-training supply chain attacks hijack coding agents",
+   "link": "https://www.microsoft.com/en-us/security/blog/2026/11/12/trained-to-betray-how-post-training-supply-chain-attacks-hijack-coding-agents/",
+   "source": "Microsoft Security Blog",
+   "date": "2026-11-12T17:00:00+00:00"
+  },
   {
    "title": "Critical Red Hat Quay Flaw Lets Attackers Read and Overwrite All Private Container Images in a Registry",
    "link": "https://thehackernews.com/2026/11/critical-red-hat-quay-flaw-lets.html",
@@ -83,28 +113,34 @@
    "date": "2026-11-12T13:12:11+00:00"
   },
   {
-   "title": "SCKit Malware Turns ScreenConnect Support Sessions Into Potential MSP Attack Paths",
-   "link": "https://thehackernews.com/2026/11/sckit-malware-targets-screenconnect.html",
-   "source": "The Hacker News",
-   "date": "2026-11-12T13:08:28+00:00"
-  },
-  {
    "title": "Microsoft: Recent Windows updates cause SQL Server performance issues",
    "link": "https://www.bleepingcomputer.com/news/microsoft/microsoft-recent-windows-updates-cause-sql-server-performance-issues/",
    "source": "BleepingComputer",
    "date": "2026-11-12T12:11:11+00:00"
   },
   {
-   "title": "Google Cloud Warns Three AMD Turin CPU Flaws Could Leak Data Across Processes in VMs",
-   "link": "https://thehackernews.com/2026/11/google-cloud-warns-three-amd-turin-cpu.html",
-   "source": "The Hacker News",
-   "date": "2026-11-12T12:09:14+00:00"
+   "title": "Siemens Desigo, Gridscale",
+   "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-316-02",
+   "source": "CISA",
+   "date": "2026-11-12T12:00:00+00:00"
   },
   {
-   "title": "Webinar: See How Identity Blind Spots Put Your SOC at Risk and How to Close Them",
-   "link": "https://thehackernews.com/2026/11/your-soc-sees-alert-but-does-it-know.html",
-   "source": "The Hacker News",
-   "date": "2026-11-12T12:02:51+00:00"
+   "title": "Siemens RUGGEDCOM APE1808",
+   "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-316-05",
+   "source": "CISA",
+   "date": "2026-11-12T12:00:00+00:00"
+  },
+  {
+   "title": "Siemens Building Automation and Energy Products",
+   "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-316-01",
+   "source": "CISA",
+   "date": "2026-11-12T12:00:00+00:00"
+  },
+  {
+   "title": "Siemens Industrial Edge Management",
+   "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-316-03",
+   "source": "CISA",
+   "date": "2026-11-12T12:00:00+00:00"
   },
   {
    "title": "Notion Customer Data Compromised in Fireworks AI Hack",
@@ -125,12 +161,6 @@
    "date": "2026-11-12T10:39:34+00:00"
   },
   {
-   "title": "Microsoft confirms Windows security updates installation issues",
-   "link": "https://www.bleepingcomputer.com/news/microsoft/microsoft-confirms-kb5132061-installation-issues-0x80070306-0x800f0989-0x800f0993-errors/",
-   "source": "BleepingComputer",
-   "date": "2026-11-12T10:24:07+00:00"
-  },
-  {
    "title": "Chinese AI Project Scouts Spies in Taiwan Chip Industry",
    "link": "https://www.darkreading.com/threat-intelligence/chinese-ai-project-scouts-spies-taiwan-chip-industry",
    "source": "Dark Reading",
@@ -149,18 +179,6 @@
    "date": "2026-11-11T21:44:04+00:00"
   },
   {
-   "title": "AI Raises the Stakes for Cyber Resilience",
-   "link": "https://www.darkreading.com/cyber-risk/ai-raises-stakes-cyber-resilience",
-   "source": "Dark Reading",
-   "date": "2026-11-11T21:20:41+00:00"
-  },
-  {
-   "title": "N-able Takes N-central Platform Offline After Discovery of 33 Flaws",
-   "link": "https://www.darkreading.com/endpoint-security/n-able-n-central-offline-33-flaws",
-   "source": "Dark Reading",
-   "date": "2026-11-11T20:05:18+00:00"
-  },
-  {
    "title": "The global socket: how threat actors are weaponizing GSocket for stealthy C2",
    "link": "https://www.microsoft.com/en-us/security/blog/2026/11/11/global-socket-how-threat-actors-weaponizing-gsocket-stealthy-c2/",
    "source": "Microsoft Security Blog",
@@ -173,31 +191,11 @@
    "date": "2026-11-11T18:06:01+00:00"
   },
   {
-   "title": "Lessons from 59 Linux Kernel Bug Reports",
-   "link": "https://www.microsoft.com/en-us/security/blog/2026/11/11/lessons-from-59-linux-kernel-bug-reports/",
-   "source": "Microsoft Security Blog",
-   "date": "2026-11-11T16:55:00+00:00"
-  },
-  {
    "title": "Microsoft Fixes Nearly 1,100 Security Vulnerabilities",
    "link": "https://krebsonsecurity.com/2026/11/microsoft-fixes-nearly-1100-security-vulnerabilities/",
    "source": "Krebs on Security",
    "date": "2026-11-10T21:55:03+00:00"
-  },
-  {
-   "title": "Actively exploited: GitLab Community Edition and Enterprise Edition (CVE-2026-97229)",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-97229",
-   "source": "CISA",
-   "date": "2026-10-29T00:00:00+00:00"
-  },
-  {
-   "title": "Actively exploited: Cisco Secure Firewall ASA Software and Cisco Secure FTD Software (CVE-2026-76418)",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-76418",
-   "source": "CISA",
-   "date": "2026-10-29T00:00:00+00:00"
   }
  ],
- "errors": {
-  "CISA": "HTTP Error 403: Forbidden"
- }
+ "errors": {}
 }
