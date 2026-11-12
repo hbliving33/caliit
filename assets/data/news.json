@@ -1,21 +1,69 @@
 {
- "updated": "2026-11-12T09:18:06.818727+00:00",
+ "updated": "2026-11-12T11:18:09.063036+00:00",
  "m365": {
   "status": "Available",
-  "checked": "2026-11-12T09:18:06.934817+00:00",
+  "checked": "2026-11-12T11:18:09.165386+00:00",
   "link": "https://status.cloud.microsoft/"
  },
  "aws": {
   "status": "3 open events",
   "link": "https://health.aws.amazon.com/health/status",
-  "checked": "2026-11-12T09:18:06.818727+00:00"
+  "checked": "2026-11-12T11:18:09.063036+00:00"
  },
  "wasabi": {
   "status": "Available",
   "link": "https://status.wasabi.com/",
-  "checked": "2026-11-12T09:18:06.818727+00:00"
+  "checked": "2026-11-12T11:18:09.063036+00:00"
  },
  "items": [
+  {
+   "title": "Notion Customer Data Compromised in Fireworks AI Hack",
+   "link": "https://www.securityweek.com/notion-customer-data-compromised-in-fireworks-ai-hack/",
+   "source": "SecurityWeek",
+   "date": "2026-11-12T11:08:52+00:00"
+  },
+  {
+   "title": "Inside an AI Attack Against a US Retailer",
+   "link": "https://www.darkreading.com/cyberattacks-data-breaches/inside-ai-attack-us-retailer",
+   "source": "Dark Reading",
+   "date": "2026-11-12T11:00:00+00:00"
+  },
+  {
+   "title": "Hackers Deploy Malware in Fresh ScreenConnect Campaign",
+   "link": "https://www.securityweek.com/hackers-deploy-malware-in-fresh-screenconnect-campaign/",
+   "source": "SecurityWeek",
+   "date": "2026-11-12T10:39:34+00:00"
+  },
+  {
+   "title": "Microsoft confirms Windows security updates installation issues",
+   "link": "https://www.bleepingcomputer.com/news/microsoft/microsoft-confirms-kb5132061-installation-issues-0x80070306-0x800f0989-0x800f0993-errors/",
+   "source": "BleepingComputer",
+   "date": "2026-11-12T10:24:07+00:00"
+  },
+  {
+   "title": "Hackers Target N-central Zero-Days as N-able Rushes Patches",
+   "link": "https://www.securityweek.com/hackers-target-n-central-zero-days-as-n-able-rushes-patches/",
+   "source": "SecurityWeek",
+   "date": "2026-11-12T09:39:55+00:00"
+  },
+  {
+   "title": "Hackers plant GSocket on Linux servers for persistent access",
+   "link": "https://www.bleepingcomputer.com/news/security/hackers-plant-gsocket-on-linux-servers-for-persistent-access/",
+   "source": "BleepingComputer",
+   "date": "2026-11-12T09:38:00+00:00"
+  },
+  {
+   "title": "Critical Pre-Auth MongoDB Flaw (CVE-2026-118383) Can Crash Lagging Servers on Failover",
+   "link": "https://thehackernews.com/2026/11/critical-pre-auth-mongodb-flaw-cve-2026.html",
+   "source": "The Hacker News",
+   "date": "2026-11-12T09:25:00+00:00"
+  },
+  {
+   "title": "Critical Red Hat Quay Vulnerability Could Expose Private Container Images",
+   "link": "https://www.securityweek.com/critical-red-hat-quay-vulnerability-could-expose-private-container-images/",
+   "source": "SecurityWeek",
+   "date": "2026-11-12T09:23:21+00:00"
+  },
   {
    "title": "Maersk Confirms Data Theft Amid $5 Million Extortion Attempt",
    "link": "https://www.securityweek.com/maersk-confirms-data-theft-amid-5-million-extortion-attempt/",
@@ -125,58 +173,10 @@
    "date": "2026-11-11T16:29:42+00:00"
   },
   {
-   "title": "Maersk confirms data breach as WhiteArmor ransomware demands $5 million",
-   "link": "https://www.bleepingcomputer.com/news/security/maersk-confirms-data-breach-as-whitearmor-ransomware-demands-5-million/",
-   "source": "BleepingComputer",
-   "date": "2026-11-11T16:24:18+00:00"
-  },
-  {
    "title": "Critical Zoom Workplace Flaw Could Allow Unauthenticated Remote Privilege Escalation",
    "link": "https://thehackernews.com/2026/11/critical-zoom-workplace-flaw-could.html",
    "source": "The Hacker News",
    "date": "2026-11-11T16:12:46+00:00"
-  },
-  {
-   "title": "Critical Xen Orchestra Flaws Exploited in Attacks",
-   "link": "https://www.securityweek.com/critical-xen-orchestra-flaws-exploited-in-attacks/",
-   "source": "SecurityWeek",
-   "date": "2026-11-11T15:42:47+00:00"
-  },
-  {
-   "title": "AntiFox AI Pentesting Platform Linked to Attacks That Accessed AWS Production Secrets",
-   "link": "https://thehackernews.com/2026/11/antifox-ai-pentesting-platform-linked.html",
-   "source": "The Hacker News",
-   "date": "2026-11-11T15:34:27+00:00"
-  },
-  {
-   "title": "Hackers use AntiFox AI agents in AWS credential-theft attacks",
-   "link": "https://www.bleepingcomputer.com/news/security/hackers-use-antifox-ai-agents-in-aws-credential-theft-attacks/",
-   "source": "BleepingComputer",
-   "date": "2026-11-11T15:12:59+00:00"
-  },
-  {
-   "title": "Asus, Zoom Release Security Patches",
-   "link": "https://www.securityweek.com/asus-zoom-release-security-patches/",
-   "source": "SecurityWeek",
-   "date": "2026-11-11T13:58:38+00:00"
-  },
-  {
-   "title": "Citrix, Ivanti Patch Critical and High-Severity Vulnerabilities",
-   "link": "https://www.securityweek.com/citrix-ivanti-patch-critical-and-high-severity-vulnerabilities/",
-   "source": "SecurityWeek",
-   "date": "2026-11-11T13:37:19+00:00"
-  },
-  {
-   "title": "Finite State Raises $27 Million to Secure Software and Firmware in Connected Devices",
-   "link": "https://www.securityweek.com/finite-state-raises-27-million-to-secure-software-and-firmware-in-connected-devices/",
-   "source": "SecurityWeek",
-   "date": "2026-11-11T12:24:33+00:00"
-  },
-  {
-   "title": "Detecting sleeper agents hiding in AI model neurons",
-   "link": "https://www.microsoft.com/en-us/security/blog/2026/11/10/detecting-sleeper-agents-hiding-in-ai-model-neurons/",
-   "source": "Microsoft Security Blog",
-   "date": "2026-11-10T23:00:00+00:00"
   },
   {
    "title": "Microsoft Fixes Nearly 1,100 Security Vulnerabilities",
