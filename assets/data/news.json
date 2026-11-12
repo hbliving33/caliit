@@ -1,21 +1,33 @@
 {
- "updated": "2026-11-12T07:38:54.593726+00:00",
+ "updated": "2026-11-12T09:18:06.818727+00:00",
  "m365": {
   "status": "Available",
-  "checked": "2026-11-12T07:38:54.646943+00:00",
+  "checked": "2026-11-12T09:18:06.934817+00:00",
   "link": "https://status.cloud.microsoft/"
  },
  "aws": {
   "status": "3 open events",
   "link": "https://health.aws.amazon.com/health/status",
-  "checked": "2026-11-12T07:38:54.593726+00:00"
+  "checked": "2026-11-12T09:18:06.818727+00:00"
  },
  "wasabi": {
   "status": "Available",
   "link": "https://status.wasabi.com/",
-  "checked": "2026-11-12T07:38:54.593726+00:00"
+  "checked": "2026-11-12T09:18:06.818727+00:00"
  },
  "items": [
+  {
+   "title": "Maersk Confirms Data Theft Amid $5 Million Extortion Attempt",
+   "link": "https://www.securityweek.com/maersk-confirms-data-theft-amid-5-million-extortion-attempt/",
+   "source": "SecurityWeek",
+   "date": "2026-11-12T08:38:47+00:00"
+  },
+  {
+   "title": "Node.js Fixes 16 Flaws, Including HTTP/2 Bugs That Crash Servers and Leak Other Connections' Data",
+   "link": "https://thehackernews.com/2026/11/nodejs-fixes-16-flaws-including-http2.html",
+   "source": "The Hacker News",
+   "date": "2026-11-12T08:20:37+00:00"
+  },
   {
    "title": "Attacker Used 4,837 Hijacked GitHub Accounts to Run a CI Secret Stealer in 1,806+ Repositories",
    "link": "https://thehackernews.com/2026/11/4837-hijacked-github-accounts-ran-ci.html",
@@ -143,12 +155,6 @@
    "date": "2026-11-11T15:12:59+00:00"
   },
   {
-   "title": "Hackers Target Qlik Sense Servers With Reverse Shells, Stage ActiveMQ and Veeam Exploits",
-   "link": "https://thehackernews.com/2026/11/hackers-target-qlik-sense-servers-with.html",
-   "source": "The Hacker News",
-   "date": "2026-11-11T14:01:00+00:00"
-  },
-  {
    "title": "Asus, Zoom Release Security Patches",
    "link": "https://www.securityweek.com/asus-zoom-release-security-patches/",
    "source": "SecurityWeek",
@@ -165,12 +171,6 @@
    "link": "https://www.securityweek.com/finite-state-raises-27-million-to-secure-software-and-firmware-in-connected-devices/",
    "source": "SecurityWeek",
    "date": "2026-11-11T12:24:33+00:00"
-  },
-  {
-   "title": "Fortinet Patches Nearly 100 Vulnerabilities",
-   "link": "https://www.securityweek.com/fortinet-patches-nearly-100-vulnerabilities/",
-   "source": "SecurityWeek",
-   "date": "2026-11-11T12:10:14+00:00"
   },
   {
    "title": "Detecting sleeper agents hiding in AI model neurons",
