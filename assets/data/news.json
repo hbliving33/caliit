@@ -1,21 +1,45 @@
 {
- "updated": "2026-11-13T12:08:26.588654+00:00",
+ "updated": "2026-11-13T13:28:18.107057+00:00",
  "m365": {
   "status": "ServiceDegradation",
-  "checked": "2026-11-13T12:08:26.656492+00:00",
+  "checked": "2026-11-13T13:28:18.161523+00:00",
   "link": "https://status.cloud.microsoft/"
  },
  "aws": {
   "status": "2 open events",
   "link": "https://health.aws.amazon.com/health/status",
-  "checked": "2026-11-13T12:08:26.588654+00:00"
+  "checked": "2026-11-13T13:28:18.107057+00:00"
  },
  "wasabi": {
   "status": "Available",
   "link": "https://status.wasabi.com/",
-  "checked": "2026-11-13T12:08:26.588654+00:00"
+  "checked": "2026-11-13T13:28:18.107057+00:00"
  },
  "items": [
+  {
+   "title": "Attackers in Binance Breach Targeted Known Weakness, Missing Controls",
+   "link": "https://www.darkreading.com/cybersecurity-operations/attackers-binance-breach-targeted-weakness-missing-controls",
+   "source": "Dark Reading",
+   "date": "2026-11-13T13:00:00+00:00"
+  },
+  {
+   "title": "Apify Confirms Customer Data Accessed in Cyberattack",
+   "link": "https://www.securityweek.com/apify-confirms-customer-data-accessed-in-cyberattack/",
+   "source": "SecurityWeek",
+   "date": "2026-11-13T12:41:01+00:00"
+  },
+  {
+   "title": "Microsoft says November security updates cause printing issues",
+   "link": "https://www.bleepingcomputer.com/news/microsoft/microsoft-says-november-security-updates-cause-printing-issues/",
+   "source": "BleepingComputer",
+   "date": "2026-11-13T12:27:40+00:00"
+  },
+  {
+   "title": "SilentAir Hackers Intercept Calls, SMS From Inside Mobile Networks",
+   "link": "https://www.securityweek.com/silentair-hackers-intercept-calls-sms-from-inside-mobile-networks/",
+   "source": "SecurityWeek",
+   "date": "2026-11-13T12:20:28+00:00"
+  },
   {
    "title": "When an AI Agent Goes Wrong, Can You Stop It?",
    "link": "https://thehackernews.com/2026/11/when-ai-agent-goes-wrong-can-you-stop-it.html",
@@ -83,18 +107,6 @@
    "date": "2026-11-13T08:05:49+00:00"
   },
   {
-   "title": "PHP2Shell Exploited in Destructive Check Point Gateway Attacks",
-   "link": "https://www.securityweek.com/php2shell-exploited-in-destructive-check-point-gateway-attacks/",
-   "source": "SecurityWeek",
-   "date": "2026-11-13T07:39:04+00:00"
-  },
-  {
-   "title": "Hackers Exploit New N-central Zero-Day Hours After PoC Publication",
-   "link": "https://www.securityweek.com/hackers-exploit-new-n-central-zero-day-hours-after-poc-publication/",
-   "source": "SecurityWeek",
-   "date": "2026-11-13T07:20:50+00:00"
-  },
-  {
    "title": "Hackers Exploit N-central Flaws to Infect 21 Servers, Including 19 Running Hotfix 2",
    "link": "https://thehackernews.com/2026/11/hackers-exploit-n-central-flaws-to.html",
    "source": "The Hacker News",
@@ -123,12 +135,6 @@
    "link": "https://www.darkreading.com/cybersecurity-operations/cyber-experts-fight-artex-antifox",
    "source": "Dark Reading",
    "date": "2026-11-12T21:18:52+00:00"
-  },
-  {
-   "title": "Massive Microsoft 365 outage disrupts Outlook, Teams, Copilot worldwide",
-   "link": "https://www.bleepingcomputer.com/news/microsoft/massive-microsoft-365-outage-disrupts-outlook-teams-copilot-worldwide/",
-   "source": "BleepingComputer",
-   "date": "2026-11-12T20:15:16+00:00"
   },
   {
    "title": "Extortion Group Luna Moth Flits Into Law Firms a Second Time",
@@ -171,12 +177,6 @@
    "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-316-03",
    "source": "CISA",
    "date": "2026-11-12T12:00:00+00:00"
-  },
-  {
-   "title": "Inside an AI Attack Against a US Retailer",
-   "link": "https://www.darkreading.com/cyberattacks-data-breaches/inside-ai-attack-us-retailer",
-   "source": "Dark Reading",
-   "date": "2026-11-12T11:00:00+00:00"
   },
   {
    "title": "The global socket: how threat actors are weaponizing GSocket for stealthy C2",
