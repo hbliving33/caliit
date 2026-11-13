@@ -1,19 +1,19 @@
 {
- "updated": "2026-11-13T21:59:45.804576+00:00",
+ "updated": "2026-11-13T22:58:03.552314+00:00",
  "m365": {
   "status": "ServiceDegradation",
-  "checked": "2026-11-13T21:59:45.871169+00:00",
+  "checked": "2026-11-13T22:58:03.599169+00:00",
   "link": "https://status.cloud.microsoft/"
  },
  "aws": {
   "status": "2 open events",
   "link": "https://health.aws.amazon.com/health/status",
-  "checked": "2026-11-13T21:59:45.804576+00:00"
+  "checked": "2026-11-13T22:58:03.552314+00:00"
  },
  "wasabi": {
-  "status": "Service Under Maintenance",
+  "status": "Available",
   "link": "https://status.wasabi.com/",
-  "checked": "2026-11-13T21:59:45.804576+00:00"
+  "checked": "2026-11-13T22:58:03.552314+00:00"
  },
  "items": [
   {
@@ -21,6 +21,18 @@
    "link": "https://www.securityweek.com/faa-ground-stop-issued-due-to-extraordinary-circumstances/",
    "source": "SecurityWeek",
    "date": "2026-11-13T21:33:27+00:00"
+  },
+  {
+   "title": "SCKit abuses ScreenConnect to deploy remote access and target technician sessions",
+   "link": "https://www.microsoft.com/en-us/security/blog/2026/11/13/sckit-abuses-screenconnect-deploy-remote-access-target-technician-sessions/",
+   "source": "Microsoft Security Blog",
+   "date": "2026-11-13T21:31:44+00:00"
+  },
+  {
+   "title": "ArcticRAT Cybercrime Gang Profiles Victim Finances With AI",
+   "link": "https://www.darkreading.com/mobile-security/arcticrat-cybercrime-gang-profiles-victim-finances-ai",
+   "source": "Dark Reading",
+   "date": "2026-11-13T20:20:27+00:00"
   },
   {
    "title": "Trezor confirms crypto-stealing implants in three wallets, releases fix",
@@ -171,18 +183,6 @@
    "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-316-05",
    "source": "CISA",
    "date": "2026-11-12T12:00:00+00:00"
-  },
-  {
-   "title": "Siemens Building Automation and Energy Products",
-   "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-316-01",
-   "source": "CISA",
-   "date": "2026-11-12T12:00:00+00:00"
-  },
-  {
-   "title": "The global socket: how threat actors are weaponizing GSocket for stealthy C2",
-   "link": "https://www.microsoft.com/en-us/security/blog/2026/11/11/global-socket-how-threat-actors-weaponizing-gsocket-stealthy-c2/",
-   "source": "Microsoft Security Blog",
-   "date": "2026-11-11T19:49:57+00:00"
   },
   {
    "title": "Who Runs the Ransomware Group Qilin?",
