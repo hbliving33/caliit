@@ -1,21 +1,45 @@
 {
- "updated": "2026-11-13T07:36:30.742121+00:00",
+ "updated": "2026-11-13T09:15:24.968237+00:00",
  "m365": {
   "status": "ServiceDegradation",
-  "checked": "2026-11-13T07:36:30.782679+00:00",
+  "checked": "2026-11-13T09:15:25.095515+00:00",
   "link": "https://status.cloud.microsoft/"
  },
  "aws": {
   "status": "2 open events",
   "link": "https://health.aws.amazon.com/health/status",
-  "checked": "2026-11-13T07:36:30.742121+00:00"
+  "checked": "2026-11-13T09:15:24.968237+00:00"
  },
  "wasabi": {
   "status": "Available",
   "link": "https://status.wasabi.com/",
-  "checked": "2026-11-13T07:36:30.742121+00:00"
+  "checked": "2026-11-13T09:15:24.968237+00:00"
  },
  "items": [
+  {
+   "title": "Nightmare Eclipse Drops Windows Zero-Day Exploit \u2018SignDrop\u2019",
+   "link": "https://www.securityweek.com/nightmare-eclipse-drops-windows-zero-day-exploit-signdrop/",
+   "source": "SecurityWeek",
+   "date": "2026-11-13T08:50:36+00:00"
+  },
+  {
+   "title": "Police arrest 354 suspects in dark web cybercrime crackdown",
+   "link": "https://www.bleepingcomputer.com/news/security/police-arrest-354-vendors-buyers-in-global-cybercrime-crackdown/",
+   "source": "BleepingComputer",
+   "date": "2026-11-13T08:34:20+00:00"
+  },
+  {
+   "title": "Hackers Exploit PHP2Shell Flaws in Check Point Gateways to Deploy TSGA Backdoor and Wipe ESXi Files",
+   "link": "https://thehackernews.com/2026/11/hackers-exploit-php2shell-flaws-in.html",
+   "source": "The Hacker News",
+   "date": "2026-11-13T08:05:49+00:00"
+  },
+  {
+   "title": "PHP2Shell Exploited in Destructive Check Point Gateway Attacks",
+   "link": "https://www.securityweek.com/php2shell-exploited-in-destructive-check-point-gateway-attacks/",
+   "source": "SecurityWeek",
+   "date": "2026-11-13T07:39:04+00:00"
+  },
   {
    "title": "Hackers Exploit New N-central Zero-Day Hours After PoC Publication",
    "link": "https://www.securityweek.com/hackers-exploit-new-n-central-zero-day-hours-after-poc-publication/",
@@ -119,34 +143,10 @@
    "date": "2026-11-12T16:27:01+00:00"
   },
   {
-   "title": "New Windows SignDrop zero-day gives hackers SYSTEM privileges",
-   "link": "https://www.bleepingcomputer.com/news/security/new-windows-signdrop-zero-day-gives-hackers-system-privileges/",
-   "source": "BleepingComputer",
-   "date": "2026-11-12T16:04:00+00:00"
-  },
-  {
-   "title": "Citrix Patches 12 NetScaler and Secure Access Client Flaws, Including Authentication Bypass",
-   "link": "https://thehackernews.com/2026/11/citrix-patches-12-netscaler-and-secure.html",
-   "source": "The Hacker News",
-   "date": "2026-11-12T15:38:49+00:00"
-  },
-  {
    "title": "Apache Patches Critical HTTP Server RCE Found by Anthropic, Google",
    "link": "https://www.securityweek.com/apache-patches-critical-http-server-rce-found-by-anthropic-google/",
    "source": "SecurityWeek",
    "date": "2026-11-12T15:38:31+00:00"
-  },
-  {
-   "title": "Chrome, Firefox Updates Patch Over 180 Vulnerabilities",
-   "link": "https://www.securityweek.com/chrome-firefox-updates-patch-180-vulnerabilities/",
-   "source": "SecurityWeek",
-   "date": "2026-11-12T13:42:09+00:00"
-  },
-  {
-   "title": "Attacker Targets 60,000 GitHub Repositories in Credential Theft Campaign",
-   "link": "https://www.securityweek.com/attacker-targets-60000-github-repositories-in-credential-theft-campaign/",
-   "source": "SecurityWeek",
-   "date": "2026-11-12T13:39:03+00:00"
   },
   {
    "title": "Siemens Desigo, Gridscale",
