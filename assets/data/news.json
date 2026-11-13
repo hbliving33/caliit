@@ -1,21 +1,27 @@
 {
- "updated": "2026-11-13T13:28:18.107057+00:00",
+ "updated": "2026-11-13T15:05:34.989955+00:00",
  "m365": {
   "status": "ServiceDegradation",
-  "checked": "2026-11-13T13:28:18.161523+00:00",
+  "checked": "2026-11-13T15:05:35.056920+00:00",
   "link": "https://status.cloud.microsoft/"
  },
  "aws": {
   "status": "2 open events",
   "link": "https://health.aws.amazon.com/health/status",
-  "checked": "2026-11-13T13:28:18.107057+00:00"
+  "checked": "2026-11-13T15:05:34.989955+00:00"
  },
  "wasabi": {
-  "status": "Available",
+  "status": "Service Under Maintenance",
   "link": "https://status.wasabi.com/",
-  "checked": "2026-11-13T13:28:18.107057+00:00"
+  "checked": "2026-11-13T15:05:34.989955+00:00"
  },
  "items": [
+  {
+   "title": "Microsoft Struggles to Restore Email and Other Services in a Global Outage",
+   "link": "https://www.securityweek.com/microsoft-struggles-to-restore-email-and-other-services-in-a-global-outage/",
+   "source": "SecurityWeek",
+   "date": "2026-11-13T13:47:42+00:00"
+  },
   {
    "title": "Attackers in Binance Breach Targeted Known Weakness, Missing Controls",
    "link": "https://www.darkreading.com/cybersecurity-operations/attackers-binance-breach-targeted-weakness-missing-controls",
@@ -87,12 +93,6 @@
    "link": "https://www.securityweek.com/openai-unveils-daybreak-red-team-defense-factory-security-tools/",
    "source": "SecurityWeek",
    "date": "2026-11-13T09:21:01+00:00"
-  },
-  {
-   "title": "Nightmare Eclipse Drops Windows Zero-Day Exploit \u2018SignDrop\u2019",
-   "link": "https://www.securityweek.com/nightmare-eclipse-drops-windows-zero-day-exploit-signdrop/",
-   "source": "SecurityWeek",
-   "date": "2026-11-13T08:50:36+00:00"
   },
   {
    "title": "Police arrest 354 suspects in dark web cybercrime crackdown",
