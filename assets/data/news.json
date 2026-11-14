@@ -1,21 +1,45 @@
 {
- "updated": "2026-11-14T09:03:00.646781+00:00",
+ "updated": "2026-11-14T15:52:26.592806+00:00",
  "m365": {
   "status": "Available",
-  "checked": "2026-11-14T09:03:00.833234+00:00",
+  "checked": "2026-11-14T15:52:26.656267+00:00",
   "link": "https://status.cloud.microsoft/"
  },
  "aws": {
   "status": "2 open events",
   "link": "https://health.aws.amazon.com/health/status",
-  "checked": "2026-11-14T09:03:00.646781+00:00"
+  "checked": "2026-11-14T15:52:26.592806+00:00"
  },
  "wasabi": {
   "status": "Available",
   "link": "https://status.wasabi.com/",
-  "checked": "2026-11-14T09:03:00.646781+00:00"
+  "checked": "2026-11-14T15:52:26.592806+00:00"
  },
  "items": [
+  {
+   "title": "US disrupts North Korean campaign behind $400 million crypto theft",
+   "link": "https://www.bleepingcomputer.com/news/security/us-disrupts-north-korean-campaign-behind-400-million-crypto-theft/",
+   "source": "BleepingComputer",
+   "date": "2026-11-14T15:15:49+00:00"
+  },
+  {
+   "title": "Is AI Making Us Worse at Cybersecurity?",
+   "link": "https://www.securityweek.com/is-ai-making-us-worse-at-cybersecurity/",
+   "source": "SecurityWeek",
+   "date": "2026-11-14T14:00:00+00:00"
+  },
+  {
+   "title": "Attackers Exploit UnrealIRCd Flaw That Enables Server-Level Command Injection",
+   "link": "https://thehackernews.com/2026/11/attackers-exploit-unrealircd-flaw-that.html",
+   "source": "The Hacker News",
+   "date": "2026-11-14T12:38:35+00:00"
+  },
+  {
+   "title": "Apple Reveals How Secure Exclaves Shield Camera and Microphone Data",
+   "link": "https://www.securityweek.com/apple-reveals-how-secure-exclaves-shield-camera-and-microphone-data/",
+   "source": "SecurityWeek",
+   "date": "2026-11-14T11:00:00+00:00"
+  },
   {
    "title": "No Signs of Hacking in FAA Ground Stop as FBI Reportedly Probes Software Update",
    "link": "https://www.securityweek.com/no-signs-of-hacking-in-faa-ground-stop-as-fbi-reportedly-probes-software-update/",
@@ -107,22 +131,10 @@
    "date": "2026-11-13T13:00:00+00:00"
   },
   {
-   "title": "Apify Confirms Customer Data Accessed in Cyberattack",
-   "link": "https://www.securityweek.com/apify-confirms-customer-data-accessed-in-cyberattack/",
-   "source": "SecurityWeek",
-   "date": "2026-11-13T12:41:01+00:00"
-  },
-  {
    "title": "Microsoft says November security updates cause printing issues",
    "link": "https://www.bleepingcomputer.com/news/microsoft/microsoft-says-november-security-updates-cause-printing-issues/",
    "source": "BleepingComputer",
    "date": "2026-11-13T12:27:40+00:00"
-  },
-  {
-   "title": "SilentAir Hackers Intercept Calls, SMS From Inside Mobile Networks",
-   "link": "https://www.securityweek.com/silentair-hackers-intercept-calls-sms-from-inside-mobile-networks/",
-   "source": "SecurityWeek",
-   "date": "2026-11-13T12:20:28+00:00"
   },
   {
    "title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
@@ -135,18 +147,6 @@
    "link": "https://thehackernews.com/2026/11/when-ai-agent-goes-wrong-can-you-stop-it.html",
    "source": "The Hacker News",
    "date": "2026-11-13T11:52:31+00:00"
-  },
-  {
-   "title": "SilentAir Hijacks Asian Telecom Networks to Intercept SMS 2FA Codes and Spy on Taiwanese Users",
-   "link": "https://thehackernews.com/2026/11/silentair-hijacks-asian-telecom.html",
-   "source": "The Hacker News",
-   "date": "2026-11-13T11:10:40+00:00"
-  },
-  {
-   "title": "Check Point warns of zero-day flaw exploited for root access",
-   "link": "https://www.bleepingcomputer.com/news/security/check-point-patches-zero-day-that-lets-hackers-get-root-access/",
-   "source": "BleepingComputer",
-   "date": "2026-11-13T10:44:22+00:00"
   },
   {
    "title": "Getting Past the Post-Quantum Cryptography Discovery Phase",
