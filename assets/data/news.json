@@ -1,21 +1,99 @@
 {
- "updated": "2026-11-19T02:37:42.813819+00:00",
+ "updated": "2026-11-19T11:48:43.356672+00:00",
  "m365": {
   "status": "Available",
-  "checked": "2026-11-19T02:37:42.978183+00:00",
+  "checked": "2026-11-19T11:48:43.393946+00:00",
   "link": "https://status.cloud.microsoft/"
  },
  "aws": {
   "status": "2 open events",
   "link": "https://health.aws.amazon.com/health/status",
-  "checked": "2026-11-19T02:37:42.813819+00:00"
+  "checked": "2026-11-19T11:48:43.356672+00:00"
  },
  "wasabi": {
   "status": "Service Under Maintenance",
   "link": "https://status.wasabi.com/",
-  "checked": "2026-11-19T02:37:42.813819+00:00"
+  "checked": "2026-11-19T11:48:43.356672+00:00"
  },
  "items": [
+  {
+   "title": "Splunk Patches Nearly 140 Flaws Across Three Core Products",
+   "link": "https://www.securityweek.com/splunk-patches-nearly-140-flaws-across-three-core-products/",
+   "source": "SecurityWeek",
+   "date": "2026-11-19T10:41:05+00:00"
+  },
+  {
+   "title": "Microsoft confirms app installation, launch issues after hotpatch",
+   "link": "https://www.bleepingcomputer.com/news/microsoft/microsoft-confirms-app-installation-launch-issues-after-hotpatch/",
+   "source": "BleepingComputer",
+   "date": "2026-11-19T10:35:05+00:00"
+  },
+  {
+   "title": "F5 Patches Critical NGINX2Root Flaws as PoC Exploits Go Public",
+   "link": "https://www.securityweek.com/f5-patches-critical-nginx2root-flaws-as-poc-exploits-go-public/",
+   "source": "SecurityWeek",
+   "date": "2026-11-19T10:26:51+00:00"
+  },
+  {
+   "title": "Hackers Breach N-able Cloud Server, Disrupting Email Security Management Across 3 Regions",
+   "link": "https://thehackernews.com/2026/11/n-able-confirms-hackers-accessed-cloud.html",
+   "source": "The Hacker News",
+   "date": "2026-11-19T09:31:26+00:00"
+  },
+  {
+   "title": "NVIDIA investigating Gentlemen ransomware breach claims",
+   "link": "https://www.bleepingcomputer.com/news/security/nvidia-investigating-gentlemen-ransomware-breach-claims/",
+   "source": "BleepingComputer",
+   "date": "2026-11-19T09:23:21+00:00"
+  },
+  {
+   "title": "Java4Shell Exploitation Attempts Begin as Vendors Rush Out Advisories",
+   "link": "https://www.securityweek.com/java4shell-exploitation-attempts-begin-as-vendors-rush-out-advisories/",
+   "source": "SecurityWeek",
+   "date": "2026-11-19T09:10:58+00:00"
+  },
+  {
+   "title": "Ruby Releases Fixes for 7 Regex and String Flaws, Warns 5 Have Proof-of-Concept RCE",
+   "link": "https://thehackernews.com/2026/11/ruby-releases-fixes-for-7-regex-and.html",
+   "source": "The Hacker News",
+   "date": "2026-11-19T08:42:11+00:00"
+  },
+  {
+   "title": "Researcher Demonstrates Database RCE Exploits Affecting PostgreSQL, MySQL and Oracle",
+   "link": "https://thehackernews.com/2026/11/researcher-demonstrates-database-rce.html",
+   "source": "The Hacker News",
+   "date": "2026-11-19T08:14:00+00:00"
+  },
+  {
+   "title": "Africa Retakes Top Spot as Most Attacked Region, Led by Nigeria Surge",
+   "link": "https://www.darkreading.com/threat-intelligence/africa-top-spot-most-attacked-region-nigeria-surge",
+   "source": "Dark Reading",
+   "date": "2026-11-19T08:00:00+00:00"
+  },
+  {
+   "title": "CISA Warns of 4 Exploited Flaws Linked to Ransomware, Cryptomining, and LLMjacking Attacks",
+   "link": "https://thehackernews.com/2026/11/cisa-warns-of-4-exploited-flaws-linked.html",
+   "source": "The Hacker News",
+   "date": "2026-11-19T08:00:00+00:00"
+  },
+  {
+   "title": "PHP Readies Critical Security Updates to Patch Another RCE Flaw",
+   "link": "https://www.securityweek.com/php-readies-critical-security-updates-to-patch-another-rce-flaw/",
+   "source": "SecurityWeek",
+   "date": "2026-11-19T07:45:17+00:00"
+  },
+  {
+   "title": "PHP Warns of Critical Security Flaws Affecting All Supported Versions, Fixes Coming November 19",
+   "link": "https://thehackernews.com/2026/11/php-warns-of-critical-security-flaws.html",
+   "source": "The Hacker News",
+   "date": "2026-11-19T04:33:46+00:00"
+  },
+  {
+   "title": "Palo Alto Networks to Buy AI Startup Applied Compute for $4.5 Billion",
+   "link": "https://www.securityweek.com/palo-alto-networks-to-buy-ai-startup-applied-compute-for-4-5-billion/",
+   "source": "SecurityWeek",
+   "date": "2026-11-19T03:25:23+00:00"
+  },
   {
    "title": "Ukraine, FBI arrest ransomware gang members tied to $40M in ransoms",
    "link": "https://www.bleepingcomputer.com/news/security/ukraine-fbi-arrest-ransomware-gang-members-tied-to-40m-in-ransoms/",
@@ -59,18 +137,6 @@
    "date": "2026-11-18T18:31:17+00:00"
   },
   {
-   "title": "F5 Warns 6 Critical BIG-IP Flaws Can Crash Traffic in Specific Setups, May Allow RCE",
-   "link": "https://thehackernews.com/2026/11/f5-warns-6-critical-big-ip-flaws-can.html",
-   "source": "The Hacker News",
-   "date": "2026-11-18T18:15:39+00:00"
-  },
-  {
-   "title": "Critical Apache Roller RCE Flaw Under Active Exploitation, No Authentication Required",
-   "link": "https://thehackernews.com/2026/11/critical-apache-roller-rce-flaw-under.html",
-   "source": "The Hacker News",
-   "date": "2026-11-18T17:10:45+00:00"
-  },
-  {
    "title": "Microsoft\u2019s Agent Framework PyPI package compromised to steal credentials",
    "link": "https://www.bleepingcomputer.com/news/security/microsofts-agent-framework-pypi-package-compromised-to-steal-credentials/",
    "source": "BleepingComputer",
@@ -83,22 +149,10 @@
    "date": "2026-11-18T16:54:52+00:00"
   },
   {
-   "title": "VeroSecurity Raises $11 Million for AI Security Engineering Platform",
+   "title": "Vero Security Raises $11 Million for AI Security Engineering Platform",
    "link": "https://www.securityweek.com/verosecurity-raises-11-million-for-ai-security-engineering-platform/",
    "source": "SecurityWeek",
    "date": "2026-11-18T15:30:42+00:00"
-  },
-  {
-   "title": "From Deepfakes to Helpdesk Impersonation: Why Stronger Verification Matters",
-   "link": "https://www.bleepingcomputer.com/news/security/from-deepfakes-to-helpdesk-impersonation-why-stronger-verification-matters/",
-   "source": "BleepingComputer",
-   "date": "2026-11-18T15:00:10+00:00"
-  },
-  {
-   "title": "New EggStreme Malware Variant Goes Silent to Evade Security Tools in Government Attacks",
-   "link": "https://thehackernews.com/2026/11/eggstreme-hackers-rebuild-malware-with.html",
-   "source": "The Hacker News",
-   "date": "2026-11-18T14:11:28+00:00"
   },
   {
    "title": "Major Brazilian Signature Apps Enable RCE & Fraud",
@@ -107,70 +161,16 @@
    "date": "2026-11-18T14:00:00+00:00"
   },
   {
-   "title": "Russian APT Poses as Employee of Hacked Firm to Breach Another US Organization",
-   "link": "https://www.securityweek.com/russian-apt-poses-as-employee-of-hacked-firm-to-breach-another-us-organization/",
-   "source": "SecurityWeek",
-   "date": "2026-11-18T13:33:47+00:00"
-  },
-  {
-   "title": "Last of Five Defendants Sentenced in US Scattered Spider Hacking Case",
-   "link": "https://www.securityweek.com/last-of-five-defendants-sentenced-in-us-scattered-spider-hacking-case/",
-   "source": "SecurityWeek",
-   "date": "2026-11-18T13:19:32+00:00"
-  },
-  {
-   "title": "New Attack Bypasses TPM Lockout to Crack Windows Hello and BitLocker PINs in Days, Not Years",
-   "link": "https://thehackernews.com/2026/11/flash-chip-attack-bypasses-tpm-lockout.html",
-   "source": "The Hacker News",
-   "date": "2026-11-18T12:28:30+00:00"
-  },
-  {
-   "title": "AI Pentesting Checklist for Web Apps: 15 Questions to Ask Before Choosing a Vendor",
-   "link": "https://thehackernews.com/2026/11/ai-pentesting-checklist-for-web-apps-15.html",
-   "source": "The Hacker News",
-   "date": "2026-11-18T12:15:00+00:00"
-  },
-  {
-   "title": "Microsoft Takes Perception Agentic Security Platform Out of Preview",
-   "link": "https://www.securityweek.com/microsoft-takes-perception-agentic-security-platform-out-of-preview/",
-   "source": "SecurityWeek",
-   "date": "2026-11-18T12:14:23+00:00"
-  },
-  {
    "title": "CISA Adds Four Known Exploited Vulnerabilities to Catalog",
    "link": "https://www.cisa.gov/news-events/alerts/2026/11/18/cisa-adds-four-known-exploited-vulnerabilities-catalog",
    "source": "CISA",
    "date": "2026-11-18T12:00:00+00:00"
   },
   {
-   "title": "CISO Conversations: Patti Degnan \u2013 Part of the Job Is Deciding What Not to Do",
-   "link": "https://www.securityweek.com/ciso-conversations-patti-degnan-part-of-the-job-is-deciding-what-not-to-do/",
-   "source": "SecurityWeek",
-   "date": "2026-11-18T12:00:00+00:00"
-  },
-  {
-   "title": "Dizigom illegal streaming service with 21M monthly visits shuts down",
-   "link": "https://www.bleepingcomputer.com/news/security/dizigom-illegal-streaming-service-with-21m-monthly-visits-shuts-down/",
-   "source": "BleepingComputer",
-   "date": "2026-11-18T11:50:25+00:00"
-  },
-  {
-   "title": "Chrome 158 Patches 204 Vulnerabilities",
-   "link": "https://www.securityweek.com/chrome-158-patches-204-vulnerabilities/",
-   "source": "SecurityWeek",
-   "date": "2026-11-18T11:43:22+00:00"
-  },
-  {
    "title": "Attackers Used Optimizely to A/B Test Malware on Top Websites",
    "link": "https://krebsonsecurity.com/2026/11/attackers-used-optimizely-to-a-b-test-malware-on-top-websites/",
    "source": "Krebs on Security",
    "date": "2026-11-18T02:52:04+00:00"
-  },
-  {
-   "title": "Optimizely Malware Attacks Highlight Third-Party Vendor Risks",
-   "link": "https://www.darkreading.com/cyber-risk/optimizely-malware-attacks-third-party-vendor-risks",
-   "source": "Dark Reading",
-   "date": "2026-11-17T22:34:22+00:00"
   },
   {
    "title": "Security for the agentic era, powered by Microsoft Perception",
