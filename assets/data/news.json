@@ -1,68 +1,158 @@
 {
- "updated": "2026-11-19T11:48:43.356672+00:00",
+ "updated": "2026-11-19T20:43:54.604295+00:00",
  "m365": {
   "status": "Available",
-  "checked": "2026-11-19T11:48:43.393946+00:00",
+  "checked": "2026-11-19T20:43:54.805388+00:00",
   "link": "https://status.cloud.microsoft/"
  },
  "aws": {
   "status": "2 open events",
   "link": "https://health.aws.amazon.com/health/status",
-  "checked": "2026-11-19T11:48:43.356672+00:00"
+  "checked": "2026-11-19T20:43:54.604295+00:00"
  },
  "wasabi": {
   "status": "Service Under Maintenance",
   "link": "https://status.wasabi.com/",
-  "checked": "2026-11-19T11:48:43.356672+00:00"
+  "checked": "2026-11-19T20:43:54.604295+00:00"
  },
  "items": [
   {
-   "title": "Splunk Patches Nearly 140 Flaws Across Three Core Products",
-   "link": "https://www.securityweek.com/splunk-patches-nearly-140-flaws-across-three-core-products/",
-   "source": "SecurityWeek",
-   "date": "2026-11-19T10:41:05+00:00"
+   "title": "Navigating Vulnerability Hysteria in the AI Era",
+   "link": "https://www.darkreading.com/vulnerabilities-threats/navigating-vulnerability-hysteria-ai-era",
+   "source": "Dark Reading",
+   "date": "2026-11-19T19:46:44+00:00"
   },
   {
-   "title": "Microsoft confirms app installation, launch issues after hotpatch",
-   "link": "https://www.bleepingcomputer.com/news/microsoft/microsoft-confirms-app-installation-launch-issues-after-hotpatch/",
+   "title": "Newly Patched VMware vCenter Flaw Exploited as Zero-Day by Chinese APT",
+   "link": "https://www.securityweek.com/newly-patched-vmware-vcenter-flaw-exploited-as-zero-day-by-chinese-apt/",
+   "source": "SecurityWeek",
+   "date": "2026-11-19T19:21:06+00:00"
+  },
+  {
+   "title": "ThreatsDay: GPT-6.2 Jailbreak Flaws, BubbleLoader PNG Malware, $500M Ransom Demands + 17 More Stories",
+   "link": "https://thehackernews.com/2026/11/threatsday-gpt-62-jailbreak-flaws.html",
+   "source": "The Hacker News",
+   "date": "2026-11-19T18:47:58+00:00"
+  },
+  {
+   "title": "Transport for London breach exposes 265,000 Oyster card users' data",
+   "link": "https://www.bleepingcomputer.com/news/security/transport-for-london-breach-exposes-265-000-oyster-card-users-data/",
    "source": "BleepingComputer",
-   "date": "2026-11-19T10:35:05+00:00"
+   "date": "2026-11-19T18:20:01+00:00"
   },
   {
-   "title": "F5 Patches Critical NGINX2Root Flaws as PoC Exploits Go Public",
-   "link": "https://www.securityweek.com/f5-patches-critical-nginx2root-flaws-as-poc-exploits-go-public/",
-   "source": "SecurityWeek",
-   "date": "2026-11-19T10:26:51+00:00"
-  },
-  {
-   "title": "Hackers Breach N-able Cloud Server, Disrupting Email Security Management Across 3 Regions",
-   "link": "https://thehackernews.com/2026/11/n-able-confirms-hackers-accessed-cloud.html",
+   "title": "phpAfterShell Explained: How Hackers Could Turn a PHP Session Flaw Into Code Execution",
+   "link": "https://thehackernews.com/2026/11/phpaftershell-explained-how-hackers.html",
    "source": "The Hacker News",
-   "date": "2026-11-19T09:31:26+00:00"
+   "date": "2026-11-19T16:59:56+00:00"
   },
   {
-   "title": "NVIDIA investigating Gentlemen ransomware breach claims",
-   "link": "https://www.bleepingcomputer.com/news/security/nvidia-investigating-gentlemen-ransomware-breach-claims/",
+   "title": "PHP security updates fix 18 flaws, including critical RCE bugs",
+   "link": "https://www.bleepingcomputer.com/news/security/php-security-updates-fix-18-flaws-including-critical-rce-bugs/",
    "source": "BleepingComputer",
-   "date": "2026-11-19T09:23:21+00:00"
+   "date": "2026-11-19T16:28:23+00:00"
   },
   {
-   "title": "Java4Shell Exploitation Attempts Begin as Vendors Rush Out Advisories",
-   "link": "https://www.securityweek.com/java4shell-exploitation-attempts-begin-as-vendors-rush-out-advisories/",
+   "title": "PHP Patches Seven Critical RCE Vulnerabilities",
+   "link": "https://www.securityweek.com/php-patches-seven-critical-rce-vulnerabilities/",
    "source": "SecurityWeek",
-   "date": "2026-11-19T09:10:58+00:00"
+   "date": "2026-11-19T15:54:20+00:00"
   },
   {
-   "title": "Ruby Releases Fixes for 7 Regex and String Flaws, Warns 5 Have Proof-of-Concept RCE",
-   "link": "https://thehackernews.com/2026/11/ruby-releases-fixes-for-7-regex-and.html",
+   "title": "PHP Fixes 7 Critical Flaws, Including Bugs That Could Allow Remote Code Execution",
+   "link": "https://thehackernews.com/2026/11/php-fixes-7-critical-flaws-including.html",
    "source": "The Hacker News",
-   "date": "2026-11-19T08:42:11+00:00"
+   "date": "2026-11-19T15:18:07+00:00"
   },
   {
-   "title": "Researcher Demonstrates Database RCE Exploits Affecting PostgreSQL, MySQL and Oracle",
-   "link": "https://thehackernews.com/2026/11/researcher-demonstrates-database-rce.html",
+   "title": "Critical VMware vCenter Flaw (CVSS 9.8) Lets Network Attackers Bypass Authentication",
+   "link": "https://thehackernews.com/2026/11/critical-vmware-vcenter-flaw-cvss-98.html",
    "source": "The Hacker News",
-   "date": "2026-11-19T08:14:00+00:00"
+   "date": "2026-11-19T15:11:06+00:00"
+  },
+  {
+   "title": "Five warning signs of ransomware breach before encryption or data theft",
+   "link": "https://www.bleepingcomputer.com/news/security/five-warning-signs-of-ransomware-breach-before-encryption-or-data-theft/",
+   "source": "BleepingComputer",
+   "date": "2026-11-19T15:00:10+00:00"
+  },
+  {
+   "title": "Critical NGINX \u2018NGINX2Root\u2019 bugs let attackers hijack servers",
+   "link": "https://www.bleepingcomputer.com/news/security/critical-nginx-nginx2root-bugs-let-attackers-hijack-servers/",
+   "source": "BleepingComputer",
+   "date": "2026-11-19T14:57:24+00:00"
+  },
+  {
+   "title": "Drupal Patches Critical Installer Flaw That Could Give Unauthenticated Attackers Control of Sites",
+   "link": "https://thehackernews.com/2026/11/drupal-patches-critical-installer-flaw.html",
+   "source": "The Hacker News",
+   "date": "2026-11-19T14:33:06+00:00"
+  },
+  {
+   "title": "Nvidia Responds to Gentlemen Ransomware Claim",
+   "link": "https://www.securityweek.com/nvidia-responds-to-gentlemen-ransomware-claim/",
+   "source": "SecurityWeek",
+   "date": "2026-11-19T14:17:32+00:00"
+  },
+  {
+   "title": "Why Holiday Security Can't Wait for Black Friday",
+   "link": "https://www.darkreading.com/cybersecurity-operations/why-holiday-security-cant-wait-black-friday",
+   "source": "Dark Reading",
+   "date": "2026-11-19T14:00:00+00:00"
+  },
+  {
+   "title": "Hackers Exploit Cisco Expressway Vulnerability Soon After PoC Release",
+   "link": "https://www.securityweek.com/hackers-exploit-cisco-expressway-vulnerability-soon-after-poc-release/",
+   "source": "SecurityWeek",
+   "date": "2026-11-19T13:12:20+00:00"
+  },
+  {
+   "title": "Drupal patches critical RCE flaw, warns exploits may surface quickly",
+   "link": "https://www.bleepingcomputer.com/news/security/drupal-patches-critical-rce-flaw-warns-exploits-may-surface-quickly/",
+   "source": "BleepingComputer",
+   "date": "2026-11-19T13:08:08+00:00"
+  },
+  {
+   "title": "StepSecurity Secures $20 Million to Expand Supply Chain Protection",
+   "link": "https://www.securityweek.com/stepsecurity-secures-20-million-to-expand-supply-chain-protection/",
+   "source": "SecurityWeek",
+   "date": "2026-11-19T12:23:34+00:00"
+  },
+  {
+   "title": "Critical Apache Roller, Axis Vulnerabilities Exploited in Attacks",
+   "link": "https://www.securityweek.com/critical-apache-roller-axis-vulnerabilities-exploited-in-attacks/",
+   "source": "SecurityWeek",
+   "date": "2026-11-19T12:13:24+00:00"
+  },
+  {
+   "title": "Elecbrakes EB2, VM1, ELBC2000",
+   "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-323-02",
+   "source": "CISA",
+   "date": "2026-11-19T12:00:00+00:00"
+  },
+  {
+   "title": "libumqtt",
+   "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-323-03",
+   "source": "CISA",
+   "date": "2026-11-19T12:00:00+00:00"
+  },
+  {
+   "title": "Autonomy Logic OpenPLC Runtime",
+   "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-323-01",
+   "source": "CISA",
+   "date": "2026-11-19T12:00:00+00:00"
+  },
+  {
+   "title": "Everything Is a Web Application, Including Your Firewall",
+   "link": "https://thehackernews.com/2026/11/everything-is-web-application-including.html",
+   "source": "The Hacker News",
+   "date": "2026-11-19T11:52:23+00:00"
+  },
+  {
+   "title": "Microsoft tests new Edge Lockdown Mode that disables GPU APIs",
+   "link": "https://www.bleepingcomputer.com/news/microsoft/microsoft-tests-new-edge-lockdown-mode-that-disables-gpu-apis/",
+   "source": "BleepingComputer",
+   "date": "2026-11-19T11:46:00+00:00"
   },
   {
    "title": "Africa Retakes Top Spot as Most Attacked Region, Led by Nigeria Surge",
@@ -71,100 +161,16 @@
    "date": "2026-11-19T08:00:00+00:00"
   },
   {
-   "title": "CISA Warns of 4 Exploited Flaws Linked to Ransomware, Cryptomining, and LLMjacking Attacks",
-   "link": "https://thehackernews.com/2026/11/cisa-warns-of-4-exploited-flaws-linked.html",
-   "source": "The Hacker News",
-   "date": "2026-11-19T08:00:00+00:00"
-  },
-  {
-   "title": "PHP Readies Critical Security Updates to Patch Another RCE Flaw",
-   "link": "https://www.securityweek.com/php-readies-critical-security-updates-to-patch-another-rce-flaw/",
-   "source": "SecurityWeek",
-   "date": "2026-11-19T07:45:17+00:00"
-  },
-  {
-   "title": "PHP Warns of Critical Security Flaws Affecting All Supported Versions, Fixes Coming November 19",
-   "link": "https://thehackernews.com/2026/11/php-warns-of-critical-security-flaws.html",
-   "source": "The Hacker News",
-   "date": "2026-11-19T04:33:46+00:00"
-  },
-  {
-   "title": "Palo Alto Networks to Buy AI Startup Applied Compute for $4.5 Billion",
-   "link": "https://www.securityweek.com/palo-alto-networks-to-buy-ai-startup-applied-compute-for-4-5-billion/",
-   "source": "SecurityWeek",
-   "date": "2026-11-19T03:25:23+00:00"
-  },
-  {
-   "title": "Ukraine, FBI arrest ransomware gang members tied to $40M in ransoms",
-   "link": "https://www.bleepingcomputer.com/news/security/ukraine-fbi-arrest-ransomware-gang-members-tied-to-40m-in-ransoms/",
-   "source": "BleepingComputer",
-   "date": "2026-11-18T23:08:33+00:00"
-  },
-  {
    "title": "Russia's Cold Relic APT Turns One Cloud Breach Into Another",
    "link": "https://www.darkreading.com/cyberattacks-data-breaches/cold-relic-turns-one-cloud-breach-into-another",
    "source": "Dark Reading",
    "date": "2026-11-18T21:59:46+00:00"
   },
   {
-   "title": "Coinbase blocks $4.7 million in transfers to Elon Musk deepfake scam",
-   "link": "https://www.bleepingcomputer.com/news/security/coinbase-blocks-47-million-in-transfers-to-elon-musk-deepfake-scam/",
-   "source": "BleepingComputer",
-   "date": "2026-11-18T20:49:32+00:00"
-  },
-  {
    "title": "Strike Graph Launches Integration AI to Automate Continuous Compliance Evidence Using Any Existing Tool",
    "link": "https://www.darkreading.com/cyber-risk/strike-graph-launches-integration-ai-to-automate-continuous-compliance-evidence-using-any-existing-tool",
    "source": "Dark Reading",
    "date": "2026-11-18T20:45:49+00:00"
-  },
-  {
-   "title": "AttackIQ Research Reveals How Iranian Cyber Groups Hand Off Network Access to Enable Destructive Attacks",
-   "link": "https://www.darkreading.com/threat-intelligence/attackiq-research-reveals-iranian-cyber-groups",
-   "source": "Dark Reading",
-   "date": "2026-11-18T20:38:42+00:00"
-  },
-  {
-   "title": "Data breach impacts 40 Irish credit unions in reported IT provider hack",
-   "link": "https://www.bleepingcomputer.com/news/security/data-breach-impacts-40-irish-credit-unions-in-reported-it-provider-hack/",
-   "source": "BleepingComputer",
-   "date": "2026-11-18T19:39:33+00:00"
-  },
-  {
-   "title": "10-Year-Old NGINX HTTP/2 Flaw Lets Unauthenticated Attackers Execute Code on Servers",
-   "link": "https://thehackernews.com/2026/11/10-year-old-nginx-http2-flaw-lets.html",
-   "source": "The Hacker News",
-   "date": "2026-11-18T18:31:17+00:00"
-  },
-  {
-   "title": "Microsoft\u2019s Agent Framework PyPI package compromised to steal credentials",
-   "link": "https://www.bleepingcomputer.com/news/security/microsofts-agent-framework-pypi-package-compromised-to-steal-credentials/",
-   "source": "BleepingComputer",
-   "date": "2026-11-18T16:58:42+00:00"
-  },
-  {
-   "title": "Java4Shell Flaw Threatens Global Enterprises, Java Application Ecosystem",
-   "link": "https://www.darkreading.com/vulnerabilities-threats/java4shell-flaw-threatens-global-java-application-ecosystem",
-   "source": "Dark Reading",
-   "date": "2026-11-18T16:54:52+00:00"
-  },
-  {
-   "title": "Vero Security Raises $11 Million for AI Security Engineering Platform",
-   "link": "https://www.securityweek.com/verosecurity-raises-11-million-for-ai-security-engineering-platform/",
-   "source": "SecurityWeek",
-   "date": "2026-11-18T15:30:42+00:00"
-  },
-  {
-   "title": "Major Brazilian Signature Apps Enable RCE & Fraud",
-   "link": "https://www.darkreading.com/vulnerabilities-threats/major-brazilian-signature-app-rce-fraud",
-   "source": "Dark Reading",
-   "date": "2026-11-18T14:00:00+00:00"
-  },
-  {
-   "title": "CISA Adds Four Known Exploited Vulnerabilities to Catalog",
-   "link": "https://www.cisa.gov/news-events/alerts/2026/11/18/cisa-adds-four-known-exploited-vulnerabilities-catalog",
-   "source": "CISA",
-   "date": "2026-11-18T12:00:00+00:00"
   },
   {
    "title": "Attackers Used Optimizely to A/B Test Malware on Top Websites",
@@ -183,12 +189,6 @@
    "link": "https://www.microsoft.com/en-us/security/blog/2026/11/17/the-risks-of-device-code-authentication-for-ai-coding-agents/",
    "source": "Microsoft Security Blog",
    "date": "2026-11-17T15:00:00+00:00"
-  },
-  {
-   "title": "Siemens ROS#",
-   "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-321-06",
-   "source": "CISA",
-   "date": "2026-11-17T12:00:00+00:00"
   },
   {
    "title": "Who Runs the Ransomware Group Qilin?",
