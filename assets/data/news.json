@@ -1,21 +1,57 @@
 {
- "updated": "2026-11-19T20:43:54.604295+00:00",
+ "updated": "2026-11-20T02:22:38.450371+00:00",
  "m365": {
   "status": "Available",
-  "checked": "2026-11-19T20:43:54.805388+00:00",
+  "checked": "2026-11-20T02:22:38.635848+00:00",
   "link": "https://status.cloud.microsoft/"
  },
  "aws": {
   "status": "2 open events",
   "link": "https://health.aws.amazon.com/health/status",
-  "checked": "2026-11-19T20:43:54.604295+00:00"
+  "checked": "2026-11-20T02:22:38.450371+00:00"
  },
  "wasabi": {
-  "status": "Service Under Maintenance",
+  "status": "Available",
   "link": "https://status.wasabi.com/",
-  "checked": "2026-11-19T20:43:54.604295+00:00"
+  "checked": "2026-11-20T02:22:38.450371+00:00"
  },
  "items": [
+  {
+   "title": "VMware patches vCenter zero-day exploited in attacks since September",
+   "link": "https://www.bleepingcomputer.com/news/security/vmware-patches-vcenter-zero-day-exploited-in-attacks-since-september/",
+   "source": "BleepingComputer",
+   "date": "2026-11-20T00:26:25+00:00"
+  },
+  {
+   "title": "Qwen Incidents Show Self-Hosted AI Models Need Stronger Steering",
+   "link": "https://www.darkreading.com/cyber-risk/qwen-incidents-self-hosted-ai-models-stronger-steering",
+   "source": "Dark Reading",
+   "date": "2026-11-19T22:40:03+00:00"
+  },
+  {
+   "title": "Hackers steal data of 1.6 million SBC Medical Group customers",
+   "link": "https://www.bleepingcomputer.com/news/security/hackers-steal-data-of-16-million-sbc-medical-group-customers/",
+   "source": "BleepingComputer",
+   "date": "2026-11-19T22:25:42+00:00"
+  },
+  {
+   "title": "ASUS warns of critical hard-coded key flaw in Control Center Express",
+   "link": "https://www.bleepingcomputer.com/news/security/asus-warns-of-critical-hard-coded-key-flaw-in-control-center-express/",
+   "source": "BleepingComputer",
+   "date": "2026-11-19T21:15:59+00:00"
+  },
+  {
+   "title": "Second Norwegian Energy Company Breached in Two Days",
+   "link": "https://www.darkreading.com/cyberattacks-data-breaches/second-norwegian-energy-company-breached",
+   "source": "Dark Reading",
+   "date": "2026-11-19T20:14:15+00:00"
+  },
+  {
+   "title": "Critical PHP Flaws Allow Code Execution, But Don't Panic 'PHP2Shell'-Style",
+   "link": "https://www.darkreading.com/application-security/critical-php-flaws-code-execution-panic-php2shell",
+   "source": "Dark Reading",
+   "date": "2026-11-19T19:57:31+00:00"
+  },
   {
    "title": "Navigating Vulnerability Hysteria in the AI Era",
    "link": "https://www.darkreading.com/vulnerabilities-threats/navigating-vulnerability-hysteria-ai-era",
@@ -77,12 +113,6 @@
    "date": "2026-11-19T15:00:10+00:00"
   },
   {
-   "title": "Critical NGINX \u2018NGINX2Root\u2019 bugs let attackers hijack servers",
-   "link": "https://www.bleepingcomputer.com/news/security/critical-nginx-nginx2root-bugs-let-attackers-hijack-servers/",
-   "source": "BleepingComputer",
-   "date": "2026-11-19T14:57:24+00:00"
-  },
-  {
    "title": "Drupal Patches Critical Installer Flaw That Could Give Unauthenticated Attackers Control of Sites",
    "link": "https://thehackernews.com/2026/11/drupal-patches-critical-installer-flaw.html",
    "source": "The Hacker News",
@@ -105,12 +135,6 @@
    "link": "https://www.securityweek.com/hackers-exploit-cisco-expressway-vulnerability-soon-after-poc-release/",
    "source": "SecurityWeek",
    "date": "2026-11-19T13:12:20+00:00"
-  },
-  {
-   "title": "Drupal patches critical RCE flaw, warns exploits may surface quickly",
-   "link": "https://www.bleepingcomputer.com/news/security/drupal-patches-critical-rce-flaw-warns-exploits-may-surface-quickly/",
-   "source": "BleepingComputer",
-   "date": "2026-11-19T13:08:08+00:00"
   },
   {
    "title": "StepSecurity Secures $20 Million to Expand Supply Chain Protection",
@@ -147,30 +171,6 @@
    "link": "https://thehackernews.com/2026/11/everything-is-web-application-including.html",
    "source": "The Hacker News",
    "date": "2026-11-19T11:52:23+00:00"
-  },
-  {
-   "title": "Microsoft tests new Edge Lockdown Mode that disables GPU APIs",
-   "link": "https://www.bleepingcomputer.com/news/microsoft/microsoft-tests-new-edge-lockdown-mode-that-disables-gpu-apis/",
-   "source": "BleepingComputer",
-   "date": "2026-11-19T11:46:00+00:00"
-  },
-  {
-   "title": "Africa Retakes Top Spot as Most Attacked Region, Led by Nigeria Surge",
-   "link": "https://www.darkreading.com/threat-intelligence/africa-top-spot-most-attacked-region-nigeria-surge",
-   "source": "Dark Reading",
-   "date": "2026-11-19T08:00:00+00:00"
-  },
-  {
-   "title": "Russia's Cold Relic APT Turns One Cloud Breach Into Another",
-   "link": "https://www.darkreading.com/cyberattacks-data-breaches/cold-relic-turns-one-cloud-breach-into-another",
-   "source": "Dark Reading",
-   "date": "2026-11-18T21:59:46+00:00"
-  },
-  {
-   "title": "Strike Graph Launches Integration AI to Automate Continuous Compliance Evidence Using Any Existing Tool",
-   "link": "https://www.darkreading.com/cyber-risk/strike-graph-launches-integration-ai-to-automate-continuous-compliance-evidence-using-any-existing-tool",
-   "source": "Dark Reading",
-   "date": "2026-11-18T20:45:49+00:00"
   },
   {
    "title": "Attackers Used Optimizely to A/B Test Malware on Top Websites",
