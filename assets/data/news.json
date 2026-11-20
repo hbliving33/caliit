@@ -1,21 +1,93 @@
 {
- "updated": "2026-11-20T02:22:38.450371+00:00",
+ "updated": "2026-11-20T11:50:03.274583+00:00",
  "m365": {
   "status": "Available",
-  "checked": "2026-11-20T02:22:38.635848+00:00",
+  "checked": "2026-11-20T11:50:03.322204+00:00",
   "link": "https://status.cloud.microsoft/"
  },
  "aws": {
   "status": "2 open events",
   "link": "https://health.aws.amazon.com/health/status",
-  "checked": "2026-11-20T02:22:38.450371+00:00"
+  "checked": "2026-11-20T11:50:03.274583+00:00"
  },
  "wasabi": {
-  "status": "Available",
+  "status": "Service Under Maintenance",
   "link": "https://status.wasabi.com/",
-  "checked": "2026-11-20T02:22:38.450371+00:00"
+  "checked": "2026-11-20T11:50:03.274583+00:00"
  },
  "items": [
+  {
+   "title": "SBC Medical Group Data Breach Impacts Over 2 Million",
+   "link": "https://www.securityweek.com/sbc-medical-group-data-breach-impacts-over-2-million/",
+   "source": "SecurityWeek",
+   "date": "2026-11-20T11:36:51+00:00"
+  },
+  {
+   "title": "F5 releases emergency patches for critical BIG-IP RCE flaws",
+   "link": "https://www.bleepingcomputer.com/news/security/f5-releases-emergency-patches-for-critical-big-ip-rce-flaws/",
+   "source": "BleepingComputer",
+   "date": "2026-11-20T10:57:43+00:00"
+  },
+  {
+   "title": "European Commission Confirms AI-Assisted Cyberattack Disrupted Services",
+   "link": "https://www.securityweek.com/european-commission-confirms-ai-assisted-cyberattack-disrupted-services/",
+   "source": "SecurityWeek",
+   "date": "2026-11-20T10:51:42+00:00"
+  },
+  {
+   "title": "SonicWall Warns Gen 6 Firewalls Won't Get Security Patches, Even for Critical Flaws",
+   "link": "https://thehackernews.com/2026/11/sonicwall-warns-gen-6-firewalls-wont.html",
+   "source": "The Hacker News",
+   "date": "2026-11-20T10:38:22+00:00"
+  },
+  {
+   "title": "Ruby Patches Ruby2Shell Vulnerability That Could Lead to RCE",
+   "link": "https://www.securityweek.com/ruby-patches-ruby2shell-vulnerability-that-could-lead-to-rce/",
+   "source": "SecurityWeek",
+   "date": "2026-11-20T10:34:10+00:00"
+  },
+  {
+   "title": "Hackers Exploit Critical Cisco Expressway Flaw, Breach Four Devices and Reach Internal Network",
+   "link": "https://thehackernews.com/2026/11/hackers-exploit-critical-cisco.html",
+   "source": "The Hacker News",
+   "date": "2026-11-20T10:32:50+00:00"
+  },
+  {
+   "title": "China-Linked Hackers Exploit Critical VMware vCenter Zero-Day to Gain Admin Access and Steal Data",
+   "link": "https://thehackernews.com/2026/11/china-linked-hackers-exploit-critical.html",
+   "source": "The Hacker News",
+   "date": "2026-11-20T09:38:15+00:00"
+  },
+  {
+   "title": "Windows 11 KB5132057 update released with 28 changes and fixes",
+   "link": "https://www.bleepingcomputer.com/news/microsoft/windows-11-kb5132057-update-released-with-28-changes-and-fixes/",
+   "source": "BleepingComputer",
+   "date": "2026-11-20T09:25:35+00:00"
+  },
+  {
+   "title": "N-able Blames Service Disruption on Cyberattack",
+   "link": "https://www.securityweek.com/n-able-blames-service-disruption-on-cyberattack/",
+   "source": "SecurityWeek",
+   "date": "2026-11-20T09:08:35+00:00"
+  },
+  {
+   "title": "JPMorgan, Visa, Mastercard Cite Third-Party Incidents Amid Data Leak",
+   "link": "https://www.securityweek.com/jpmorgan-visa-mastercard-cite-third-party-incidents-amid-data-leak/",
+   "source": "SecurityWeek",
+   "date": "2026-11-20T07:35:46+00:00"
+  },
+  {
+   "title": "ROMULUS ClickFix Attacks Deliver RAT That Can Spy on Users and Control PCs",
+   "link": "https://thehackernews.com/2026/11/romulus-clickfix-attacks-deliver-rat.html",
+   "source": "The Hacker News",
+   "date": "2026-11-20T07:11:39+00:00"
+  },
+  {
+   "title": "New Unpatched Windows 0-Day FastUnlock Lets Someone Holding a Locked PC Run Programs on It",
+   "link": "https://thehackernews.com/2026/11/new-unpatched-windows-0-day-fastunlock.html",
+   "source": "The Hacker News",
+   "date": "2026-11-20T05:30:01+00:00"
+  },
   {
    "title": "VMware patches vCenter zero-day exploited in attacks since September",
    "link": "https://www.bleepingcomputer.com/news/security/vmware-patches-vcenter-zero-day-exploited-in-attacks-since-september/",
@@ -77,76 +149,10 @@
    "date": "2026-11-19T18:20:01+00:00"
   },
   {
-   "title": "phpAfterShell Explained: How Hackers Could Turn a PHP Session Flaw Into Code Execution",
-   "link": "https://thehackernews.com/2026/11/phpaftershell-explained-how-hackers.html",
-   "source": "The Hacker News",
-   "date": "2026-11-19T16:59:56+00:00"
-  },
-  {
-   "title": "PHP security updates fix 18 flaws, including critical RCE bugs",
-   "link": "https://www.bleepingcomputer.com/news/security/php-security-updates-fix-18-flaws-including-critical-rce-bugs/",
-   "source": "BleepingComputer",
-   "date": "2026-11-19T16:28:23+00:00"
-  },
-  {
-   "title": "PHP Patches Seven Critical RCE Vulnerabilities",
-   "link": "https://www.securityweek.com/php-patches-seven-critical-rce-vulnerabilities/",
-   "source": "SecurityWeek",
-   "date": "2026-11-19T15:54:20+00:00"
-  },
-  {
-   "title": "PHP Fixes 7 Critical Flaws, Including Bugs That Could Allow Remote Code Execution",
-   "link": "https://thehackernews.com/2026/11/php-fixes-7-critical-flaws-including.html",
-   "source": "The Hacker News",
-   "date": "2026-11-19T15:18:07+00:00"
-  },
-  {
-   "title": "Critical VMware vCenter Flaw (CVSS 9.8) Lets Network Attackers Bypass Authentication",
-   "link": "https://thehackernews.com/2026/11/critical-vmware-vcenter-flaw-cvss-98.html",
-   "source": "The Hacker News",
-   "date": "2026-11-19T15:11:06+00:00"
-  },
-  {
-   "title": "Five warning signs of ransomware breach before encryption or data theft",
-   "link": "https://www.bleepingcomputer.com/news/security/five-warning-signs-of-ransomware-breach-before-encryption-or-data-theft/",
-   "source": "BleepingComputer",
-   "date": "2026-11-19T15:00:10+00:00"
-  },
-  {
-   "title": "Drupal Patches Critical Installer Flaw That Could Give Unauthenticated Attackers Control of Sites",
-   "link": "https://thehackernews.com/2026/11/drupal-patches-critical-installer-flaw.html",
-   "source": "The Hacker News",
-   "date": "2026-11-19T14:33:06+00:00"
-  },
-  {
-   "title": "Nvidia Responds to Gentlemen Ransomware Claim",
-   "link": "https://www.securityweek.com/nvidia-responds-to-gentlemen-ransomware-claim/",
-   "source": "SecurityWeek",
-   "date": "2026-11-19T14:17:32+00:00"
-  },
-  {
    "title": "Why Holiday Security Can't Wait for Black Friday",
    "link": "https://www.darkreading.com/cybersecurity-operations/why-holiday-security-cant-wait-black-friday",
    "source": "Dark Reading",
    "date": "2026-11-19T14:00:00+00:00"
-  },
-  {
-   "title": "Hackers Exploit Cisco Expressway Vulnerability Soon After PoC Release",
-   "link": "https://www.securityweek.com/hackers-exploit-cisco-expressway-vulnerability-soon-after-poc-release/",
-   "source": "SecurityWeek",
-   "date": "2026-11-19T13:12:20+00:00"
-  },
-  {
-   "title": "StepSecurity Secures $20 Million to Expand Supply Chain Protection",
-   "link": "https://www.securityweek.com/stepsecurity-secures-20-million-to-expand-supply-chain-protection/",
-   "source": "SecurityWeek",
-   "date": "2026-11-19T12:23:34+00:00"
-  },
-  {
-   "title": "Critical Apache Roller, Axis Vulnerabilities Exploited in Attacks",
-   "link": "https://www.securityweek.com/critical-apache-roller-axis-vulnerabilities-exploited-in-attacks/",
-   "source": "SecurityWeek",
-   "date": "2026-11-19T12:13:24+00:00"
   },
   {
    "title": "Elecbrakes EB2, VM1, ELBC2000",
@@ -165,12 +171,6 @@
    "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-323-01",
    "source": "CISA",
    "date": "2026-11-19T12:00:00+00:00"
-  },
-  {
-   "title": "Everything Is a Web Application, Including Your Firewall",
-   "link": "https://thehackernews.com/2026/11/everything-is-web-application-including.html",
-   "source": "The Hacker News",
-   "date": "2026-11-19T11:52:23+00:00"
   },
   {
    "title": "Attackers Used Optimizely to A/B Test Malware on Top Websites",
