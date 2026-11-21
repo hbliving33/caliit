@@ -1,21 +1,33 @@
 {
- "updated": "2026-11-21T02:24:48.402209+00:00",
+ "updated": "2026-11-21T11:15:49.470541+00:00",
  "m365": {
   "status": "Available",
-  "checked": "2026-11-21T02:24:48.569737+00:00",
+  "checked": "2026-11-21T11:15:49.543992+00:00",
   "link": "https://status.cloud.microsoft/"
  },
  "aws": {
   "status": "2 open events",
   "link": "https://health.aws.amazon.com/health/status",
-  "checked": "2026-11-21T02:24:48.402209+00:00"
+  "checked": "2026-11-21T11:15:49.470541+00:00"
  },
  "wasabi": {
-  "status": "Service Under Maintenance",
+  "status": "Available",
   "link": "https://status.wasabi.com/",
-  "checked": "2026-11-21T02:24:48.402209+00:00"
+  "checked": "2026-11-21T11:15:49.470541+00:00"
  },
  "items": [
+  {
+   "title": "Signal Blocks AI Agents From Reading Private Chats via Screenshots on Android and iOS",
+   "link": "https://thehackernews.com/2026/11/signal-blocks-ai-agents-from-reading.html",
+   "source": "The Hacker News",
+   "date": "2026-11-21T08:49:20+00:00"
+  },
+  {
+   "title": "Hackers Exploit Critical VMware, Cisco, and Apache Flaws as Espionage Attacks Emerge",
+   "link": "https://thehackernews.com/2026/11/hackers-exploit-critical-vmware-cisco.html",
+   "source": "The Hacker News",
+   "date": "2026-11-21T08:49:13+00:00"
+  },
   {
    "title": "CTO of \u2018RansomwareHelp\u2019 Indicted for Wire Fraud",
    "link": "https://krebsonsecurity.com/2026/11/cto-of-ransomwarehelp-indicted-for-wire-fraud/",
@@ -143,22 +155,10 @@
    "date": "2026-11-20T10:51:42+00:00"
   },
   {
-   "title": "SonicWall Warns Gen 6 Firewalls Won't Get Security Patches, Even for Critical Flaws",
-   "link": "https://thehackernews.com/2026/11/sonicwall-warns-gen-6-firewalls-wont.html",
-   "source": "The Hacker News",
-   "date": "2026-11-20T10:38:22+00:00"
-  },
-  {
    "title": "Ruby Patches Ruby2Shell Vulnerability That Could Lead to RCE",
    "link": "https://www.securityweek.com/ruby-patches-ruby2shell-vulnerability-that-could-lead-to-rce/",
    "source": "SecurityWeek",
    "date": "2026-11-20T10:34:10+00:00"
-  },
-  {
-   "title": "Hackers Exploit Critical Cisco Expressway Flaw, Breach Four Devices and Reach Internal Network",
-   "link": "https://thehackernews.com/2026/11/hackers-exploit-critical-cisco.html",
-   "source": "The Hacker News",
-   "date": "2026-11-20T10:32:50+00:00"
   },
   {
    "title": "Qwen Incidents Show Self-Hosted AI Models Need Stronger Steering",
