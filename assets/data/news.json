@@ -1,21 +1,63 @@
 {
- "updated": "2026-11-21T11:15:49.470541+00:00",
+ "updated": "2026-11-21T18:05:12.910300+00:00",
  "m365": {
   "status": "Available",
-  "checked": "2026-11-21T11:15:49.543992+00:00",
+  "checked": "2026-11-21T18:05:12.967132+00:00",
   "link": "https://status.cloud.microsoft/"
  },
  "aws": {
   "status": "2 open events",
   "link": "https://health.aws.amazon.com/health/status",
-  "checked": "2026-11-21T11:15:49.470541+00:00"
+  "checked": "2026-11-21T18:05:12.910300+00:00"
  },
  "wasabi": {
   "status": "Available",
   "link": "https://status.wasabi.com/",
-  "checked": "2026-11-21T11:15:49.470541+00:00"
+  "checked": "2026-11-21T18:05:12.910300+00:00"
  },
  "items": [
+  {
+   "title": "Microsoft Entra Connect Health flaw exploited to steal tenant data",
+   "link": "https://www.bleepingcomputer.com/news/security/microsoft-entra-connect-health-flaw-exploited-to-steal-tenant-data/",
+   "source": "BleepingComputer",
+   "date": "2026-11-21T18:01:58+00:00"
+  },
+  {
+   "title": "BADBOX botnet returns with record-breaking 40 billion daily ad requests",
+   "link": "https://www.bleepingcomputer.com/news/security/badbox-30-botnet-returns-with-record-breaking-40-billion-daily-ad-requests/",
+   "source": "BleepingComputer",
+   "date": "2026-11-21T15:17:27+00:00"
+  },
+  {
+   "title": "FBI reportedly hacked again, this time targeting nationwide police database",
+   "link": "https://www.bleepingcomputer.com/news/security/fbi-reportedly-hacked-again-this-time-targeting-nationwide-police-database/",
+   "source": "BleepingComputer",
+   "date": "2026-11-21T14:26:04+00:00"
+  },
+  {
+   "title": "Amazon: China-Linked Hackers\u2019 AI Agents Exploited Medical Software Zero-Day",
+   "link": "https://www.securityweek.com/amazon-china-linked-hackers-ai-agents-exploited-medical-software-zero-day/",
+   "source": "SecurityWeek",
+   "date": "2026-11-21T12:08:50+00:00"
+  },
+  {
+   "title": "A Single Malicious Webpage Let Researchers Hijack Meta Muse and Access Private Chats",
+   "link": "https://thehackernews.com/2026/11/a-single-malicious-webpage-let.html",
+   "source": "The Hacker News",
+   "date": "2026-11-21T11:53:07+00:00"
+  },
+  {
+   "title": "GnuPG Warns Critical GPGME Flaw Could Expose App Data via Malicious OpenPGP Keys",
+   "link": "https://thehackernews.com/2026/11/gnupg-warns-critical-gpgme-flaw-could.html",
+   "source": "The Hacker News",
+   "date": "2026-11-21T11:05:53+00:00"
+  },
+  {
+   "title": "Attackers' AI Agents Found a Zero-Day in Medical-Imaging Software and Gained Root Access",
+   "link": "https://thehackernews.com/2026/11/attackers-ai-agents-found-zero-day-in.html",
+   "source": "The Hacker News",
+   "date": "2026-11-21T11:03:17+00:00"
+  },
   {
    "title": "Signal Blocks AI Agents From Reading Private Chats via Screenshots on Android and iOS",
    "link": "https://thehackernews.com/2026/11/signal-blocks-ai-agents-from-reading.html",
@@ -77,12 +119,6 @@
    "date": "2026-11-20T17:00:00+00:00"
   },
   {
-   "title": "Bazuka Android Malware Uses Fake Screen Overlays to Hide Credential Theft and Device Control",
-   "link": "https://thehackernews.com/2026/11/bazuka-android-malware-uses-fake-screen.html",
-   "source": "The Hacker News",
-   "date": "2026-11-20T16:58:16+00:00"
-  },
-  {
    "title": "WhatsApp Fixes Flaw Uncovered While Disrupting Scam Campaign",
    "link": "https://www.securityweek.com/whatsapp-fixes-flaw-uncovered-while-disrupting-scam-campaign/",
    "source": "SecurityWeek",
@@ -95,22 +131,10 @@
    "date": "2026-11-20T15:58:06+00:00"
   },
   {
-   "title": "Still tracking company passwords in spreadsheets? You\u2019re flying blind.",
-   "link": "https://www.bleepingcomputer.com/news/security/still-tracking-company-passwords-in-spreadsheets-youre-flying-blind/",
-   "source": "BleepingComputer",
-   "date": "2026-11-20T15:00:10+00:00"
-  },
-  {
    "title": "In Other News: Norwegian Energy Firm Cyberattacks, Supercomputer Hack, New Nightmare Eclipse Exploit",
    "link": "https://www.securityweek.com/in-other-news-norwegian-energy-firm-cyberattacks-supercomputer-hack-new-nightmare-eclipse-exploit/",
    "source": "SecurityWeek",
    "date": "2026-11-20T14:56:23+00:00"
-  },
-  {
-   "title": "N-able says recent security breach led to major service outage",
-   "link": "https://www.bleepingcomputer.com/news/microsoft/n-able-says-recent-security-breach-led-to-major-service-outage/",
-   "source": "BleepingComputer",
-   "date": "2026-11-20T13:18:36+00:00"
   },
   {
    "title": "Industry Reactions to Major Outages and AI Patching Debate: Feedback Friday",
@@ -119,27 +143,9 @@
    "date": "2026-11-20T12:38:55+00:00"
   },
   {
-   "title": "Linux KVM Flaw CVE-2026-99312 Lets Guest VMs Access Host Memory on AMD Hosts",
-   "link": "https://thehackernews.com/2026/11/new-linux-kvm-flaw-cve-2026-99312-lets.html",
-   "source": "The Hacker News",
-   "date": "2026-11-20T12:20:00+00:00"
-  },
-  {
-   "title": "Microsoft now automatically installs Windows 11 26H2 on unmanaged devices",
-   "link": "https://www.bleepingcomputer.com/news/microsoft/microsoft-now-automatically-installs-windows-11-26h2-on-personal-and-unmanaged-pcs/",
-   "source": "BleepingComputer",
-   "date": "2026-11-20T12:14:28+00:00"
-  },
-  {
    "title": "CISA Adds Four Known Exploited Vulnerabilities to Catalog",
    "link": "https://www.cisa.gov/news-events/alerts/2026/11/20/cisa-adds-four-known-exploited-vulnerabilities-catalog",
    "source": "CISA",
-   "date": "2026-11-20T12:00:00+00:00"
-  },
-  {
-   "title": "The Path to AI Autonomy in the SOC",
-   "link": "https://thehackernews.com/2026/11/the-path-to-ai-autonomy-in-soc.html",
-   "source": "The Hacker News",
    "date": "2026-11-20T12:00:00+00:00"
   },
   {
@@ -153,12 +159,6 @@
    "link": "https://www.securityweek.com/european-commission-confirms-ai-assisted-cyberattack-disrupted-services/",
    "source": "SecurityWeek",
    "date": "2026-11-20T10:51:42+00:00"
-  },
-  {
-   "title": "Ruby Patches Ruby2Shell Vulnerability That Could Lead to RCE",
-   "link": "https://www.securityweek.com/ruby-patches-ruby2shell-vulnerability-that-could-lead-to-rce/",
-   "source": "SecurityWeek",
-   "date": "2026-11-20T10:34:10+00:00"
   },
   {
    "title": "Qwen Incidents Show Self-Hosted AI Models Need Stronger Steering",
