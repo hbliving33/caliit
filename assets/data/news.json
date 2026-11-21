@@ -1,21 +1,27 @@
 {
- "updated": "2026-11-21T18:05:12.910300+00:00",
+ "updated": "2026-11-21T23:25:27.310555+00:00",
  "m365": {
   "status": "Available",
-  "checked": "2026-11-21T18:05:12.967132+00:00",
+  "checked": "2026-11-21T23:25:27.336992+00:00",
   "link": "https://status.cloud.microsoft/"
  },
  "aws": {
   "status": "2 open events",
   "link": "https://health.aws.amazon.com/health/status",
-  "checked": "2026-11-21T18:05:12.910300+00:00"
+  "checked": "2026-11-21T23:25:27.310555+00:00"
  },
  "wasabi": {
   "status": "Available",
   "link": "https://status.wasabi.com/",
-  "checked": "2026-11-21T18:05:12.910300+00:00"
+  "checked": "2026-11-21T23:25:27.310555+00:00"
  },
  "items": [
+  {
+   "title": "Rackspace Spot breach let hackers access customer Kubernetes secrets",
+   "link": "https://www.bleepingcomputer.com/news/security/rackspace-spot-breach-let-hackers-access-customer-kubernetes-secrets/",
+   "source": "BleepingComputer",
+   "date": "2026-11-21T22:59:58+00:00"
+  },
   {
    "title": "Microsoft Entra Connect Health flaw exploited to steal tenant data",
    "link": "https://www.bleepingcomputer.com/news/security/microsoft-entra-connect-health-flaw-exploited-to-steal-tenant-data/",
@@ -123,12 +129,6 @@
    "link": "https://www.securityweek.com/whatsapp-fixes-flaw-uncovered-while-disrupting-scam-campaign/",
    "source": "SecurityWeek",
    "date": "2026-11-20T16:01:02+00:00"
-  },
-  {
-   "title": "Vendor data breach exposes Chase, Visa, Mastercard customer info",
-   "link": "https://www.bleepingcomputer.com/news/security/vendor-data-breach-exposes-chase-visa-mastercard-customer-info/",
-   "source": "BleepingComputer",
-   "date": "2026-11-20T15:58:06+00:00"
   },
   {
    "title": "In Other News: Norwegian Energy Firm Cyberattacks, Supercomputer Hack, New Nightmare Eclipse Exploit",
