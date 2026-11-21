@@ -1,21 +1,33 @@
 {
- "updated": "2026-11-20T20:28:16.735917+00:00",
+ "updated": "2026-11-21T02:24:48.402209+00:00",
  "m365": {
   "status": "Available",
-  "checked": "2026-11-20T20:28:16.762001+00:00",
+  "checked": "2026-11-21T02:24:48.569737+00:00",
   "link": "https://status.cloud.microsoft/"
  },
  "aws": {
   "status": "2 open events",
   "link": "https://health.aws.amazon.com/health/status",
-  "checked": "2026-11-20T20:28:16.735917+00:00"
+  "checked": "2026-11-21T02:24:48.402209+00:00"
  },
  "wasabi": {
-  "status": "Available",
+  "status": "Service Under Maintenance",
   "link": "https://status.wasabi.com/",
-  "checked": "2026-11-20T20:28:16.735917+00:00"
+  "checked": "2026-11-21T02:24:48.402209+00:00"
  },
  "items": [
+  {
+   "title": "CTO of \u2018RansomwareHelp\u2019 Indicted for Wire Fraud",
+   "link": "https://krebsonsecurity.com/2026/11/cto-of-ransomwarehelp-indicted-for-wire-fraud/",
+   "source": "Krebs on Security",
+   "date": "2026-11-21T00:36:39+00:00"
+  },
+  {
+   "title": "China's 'Armory Castle' Lays Siege to VMware vCenter Zero-Day",
+   "link": "https://www.darkreading.com/cyberattacks-data-breaches/china-armory-castle-vmware-vcenter-zero-day",
+   "source": "Dark Reading",
+   "date": "2026-11-20T21:03:27+00:00"
+  },
   {
    "title": "Bell Canada says 'agentic' hacker stole enterprise customer data",
    "link": "https://www.bleepingcomputer.com/news/security/bell-canada-says-agentic-hacker-stole-enterprise-customer-data/",
@@ -167,12 +179,6 @@
    "date": "2026-11-19T19:57:31+00:00"
   },
   {
-   "title": "Navigating Vulnerability Hysteria in the AI Era",
-   "link": "https://www.darkreading.com/vulnerabilities-threats/navigating-vulnerability-hysteria-ai-era",
-   "source": "Dark Reading",
-   "date": "2026-11-19T19:46:44+00:00"
-  },
-  {
    "title": "Elecbrakes EB2, VM1, ELBC2000",
    "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-323-02",
    "source": "CISA",
@@ -189,12 +195,6 @@
    "link": "https://www.microsoft.com/en-us/security/blog/2026/11/17/security-for-the-agentic-era-powered-by-microsoft-perception/",
    "source": "Microsoft Security Blog",
    "date": "2026-11-17T18:14:00+00:00"
-  },
-  {
-   "title": "Who Runs the Ransomware Group Qilin?",
-   "link": "https://krebsonsecurity.com/2026/11/who-runs-the-ransomware-group-qilin/",
-   "source": "Krebs on Security",
-   "date": "2026-11-11T18:06:01+00:00"
   }
  ],
  "errors": {}
