@@ -1,21 +1,39 @@
 {
- "updated": "2026-11-21T23:25:27.310555+00:00",
+ "updated": "2026-11-22T06:59:30.145342+00:00",
  "m365": {
   "status": "Available",
-  "checked": "2026-11-21T23:25:27.336992+00:00",
+  "checked": "2026-11-22T06:59:30.296140+00:00",
   "link": "https://status.cloud.microsoft/"
  },
  "aws": {
   "status": "2 open events",
   "link": "https://health.aws.amazon.com/health/status",
-  "checked": "2026-11-21T23:25:27.310555+00:00"
+  "checked": "2026-11-22T06:59:30.145342+00:00"
  },
  "wasabi": {
   "status": "Available",
   "link": "https://status.wasabi.com/",
-  "checked": "2026-11-21T23:25:27.310555+00:00"
+  "checked": "2026-11-22T06:59:30.145342+00:00"
  },
  "items": [
+  {
+   "title": "OpenRouter Drops 3 Providers After Researchers Catch Months of Prompt Theft at AI Hosting Firms",
+   "link": "https://thehackernews.com/2026/11/openrouter-drops-3-providers-after.html",
+   "source": "The Hacker News",
+   "date": "2026-11-22T05:06:55+00:00"
+  },
+  {
+   "title": "Researchers Demonstrate Ghostscript Sandbox-Escape RCE via Crafted File Uploads in Popular Apps",
+   "link": "https://thehackernews.com/2026/11/researchers-demonstrate-ghostscript.html",
+   "source": "The Hacker News",
+   "date": "2026-11-22T05:03:41+00:00"
+  },
+  {
+   "title": "FBI Investigating Apparent Hack of Its Key National Criminal Justice Database, AP Source Says",
+   "link": "https://www.securityweek.com/fbi-investigating-apparent-hack-of-its-key-national-criminal-justice-database-ap-source-says/",
+   "source": "SecurityWeek",
+   "date": "2026-11-22T00:53:02+00:00"
+  },
   {
    "title": "Rackspace Spot breach let hackers access customer Kubernetes secrets",
    "link": "https://www.bleepingcomputer.com/news/security/rackspace-spot-breach-let-hackers-access-customer-kubernetes-secrets/",
@@ -39,6 +57,12 @@
    "link": "https://www.bleepingcomputer.com/news/security/fbi-reportedly-hacked-again-this-time-targeting-nationwide-police-database/",
    "source": "BleepingComputer",
    "date": "2026-11-21T14:26:04+00:00"
+  },
+  {
+   "title": "President Trump Taps Kirsten Davies as National Cyber Director",
+   "link": "https://www.securityweek.com/president-trump-taps-kirsten-davies-as-national-cyber-director/",
+   "source": "SecurityWeek",
+   "date": "2026-11-21T13:00:00+00:00"
   },
   {
    "title": "Amazon: China-Linked Hackers\u2019 AI Agents Exploited Medical Software Zero-Day",
@@ -71,12 +95,6 @@
    "date": "2026-11-21T08:49:20+00:00"
   },
   {
-   "title": "Hackers Exploit Critical VMware, Cisco, and Apache Flaws as Espionage Attacks Emerge",
-   "link": "https://thehackernews.com/2026/11/hackers-exploit-critical-vmware-cisco.html",
-   "source": "The Hacker News",
-   "date": "2026-11-21T08:49:13+00:00"
-  },
-  {
    "title": "CTO of \u2018RansomwareHelp\u2019 Indicted for Wire Fraud",
    "link": "https://krebsonsecurity.com/2026/11/cto-of-ransomwarehelp-indicted-for-wire-fraud/",
    "source": "Krebs on Security",
@@ -99,12 +117,6 @@
    "link": "https://www.darkreading.com/cybersecurity-operations/security-words-matter",
    "source": "Dark Reading",
    "date": "2026-11-20T18:35:40+00:00"
-  },
-  {
-   "title": "WhatsApp Patches 3 Security Flaws, Including Android Bug Suspected of Use in Scams",
-   "link": "https://thehackernews.com/2026/11/whatsapp-patches-3-security-flaws.html",
-   "source": "The Hacker News",
-   "date": "2026-11-20T17:57:20+00:00"
   },
   {
    "title": "Hackers use autonomous AI tool Cairn to find zero-day, take over server",
@@ -147,18 +159,6 @@
    "link": "https://www.cisa.gov/news-events/alerts/2026/11/20/cisa-adds-four-known-exploited-vulnerabilities-catalog",
    "source": "CISA",
    "date": "2026-11-20T12:00:00+00:00"
-  },
-  {
-   "title": "SBC Medical Group Data Breach Impacts Over 2 Million",
-   "link": "https://www.securityweek.com/sbc-medical-group-data-breach-impacts-over-2-million/",
-   "source": "SecurityWeek",
-   "date": "2026-11-20T11:36:51+00:00"
-  },
-  {
-   "title": "European Commission Confirms AI-Assisted Cyberattack Disrupted Services",
-   "link": "https://www.securityweek.com/european-commission-confirms-ai-assisted-cyberattack-disrupted-services/",
-   "source": "SecurityWeek",
-   "date": "2026-11-20T10:51:42+00:00"
   },
   {
    "title": "Qwen Incidents Show Self-Hosted AI Models Need Stronger Steering",
