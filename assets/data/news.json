@@ -1,21 +1,33 @@
 {
- "updated": "2026-11-22T15:25:48.399369+00:00",
+ "updated": "2026-11-22T21:52:10.097425+00:00",
  "m365": {
   "status": "Available",
-  "checked": "2026-11-22T15:25:48.445987+00:00",
+  "checked": "2026-11-22T21:52:10.277727+00:00",
   "link": "https://status.cloud.microsoft/"
  },
  "aws": {
   "status": "2 open events",
   "link": "https://health.aws.amazon.com/health/status",
-  "checked": "2026-11-22T15:25:48.399369+00:00"
+  "checked": "2026-11-22T21:52:10.097425+00:00"
  },
  "wasabi": {
   "status": "Available",
   "link": "https://status.wasabi.com/",
-  "checked": "2026-11-22T15:25:48.399369+00:00"
+  "checked": "2026-11-22T21:52:10.097425+00:00"
  },
  "items": [
+  {
+   "title": "Hackers exploit GL.iNet cloud flaw to infect routers, KVM devices",
+   "link": "https://www.bleepingcomputer.com/news/security/hackers-exploit-glinet-cloud-flaw-to-infect-routers-kvm-devices/",
+   "source": "BleepingComputer",
+   "date": "2026-11-22T18:45:37+00:00"
+  },
+  {
+   "title": "Cleverbridge warns hackers stole credit card numbers, CVVs in data breach",
+   "link": "https://www.bleepingcomputer.com/news/security/cleverbridge-warns-hackers-stole-credit-card-numbers-cvvs-in-data-breach/",
+   "source": "BleepingComputer",
+   "date": "2026-11-22T15:43:04+00:00"
+  },
   {
    "title": "Signal to block Siri, Gemini AI from capturing chats on iOS, Android",
    "link": "https://www.bleepingcomputer.com/news/security/signal-to-block-siri-gemini-ai-from-capturing-chats-on-ios-android/",
@@ -57,12 +69,6 @@
    "link": "https://www.bleepingcomputer.com/news/security/badbox-30-botnet-returns-with-record-breaking-40-billion-daily-ad-requests/",
    "source": "BleepingComputer",
    "date": "2026-11-21T15:17:27+00:00"
-  },
-  {
-   "title": "FBI reportedly hacked again, this time targeting nationwide police database",
-   "link": "https://www.bleepingcomputer.com/news/security/fbi-reportedly-hacked-again-this-time-targeting-nationwide-police-database/",
-   "source": "BleepingComputer",
-   "date": "2026-11-21T14:26:04+00:00"
   },
   {
    "title": "President Trump Taps Kirsten Davies as National Cyber Director",
@@ -111,12 +117,6 @@
    "link": "https://www.darkreading.com/cyberattacks-data-breaches/china-armory-castle-vmware-vcenter-zero-day",
    "source": "Dark Reading",
    "date": "2026-11-20T21:03:27+00:00"
-  },
-  {
-   "title": "Bell Canada says 'agentic' hacker stole enterprise customer data",
-   "link": "https://www.bleepingcomputer.com/news/security/bell-canada-says-agentic-hacker-stole-enterprise-customer-data/",
-   "source": "BleepingComputer",
-   "date": "2026-11-20T18:51:43+00:00"
   },
   {
    "title": "In Security, Words Matter as Much as Tools, Maybe More",
