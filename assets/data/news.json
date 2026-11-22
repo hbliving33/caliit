@@ -1,21 +1,27 @@
 {
- "updated": "2026-11-22T06:59:30.145342+00:00",
+ "updated": "2026-11-22T15:25:48.399369+00:00",
  "m365": {
   "status": "Available",
-  "checked": "2026-11-22T06:59:30.296140+00:00",
+  "checked": "2026-11-22T15:25:48.445987+00:00",
   "link": "https://status.cloud.microsoft/"
  },
  "aws": {
   "status": "2 open events",
   "link": "https://health.aws.amazon.com/health/status",
-  "checked": "2026-11-22T06:59:30.145342+00:00"
+  "checked": "2026-11-22T15:25:48.399369+00:00"
  },
  "wasabi": {
   "status": "Available",
   "link": "https://status.wasabi.com/",
-  "checked": "2026-11-22T06:59:30.145342+00:00"
+  "checked": "2026-11-22T15:25:48.399369+00:00"
  },
  "items": [
+  {
+   "title": "Signal to block Siri, Gemini AI from capturing chats on iOS, Android",
+   "link": "https://www.bleepingcomputer.com/news/security/signal-to-block-siri-gemini-ai-from-capturing-chats-on-ios-android/",
+   "source": "BleepingComputer",
+   "date": "2026-11-22T15:15:25+00:00"
+  },
   {
    "title": "OpenRouter Drops 3 Providers After Researchers Catch Months of Prompt Theft at AI Hosting Firms",
    "link": "https://thehackernews.com/2026/11/openrouter-drops-3-providers-after.html",
@@ -117,12 +123,6 @@
    "link": "https://www.darkreading.com/cybersecurity-operations/security-words-matter",
    "source": "Dark Reading",
    "date": "2026-11-20T18:35:40+00:00"
-  },
-  {
-   "title": "Hackers use autonomous AI tool Cairn to find zero-day, take over server",
-   "link": "https://www.bleepingcomputer.com/news/security/hackers-use-autonomous-ai-tool-cairn-to-find-zero-day-take-over-server/",
-   "source": "BleepingComputer",
-   "date": "2026-11-20T17:30:00+00:00"
   },
   {
    "title": "What We Missed: Nvidia CEO Scandal Rocks AI Industry",
