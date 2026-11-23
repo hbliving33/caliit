@@ -1,21 +1,93 @@
 {
- "updated": "2026-11-23T02:52:19.662407+00:00",
+ "updated": "2026-11-23T13:00:23.108408+00:00",
  "m365": {
   "status": "Available",
-  "checked": "2026-11-23T02:52:19.903255+00:00",
+  "checked": "2026-11-23T13:00:23.226985+00:00",
   "link": "https://status.cloud.microsoft/"
  },
  "aws": {
   "status": "2 open events",
   "link": "https://health.aws.amazon.com/health/status",
-  "checked": "2026-11-23T02:52:19.662407+00:00"
+  "checked": "2026-11-23T13:00:23.108408+00:00"
  },
  "wasabi": {
   "status": "Available",
   "link": "https://status.wasabi.com/",
-  "checked": "2026-11-23T02:52:19.662407+00:00"
+  "checked": "2026-11-23T13:00:23.108408+00:00"
  },
  "items": [
+  {
+   "title": "Hackers Exploit Critical ScreenConnect Flaw to Hijack MSP Technician PCs Without Warning",
+   "link": "https://thehackernews.com/2026/11/hackers-exploit-critical-screenconnect.html",
+   "source": "The Hacker News",
+   "date": "2026-11-23T12:41:04+00:00"
+  },
+  {
+   "title": "N-able Discloses Critical Mail Assure Vulnerability Found During Breach Investigation",
+   "link": "https://thehackernews.com/2026/11/n-able-discloses-critical-mail-assure.html",
+   "source": "The Hacker News",
+   "date": "2026-11-23T12:28:09+00:00"
+  },
+  {
+   "title": "AI Inference Providers Failed to Detect Hacking and Prompt Theft, Says Dragos",
+   "link": "https://www.securityweek.com/ai-inference-providers-failed-to-detect-hacking-and-prompt-theft-says-dragos/",
+   "source": "SecurityWeek",
+   "date": "2026-11-23T12:16:20+00:00"
+  },
+  {
+   "title": "Call center operator gets 8 years for helping scam 30,000 Americans",
+   "link": "https://www.bleepingcomputer.com/news/security/call-center-operator-gets-8-years-for-helping-scam-30-000-americans/",
+   "source": "BleepingComputer",
+   "date": "2026-11-23T12:02:23+00:00"
+  },
+  {
+   "title": "BadBox 3.0 Ad Fraud Operation Generating 40 Billion Daily Bid Requests Disrupted",
+   "link": "https://www.securityweek.com/badbox-3-0-ad-fraud-operation-generating-40-billion-daily-bid-requests-disrupted/",
+   "source": "SecurityWeek",
+   "date": "2026-11-23T11:44:18+00:00"
+  },
+  {
+   "title": "SAP NetWeaver, Cisco Expressway Flaws Exploited in Attacks",
+   "link": "https://www.securityweek.com/sap-netweaver-cisco-expressway-flaws-exploited-in-attacks/",
+   "source": "SecurityWeek",
+   "date": "2026-11-23T11:35:15+00:00"
+  },
+  {
+   "title": "CrowdStrike to Acquire Zscaler in $43.9 Billion Deal",
+   "link": "https://www.securityweek.com/crowdstrike-to-acquire-zscaler-in-43-9-billion-deal/",
+   "source": "SecurityWeek",
+   "date": "2026-11-23T11:31:44+00:00"
+  },
+  {
+   "title": "Hackers Exploit Critical ASP.NET Anti-CSRF Library Flaw Allowing Unauthenticated RCE",
+   "link": "https://thehackernews.com/2026/11/hackers-exploit-critical-aspnet-anti.html",
+   "source": "The Hacker News",
+   "date": "2026-11-23T09:11:56+00:00"
+  },
+  {
+   "title": "Microsoft confirms Windows printing issues affecting Forcepoint users",
+   "link": "https://www.bleepingcomputer.com/news/microsoft/microsoft-confirms-printing-issues-after-kb5132043-windows-hotpatch/",
+   "source": "BleepingComputer",
+   "date": "2026-11-23T09:11:15+00:00"
+  },
+  {
+   "title": "Hackers Exploited GL.iNet Cloud Flaw to Install Malware on Routers and KVM Devices",
+   "link": "https://thehackernews.com/2026/11/hackers-exploited-glinet-cloud-flaw-to.html",
+   "source": "The Hacker News",
+   "date": "2026-11-23T09:04:08+00:00"
+  },
+  {
+   "title": "AI-Assisted Cyber Attacks Trigger Unauthorized Payments at Indian Banks and Fintech Firms",
+   "link": "https://thehackernews.com/2026/11/ai-assisted-cyberattacks-trigger.html",
+   "source": "The Hacker News",
+   "date": "2026-11-23T08:24:15+00:00"
+  },
+  {
+   "title": "CISA flags critical Cisco RCE flaw as actively exploited in attacks",
+   "link": "https://www.bleepingcomputer.com/news/security/cisa-flags-critical-cisco-expressway-rce-flaw-as-actively-exploited/",
+   "source": "BleepingComputer",
+   "date": "2026-11-23T07:44:19+00:00"
+  },
   {
    "title": "Hackers exploit GL.iNet cloud flaw to infect routers, KVM devices",
    "link": "https://www.bleepingcomputer.com/news/security/hackers-exploit-glinet-cloud-flaw-to-infect-routers-kvm-devices/",
@@ -41,34 +113,10 @@
    "date": "2026-11-22T05:06:55+00:00"
   },
   {
-   "title": "Researchers Demonstrate Ghostscript Sandbox-Escape RCE via Crafted File Uploads in Popular Apps",
-   "link": "https://thehackernews.com/2026/11/researchers-demonstrate-ghostscript.html",
-   "source": "The Hacker News",
-   "date": "2026-11-22T05:03:41+00:00"
-  },
-  {
    "title": "FBI Investigating Apparent Hack of Its Key National Criminal Justice Database, AP Source Says",
    "link": "https://www.securityweek.com/fbi-investigating-apparent-hack-of-its-key-national-criminal-justice-database-ap-source-says/",
    "source": "SecurityWeek",
    "date": "2026-11-22T00:53:02+00:00"
-  },
-  {
-   "title": "Rackspace Spot breach let hackers access customer Kubernetes secrets",
-   "link": "https://www.bleepingcomputer.com/news/security/rackspace-spot-breach-let-hackers-access-customer-kubernetes-secrets/",
-   "source": "BleepingComputer",
-   "date": "2026-11-21T22:59:58+00:00"
-  },
-  {
-   "title": "Microsoft Entra Connect Health flaw exploited to steal tenant data",
-   "link": "https://www.bleepingcomputer.com/news/security/microsoft-entra-connect-health-flaw-exploited-to-steal-tenant-data/",
-   "source": "BleepingComputer",
-   "date": "2026-11-21T18:01:58+00:00"
-  },
-  {
-   "title": "BADBOX botnet returns with record-breaking 40 billion daily ad requests",
-   "link": "https://www.bleepingcomputer.com/news/security/badbox-30-botnet-returns-with-record-breaking-40-billion-daily-ad-requests/",
-   "source": "BleepingComputer",
-   "date": "2026-11-21T15:17:27+00:00"
   },
   {
    "title": "President Trump Taps Kirsten Davies as National Cyber Director",
@@ -77,34 +125,10 @@
    "date": "2026-11-21T13:00:00+00:00"
   },
   {
-   "title": "Amazon: China-Linked Hackers\u2019 AI Agents Exploited Medical Software Zero-Day",
-   "link": "https://www.securityweek.com/amazon-china-linked-hackers-ai-agents-exploited-medical-software-zero-day/",
-   "source": "SecurityWeek",
-   "date": "2026-11-21T12:08:50+00:00"
-  },
-  {
-   "title": "A Single Malicious Webpage Let Researchers Hijack Meta Muse and Access Private Chats",
-   "link": "https://thehackernews.com/2026/11/a-single-malicious-webpage-let.html",
-   "source": "The Hacker News",
-   "date": "2026-11-21T11:53:07+00:00"
-  },
-  {
-   "title": "GnuPG Warns Critical GPGME Flaw Could Expose App Data via Malicious OpenPGP Keys",
-   "link": "https://thehackernews.com/2026/11/gnupg-warns-critical-gpgme-flaw-could.html",
-   "source": "The Hacker News",
-   "date": "2026-11-21T11:05:53+00:00"
-  },
-  {
-   "title": "Attackers' AI Agents Found a Zero-Day in Medical-Imaging Software and Gained Root Access",
-   "link": "https://thehackernews.com/2026/11/attackers-ai-agents-found-zero-day-in.html",
-   "source": "The Hacker News",
-   "date": "2026-11-21T11:03:17+00:00"
-  },
-  {
-   "title": "Signal Blocks AI Agents From Reading Private Chats via Screenshots on Android and iOS",
-   "link": "https://thehackernews.com/2026/11/signal-blocks-ai-agents-from-reading.html",
-   "source": "The Hacker News",
-   "date": "2026-11-21T08:49:20+00:00"
+   "title": "How Security Vendors Are Tackling Access-Control Challenges for AI Agents",
+   "link": "https://www.darkreading.com/identity-access-management-security/ai-agents-bring-enterprises-new-access-control-challenges",
+   "source": "Dark Reading",
+   "date": "2026-11-21T01:31:23+00:00"
   },
   {
    "title": "CTO of \u2018RansomwareHelp\u2019 Indicted for Wire Fraud",
@@ -137,28 +161,10 @@
    "date": "2026-11-20T17:00:00+00:00"
   },
   {
-   "title": "WhatsApp Fixes Flaw Uncovered While Disrupting Scam Campaign",
-   "link": "https://www.securityweek.com/whatsapp-fixes-flaw-uncovered-while-disrupting-scam-campaign/",
-   "source": "SecurityWeek",
-   "date": "2026-11-20T16:01:02+00:00"
-  },
-  {
-   "title": "In Other News: Norwegian Energy Firm Cyberattacks, Supercomputer Hack, New Nightmare Eclipse Exploit",
-   "link": "https://www.securityweek.com/in-other-news-norwegian-energy-firm-cyberattacks-supercomputer-hack-new-nightmare-eclipse-exploit/",
-   "source": "SecurityWeek",
-   "date": "2026-11-20T14:56:23+00:00"
-  },
-  {
    "title": "Microsoft Debuts Offensive, Defensive Security Tools for the AI Era",
    "link": "https://www.darkreading.com/endpoint-security/microsoft-offense-defense-ai-security-tools",
    "source": "Dark Reading",
    "date": "2026-11-20T13:51:30+00:00"
-  },
-  {
-   "title": "Industry Reactions to Major Outages and AI Patching Debate: Feedback Friday",
-   "link": "https://www.securityweek.com/industry-reactions-to-major-outages-and-ai-patching-questions-feedback-friday/",
-   "source": "SecurityWeek",
-   "date": "2026-11-20T12:38:55+00:00"
   },
   {
    "title": "CISA Adds Four Known Exploited Vulnerabilities to Catalog",
@@ -171,12 +177,6 @@
    "link": "https://www.darkreading.com/cyber-risk/qwen-incidents-self-hosted-ai-models-stronger-steering",
    "source": "Dark Reading",
    "date": "2026-11-19T22:40:03+00:00"
-  },
-  {
-   "title": "Second Norwegian Energy Company Breached in 2 Days",
-   "link": "https://www.darkreading.com/cyberattacks-data-breaches/second-norwegian-energy-company-breached",
-   "source": "Dark Reading",
-   "date": "2026-11-19T20:14:15+00:00"
   },
   {
    "title": "Elecbrakes EB2, VM1, ELBC2000",
