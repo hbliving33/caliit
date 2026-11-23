@@ -1,19 +1,19 @@
 {
- "updated": "2026-11-22T21:52:10.097425+00:00",
+ "updated": "2026-11-23T02:52:19.662407+00:00",
  "m365": {
   "status": "Available",
-  "checked": "2026-11-22T21:52:10.277727+00:00",
+  "checked": "2026-11-23T02:52:19.903255+00:00",
   "link": "https://status.cloud.microsoft/"
  },
  "aws": {
   "status": "2 open events",
   "link": "https://health.aws.amazon.com/health/status",
-  "checked": "2026-11-22T21:52:10.097425+00:00"
+  "checked": "2026-11-23T02:52:19.662407+00:00"
  },
  "wasabi": {
   "status": "Available",
   "link": "https://status.wasabi.com/",
-  "checked": "2026-11-22T21:52:10.097425+00:00"
+  "checked": "2026-11-23T02:52:19.662407+00:00"
  },
  "items": [
   {
@@ -149,6 +149,12 @@
    "date": "2026-11-20T14:56:23+00:00"
   },
   {
+   "title": "Microsoft Debuts Offensive, Defensive Security Tools for the AI Era",
+   "link": "https://www.darkreading.com/endpoint-security/microsoft-offense-defense-ai-security-tools",
+   "source": "Dark Reading",
+   "date": "2026-11-20T13:51:30+00:00"
+  },
+  {
    "title": "Industry Reactions to Major Outages and AI Patching Debate: Feedback Friday",
    "link": "https://www.securityweek.com/industry-reactions-to-major-outages-and-ai-patching-questions-feedback-friday/",
    "source": "SecurityWeek",
@@ -171,12 +177,6 @@
    "link": "https://www.darkreading.com/cyberattacks-data-breaches/second-norwegian-energy-company-breached",
    "source": "Dark Reading",
    "date": "2026-11-19T20:14:15+00:00"
-  },
-  {
-   "title": "Critical PHP Flaws Allow Code Execution, but Don't Panic 'PHP2Shell'-Style",
-   "link": "https://www.darkreading.com/application-security/critical-php-flaws-code-execution-panic-php2shell",
-   "source": "Dark Reading",
-   "date": "2026-11-19T19:57:31+00:00"
   },
   {
    "title": "Elecbrakes EB2, VM1, ELBC2000",
