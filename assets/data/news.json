@@ -1,56 +1,146 @@
 {
- "updated": "2026-11-24T11:02:27.062992+00:00",
+ "updated": "2026-11-24T21:19:29.901335+00:00",
  "m365": {
   "status": "Available",
-  "checked": "2026-11-24T11:02:27.187250+00:00",
+  "checked": "2026-11-24T21:19:30.035438+00:00",
   "link": "https://status.cloud.microsoft/"
  },
  "aws": {
   "status": "2 open events",
   "link": "https://health.aws.amazon.com/health/status",
-  "checked": "2026-11-24T11:02:27.062992+00:00"
+  "checked": "2026-11-24T21:19:29.901335+00:00"
  },
  "wasabi": {
   "status": "Available",
   "link": "https://status.wasabi.com/",
-  "checked": "2026-11-24T11:02:27.062992+00:00"
+  "checked": "2026-11-24T21:19:29.901335+00:00"
  },
  "items": [
   {
-   "title": "Microsoft Fixes Azure API Management Classic Flaw as Actor Targets Customer Secrets",
-   "link": "https://thehackernews.com/2026/11/microsoft-fixes-azure-api-management.html",
-   "source": "The Hacker News",
-   "date": "2026-11-24T10:44:49+00:00"
+   "title": "New Inception extortion gang launches large-scale vishing campaign",
+   "link": "https://www.bleepingcomputer.com/news/security/new-inception-extortion-gang-launches-large-scale-vishing-campaign/",
+   "source": "BleepingComputer",
+   "date": "2026-11-24T20:21:20+00:00"
   },
   {
-   "title": "Elecbrakes Bluetooth Vulnerabilities Expose Trailers to Forced Braking",
-   "link": "https://www.securityweek.com/elecbrakes-bluetooth-vulnerabilities-expose-trailers-to-forced-braking/",
+   "title": "Turnitin discloses cyberattack affecting customer-facing systems",
+   "link": "https://www.bleepingcomputer.com/news/security/turnitin-discloses-cyberattack-affecting-customer-facing-systems/",
+   "source": "BleepingComputer",
+   "date": "2026-11-24T18:59:52+00:00"
+  },
+  {
+   "title": "Radware discloses breach exposing customer cloud access keys",
+   "link": "https://www.bleepingcomputer.com/news/security/radware-discloses-breach-exposing-customer-cloud-access-keys/",
+   "source": "BleepingComputer",
+   "date": "2026-11-24T17:49:05+00:00"
+  },
+  {
+   "title": "Iran-Aligned Volant Manticore Uses IPFS-Based KuboShell Backdoor in Espionage Campaigns",
+   "link": "https://thehackernews.com/2026/11/iran-aligned-volant-manticore-uses-ipfs.html",
+   "source": "The Hacker News",
+   "date": "2026-11-24T16:54:07+00:00"
+  },
+  {
+   "title": "VMware Updates Patch Critical ESX, vCenter Vulnerabilities",
+   "link": "https://www.securityweek.com/vmware-updates-patch-critical-esx-vcenter-vulnerabilities/",
    "source": "SecurityWeek",
-   "date": "2026-11-24T10:44:44+00:00"
+   "date": "2026-11-24T16:32:56+00:00"
   },
   {
-   "title": "Peninsula Energy Halts Trading After Cyber Incident Hits US Uranium Mine",
-   "link": "https://www.securityweek.com/peninsula-energy-halts-trading-after-cyber-incident-hits-us-uranium-mine/",
+   "title": "ShinyHunters claims to return after FBI arrests, uses old PGP keys as proof",
+   "link": "https://www.bleepingcomputer.com/news/security/shinyhunters-resurfaces-after-fbi-arrests-uses-old-pgp-keys-as-proof/",
+   "source": "BleepingComputer",
+   "date": "2026-11-24T16:30:19+00:00"
+  },
+  {
+   "title": "European Commission confirms data theft in EU Academy breach",
+   "link": "https://www.bleepingcomputer.com/news/security/european-commission-confirms-data-theft-in-eu-academy-breach/",
+   "source": "BleepingComputer",
+   "date": "2026-11-24T16:22:44+00:00"
+  },
+  {
+   "title": "Hackers compromise Check Point Servers in 22 organizations",
+   "link": "https://www.bleepingcomputer.com/news/security/hackers-compromise-check-point-servers-in-22-organizations/",
+   "source": "BleepingComputer",
+   "date": "2026-11-24T16:15:23+00:00"
+  },
+  {
+   "title": "European Commission Uncovers Data Breach in Cyberattack Investigation",
+   "link": "https://www.securityweek.com/european-commission-uncovers-data-breach-in-cyberattack-investigation/",
    "source": "SecurityWeek",
-   "date": "2026-11-24T10:35:04+00:00"
+   "date": "2026-11-24T14:49:59+00:00"
   },
   {
-   "title": "WHMCS SQL Injection Could Expose Customer Data and Admin Password Hashes without Login",
-   "link": "https://thehackernews.com/2026/11/whmcs-sql-injection-flaw-could-expose.html",
-   "source": "The Hacker News",
-   "date": "2026-11-24T08:34:20+00:00"
+   "title": "Check Point Security Management Servers Hacked in AI-Assisted Campaign",
+   "link": "https://www.securityweek.com/check-point-security-management-servers-hacked-in-ai-assisted-campaign/",
+   "source": "SecurityWeek",
+   "date": "2026-11-24T14:21:56+00:00"
   },
   {
-   "title": "OpenAI and Cisco Unveil AI-Assisted Linux Security Tool to Block Exploits Before Patching",
-   "link": "https://thehackernews.com/2026/11/openai-and-cisco-unveil-ai-assisted.html",
-   "source": "The Hacker News",
-   "date": "2026-11-24T06:02:57+00:00"
+   "title": "Anthropic Expands Enterprise Safeguards for Detecting AI Misuse",
+   "link": "https://www.securityweek.com/anthropic-expands-enterprise-safeguards-for-detecting-ai-misuse/",
+   "source": "SecurityWeek",
+   "date": "2026-11-24T13:30:23+00:00"
   },
   {
-   "title": "Hackers Exploit N-able MailAssure Flaw While AI Agents Exploit MONAI Label Zero-Day",
-   "link": "https://thehackernews.com/2026/11/hackers-exploit-n-able-mailassure-flaw.html",
+   "title": "VMware vCenter Hit by Another Critical 9.8-Rated Auth Bypass Flaw After Zero-Day Exploitation",
+   "link": "https://thehackernews.com/2026/11/vmware-vcenter-hit-by-another-critical.html",
    "source": "The Hacker News",
-   "date": "2026-11-24T06:02:45+00:00"
+   "date": "2026-11-24T13:28:26+00:00"
+  },
+  {
+   "title": "Okta Links ShinyHunters-Associated Vishing Group to New INCEPTION Data Leak Site",
+   "link": "https://thehackernews.com/2026/11/okta-links-shinyhunters-associated.html",
+   "source": "The Hacker News",
+   "date": "2026-11-24T13:28:21+00:00"
+  },
+  {
+   "title": "Hackers Found a Way Around GitHub SHA Pinning. This Webinar Explains How to Close the Gap",
+   "link": "https://thehackernews.com/2026/11/hackers-found-way-around-github-sha.html",
+   "source": "The Hacker News",
+   "date": "2026-11-24T12:42:09+00:00"
+  },
+  {
+   "title": "OpenAI, Cisco Unveil Open Source Tool to Shield Unpatched Linux Systems",
+   "link": "https://www.securityweek.com/openai-cisco-unveil-open-source-tool-to-shield-unpatched-linux-systems/",
+   "source": "SecurityWeek",
+   "date": "2026-11-24T12:20:41+00:00"
+  },
+  {
+   "title": "Google Researcher Shows How a Single Bit Change in .NET Files Bypassed Windows Code Integrity",
+   "link": "https://thehackernews.com/2026/11/google-researcher-shows-how-single-bit.html",
+   "source": "The Hacker News",
+   "date": "2026-11-24T12:02:00+00:00"
+  },
+  {
+   "title": "2027 SOC Budget Reset: 5 Priorities to Cut Costs and Reduce Cyber Risk",
+   "link": "https://thehackernews.com/2026/11/2027-soc-budget-reset-5-priorities-to.html",
+   "source": "The Hacker News",
+   "date": "2026-11-24T12:01:54+00:00"
+  },
+  {
+   "title": "Schneider Electric EcoStruxure Power Build Rapsody software",
+   "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-328-02",
+   "source": "CISA",
+   "date": "2026-11-24T12:00:00+00:00"
+  },
+  {
+   "title": "Danfoss AK-SM 8xxA Series",
+   "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-328-03",
+   "source": "CISA",
+   "date": "2026-11-24T12:00:00+00:00"
+  },
+  {
+   "title": "AutomationDirect C-More EA9 Programming Software",
+   "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-328-01",
+   "source": "CISA",
+   "date": "2026-11-24T12:00:00+00:00"
+  },
+  {
+   "title": "1.5 Million Impacted by Data Breach at South Korean Electric Company KEPCO",
+   "link": "https://www.securityweek.com/1-5-million-impacted-by-data-breach-at-south-korean-electric-company-kepco/",
+   "source": "SecurityWeek",
+   "date": "2026-11-24T11:50:21+00:00"
   },
   {
    "title": "Industrial Serial Gateways Broadcast That They're Insecure",
@@ -65,34 +155,10 @@
    "date": "2026-11-23T21:21:42+00:00"
   },
   {
-   "title": "South Korea\u2019s power giant KEPCO confirms data breach impacting 1.5 million",
-   "link": "https://www.bleepingcomputer.com/news/security/south-koreas-power-giant-kepco-confirms-data-breach-impacting-15-million/",
-   "source": "BleepingComputer",
-   "date": "2026-11-23T20:54:51+00:00"
-  },
-  {
    "title": "US Cyber Director Pick Signals Shift Toward Expertise",
    "link": "https://www.darkreading.com/cybersecurity-operations/us-cyber-director-pick-signals-shift-toward-expertise",
    "source": "Dark Reading",
    "date": "2026-11-23T20:13:48+00:00"
-  },
-  {
-   "title": "OpenRouter drops AI providers over leaked prompts and secrets",
-   "link": "https://www.bleepingcomputer.com/news/security/openrouter-drops-ai-providers-over-leaked-prompts-and-secrets/",
-   "source": "BleepingComputer",
-   "date": "2026-11-23T20:00:20+00:00"
-  },
-  {
-   "title": "Microsoft Azure flaw exploited to steal customers' API credentials",
-   "link": "https://www.bleepingcomputer.com/news/security/microsoft-azure-flaw-exploited-to-steal-customers-api-credentials/",
-   "source": "BleepingComputer",
-   "date": "2026-11-23T19:42:20+00:00"
-  },
-  {
-   "title": "Spanish LaLiga confirms hackers stole soccer fans\u2019 personal data",
-   "link": "https://www.bleepingcomputer.com/news/security/spanish-laliga-confirms-hackers-stole-soccer-fans-personal-data/",
-   "source": "BleepingComputer",
-   "date": "2026-11-23T18:38:40+00:00"
   },
   {
    "title": "Behind the Alias: How One Researcher Unmasked a Decade of Ransomware Actors",
@@ -101,70 +167,10 @@
    "date": "2026-11-23T17:45:52+00:00"
   },
   {
-   "title": "Webworm Suspected of Modifying SoftEther VPN to Evade Detection and Hide Remote Access",
-   "link": "https://thehackernews.com/2026/11/webworm-suspected-of-modifying.html",
-   "source": "The Hacker News",
-   "date": "2026-11-23T17:45:15+00:00"
-  },
-  {
-   "title": "GlobeTopper loses $2.5 million after hackers steal $70k in gift cards",
-   "link": "https://www.bleepingcomputer.com/news/security/globetopper-loses-25-million-after-hackers-steal-70k-in-gift-cards/",
-   "source": "BleepingComputer",
-   "date": "2026-11-23T16:50:01+00:00"
-  },
-  {
    "title": "AI Agents Zip From Flaw Discovery to Root Access in 11 Minutes",
    "link": "https://www.darkreading.com/cyberattacks-data-breaches/ai-agents-flaw-discovery-root-access-11-minutes",
    "source": "Dark Reading",
    "date": "2026-11-23T16:17:21+00:00"
-  },
-  {
-   "title": "Azure Flaw Exploited to Target Secrets at Norwegian Energy Firms",
-   "link": "https://www.securityweek.com/azure-flaw-exploited-to-target-secrets-at-norwegian-energy-firms/",
-   "source": "SecurityWeek",
-   "date": "2026-11-23T15:47:40+00:00"
-  },
-  {
-   "title": "\u26a1 Weekly Recap: VMware 0-Day, Java4Shell, NGINX2Root, Ruby2Shell, and a Whole Lot of Shell Trouble",
-   "link": "https://thehackernews.com/2026/11/weekly-recap-vmware-0-day-java4shell.html",
-   "source": "The Hacker News",
-   "date": "2026-11-23T15:10:48+00:00"
-  },
-  {
-   "title": "N-able Patches Critical Flaw Discovered After Mail Assure Cyberattack",
-   "link": "https://www.securityweek.com/n-able-patches-critical-flaw-disclosed-after-mail-assure-cyberattack/",
-   "source": "SecurityWeek",
-   "date": "2026-11-23T15:06:49+00:00"
-  },
-  {
-   "title": "AI Agents Are Creating a Shared Responsibility Gap",
-   "link": "https://www.bleepingcomputer.com/news/security/ai-agents-are-creating-a-shared-responsibility-gap/",
-   "source": "BleepingComputer",
-   "date": "2026-11-23T15:00:10+00:00"
-  },
-  {
-   "title": "phpAfterShell Vulnerability Revives PHP2Shell\u2019s Attack Path",
-   "link": "https://www.securityweek.com/phpaftershell-vulnerability-revives-php2shells-attack-path/",
-   "source": "SecurityWeek",
-   "date": "2026-11-23T13:58:07+00:00"
-  },
-  {
-   "title": "GL.iNet Routers, KVMs Compromised via Remote Management Service Flaw",
-   "link": "https://www.securityweek.com/gl-inet-routers-kvms-compromised-via-remote-management-service-flaw/",
-   "source": "SecurityWeek",
-   "date": "2026-11-23T13:26:22+00:00"
-  },
-  {
-   "title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
-   "link": "https://www.cisa.gov/news-events/alerts/2026/11/23/cisa-adds-two-known-exploited-vulnerabilities-catalog",
-   "source": "CISA",
-   "date": "2026-11-23T12:00:00+00:00"
-  },
-  {
-   "title": "How Security Vendors Are Tackling Access-Control Challenges for AI Agents",
-   "link": "https://www.darkreading.com/identity-access-management-security/ai-agents-bring-enterprises-new-access-control-challenges",
-   "source": "Dark Reading",
-   "date": "2026-11-21T01:31:23+00:00"
   },
   {
    "title": "CTO of \u2018RansomwareHelp\u2019 Indicted for Wire Fraud",
@@ -177,12 +183,6 @@
    "link": "https://www.microsoft.com/en-us/security/blog/2026/11/20/microsoft-named-a-leader-in-the-2026-gartner-magic-quadrant-for-siem/",
    "source": "Microsoft Security Blog",
    "date": "2026-11-20T17:00:00+00:00"
-  },
-  {
-   "title": "CISA Adds Four Known Exploited Vulnerabilities to Catalog",
-   "link": "https://www.cisa.gov/news-events/alerts/2026/11/20/cisa-adds-four-known-exploited-vulnerabilities-catalog",
-   "source": "CISA",
-   "date": "2026-11-20T12:00:00+00:00"
   },
   {
    "title": "Attackers Used Optimizely to A/B Test Malware on Top Websites",
