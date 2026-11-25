@@ -1,21 +1,57 @@
 {
- "updated": "2026-11-24T21:19:29.901335+00:00",
+ "updated": "2026-11-25T04:55:46.223498+00:00",
  "m365": {
   "status": "Available",
-  "checked": "2026-11-24T21:19:30.035438+00:00",
+  "checked": "2026-11-25T04:55:46.467703+00:00",
   "link": "https://status.cloud.microsoft/"
  },
  "aws": {
   "status": "2 open events",
   "link": "https://health.aws.amazon.com/health/status",
-  "checked": "2026-11-24T21:19:29.901335+00:00"
+  "checked": "2026-11-25T04:55:46.223498+00:00"
  },
  "wasabi": {
   "status": "Available",
   "link": "https://status.wasabi.com/",
-  "checked": "2026-11-24T21:19:29.901335+00:00"
+  "checked": "2026-11-25T04:55:46.223498+00:00"
  },
  "items": [
+  {
+   "title": "Cyber Insurers See New Divide: AI Defense 'Haves' & 'Have Nots'",
+   "link": "https://www.darkreading.com/cybersecurity-operations/cyber-insurers-see-new-ai-divide",
+   "source": "Dark Reading",
+   "date": "2026-11-25T15:00:00+00:00"
+  },
+  {
+   "title": "An Unclassified CIA System Was Breached in a Cyberattack, AP Source Says",
+   "link": "https://www.securityweek.com/an-unclassified-cia-system-was-breached-in-a-cyberattack-ap-source-says/",
+   "source": "SecurityWeek",
+   "date": "2026-11-24T22:41:58+00:00"
+  },
+  {
+   "title": "Satellites Have a Ground-Level Cybersecurity Problem",
+   "link": "https://www.darkreading.com/cyber-risk/satellites-ground-level-cybersecurity-problem",
+   "source": "Dark Reading",
+   "date": "2026-11-24T22:05:34+00:00"
+  },
+  {
+   "title": "Webworm APT Slithers Into Networks With Customized SoftEther VPN",
+   "link": "https://www.darkreading.com/perimeter/webworm-slithers-customized-softether-vpn",
+   "source": "Dark Reading",
+   "date": "2026-11-24T21:48:06+00:00"
+  },
+  {
+   "title": "Rackspace shuts down Spot cloud platform after security breach",
+   "link": "https://www.bleepingcomputer.com/news/security/rackspace-shuts-down-spot-cloud-platform-after-security-breach/",
+   "source": "BleepingComputer",
+   "date": "2026-11-24T21:37:30+00:00"
+  },
+  {
+   "title": "'God Mode' Flaws Could Wreak Border-Control Havoc",
+   "link": "https://www.darkreading.com/vulnerabilities-threats/god-mode-flaws-wreak-border-control-havoc",
+   "source": "Dark Reading",
+   "date": "2026-11-24T21:36:11+00:00"
+  },
   {
    "title": "New Inception extortion gang launches large-scale vishing campaign",
    "link": "https://www.bleepingcomputer.com/news/security/new-inception-extortion-gang-launches-large-scale-vishing-campaign/",
@@ -57,12 +93,6 @@
    "link": "https://www.bleepingcomputer.com/news/security/european-commission-confirms-data-theft-in-eu-academy-breach/",
    "source": "BleepingComputer",
    "date": "2026-11-24T16:22:44+00:00"
-  },
-  {
-   "title": "Hackers compromise Check Point Servers in 22 organizations",
-   "link": "https://www.bleepingcomputer.com/news/security/hackers-compromise-check-point-servers-in-22-organizations/",
-   "source": "BleepingComputer",
-   "date": "2026-11-24T16:15:23+00:00"
   },
   {
    "title": "European Commission Uncovers Data Breach in Cyberattack Investigation",
@@ -119,8 +149,8 @@
    "date": "2026-11-24T12:01:54+00:00"
   },
   {
-   "title": "Schneider Electric EcoStruxure Power Build Rapsody software",
-   "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-328-02",
+   "title": "CISA Adds Three Known Exploited Vulnerabilities to Catalog",
+   "link": "https://www.cisa.gov/news-events/alerts/2026/11/24/cisa-adds-three-known-exploited-vulnerabilities-catalog",
    "source": "CISA",
    "date": "2026-11-24T12:00:00+00:00"
   },
@@ -131,46 +161,16 @@
    "date": "2026-11-24T12:00:00+00:00"
   },
   {
-   "title": "AutomationDirect C-More EA9 Programming Software",
-   "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-328-01",
+   "title": "Schneider Electric EcoStruxure Power Build Rapsody software",
+   "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-328-02",
    "source": "CISA",
    "date": "2026-11-24T12:00:00+00:00"
   },
   {
-   "title": "1.5 Million Impacted by Data Breach at South Korean Electric Company KEPCO",
-   "link": "https://www.securityweek.com/1-5-million-impacted-by-data-breach-at-south-korean-electric-company-kepco/",
-   "source": "SecurityWeek",
-   "date": "2026-11-24T11:50:21+00:00"
-  },
-  {
-   "title": "Industrial Serial Gateways Broadcast That They're Insecure",
-   "link": "https://www.darkreading.com/ics-ot-security/industrial-serial-gateways-broadcast-insecure",
-   "source": "Dark Reading",
-   "date": "2026-11-23T22:02:46+00:00"
-  },
-  {
-   "title": "CrowdStrike Makes AI Security Push With Blockbuster Zscaler Deal",
-   "link": "https://www.darkreading.com/endpoint-security/crowdstrike-ai-security-push-zscaler-deal",
-   "source": "Dark Reading",
-   "date": "2026-11-23T21:21:42+00:00"
-  },
-  {
-   "title": "US Cyber Director Pick Signals Shift Toward Expertise",
-   "link": "https://www.darkreading.com/cybersecurity-operations/us-cyber-director-pick-signals-shift-toward-expertise",
-   "source": "Dark Reading",
-   "date": "2026-11-23T20:13:48+00:00"
-  },
-  {
-   "title": "Behind the Alias: How One Researcher Unmasked a Decade of Ransomware Actors",
-   "link": "https://www.darkreading.com/cybersecurity-operations/alias-researcher-unmasked-ransomware-actors",
-   "source": "Dark Reading",
-   "date": "2026-11-23T17:45:52+00:00"
-  },
-  {
-   "title": "AI Agents Zip From Flaw Discovery to Root Access in 11 Minutes",
-   "link": "https://www.darkreading.com/cyberattacks-data-breaches/ai-agents-flaw-discovery-root-access-11-minutes",
-   "source": "Dark Reading",
-   "date": "2026-11-23T16:17:21+00:00"
+   "title": "AutomationDirect C-More EA9 Programming Software",
+   "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-328-01",
+   "source": "CISA",
+   "date": "2026-11-24T12:00:00+00:00"
   },
   {
    "title": "CTO of \u2018RansomwareHelp\u2019 Indicted for Wire Fraud",
