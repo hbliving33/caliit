@@ -1,21 +1,63 @@
 {
- "updated": "2026-11-25T15:42:52.863371+00:00",
+ "updated": "2026-11-26T00:29:16.332026+00:00",
  "m365": {
   "status": "Available",
-  "checked": "2026-11-25T15:42:53.015276+00:00",
+  "checked": "2026-11-26T00:29:16.353805+00:00",
   "link": "https://status.cloud.microsoft/"
  },
  "aws": {
   "status": "2 open events",
   "link": "https://health.aws.amazon.com/health/status",
-  "checked": "2026-11-25T15:42:52.863371+00:00"
+  "checked": "2026-11-26T00:29:16.332026+00:00"
  },
  "wasabi": {
   "status": "Available",
   "link": "https://status.wasabi.com/",
-  "checked": "2026-11-25T15:42:52.863371+00:00"
+  "checked": "2026-11-26T00:29:16.332026+00:00"
  },
  "items": [
+  {
+   "title": "Palo Alto Networks warns of Fragnesia flaw exploited in PAN-OS attacks",
+   "link": "https://www.bleepingcomputer.com/news/security/palo-alto-networks-warns-of-fragnesia-flaw-exploited-in-pan-os-attacks/",
+   "source": "BleepingComputer",
+   "date": "2026-11-25T22:05:09+00:00"
+  },
+  {
+   "title": "1Password customer data stolen after employee GitHub account breach",
+   "link": "https://www.bleepingcomputer.com/news/security/1password-customer-data-stolen-after-employee-github-account-breach/",
+   "source": "BleepingComputer",
+   "date": "2026-11-25T21:33:33+00:00"
+  },
+  {
+   "title": "Italy and Switzerland warn of autonomous AI-driven cyberattacks",
+   "link": "https://www.bleepingcomputer.com/news/security/italy-and-switzerland-warn-of-autonomous-ai-driven-cyberattacks/",
+   "source": "BleepingComputer",
+   "date": "2026-11-25T19:39:31+00:00"
+  },
+  {
+   "title": "What defenders need to know about ARTEX, the agentic AI framework threat actors abuse",
+   "link": "https://www.microsoft.com/en-us/security/blog/2026/11/25/what-defenders-need-to-know-artex-agentic-ai-framework-threat-actors-abuse/",
+   "source": "Microsoft Security Blog",
+   "date": "2026-11-25T18:09:06+00:00"
+  },
+  {
+   "title": "Microsoft named a Leader in the 2026 Gartner\u00ae Magic Quadrant\u2122 for Email Security",
+   "link": "https://www.microsoft.com/en-us/security/blog/2026/11/25/microsoft-named-a-leader-in-the-2026-gartner-magic-quadrant-for-email-security/",
+   "source": "Microsoft Security Blog",
+   "date": "2026-11-25T17:15:00+00:00"
+  },
+  {
+   "title": "CISA warns of critical unpatched flaw in Danfoss refrigeration controllers",
+   "link": "https://www.bleepingcomputer.com/news/security/cisa-warns-of-critical-unpatched-flaw-in-danfoss-refrigeration-controllers/",
+   "source": "BleepingComputer",
+   "date": "2026-11-25T16:13:40+00:00"
+  },
+  {
+   "title": "Attackers Target .NET Developers With Poisoned Job Assessments",
+   "link": "https://www.darkreading.com/threat-intelligence/attackers-net-developers-poisoned-job-assessments",
+   "source": "Dark Reading",
+   "date": "2026-11-25T15:48:04+00:00"
+  },
   {
    "title": "Two Newly Disclosed GeoServer Vulnerabilities Under Attack",
    "link": "https://www.securityweek.com/two-newly-disclosed-geoserver-vulnerabilities-under-attack/",
@@ -83,6 +125,12 @@
    "date": "2026-11-25T12:30:08+00:00"
   },
   {
+   "title": "CISA Adds 10 Known Exploited Vulnerabilities to Catalog",
+   "link": "https://www.cisa.gov/news-events/alerts/2026/11/25/cisa-adds-10-known-exploited-vulnerabilities-catalog",
+   "source": "CISA",
+   "date": "2026-11-25T12:00:00+00:00"
+  },
+  {
    "title": "Credential Remediation Is Slow When You Don\u2019t Know What Will Break",
    "link": "https://thehackernews.com/2026/11/credential-remediation-is-slow-when-you.html",
    "source": "The Hacker News",
@@ -93,12 +141,6 @@
    "link": "https://thehackernews.com/2026/11/drupal-fail2install-exploit-details.html",
    "source": "The Hacker News",
    "date": "2026-11-25T11:23:26+00:00"
-  },
-  {
-   "title": "Microsoft fixes Microsoft 365 bug blocking access to Office apps",
-   "link": "https://www.bleepingcomputer.com/news/microsoft/microsoft-fixes-blank-dialog-that-made-microsoft-365-office-apps-unusable/",
-   "source": "BleepingComputer",
-   "date": "2026-11-25T11:16:32+00:00"
   },
   {
    "title": "Ex-OpenAI Employee Accused of Bugging Company Offices Granted $1 Million Bail",
@@ -113,12 +155,6 @@
    "date": "2026-11-25T10:40:07+00:00"
   },
   {
-   "title": "Hackers now exploit critical Drupal RCE flaw to hijack sites",
-   "link": "https://www.bleepingcomputer.com/news/security/hackers-now-exploit-critical-drupal-rce-flaw-to-hijack-sites/",
-   "source": "BleepingComputer",
-   "date": "2026-11-25T10:10:20+00:00"
-  },
-  {
    "title": "Hackers Exploited CVSS 10.0 Hex.pm RCE Flaw to Compromise 6 Package Registry Servers",
    "link": "https://thehackernews.com/2026/11/hackers-exploited-cvss-100-hexpm-rce.html",
    "source": "The Hacker News",
@@ -129,18 +165,6 @@
    "link": "https://www.securityweek.com/hackers-exploit-unpatched-flaw-in-defunct-idunno-anticsrf-library/",
    "source": "SecurityWeek",
    "date": "2026-11-25T09:05:13+00:00"
-  },
-  {
-   "title": "Microsoft confirms authentication issues after November updates",
-   "link": "https://www.bleepingcomputer.com/news/microsoft/microsoft-confirms-authentication-issues-after-november-updates/",
-   "source": "BleepingComputer",
-   "date": "2026-11-25T09:02:57+00:00"
-  },
-  {
-   "title": "Hackers reportedly breached CIA intelligence analysis system",
-   "link": "https://www.bleepingcomputer.com/news/security/hackers-reportedly-breached-cia-intelligence-analysis-system/",
-   "source": "BleepingComputer",
-   "date": "2026-11-25T07:45:03+00:00"
   },
   {
    "title": "Satellites Have a Ground-Level Cybersecurity Problem",
@@ -155,20 +179,8 @@
    "date": "2026-11-24T21:48:06+00:00"
   },
   {
-   "title": "'God Mode' Flaws Could Wreak Border-Control Havoc",
-   "link": "https://www.darkreading.com/vulnerabilities-threats/god-mode-flaws-wreak-border-control-havoc",
-   "source": "Dark Reading",
-   "date": "2026-11-24T21:36:11+00:00"
-  },
-  {
-   "title": "CISA Adds Three Known Exploited Vulnerabilities to Catalog",
-   "link": "https://www.cisa.gov/news-events/alerts/2026/11/24/cisa-adds-three-known-exploited-vulnerabilities-catalog",
-   "source": "CISA",
-   "date": "2026-11-24T12:00:00+00:00"
-  },
-  {
-   "title": "Danfoss AK-SM 8xxA Series",
-   "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-328-03",
+   "title": "AutomationDirect C-More EA9 Programming Software",
+   "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-328-01",
    "source": "CISA",
    "date": "2026-11-24T12:00:00+00:00"
   },
@@ -179,22 +191,10 @@
    "date": "2026-11-21T00:36:39+00:00"
   },
   {
-   "title": "Microsoft named a Leader in the 2026 Gartner\u00ae Magic Quadrant\u2122 for SIEM",
-   "link": "https://www.microsoft.com/en-us/security/blog/2026/11/20/microsoft-named-a-leader-in-the-2026-gartner-magic-quadrant-for-siem/",
-   "source": "Microsoft Security Blog",
-   "date": "2026-11-20T17:00:00+00:00"
-  },
-  {
    "title": "Attackers Used Optimizely to A/B Test Malware on Top Websites",
    "link": "https://krebsonsecurity.com/2026/11/attackers-used-optimizely-to-a-b-test-malware-on-top-websites/",
    "source": "Krebs on Security",
    "date": "2026-11-18T02:52:04+00:00"
-  },
-  {
-   "title": "Security for the agentic era, powered by Microsoft Perception",
-   "link": "https://www.microsoft.com/en-us/security/blog/2026/11/17/security-for-the-agentic-era-powered-by-microsoft-perception/",
-   "source": "Microsoft Security Blog",
-   "date": "2026-11-17T18:14:00+00:00"
   }
  ],
  "errors": {}
