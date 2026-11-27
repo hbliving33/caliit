@@ -1,21 +1,33 @@
 {
- "updated": "2026-11-26T19:41:28.032647+00:00",
+ "updated": "2026-11-27T02:54:53.880714+00:00",
  "m365": {
   "status": "Available",
-  "checked": "2026-11-26T19:41:28.170301+00:00",
+  "checked": "2026-11-27T02:54:53.940890+00:00",
   "link": "https://status.cloud.microsoft/"
  },
  "aws": {
   "status": "2 open events",
   "link": "https://health.aws.amazon.com/health/status",
-  "checked": "2026-11-26T19:41:28.032647+00:00"
+  "checked": "2026-11-27T02:54:53.880714+00:00"
  },
  "wasabi": {
   "status": "Available",
   "link": "https://status.wasabi.com/",
-  "checked": "2026-11-26T19:41:28.032647+00:00"
+  "checked": "2026-11-27T02:54:53.880714+00:00"
  },
  "items": [
+  {
+   "title": "OpenAI warns GPT-6.2 Astra will hit usage limits 40% faster because it fixed a bug",
+   "link": "https://www.bleepingcomputer.com/news/artificial-intelligence/openai-warns-gpt-62-astra-will-hit-usage-limits-40-percent-faster-because-it-fixed-a-bug/",
+   "source": "BleepingComputer",
+   "date": "2026-11-26T21:06:22+00:00"
+  },
+  {
+   "title": "ThreatsDay: 10M NGINX Services at Risk, 250+ Malicious Extensions, AI Server Hijacking + 17 More Stories",
+   "link": "https://thehackernews.com/2026/11/threatsday-250-rogue-extensions-10m.html",
+   "source": "The Hacker News",
+   "date": "2026-11-26T19:39:57+00:00"
+  },
   {
    "title": "NordVPN Black Friday Deal: Get 78% off VPN plans in 2026",
    "link": "https://www.bleepingcomputer.com/news/security/nordvpn-black-friday-deal-get-78-percent-off-vpn-plans-in-2026/",
@@ -107,22 +119,10 @@
    "date": "2026-11-26T06:44:46+00:00"
   },
   {
-   "title": "13 Malicious NuGet Packages Turn Fake .NET Job Assessments Into Malware Delivery Traps",
-   "link": "https://thehackernews.com/2026/11/13-malicious-nuget-packages-turn-fake.html",
-   "source": "The Hacker News",
-   "date": "2026-11-26T03:48:52+00:00"
-  },
-  {
    "title": "Palo Alto Networks warns of Fragnesia flaw exploited in PAN-OS attacks",
    "link": "https://www.bleepingcomputer.com/news/security/palo-alto-networks-warns-of-fragnesia-flaw-exploited-in-pan-os-attacks/",
    "source": "BleepingComputer",
    "date": "2026-11-25T22:05:09+00:00"
-  },
-  {
-   "title": "1Password customer data stolen after employee GitHub account breach",
-   "link": "https://www.bleepingcomputer.com/news/security/1password-customer-data-stolen-after-employee-github-account-breach/",
-   "source": "BleepingComputer",
-   "date": "2026-11-25T21:33:33+00:00"
   },
   {
    "title": "What defenders need to know about ARTEX, the agentic AI framework threat actors abuse",
