@@ -1,26 +1,86 @@
 {
- "updated": "2026-11-27T12:37:15.478912+00:00",
+ "updated": "2026-11-27T22:02:57.733792+00:00",
  "m365": {
   "status": "Available",
-  "checked": "2026-11-27T12:37:15.664788+00:00",
+  "checked": "2026-11-27T22:02:57.845350+00:00",
   "link": "https://status.cloud.microsoft/"
  },
  "aws": {
   "status": "2 open events",
   "link": "https://health.aws.amazon.com/health/status",
-  "checked": "2026-11-27T12:37:15.478912+00:00"
+  "checked": "2026-11-27T22:02:57.733792+00:00"
  },
  "wasabi": {
   "status": "Available",
   "link": "https://status.wasabi.com/",
-  "checked": "2026-11-27T12:37:15.478912+00:00"
+  "checked": "2026-11-27T22:02:57.733792+00:00"
  },
  "items": [
   {
-   "title": "Microsoft removes WSUS server role in Windows Server 2028",
-   "link": "https://www.bleepingcomputer.com/news/microsoft/microsoft-removes-wsus-server-role-in-windows-server-2028/",
+   "title": "pCloud confirms password manager hack after suspicious login alerts",
+   "link": "https://www.bleepingcomputer.com/news/security/pcloud-confirms-password-manager-hack-after-suspicious-login-alerts/",
    "source": "BleepingComputer",
-   "date": "2026-11-27T11:18:36+00:00"
+   "date": "2026-11-27T19:26:04+00:00"
+  },
+  {
+   "title": "New Boston Scientific data breach exposes personal, medical info",
+   "link": "https://www.bleepingcomputer.com/news/security/new-boston-scientific-data-breach-exposes-personal-medical-info/",
+   "source": "BleepingComputer",
+   "date": "2026-11-27T18:57:42+00:00"
+  },
+  {
+   "title": "Unpatched Cacti zero-day with public PoC gives remote code execution",
+   "link": "https://www.bleepingcomputer.com/news/security/unpatched-cacti-zero-day-with-public-poc-gives-remote-code-execution/",
+   "source": "BleepingComputer",
+   "date": "2026-11-27T17:06:13+00:00"
+  },
+  {
+   "title": "Suspected Vietnam-Linked Hackers Target Southeast Asia in South China Sea Espionage Campaign",
+   "link": "https://thehackernews.com/2026/11/suspected-vietnam-linked-hackers-target.html",
+   "source": "The Hacker News",
+   "date": "2026-11-27T16:36:11+00:00"
+  },
+  {
+   "title": "Matters.AI Lands India\u2019s Largest Cybersecurity Pre-Series A Round to Fight AI Data Risks",
+   "link": "https://www.darkreading.com/cyber-risk/matters-india-cybersecurity-pre-series-ai-data-risks",
+   "source": "Dark Reading",
+   "date": "2026-11-27T15:27:20+00:00"
+  },
+  {
+   "title": "US Air Force cloud platform reportedly hacked in latest federal breach",
+   "link": "https://www.bleepingcomputer.com/news/security/us-air-force-cloud-platform-reportedly-hacked-in-latest-federal-breach/",
+   "source": "BleepingComputer",
+   "date": "2026-11-27T15:09:40+00:00"
+  },
+  {
+   "title": "Your Firewall Isn't Enough: The Hidden Risk of Unmanaged VMs",
+   "link": "https://www.bleepingcomputer.com/news/security/your-firewall-isnt-enough-the-hidden-risk-of-unmanaged-vms/",
+   "source": "BleepingComputer",
+   "date": "2026-11-27T15:00:10+00:00"
+  },
+  {
+   "title": "Malwarebytes Antivirus: Get 50% off during Black Friday 2026",
+   "link": "https://www.bleepingcomputer.com/news/security/malwarebytes-antivirus-get-50-percent-off-during-black-friday-2026/",
+   "source": "BleepingComputer",
+   "date": "2026-11-27T14:22:06+00:00"
+  },
+  {
+   "title": "'God Mode' Flaws Could Wreak Border-Control Havoc",
+   "link": "https://www.darkreading.com/vulnerabilities-threats/god-mode-flaws-wreak-border-control-havoc",
+   "source": "Dark Reading",
+   "date": "2026-11-27T14:00:00+00:00"
+  },
+  {
+   "title": "CISA Adds Three Known Exploited Vulnerabilities to Catalog",
+   "link": "https://www.cisa.gov/news-events/alerts/2026/11/27/cisa-adds-three-known-exploited-vulnerabilities-catalog",
+   "source": "CISA",
+   "date": "2026-11-27T12:00:00+00:00"
+  },
+  {
+   "title": "Microsoft Store App Found Delivering Vinci RAT Capable of Remote System Control",
+   "link": "https://thehackernews.com/2026/11/microsoft-store-app-found-delivering.html",
+   "source": "The Hacker News",
+   "date": "2026-11-27T11:49:34+00:00"
   },
   {
    "title": "In Other News: Tanker Cyberattacks, EU Quantum Act, New VirusTotal Capabilities",
@@ -35,18 +95,6 @@
    "date": "2026-11-27T10:32:18+00:00"
   },
   {
-   "title": "Drupal warns of new site takeover flaw exploited in attacks",
-   "link": "https://www.bleepingcomputer.com/news/security/drupal-warns-of-new-access-bypass-flaw-exploited-in-attacks/",
-   "source": "BleepingComputer",
-   "date": "2026-11-27T10:10:15+00:00"
-  },
-  {
-   "title": "SAP confirms security incident after suspicious GitHub activity",
-   "link": "https://www.bleepingcomputer.com/news/security/sap-confirms-security-incident-after-suspicious-github-activity/",
-   "source": "BleepingComputer",
-   "date": "2026-11-27T09:56:36+00:00"
-  },
-  {
    "title": "100,000 Potentially Impacted by Colorado Data Breach",
    "link": "https://www.securityweek.com/100000-potentially-impacted-by-colorado-data-breach/",
    "source": "SecurityWeek",
@@ -57,18 +105,6 @@
    "link": "https://thehackernews.com/2026/11/hackers-trojanize-official-q-dir-and.html",
    "source": "The Hacker News",
    "date": "2026-11-27T09:29:30+00:00"
-  },
-  {
-   "title": "Microsoft pushes emergency hotpatch to fix Windows Server crashes",
-   "link": "https://www.bleepingcomputer.com/news/microsoft/new-out-of-band-oob-emergency-hotpatch-fixes-windows-server-2025-crashes/",
-   "source": "BleepingComputer",
-   "date": "2026-11-27T09:08:16+00:00"
-  },
-  {
-   "title": "New NFS2ROOT Linux flaw can let attackers gain root privileges",
-   "link": "https://www.bleepingcomputer.com/news/security/new-nfs2root-linux-flaw-can-let-attackers-gain-root-privileges/",
-   "source": "BleepingComputer",
-   "date": "2026-11-27T08:06:58+00:00"
   },
   {
    "title": "Hex Package Manager Warns of Potential Data Breach",
@@ -95,28 +131,10 @@
    "date": "2026-11-27T05:48:20+00:00"
   },
   {
-   "title": "OpenAI warns GPT-6.2 Astra will hit usage limits 40% faster because it fixed a bug",
-   "link": "https://www.bleepingcomputer.com/news/artificial-intelligence/openai-warns-gpt-62-astra-will-hit-usage-limits-40-percent-faster-because-it-fixed-a-bug/",
-   "source": "BleepingComputer",
-   "date": "2026-11-26T21:06:22+00:00"
-  },
-  {
-   "title": "ThreatsDay: 10M NGINX Services at Risk, 250+ Malicious Extensions, AI Server Hijacking + 17 More Stories",
-   "link": "https://thehackernews.com/2026/11/threatsday-250-rogue-extensions-10m.html",
-   "source": "The Hacker News",
-   "date": "2026-11-26T19:39:57+00:00"
-  },
-  {
    "title": "FIFA Says It Has Been Victim of a Cyberattack Accessing \u2018Personal and Business Information\u2019",
    "link": "https://www.securityweek.com/fifa-says-it-has-been-victim-of-a-cyberattack-accessing-personal-and-business-information/",
    "source": "SecurityWeek",
    "date": "2026-11-26T17:06:55+00:00"
-  },
-  {
-   "title": "North Korea-Linked PolinRider Poisons Over 7,600 GitHub Repositories to Spread Malware",
-   "link": "https://thehackernews.com/2026/11/north-korea-linked-polinrider-poisons.html",
-   "source": "The Hacker News",
-   "date": "2026-11-26T15:13:41+00:00"
   },
   {
    "title": "Critical Juniper Session Smart Conductor Flaw Exploited in Attacks",
@@ -161,28 +179,10 @@
    "date": "2026-11-25T15:00:00+00:00"
   },
   {
-   "title": "Latin America Sees Cyberattacks on Ports, Pipelines & Manufacturing",
-   "link": "https://www.darkreading.com/cyberattacks-data-breaches/latin-america-cyberattacks-ports-pipelines-manufacturing",
-   "source": "Dark Reading",
-   "date": "2026-11-25T14:00:00+00:00"
-  },
-  {
    "title": "CISA Adds 10 Known Exploited Vulnerabilities to Catalog",
    "link": "https://www.cisa.gov/news-events/alerts/2026/11/25/cisa-adds-10-known-exploited-vulnerabilities-catalog",
    "source": "CISA",
    "date": "2026-11-25T12:00:00+00:00"
-  },
-  {
-   "title": "Satellites Have a Ground-Level Cybersecurity Problem",
-   "link": "https://www.darkreading.com/cyber-risk/satellites-ground-level-cybersecurity-problem",
-   "source": "Dark Reading",
-   "date": "2026-11-24T22:05:34+00:00"
-  },
-  {
-   "title": "AutomationDirect C-More EA9 Programming Software",
-   "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-328-01",
-   "source": "CISA",
-   "date": "2026-11-24T12:00:00+00:00"
   },
   {
    "title": "CTO of \u2018RansomwareHelp\u2019 Indicted for Wire Fraud",
