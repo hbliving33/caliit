@@ -1,21 +1,27 @@
 {
- "updated": "2026-11-28T03:57:46.456776+00:00",
+ "updated": "2026-11-28T13:09:34.914411+00:00",
  "m365": {
   "status": "Available",
-  "checked": "2026-11-28T03:57:46.650161+00:00",
+  "checked": "2026-11-28T13:09:34.953997+00:00",
   "link": "https://status.cloud.microsoft/"
  },
  "aws": {
   "status": "2 open events",
   "link": "https://health.aws.amazon.com/health/status",
-  "checked": "2026-11-28T03:57:46.456776+00:00"
+  "checked": "2026-11-28T13:09:34.914411+00:00"
  },
  "wasabi": {
   "status": "Available",
   "link": "https://status.wasabi.com/",
-  "checked": "2026-11-28T03:57:46.456776+00:00"
+  "checked": "2026-11-28T13:09:34.914411+00:00"
  },
  "items": [
+  {
+   "title": "pCloud Password Manager Hit by Cyber Attack Involving Email Address Exposure and Login Attempts",
+   "link": "https://thehackernews.com/2026/11/pcloud-password-manager-hit-by-cyber.html",
+   "source": "The Hacker News",
+   "date": "2026-11-28T08:08:11+00:00"
+  },
   {
    "title": "pCloud confirms password manager hack after suspicious login alerts",
    "link": "https://www.bleepingcomputer.com/news/security/pcloud-confirms-password-manager-hack-after-suspicious-login-alerts/",
@@ -123,12 +129,6 @@
    "link": "https://thehackernews.com/2026/11/switzerland-confirms-ai-assisted.html",
    "source": "The Hacker News",
    "date": "2026-11-27T06:04:20+00:00"
-  },
-  {
-   "title": "Unpatched Cacti Zero-Day Enables RCE in Just Four HTTP Requests via Guest Access",
-   "link": "https://thehackernews.com/2026/11/unpatched-cacti-zero-day-enables-rce-in.html",
-   "source": "The Hacker News",
-   "date": "2026-11-27T05:48:20+00:00"
   },
   {
    "title": "FIFA Says It Has Been Victim of a Cyberattack Accessing \u2018Personal and Business Information\u2019",
